@@ -41,6 +41,7 @@ git clone git@gitlab.asoft-python.com:van.nguyenthi/react-training.git
 - Checkout branch
 
 ```
+git checkout feature/users-manager
 cd users-manager
 ```
 

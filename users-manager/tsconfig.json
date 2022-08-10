@@ -19,7 +19,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "types": [
       "@types/jest"
     ],
@@ -27,7 +27,8 @@
       "./src/types",
       "node_modules/@types"
     ],
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "incremental": true
   },
   "include": [
     ".",
