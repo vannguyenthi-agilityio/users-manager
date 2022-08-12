@@ -1,121 +1,42 @@
 {
   "name": "users-manager",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@chakra-ui/icons": "^1.1.5",
-    "@chakra-ui/react": "^1.7.4",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "@storybook/addon-actions": "^6.3.6",
-    "@storybook/addon-essentials": "^6.3.6",
-    "@storybook/addon-links": "^6.3.6",
-    "@storybook/react": "^6.3.6",
-    "framer-motion": "^4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
-    "next": "12.2.2",
-    "web-vitals": "^1.0.1"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "@storybook/node-logger": "^6.3.6",
-    "@storybook/preset-create-react-app": "^3.2.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@types/jest": "^26.0.24",
-    "@types/node": "^14.14.37",
-    "@types/react": "^16.9.43",
-    "@types/react-dom": "^16.9.8",
-    "@typescript-eslint/eslint-plugin": "^4.1.0",
-    "@typescript-eslint/parser": "^4.1.0",
-    "babel-eslint": "^10.1.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^7.11.0",
-    "eslint-config-next": "12.2.2",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-airbnb-typescript": "^6.3.1",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-mdx": "^1.7.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^2.5.1",
-    "husky": "8.0.1",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.6.0",
-    "lint-staged": "^11.0.0",
-    "postcss": "^8.2.1",
-    "postcss-loader": "^4.2.0",
-    "prettier": "^1.19.1",
-    "ts-jest": "^27.0.4",
-    "typescript": "^4.3.2",
-    "webpack": "4.44.0",
-    "@babel/core": "^7.18.10",
-    "@chakra-ui/system": "2.2.4",
-    "react-refresh": "^0.14.0",
-    "require-from-string": "2.0.2"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "storybook": "start-storybook -p 6006 -s public",
-    "pre-push": "rm -rf storybook-static/ && build-storybook -s public",
-    "build-storybook": "build-storybook -s public",
-    "test:watch": "jest --watch"
+    "start": "next start -p 9000",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
+  "dependencies": {
+    "@chakra-ui/icons": "^1.0.17",
+    "@chakra-ui/react": "^1.6.12",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
+    "@fontsource/inter": "^4.3.0",
+    "@storybook/addon-storysource": "^6.2.9",
+    "@types/react-custom-scrollbars": "^4.0.9",
+    "@types/react-scroll": "^1.8.3",
+    "framer-motion": "4",
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^5.3.0",
+    "react-hook-form": "^7.33.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "volta": {
+    "node": "14.17.0",
+    "yarn": "1.22.10"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "pnpm run pre-push",
-      "pre-commit": "lint-staged",
-      "pre-merge": "pnpm run build"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "npx prettier --write",
-      "eslint src/*.{js,jsx,ts,tsx} --fix-dry-run --no-error-on-unmatched-pattern",
-      "pnpm run test"
-    ]
-  },
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "./jest.config.js"
-      }
-    }
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
+    "@types/react": "^18.0.17",
+    "babel-loader": "^8.2.2",
+    "typescript": "^4.2.4"
   }
 }

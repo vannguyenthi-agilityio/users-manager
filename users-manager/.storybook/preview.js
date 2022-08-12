@@ -1,7 +1,16 @@
-// Import the global style enabling classes
 import { ChakraProvider } from '@chakra-ui/react';
-import { CHAKRA_THEME } from 'src/themes/chakra'
+import { CHAKRA_THEME } from '../src/themes/chakra'
 import { BrowserRouter } from 'react-router-dom';
+
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+}
 
 export const decorators = [
   (Story) => (
@@ -12,7 +21,3 @@ export const decorators = [
     </BrowserRouter>
   ),
 ];
-
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-}
