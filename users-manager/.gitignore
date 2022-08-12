@@ -27,3 +27,6 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-lock.yaml*
+
+# vercel
+.vercel
