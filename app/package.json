@@ -1,0 +1,23 @@
+{
+  "name": "Hoopa-ShibCard",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "pnpm run partytown && astro dev",
+    "build": "pnpm run partytown && astro build",
+    "preview": "pnpm run partytown && astro preview",
+    "astro": "astro",
+    "partytown": "partytown copylib public/~partytown"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^1.0.0",
+    "astro": "^1.0.5",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16"
+  },
+  "dependencies": {
+    "@builder.io/partytown": "^0.6.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

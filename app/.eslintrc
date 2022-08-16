@@ -1,0 +1,73 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:mdx/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "src"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".mdx",
+          ".astro"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "comma-dangle": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/camelcase": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-closing-tag-location": "off",
+    "react/jsx-indent": "off",
+    "import/no-unresolved": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-console": "off",
+    "no-plusplus": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "linebreak-style": "off",
+    "@typescript-eslint/semi": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "implicit-arrow-linebreak": "off",
+    "arrow-parens": "off",
+    "import/no-cycle": "off",
+    "mdx/no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "no-param-reassign": "off",
+    "no-empty-pattern": "off",
+    "react/no-this-in-sfc": "off",
+    "@typescript-eslint/no-this-alias": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "no-underscore-dangle": "off",
+    "react/no-danger": "off",
+    "no-tabs": "off",
+    "no-irregular-whitespace": "off",
+    "max-len": "off",
+    "no-trailing-spaces": "warn"
+  }
+}
