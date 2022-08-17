@@ -7,17 +7,46 @@
     "build": "pnpm run partytown && astro build",
     "preview": "pnpm run partytown && astro preview",
     "astro": "astro",
-    "partytown": "partytown copylib public/~partytown"
+    "partytown": "partytown copylib public/~partytown",
+    "pre-commit-lint": "pnpm lint-staged",
+    "pre-push-lint": "pnpm build",
+    "prepare": "cd .. && husky install app/.husky"
   },
   "devDependencies": {
     "@astrojs/react": "^1.0.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/node": "^18.6.4",
+    "@types/react": "18.0.13",
+    "@types/react-dom": "18.0.5",
+    "@typescript-eslint/eslint-plugin": "~5.24.0",
+    "@typescript-eslint/parser": "~5.24.0",
     "astro": "^1.0.5",
     "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.16"
+    "babel-loader": "8.1.0",
+    "eslint": "~8.15.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.30.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.0",
+    "jest": "27.5.1",
+    "lint-staged": "13.0.2",
+    "postcss": "^8.4.16",
+    "prettier": "2.6.2",
+    "ts-node": "10.8.0",
+    "typescript": "4.7.2"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.6.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "lint-staged": {
+    "*.{js,json,ts,tsx,astro}": [
+      "nx affected:lint --fix --files",
+      "nx format:write --files"
+    ]
   }
 }
