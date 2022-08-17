@@ -1,0 +1,53 @@
+---
+import { COLORS, METRICS } from 'themes:index'
+export interface ButtonProps {
+	disabled: boolean;
+	type?: 'success' | 'danger';
+	onclick: () => void;
+}
+
+let {
+  disabled = false,
+  type = '',
+  onclick = () => {}
+} = Astro.props;
+---
+
+<button
+	class={`btn ${type ? `btn-${type}` : ''} ${disabled ? 'btn-disabled': ''}`}
+  {onclick}
+>
+	<slot />
+</button>
+
+<style define:vars={{
+  btnTxtColor: COLORS.btnTxtColor,
+  btnBgColor: COLORS.btnBgColor, // Default color
+  btnSuccess: COLORS.btnSuccess,
+  btnDanger: COLORS.btnDanger,
+  baseBorderRadius: METRICS.borderRadius.base,
+  baseOpacity: METRICS.opacity.base,
+}}>
+  .btn {
+    background-color: var(--btnBgColor);
+    color: var(--btnTxtColor);
+    border-radius: var(--baseBorderRadius);
+    padding: 8px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-success {
+    background-color: var(--btnSuccess);
+  }
+
+  .btn-danger {
+    background-color: var(--btnDanger);
+  }
+
+  .btn-disabled {
+    opacity: var(--baseOpacity);
+  }
+</style>
