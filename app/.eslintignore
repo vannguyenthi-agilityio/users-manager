@@ -1,2 +1,6 @@
 src\models
 src/models
+src/env.d.ts
+src\env.d.ts
+commitlint.config.js
+package.json

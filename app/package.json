@@ -10,7 +10,7 @@
     "partytown": "partytown copylib public/~partytown",
     "pre-commit-lint": "pnpm lint-staged",
     "pre-push-lint": "pnpm build",
-    "prepare": "cd .. && husky install app/.husky"
+    "prepare": "cd .. && husky install app/.husky && chmod ug+x .husky/*"
   },
   "devDependencies": {
     "@astrojs/react": "^1.0.0",
@@ -25,9 +25,11 @@
     "autoprefixer": "^10.4.8",
     "babel-loader": "8.1.0",
     "eslint": "~8.15.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-mdx": "^2.0.2",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.0",
@@ -45,8 +47,8 @@
   },
   "lint-staged": {
     "*.{js,json,ts,tsx,astro}": [
-      "nx affected:lint --fix --files",
-      "nx format:write --files"
+      "npx prettier --write",
+      "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
     ]
   }
 }

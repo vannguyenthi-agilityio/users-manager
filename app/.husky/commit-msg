@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-cd src/
+cd app/
 pnpm exec commitlint --edit "${1}"
