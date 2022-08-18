@@ -1,0 +1,25 @@
+---
+import rawStylesCSS from './card.css?raw';
+export interface Props {
+  title: string;
+  body: string;
+  href: string;
+}
+
+const { href, title, body } = Astro.props as Props;
+---
+
+<li class="link-card">
+  <a href={href}>
+    <h2>
+      {title}
+      <span>&rarr;</span>
+    </h2>
+    <p>
+      {body}
+    </p>
+  </a>
+</li>
+<style is:inline set:html={rawStylesCSS}>
+
+</style>

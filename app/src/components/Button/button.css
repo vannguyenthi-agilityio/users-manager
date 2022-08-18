@@ -1,0 +1,22 @@
+.btn {
+  background-color: var(--secondary);
+  color: var(--txtColor);
+  border-radius: var(--baseBorderRadius);
+  padding: 8px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: var(--successColor);
+}
+
+.btn-danger {
+  background-color: var(--errorColor);
+}
+
+.btn-disabled {
+  opacity: var(--baseOpacity);
+}
