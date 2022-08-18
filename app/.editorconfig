@@ -1,6 +1,6 @@
 root = true
 
-[*.{js,jsx,ts,tsx,astro,css}]
+[*.{js,jsx,ts,tsx,astro,css,json}]
 end_of_line = crlf
 insert_final_newline = true
 charset = utf-8
