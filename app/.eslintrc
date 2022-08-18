@@ -17,7 +17,8 @@
     "airbnb-typescript",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:mdx/recommended"
+    "plugin:mdx/recommended",
+    "plugin:astro/recommended"
   ],
   "settings": {
     "import/resolver": {
@@ -36,6 +37,24 @@
       }
     }
   },
+  "overrides": [
+    {
+      // Define the configuration for `.astro` file.
+      "files": ["*.astro"],
+      // Allows Astro components to be parsed.
+      "parser": "astro-eslint-parser",
+      // Parse the script in `.astro` as TypeScript by adding the following configuration.
+      // It's the setting you need when using TypeScript.
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      },
+      "rules": {
+        "astro/no-conflict-set-directives": "error",
+        "astro/no-unused-define-vars-in-style": "error"
+      }
+    }
+  ],
   "rules": {
     "comma-dangle": "off",
     "@typescript-eslint/indent": "off",
@@ -76,6 +95,8 @@
     "no-tabs": "off",
     "no-irregular-whitespace": "off",
     "max-len": "off",
-    "no-trailing-spaces": "warn"
+    "no-trailing-spaces": "warn",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off"
   }
 }

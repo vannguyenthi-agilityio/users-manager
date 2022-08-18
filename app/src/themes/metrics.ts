@@ -1,20 +1,19 @@
 const METRICS = {
-  zIndex: {
-    base: 0,
-    sm: 1,
-    md: 2,
-    lg: 3,
-    modal: 10
-  },
-  opacity: {
-    tiny: 0,
-    base: 0.5,
-    lg: 1
-  },
-  borderRadius: {
-    base: '5px',
-    round: '50%'
-  }
-}
+  // Z-Index
+  zBase: 0,
+  zSm: 1,
+  zMd: 2,
+  zLg: 3,
+  zModal: 10,
 
-export default METRICS
+  // Opacity
+  oTiny: 0,
+  oBase: 0.5,
+  oLg: 1,
+
+  // Border radius
+  brBase: '5px',
+  brRound: '50%'
+};
+
+export default METRICS;

@@ -1,11 +1,10 @@
 const COLORS = {
-  foregroundColor: "#fff",
-  backgroundColor: "#000",
+  primary: '#241e35',
+  secondary: '#f0c13b',
+  txtColor: '#fff',
 
-  btnBgColor: '#3182ce',
-  btnTxtColor: '#fff',
-  btnSuccess: '#68d391',
-  btnDanger: '#fc8181',
-}
+  successColor: '#68d391',
+  errorColor: '#fc8181'
+};
 
 export default COLORS;

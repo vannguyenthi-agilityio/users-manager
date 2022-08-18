@@ -27,6 +27,7 @@
     "eslint": "~8.15.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-astro": "^0.17.1",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-mdx": "^2.0.2",
@@ -37,6 +38,7 @@
     "lint-staged": "13.0.2",
     "postcss": "^8.4.16",
     "prettier": "2.6.2",
+    "prettier-plugin-astro": "^0.5.0",
     "ts-node": "10.8.0",
     "typescript": "4.7.2"
   },
@@ -47,7 +49,7 @@
   },
   "lint-staged": {
     "*.{js,json,ts,tsx,astro}": [
-      "npx prettier --write",
+      "pnpm prettier -w src/**/*.astro",
       "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
     ]
   }
