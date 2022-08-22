@@ -9,7 +9,7 @@ export default defineConfig({
   // public: './public',   // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.
   build: {
     // site: 'http://example.com', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
-    sitemap: true,         // Generate sitemap (set to "false" to disable)
+    sitemap: true, // Generate sitemap (set to "false" to disable)     
   },
   integrations: [
     react(),
@@ -17,6 +17,6 @@ export default defineConfig({
   trailingSlash: 'always',
   server: { 
     port: 3000, 
-    host: true 
+    host: true
   }
 })
