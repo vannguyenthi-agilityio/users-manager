@@ -1,17 +1,12 @@
 ---
 export interface ButtonProps {
-  disabled: boolean;
-  type?: 'success' | 'danger';
   onclick: () => void;
 }
 
-let { disabled = false, type = '', onclick = () => {} } = Astro.props;
+const { disabled = false, type = '', onclick = () => {} } = Astro.props;
 ---
 
-<button
-  class={`btn ${type ? `btn-${type}` : ''} ${disabled ? 'btn-disabled' : ''}`}
-  {onclick}
->
+<button class="btn" {onclick}>
   <slot />
 </button>
 
