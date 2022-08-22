@@ -3,7 +3,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
 
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-// import './assets/styles/global.css';
+import 'styles:global';
 
 export interface Props {
   title?: string;
@@ -51,7 +51,3 @@ const {
   href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
   rel="stylesheet"
 />
-
-<style is:inline>
-  @import './assets/styles/global.css';
-</style>

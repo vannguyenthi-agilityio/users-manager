@@ -1,5 +1,5 @@
 dist/
+public/
 .stylelintrc.json
 package.json
-src/
 postcss.config.js

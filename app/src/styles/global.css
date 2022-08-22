@@ -102,7 +102,7 @@ section {
 }
 
 body {
-  font: var(--fontWeightNormal) var(--fontSizeBase)/1 var(--fontFamilyPrimary);
+  font: var(--fontWeightNormal) var(--fontSizeBase) / 1 var(--fontFamilyPrimary);
   color: var(--colorWhite);
   background-color: var(--colorSecondary);
 }
@@ -121,7 +121,7 @@ blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: "";
+  content: '';
   content: none;
 }
 

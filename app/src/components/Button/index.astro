@@ -1,15 +1,13 @@
 ---
+import 'styles:button';
+
 export interface ButtonProps {
   onclick: () => void;
 }
 
-const { disabled = false, type = '', onclick = () => {} } = Astro.props;
+const { onclick = () => {} } = Astro.props;
 ---
 
 <button class="btn" {onclick}>
   <slot />
 </button>
-
-<style is:inline>
-  @import './assets/styles/button.css';
-</style>

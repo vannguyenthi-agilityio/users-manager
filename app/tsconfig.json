@@ -42,6 +42,9 @@
       "themes:*": [
         "src/themes/*.ts"
       ],
+      "styles:*": [
+        "src/styles/*.css"
+      ],
     }
   },
   "include": [
