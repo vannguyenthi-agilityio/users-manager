@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "strictNullChecks": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "importsNotUsedAsValues": "remove",
+    "types": [
+      "astro/client",
+      "@types/jest"
+    ],
+    "typeRoots": [
+      "./src/types",
+      "node_modules/@types"
+    ],
+    "paths": {
+      "components:*": [
+        "src/components/*.astro"
+      ],
+      "layouts:*": [
+        "src/layouts/*.astro"
+      ],
+      "themes:*": [
+        "src/themes/*.ts"
+      ],
+    }
+  },
+  "include": [
+    ".",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.astro",
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*stories.astro",
+  ]
+}
