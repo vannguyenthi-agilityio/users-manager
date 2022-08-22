@@ -10,7 +10,8 @@
     "partytown": "partytown copylib public/~partytown",
     "pre-commit-lint": "pnpm lint-staged",
     "pre-push-lint": "pnpm build",
-    "prepare": "cd .. && husky install app/.husky"
+    "prepare": "cd .. && husky install app/.husky",
+    "install-prod": "pnpm install --only=production --ignore-scripts && npm rebuild --arch=x64 --platform=linux sharp"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
@@ -20,7 +21,6 @@
     "@types/react-dom": "18.0.5",
     "@typescript-eslint/eslint-plugin": "~5.24.0",
     "@typescript-eslint/parser": "~5.24.0",
-    "autoprefixer": "^10.4.8",
     "babel-loader": "8.1.0",
     "eslint": "~8.15.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -49,7 +49,9 @@
     "astro": "^1.0.5",
     "astro-compress": "^1.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sharp": "0.30.7",
+    "autoprefixer": "^10.4.8"
   },
   "lint-staged": {
     "*.{js,json,ts,tsx,astro}": [

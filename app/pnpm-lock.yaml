@@ -31,6 +31,7 @@ specifiers:
   prettier-plugin-astro: ^0.5.0
   react: ^18.2.0
   react-dom: ^18.2.0
+  sharp: 0.30.7
   stylelint: ^14.10.0
   stylelint-config-prettier: ^9.0.3
   stylelint-config-standard: ^27.0.0
@@ -42,8 +43,10 @@ dependencies:
   '@builder.io/partytown': 0.6.4
   astro: 1.0.6_ts-node@10.8.0
   astro-compress: 1.0.3
+  autoprefixer: 10.4.8_postcss@8.4.16
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  sharp: 0.30.7
 
 devDependencies:
   '@commitlint/cli': 17.0.3
@@ -53,7 +56,6 @@ devDependencies:
   '@types/react-dom': 18.0.5
   '@typescript-eslint/eslint-plugin': 5.24.0_dedvoei5dyqbvwzetjlq46d2ua
   '@typescript-eslint/parser': 5.24.0_ex7m3ygoyrpywhuxopuhp3yrbq
-  autoprefixer: 10.4.8_postcss@8.4.16
   babel-loader: 8.1.0
   eslint: 8.15.0
   eslint-config-airbnb-typescript: 17.0.0_v5p4p5zmhgyfga4xjug7kbakcu
@@ -1773,7 +1775,7 @@ packages:
       picocolors: 1.0.0
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
-    dev: true
+    dev: false
 
   /axe-core/4.4.3:
     resolution: {integrity: sha512-32+ub6kkdhhWick/UjvEwRchgoetXqTK14INLqbGm5U2TzBkBNF3nQtLYm8ovxSkQWArjEQvftCKryjZaATu3w==}
@@ -3525,7 +3527,7 @@ packages:
 
   /fraction.js/4.2.0:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
-    dev: true
+    dev: false
 
   /fs-constants/1.0.0:
     resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==}
@@ -5876,7 +5878,7 @@ packages:
   /normalize-range/0.1.2:
     resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
     engines: {node: '>=0.10.0'}
-    dev: true
+    dev: false
 
   /npm-run-path/4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
@@ -6249,7 +6251,6 @@ packages:
 
   /postcss-value-parser/4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
-    dev: true
 
   /postcss/8.4.16:
     resolution: {integrity: sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==}
