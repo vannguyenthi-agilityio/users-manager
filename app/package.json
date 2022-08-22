@@ -5,7 +5,7 @@
   "scripts": {
     "start": "pnpm run partytown && astro dev",
     "build": "pnpm run partytown && astro build",
-    "preview": "pnpm run partytown && astro preview",
+    "preview": "pnpm run partytown && astro preview --port 9000",
     "astro": "astro",
     "partytown": "partytown copylib public/~partytown",
     "pre-commit-lint": "pnpm lint-staged",
@@ -44,16 +44,17 @@
     "typescript": "4.7.2"
   },
   "dependencies": {
+    "@astrojs/react": "^1.0.0",
     "@builder.io/partytown": "^0.6.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "astro": "^1.0.5",
-    "@astrojs/react": "^1.0.0"
+    "astro-compress": "^1.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "lint-staged": {
     "*.{js,json,ts,tsx,astro}": [
       "pnpm prettier -w src/**/*.astro",
-      "npx stylelint src/**/*.css",
+      "npx stylelint public/**/*.css",
       "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
     ]
   }
