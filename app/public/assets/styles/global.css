@@ -1,0 +1,163 @@
+/* Resets and prototypes */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font: var(--fontWeightNormal) var(--fontSizeBase)/1 var(--fontFamilyPrimary);
+  color: var(--colorWhite);
+  background-color: var(--colorSecondary);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: var(---colorPrimary);
+  cursor: pointer;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+/* Common styles */
+.container {
+  width: var(--sizeFull);
+  max-width: var(--sizeLg);
+  margin: 0 auto;
+  padding-left: var(--paddingSm);
+  padding-right: var(--paddingSm);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: var(--fontSizeMd);
+  }
+
+  .container {
+    padding-left: var(--paddingMd);
+    padding-right: var(--paddingMd);
+    max-width: var(--sizeLg);
+  }
+}
