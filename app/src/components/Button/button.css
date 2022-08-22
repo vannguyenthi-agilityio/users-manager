@@ -1,6 +1,6 @@
 .btn {
-  background-color: var(--secondary);
-  color: var(--txtColor);
+  background-color: var(--highlightColor);
+  color: var(--blackColor);
   border-radius: var(--baseBorderRadius);
   padding: 8px;
   outline: none;

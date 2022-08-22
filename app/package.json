@@ -52,7 +52,7 @@
   },
   "lint-staged": {
     "*.{js,json,ts,tsx,astro}": [
-      "pnpm prettier -w src/**/*.astro",
+      "pnpm prettier -write src/**/*.astro",
       "npx stylelint src/**/*.css",
       "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
     ]
