@@ -5,7 +5,7 @@
   "scripts": {
     "start": "pnpm run partytown && astro dev",
     "build": "pnpm run partytown && astro build",
-    "preview": "pnpm run partytown && astro preview",
+    "preview": "pnpm run partytown && astro preview --port 9000",
     "astro": "astro",
     "partytown": "partytown copylib public/~partytown",
     "pre-commit-lint": "pnpm lint-staged",
@@ -53,7 +53,7 @@
   "lint-staged": {
     "*.{js,json,ts,tsx,astro}": [
       "pnpm prettier -w src/**/*.astro",
-      "npx stylelint src/**/*.css",
+      "npx stylelint public/**/*.css",
       "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
     ]
   }
