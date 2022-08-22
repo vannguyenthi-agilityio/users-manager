@@ -1,7 +1,7 @@
 const COLORS = {
-  primaryColor: '#241e35',
-  secondaryColor: '#1c1825',
-  highlightColor: '#f0c13b',
+  primaryColor: '#f0c13b',
+  secondaryColor: '#241e35',
+  darkColor: '#1c1825',
   blackColor: '#000',
   whiteColor: '#fff',
 
