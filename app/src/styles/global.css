@@ -101,12 +101,6 @@ section {
   display: block;
 }
 
-body {
-  font: var(--fontWeightNormal) var(--fontSizeBase) / 1 var(--fontFamilyPrimary);
-  color: var(--colorWhite);
-  background-color: var(--colorSecondary);
-}
-
 ol,
 ul {
   list-style: none;
@@ -139,6 +133,12 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
+}
+
+body {
+  font: var(--fontWeightNormal) var(--fontSizeBase) / 1 var(--fontFamilyPrimary);
+  color: var(--colorWhite);
+  background-color: var(--colorSecondary);
 }
 
 /* Common styles */
