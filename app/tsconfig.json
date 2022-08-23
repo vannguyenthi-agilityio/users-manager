@@ -36,8 +36,14 @@
       "layouts:*": [
         "src/layouts/*.astro"
       ],
+      "sections:*": [
+        "src/sections/*.astro"
+      ],
       "themes:*": [
         "src/themes/*.ts"
+      ],
+      "styles:*": [
+        "src/styles/*.css"
       ],
     }
   },

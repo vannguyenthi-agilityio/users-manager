@@ -1,4 +1,6 @@
 ---
+import 'styles:card';
+
 export interface Props {
   title: string;
   body: string;
@@ -19,6 +21,3 @@ const { href, title, body } = Astro.props as Props;
     </p>
   </a>
 </li>
-<style is:inline>
-  @import './assets/styles/card.css';
-</style>

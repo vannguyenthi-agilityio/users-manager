@@ -54,10 +54,13 @@
     "autoprefixer": "^10.4.8"
   },
   "lint-staged": {
-    "*.{js,json,ts,tsx,astro}": [
+    "*.{js,ts,tsx,astro}": [
       "pnpm prettier -w src/**/*.astro",
-      "npx stylelint public/**/*.css",
       "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
+    ],
+    "*.css": [
+      "pnpm prettier -w",
+      "npx stylelint src/**/*.css"
     ]
   }
 }
