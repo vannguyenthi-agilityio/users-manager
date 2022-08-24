@@ -1,4 +1,16 @@
 /* TODO: Style for header, just initialize */
-.header {
-  color: var(--colorWhite);
+
+.header-logo {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    display: flex;
+  }
+
+  .header-logo-title {
+    font-weight: var(--fontWeightBold);
+    font-size: var(--fontSizeLg);
+  }
 }
