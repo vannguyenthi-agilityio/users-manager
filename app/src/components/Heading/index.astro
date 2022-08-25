@@ -1,0 +1,19 @@
+---
+import './styles.css';
+
+export interface HeadingProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  uppercase?: boolean;
+  className?: string;
+}
+
+const { size = 'sm', className = '', uppercase = false } = Astro.props;
+---
+
+<h2
+  class={`heading heading-${size} ${
+    uppercase ? 'heading-uppercase' : ''
+  } ${className}`}
+>
+  <slot />
+</h2>
