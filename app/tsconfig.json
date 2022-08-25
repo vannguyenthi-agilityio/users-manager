@@ -42,6 +42,9 @@
       "themes:*": [
         "src/themes/*.ts"
       ],
+      "utils": [
+        "src/utils/index.ts"
+      ],
       "styles:*": [
         "src/styles/*.css"
       ],
