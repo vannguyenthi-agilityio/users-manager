@@ -17,10 +17,21 @@ const THEME_BASE = {
   fontSizeBase: '16px',
   fontSizeMd: '18px',
   fontSizeLg: '20px',
+  fontSizeXl: '24px',
+  fontSize2Xl: '28px',
+  fontSize3Xl: '36px',
+  fontSize4Xl: '40px',
+  fontSize5Xl: '45px',
 
   fontWeightNormal: 400,
   fontWeightMedium: 500,
   fontWeightBold: 700,
+
+  // Line height
+  lineHeightXs: '32px',
+  lineHeightSm: '34px',
+  lineHeightBase: '48px',
+  lineHeightMd: '54px',
 
   // Z-indexes
   zIndexHide: -1,

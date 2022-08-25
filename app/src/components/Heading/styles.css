@@ -1,0 +1,38 @@
+.heading {
+  color: var(--colorWhite);
+  font-weight: var(--fontWeightBold);
+}
+
+.heading-sm {
+  font-size: var(--fontSizeLg);
+  line-height: var(--lineHeightXs);
+}
+
+.heading-md {
+  font-size: var(--fontSize2Xl);
+  line-height: var(--lineHeightSm);
+}
+
+.heading-uppercase {
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  .heading-sm {
+    font-size: var(--fontSize2Xs);
+  }
+
+  .heading-md {
+    font-size: var(--fontSize4Xl);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .heading-sm {
+    font-size: var(--fontSize3Xl);
+  }
+
+  .heading-md {
+    font-size: var(--fontSize5Xl);
+  }
+}
