@@ -1,0 +1,25 @@
+.secured-info {
+  display: flex;
+  padding: 0;
+}
+
+.secured-heading {
+  font-size: var(--fontSizeLg);
+  line-height: 32px;
+  font-weight: var(--fontWeightBold);
+  margin: 80px auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .secured-heading {
+    font-size: 24px;
+    line-height: 40px;
+  }
+}
+
+@media only screen and (min-width: 1028px) {
+  .secured-heading {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
