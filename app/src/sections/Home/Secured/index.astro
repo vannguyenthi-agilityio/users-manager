@@ -1,40 +1,49 @@
 ---
+import Heading from 'components:Heading/index';
 import './styles.css';
 ---
 
 <section class="secured">
   <div class="container">
     <div class="secured-info d-flex flex-column">
-      <h2 class="secured-heading">Your DogeCard is Secured by</h2>
+      <Heading size="sm" className="secured-heading"
+        >Your DogeCard is Secured by
+      </Heading>
       <div
         class="secured-content d-flex flex-column justify-content-center text-center"
       >
         <div class="secured-item">
-          <img
-            class="secured-icon"
-            src="assets/images/icons/fdic-sm.svg"
-            alt="fdic"
-          />
+          <div class="fdic d-flex mg-auto">
+            <img
+              class="secured-icon"
+              src="assets/images/icons/fdic-secured.svg"
+              alt="fdic"
+            />
+          </div>
           <p class="secured-description secured-description-fdic">
             $250,000 FDIC insured Evolve Bank & Trust
           </p>
         </div>
         <div class="secured-item">
-          <img
-            class="secured-icon"
-            src="assets/images/icons/authentication-sm.svg"
-            alt="authentication"
-          />
+          <div class="authentication d-flex mg-auto">
+            <img
+              class="secured-icon"
+              src="assets/images/icons/authentication-secured.svg"
+              alt="authentication"
+            />
+          </div>
           <p class="secured-description">
             Bank-grade encryption and authentication
           </p>
         </div>
         <div class="secured-item">
-          <img
-            class="secured-icon visa-icon"
-            src="assets/images/icons/visa-sm.svg"
-            alt="visa"
-          />
+          <div class="visa">
+            <img
+              class="secured-icon"
+              src="assets/images/icons/visa-secured.svg"
+              alt="visa"
+            />
+          </div>
           <p class="secured-description secured-description-visa">
             Fraud Protection Zero-Liability guarantee
           </p>

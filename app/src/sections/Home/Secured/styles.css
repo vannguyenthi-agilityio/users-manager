@@ -12,11 +12,12 @@
 }
 
 .secured-description {
-  width: 200px;
+  max-width: 200px;
   font-size: var(--fontSizeBase);
-  line-height: var(--lineHeightSmallXs);
+  line-height: 30px;
   font-weight: var(--fontWeightNormal);
   margin: 27px auto;
+  margin-bottom: 0;
 }
 
 .secured-item {
@@ -28,21 +29,24 @@
   margin-bottom: 48px;
 }
 
+.fdic {
+  max-width: 120px;
+}
+
+.authentication {
+  max-width: 80px;
+}
+
 @media only screen and (min-width: 768px) {
   .secured-heading {
     font-size: var(--fontSizeXl);
-    line-height: var(--lineHeight2Sm);
+    line-height: 40px;
   }
 
   .secured-item {
     display: flex;
     flex-direction: column-reverse;
-  }
-
-  .secured-icon {
-    height: 86px;
-    align-self: center;
-    margin-top: 46px;
+    margin-top: 0;
   }
 
   .secured-description {
@@ -51,17 +55,28 @@
     margin-bottom: 0;
   }
 
+  .authentication {
+    max-width: 100px;
+    height: 100px;
+    align-self: center;
+  }
+
   .visa-icon {
     max-width: 193px;
-    height: 193px;
     margin-top: 0;
+  }
+
+  .fdic {
+    height: 160px;
+    max-width: 160px;
+    align-self: center;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .secured-heading {
     font-size: var(--fontSize3Xl);
-    line-height: var(--lineHeightSmallMd);
+    line-height: 50px;
   }
 
   .secured-content {
@@ -74,8 +89,8 @@
   }
 
   .secured-description {
-    width: 230px;
-    margin-top: 60px;
+    max-width: 230px;
+    margin-top: 0;
     margin-bottom: 50px;
   }
 
@@ -84,6 +99,6 @@
   }
 
   .secured-description-fdic {
-    margin-top: 56px;
+    margin-top: 0;
   }
 }

@@ -167,6 +167,10 @@ main {
   min-height: 100vh;
 }
 
+.mg-auto {
+  margin: auto;
+}
+
 /* Common styles */
 .container {
   padding-left: var(--containerPaddingSm);
