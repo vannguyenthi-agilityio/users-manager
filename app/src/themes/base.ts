@@ -28,10 +28,18 @@ const THEME_BASE = {
   fontWeightBold: 700,
 
   // Line height
-  lineHeightXs: '32px',
-  lineHeightSm: '34px',
-  lineHeightBase: '48px',
-  lineHeightMd: '54px',
+  lineHeightXs: '22px',
+  lineHeightSm: '24px',
+  lineHeightBase: '25px',
+  lineHeightMd: '28px',
+  lineHeightLg: '30px',
+  lineHeightXl: '32px',
+  lineHeight2Xl: '34px',
+  lineHeight3Xl: '38px',
+  lineHeight4Xl: '40px',
+  lineHeight5Xl: '48px',
+  lineHeight6Xl: '50px',
+  lineHeight7Xl: '54px',
 
   // Z-indexes
   zIndexHide: -1,

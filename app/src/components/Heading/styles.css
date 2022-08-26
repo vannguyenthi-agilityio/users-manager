@@ -5,12 +5,12 @@
 
 .heading-sm {
   font-size: var(--fontSizeLg);
-  line-height: var(--lineHeightXs);
+  line-height: var(--lineHeightXl);
 }
 
 .heading-md {
   font-size: var(--fontSize2Xl);
-  line-height: var(--lineHeightSm);
+  line-height: var(--lineHeight2Xl);
 }
 
 .heading-uppercase {
@@ -19,20 +19,24 @@
 
 @media only screen and (min-width: 768px) {
   .heading-sm {
-    font-size: var(--fontSize2Xs);
+    font-size: var(--fontSizeXl);
+    line-height: var(--lineHeight4Xl);
   }
 
   .heading-md {
     font-size: var(--fontSize4Xl);
+    line-height: var(--lineHeight5Xl);
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1920px) {
   .heading-sm {
     font-size: var(--fontSize3Xl);
+    line-height: var(--lineHeight6Xl);
   }
 
   .heading-md {
     font-size: var(--fontSize5Xl);
+    line-height: var(--lineHeight7Xl);
   }
 }
