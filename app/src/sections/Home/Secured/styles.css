@@ -1,10 +1,6 @@
-.secured-info {
-  padding: 0;
-}
-
 .secured-heading {
   font-size: var(--fontSizeLg);
-  line-height: 32px;
+  line-height: var(--lineHeightXs);
   font-weight: var(--fontWeightBold);
   margin: 80px auto;
 }
@@ -18,7 +14,7 @@
 .secured-description {
   width: 200px;
   font-size: var(--fontSizeBase);
-  line-height: 30px;
+  line-height: var(--lineHeightSmallXs);
   font-weight: var(--fontWeightNormal);
   margin: 27px auto;
 }
@@ -34,8 +30,8 @@
 
 @media only screen and (min-width: 768px) {
   .secured-heading {
-    font-size: 24px;
-    line-height: 40px;
+    font-size: var(--fontSizeXl);
+    line-height: var(--lineHeight2Sm);
   }
 
   .secured-item {
@@ -44,7 +40,6 @@
   }
 
   .secured-icon {
-    max-width: 140px;
     height: 86px;
     align-self: center;
     margin-top: 46px;
@@ -63,10 +58,10 @@
   }
 }
 
-@media only screen and (min-width: 1028px) {
+@media only screen and (min-width: 1024px) {
   .secured-heading {
-    font-size: 36px;
-    line-height: 50px;
+    font-size: var(--fontSize3Xl);
+    line-height: var(--lineHeightSmallMd);
   }
 
   .secured-content {
