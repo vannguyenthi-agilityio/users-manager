@@ -13,7 +13,6 @@
 
 .hero-heading {
   max-width: 250px;
-  line-height: var(--lineHeightSm);
 }
 
 .hero-description {
@@ -55,10 +54,6 @@
   .hero-button {
     width: 192px;
   }
-
-  .hero-heading {
-    line-height: var(--lineHeightBase);
-  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -75,9 +70,5 @@
     text-align: left;
     align-items: flex-start;
     margin-top: 0;
-  }
-
-  .hero-heading {
-    line-height: var(--lineHeightMd);
   }
 }

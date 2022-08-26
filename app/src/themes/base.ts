@@ -49,6 +49,7 @@ const THEME_BASE = {
   zIndexOverlay: 1100,
   zIndexModal: 1200,
   zIndexTooltip: 1300,
+  zIndexHeader: 1400,
 
   // Border radius
   borderRadiusNone: '0',

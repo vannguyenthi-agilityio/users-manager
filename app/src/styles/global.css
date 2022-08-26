@@ -147,6 +147,10 @@ body {
   background-color: var(--colorSecondary);
 }
 
+main {
+  min-height: 100vh;
+}
+
 /* Common styles */
 .container {
   padding-left: var(--containerPaddingSm);
