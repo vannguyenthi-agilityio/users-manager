@@ -1,0 +1,54 @@
+.button-icon {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.icon-apple {
+  width: 23px;
+  height: 28px;
+  background-image: url('/assets/images/icons/download/apple.svg');
+}
+
+.icon-play {
+  width: 25px;
+  height: 26px;
+  background-image: url('/assets/images/icons/download/google-play.svg');
+}
+
+.btn-label,
+.btn-download {
+  display: flex;
+}
+
+.btn-download {
+  width: 168px;
+  padding: 10px 16px;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--colorBlackLight);
+  box-shadow: 5px 5px 40px var(--colorBlackLight);
+  border-radius: var(--borderRadiusBase);
+}
+
+.btn-label {
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.btn-label-title {
+  font-size: var(--fontSizeXs);
+}
+
+.btn-label-heading {
+  font-size: var(--fontSizeBase);
+  line-height: var(--lineHeightSm);
+}
+
+.btn-label-title-play {
+  text-transform: uppercase;
+}
