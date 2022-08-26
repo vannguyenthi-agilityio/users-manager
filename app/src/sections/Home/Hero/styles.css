@@ -47,7 +47,7 @@
   }
 
   .hero-button {
-    width: var(--signUpBtnWidth);
+    width: 192px;
   }
 }
 

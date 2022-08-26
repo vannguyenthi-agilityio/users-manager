@@ -79,9 +79,6 @@ const THEME_BASE = {
   containerWidth2Xl: '1320px',
   containerWidth3Xl: '1660px',
 
-  // Width
-  signUpBtnWidth: '192px',
-
   // Min height
   heroBgHeight: 'calc(920/1920 * 100vw)'
 };
