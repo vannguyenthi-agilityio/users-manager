@@ -49,6 +49,7 @@ const THEME_BASE = {
   zIndexOverlay: 1100,
   zIndexModal: 1200,
   zIndexTooltip: 1300,
+  zIndexHeader: 1400,
 
   // Border radius
   borderRadiusNone: '0',
@@ -76,7 +77,10 @@ const THEME_BASE = {
   containerWidthLg: '960px',
   containerWidthXl: '1140px',
   containerWidth2Xl: '1320px',
-  containerWidth3Xl: '1660px'
+  containerWidth3Xl: '1660px',
+
+  // Min height
+  heroBgHeight: 'calc(920/1920 * 100vw)'
 };
 
 export default THEME_BASE;
