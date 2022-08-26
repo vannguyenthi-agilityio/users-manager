@@ -1,4 +1,5 @@
 /* Just initialize */
+
 .hero {
   color: var(---colorPrimary);
   min-height: var(--minHeightBase);
