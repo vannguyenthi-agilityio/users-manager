@@ -1,4 +1,9 @@
 /* Just initialize */
 .hero {
   color: var(---colorPrimary);
+  min-height: var(--minHeightBase);
+  width: var(--sizeFull);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/assets/images/landing/hero.png');
 }
