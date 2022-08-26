@@ -1,7 +1,4 @@
 .secured-heading {
-  font-size: var(--fontSizeLg);
-  line-height: var(--lineHeightXs);
-  font-weight: var(--fontWeightBold);
   margin: 80px auto;
 }
 
@@ -14,9 +11,7 @@
 .secured-description {
   max-width: 200px;
   height: 60px;
-  font-size: var(--fontSizeBase);
   line-height: var(--lineHeightLg);
-  font-weight: var(--fontWeightNormal);
   align-self: center;
 }
 
