@@ -57,6 +57,7 @@ const THEME_BASE = {
   borderRadiusSm: '5px',
   borderRadiusBase: '10px',
   borderRadiusMd: '12px',
+  borderRadiusLg: '30px',
   borderRadiusRound: '50%',
 
   // Sizes
