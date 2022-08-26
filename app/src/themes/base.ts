@@ -59,13 +59,24 @@ const THEME_BASE = {
 
   // Sizes
   sizeFull: '100%',
-  sizeSm: '375px',
-  sizeMd: '768px',
-  sizeLg: '1024px',
-  sizeXl: '1915px',
 
-  paddingSm: '16px',
-  paddingMd: '30px'
+  // Breakpoints
+  breakpointSm: '576px',
+  breakpointMd: '768px',
+  breakpointLg: '992px',
+  breakpointXl: '1200px',
+  breakpoint2xl: '1400px',
+  breakpoint3xl: '1920px',
+
+  // Container
+  containerPaddingSm: '15px',
+  containerPaddingMd: '30px',
+  containerWidthSm: '540px',
+  containerWidthMd: '768px',
+  containerWidthLg: '960px',
+  containerWidthXl: '1140px',
+  containerWidth2Xl: '1320px',
+  containerWidth3Xl: '1660px'
 };
 
 export default THEME_BASE;
