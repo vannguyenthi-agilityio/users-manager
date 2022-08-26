@@ -1,5 +1,4 @@
 /* Just initialize */
-
 .hero {
   width: var(--sizeFull);
 }
@@ -24,7 +23,7 @@
 
 .hero-bg {
   color: var(---colorPrimary);
-  min-height: var(--minHeightBase);
+  min-height: var(--heroBgHeight);
   width: var(--sizeFull);
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,7 +61,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1920px) {
   .hero {
     position: absolute;
     width: var(--sizeFull);
