@@ -31,7 +31,7 @@
 
 .hero-form {
   display: flex;
-  padding-top: var(--paddingLg);
+  padding-top: 40px;
 }
 
 .hero-button,
@@ -47,7 +47,7 @@
   }
 
   .hero-button {
-    width: var(--btnWidth);
+    width: var(--signupBntWidth);
   }
 }
 
