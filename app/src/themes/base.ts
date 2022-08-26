@@ -86,7 +86,7 @@ const THEME_BASE = {
   paddingXl: '200px',
 
   // Min height
-  minHeightBase: 'calc(920/1920 * 100vw)'
+  heroBgHeight: 'calc(920/1920 * 100vw)'
 };
 
 export default THEME_BASE;
