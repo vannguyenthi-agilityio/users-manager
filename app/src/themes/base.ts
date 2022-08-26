@@ -80,7 +80,7 @@ const THEME_BASE = {
   containerWidth3Xl: '1660px',
 
   // Width
-  signupBntWidth: '192px',
+  signUpBtnWidth: '192px',
 
   // Min height
   heroBgHeight: 'calc(920/1920 * 100vw)'
