@@ -40,13 +40,8 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .hero {
-    position: absolute;
-    top: 0;
-  }
-
   .hero-content {
-    margin-top: 127px;
+    margin-top: 63px;
     text-align: left;
     align-items: flex-start;
   }
