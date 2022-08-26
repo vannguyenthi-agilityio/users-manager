@@ -5,57 +5,37 @@
   display: block;
 }
 
-.icon-apple {
-  width: 23px;
-  height: 28px;
-  background-image: url('/assets/images/icons/download/apple.svg');
+.btn-app-store {
+  background-image: url('/assets/images/download/app-store.png');
 }
 
-.icon-play {
-  width: 25px;
-  height: 26px;
-  background-image: url('/assets/images/icons/download/google-play.svg');
+.btn-google-play {
+  background-image: url('/assets/images/download/google-play.png');
 }
 
-.btn-label,
-.btn-download {
-  display: flex;
-}
-
-.btn-download {
+.download-button-item {
   width: 164px;
-  padding: 10px var(--containerPaddingSm);
+  height: 56px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.download-button-list {
+  width: 335px;
+  margin-top: 40px;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  border: 0;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: var(--colorBlackLight);
-  box-shadow: 5px 5px 40px var(--colorBlackLight);
-  border-radius: var(--borderRadiusBase);
-}
-
-.btn-label {
-  flex-direction: column;
-  margin-left: 8px;
-}
-
-.btn-label-title {
-  font-size: var(--fontSizeXs);
-}
-
-.btn-label-heading {
-  font-size: var(--fontSizeBase);
-  line-height: var(--lineHeightSm);
-}
-
-.btn-label-title-play {
-  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
-  .btn-download {
-    padding: 10px 20px;
+  .download-button-item {
     width: 192px;
+    background-size: auto;
+  }
+
+  .download-button-list {
+    width: 400px;
   }
 }

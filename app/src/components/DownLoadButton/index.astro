@@ -2,21 +2,17 @@
 import './styles.css';
 
 export interface DownLoadButtonProps {
-  label?: string;
-  labelTitle?: string;
-  key?: string;
   className?: string;
-  btnClass?: string;
-  href?: string;
 }
 
-const { label, labelTitle, className = '', key = '', href = '' } = Astro.props;
+const { className = '' } = Astro.props;
 ---
 
-<a href={href} role="button" class={className}>
-  <i class={`button-icon icon-${key}`}></i>
-  <p class="btn-label" rel="noopener">
-    <span class={`btn-label-title btn-label-title-${key}`}>{labelTitle}</span>
-    <span class={`btn-label-heading btn-label-${key}`}>{label}</span>
-  </p>
-</a>
+<div class={`download-button-list ${className}`}>
+  <a
+    href="https://apps.apple.com/id/app/"
+    class="download-button-item btn-app-store"></a>
+  <a
+    href="https://play.google.com/store/apps/details?"
+    class="download-button-item btn-google-play"></a>
+</div>
