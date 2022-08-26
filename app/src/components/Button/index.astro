@@ -2,12 +2,13 @@
 import './styles.css';
 
 export interface ButtonProps {
+  className: string;
   onclick: () => void;
 }
 
-const { onclick = () => {} } = Astro.props;
+const { className = '', onclick = () => {} } = Astro.props;
 ---
 
-<button class="btn" {onclick}>
+<button class={`btn ${className}`} {onclick}>
   <slot />
 </button>

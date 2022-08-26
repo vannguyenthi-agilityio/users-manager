@@ -7,3 +7,25 @@
   background-size: cover;
   background-image: url('/assets/images/landing/hero.png');
 }
+
+.hero-form {
+  padding-top: 40px;
+}
+
+.hero-button {
+  width: var(--sizeFull);
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-button {
+    width: 192px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .hero {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+}
