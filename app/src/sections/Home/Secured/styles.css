@@ -34,7 +34,7 @@
   align-self: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .secured-heading {
     font-size: var(--fontSizeXl);
     line-height: var(--lineHeight4Xl);
@@ -55,22 +55,24 @@
   }
 
   .secured-icon {
-    height: 193px;
-    max-width: 193px;
+    height: 160px;
     align-self: center;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media (min-width: 992px) {
   .secured-heading {
     font-size: var(--fontSize3Xl);
     line-height: var(--lineHeight6Xl);
   }
 
   .secured-content {
+    height: 300px;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     padding-top: 0;
+    padding-bottom: 40px;
   }
 
   .secured-item {
