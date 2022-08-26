@@ -23,8 +23,8 @@
 }
 
 .btn-download {
-  width: 168px;
-  padding: 10px 16px;
+  width: 164px;
+  padding: 10px var(--containerPaddingSm);
   justify-content: space-between;
   align-items: center;
   border: 0;
@@ -51,4 +51,11 @@
 
 .btn-label-title-play {
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .btn-download {
+    padding: 10px 20px;
+    width: 192px;
+  }
 }
