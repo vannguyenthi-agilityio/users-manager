@@ -7,17 +7,17 @@
 
 .secured-content {
   background-color: var(--colorSecondary);
-  border-radius: var(--borderRadiusMd);
+  border-radius: var(--borderRadiusLg);
   padding-bottom: 50px;
 }
 
 .secured-description {
   max-width: 200px;
+  height: 60px;
   font-size: var(--fontSizeBase);
-  line-height: 30px;
+  line-height: var(--lineHeightLg);
   font-weight: var(--fontWeightNormal);
-  margin: 27px auto;
-  margin-bottom: 0;
+  align-self: center;
 }
 
 .secured-item {
@@ -29,46 +29,34 @@
   margin-bottom: 48px;
 }
 
-.fdic {
-  max-width: 120px;
-}
-
-.authentication {
-  max-width: 80px;
+.secured-icon {
+  max-width: 150px;
+  align-self: center;
 }
 
 @media only screen and (min-width: 768px) {
   .secured-heading {
     font-size: var(--fontSizeXl);
-    line-height: 40px;
+    line-height: var(--lineHeight4Xl);
+  }
+
+  .secured-content {
+    padding-top: 80px;
   }
 
   .secured-item {
-    display: flex;
     flex-direction: column-reverse;
-    margin-top: 0;
+    margin: 0;
   }
 
   .secured-description {
     font-size: var(--fontSizeMd);
-    margin-top: 80px;
     margin-bottom: 0;
   }
 
-  .authentication {
-    max-width: 100px;
-    height: 100px;
-    align-self: center;
-  }
-
-  .visa-icon {
+  .secured-icon {
+    height: 193px;
     max-width: 193px;
-    margin-top: 0;
-  }
-
-  .fdic {
-    height: 160px;
-    max-width: 160px;
     align-self: center;
   }
 }
@@ -76,12 +64,13 @@
 @media only screen and (min-width: 1024px) {
   .secured-heading {
     font-size: var(--fontSize3Xl);
-    line-height: 50px;
+    line-height: var(--lineHeight6Xl);
   }
 
   .secured-content {
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 0;
   }
 
   .secured-item {
@@ -90,15 +79,5 @@
 
   .secured-description {
     max-width: 230px;
-    margin-top: 0;
-    margin-bottom: 50px;
-  }
-
-  .secured-description-visa {
-    margin-top: 0;
-  }
-
-  .secured-description-fdic {
-    margin-top: 0;
   }
 }
