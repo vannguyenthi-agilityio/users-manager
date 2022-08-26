@@ -82,6 +82,9 @@ const THEME_BASE = {
   // Padding
   paddingLg: '40px',
 
+  // Width
+  btnWidth: '192px',
+
   // Min height
   heroBgHeight: 'calc(920/1920 * 100vw)'
 };

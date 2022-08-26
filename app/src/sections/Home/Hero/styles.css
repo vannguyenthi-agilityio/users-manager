@@ -52,7 +52,7 @@
   }
 
   .hero-button {
-    width: 192px;
+    width: var(--btnWidth);
   }
 }
 
