@@ -1,13 +1,13 @@
 const THEME_BASE = {
   // Colors
   colorPrimary: '#f0c13b',
-  colorSecondary: '#1d172b',
+  colorSecondary: '#241e35',
   colorDark: '#1c1825',
   colorBlack: '#000',
   colorWhite: '#fff',
   colorSuccess: '#68d391',
   colorError: '#fc8181',
-  colorBg: '#241e35',
+  colorBackground: '#1d172b',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',

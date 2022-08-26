@@ -1,6 +1,4 @@
 .secured-info {
-  display: flex;
-  flex-direction: column;
   padding: 0;
 }
 
@@ -12,36 +10,26 @@
 }
 
 .secured-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: var(--colorBg);
-  border: 1px solid var(--colorBg);
+  background-color: var(--colorSecondary);
   border-radius: var(--borderRadiusMd);
+  padding-bottom: 50px;
 }
 
-.secured-text {
-  width: 55%;
+.secured-description {
+  width: 200px;
   font-size: var(--fontSizeBase);
   line-height: 30px;
   font-weight: var(--fontWeightNormal);
   margin: 27px auto;
 }
 
-.secured-icon {
-  margin-top: 70px;
+.secured-item {
+  margin-top: 50px;
 }
 
-.secured-text-visa {
+.secured-description-visa {
   margin-top: 0;
   margin-bottom: 48px;
-}
-
-@media only screen and (min-width: 576px) {
-  .secured-text {
-    width: 30%;
-  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -56,17 +44,21 @@
   }
 
   .secured-icon {
+    max-width: 140px;
+    height: 86px;
+    align-self: center;
     margin-top: 46px;
   }
 
-  .secured-text {
+  .secured-description {
     font-size: var(--fontSizeMd);
     margin-top: 80px;
     margin-bottom: 0;
-    width: 25%;
   }
 
   .visa-icon {
+    max-width: 193px;
+    height: 193px;
     margin-top: 0;
   }
 }
@@ -79,23 +71,24 @@
 
   .secured-content {
     flex-direction: row;
+    justify-content: space-around;
   }
 
   .secured-item {
     flex-direction: column;
   }
 
-  .secured-text {
-    margin-top: 46px;
-    width: 65%;
-    margin-bottom: 100px;
+  .secured-description {
+    width: 230px;
+    margin-top: 60px;
+    margin-bottom: 50px;
   }
 
-  .secured-text-visa {
+  .secured-description-visa {
     margin-top: 0;
   }
 
-  .secured-text-fdic {
+  .secured-description-fdic {
     margin-top: 56px;
   }
 }
