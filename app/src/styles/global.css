@@ -203,3 +203,17 @@ body {
     max-width: var(--containerWidth3Xl);
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: var(--sizeXl);
+    padding-left: var(--paddingXl);
+    padding-right: var(--paddingXl);
+  }
+}
+
+@media only screen and (min-width: 1915px) {
+  .container {
+    max-width: var(--sizeFull);
+  }
+}

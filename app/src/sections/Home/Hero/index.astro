@@ -1,12 +1,20 @@
 ---
 import Button from 'components:Button/index';
+import Heading from 'components:Heading/index';
 import './styles.css';
 ---
 
 <section class="hero">
   <div class="container">
-    <form class="hero-form">
-      <Button className="hero-button">Sign Up</Button>
-    </form>
+    <div class="hero-content">
+      <Heading size="md" className="hero-heading" uppercase
+        >Get your DogeCard
+      </Heading>
+      <p class="hero-description">In less than 5 minutes</p>
+      <form class="hero-form">
+        <Button className="hero-button">Sign Up</Button>
+      </form>
+    </div>
   </div>
+  <div class="hero-bg"></div>
 </section>

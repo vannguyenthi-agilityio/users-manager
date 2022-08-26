@@ -1,6 +1,27 @@
 /* Just initialize */
-
 .hero {
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.hero-heading {
+  max-width: 250px;
+  line-height: var(--lineHeightSm);
+}
+
+.hero-description {
+  margin-top: 10px;
+  line-height: var(--lineHeightBase);
+}
+
+.hero-bg {
   color: var(---colorPrimary);
   min-height: var(--minHeightBase);
   width: var(--sizeFull);
@@ -10,16 +31,35 @@
 }
 
 .hero-form {
-  padding-top: 40px;
+  display: flex;
+  padding-top: var(--paddingLg);
 }
 
-.hero-button {
+.hero-button,
+.hero-form {
   width: var(--sizeFull);
 }
 
 @media only screen and (min-width: 768px) {
+  .hero {
+    position: absolute;
+    top: 0;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    align-items: flex-start;
+  }
+
   .hero-button {
     width: 192px;
+  }
+
+  .hero-heading {
+    line-height: var(--lineHeightBase);
   }
 }
 
@@ -28,5 +68,9 @@
     position: absolute;
     width: 100%;
     top: 0;
+  }
+
+  .hero-heading {
+    line-height: var(--lineHeightMd);
   }
 }
