@@ -47,9 +47,7 @@
   }
 
   .hero-content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-top: 167px;
     text-align: left;
     align-items: flex-start;
   }
@@ -68,6 +66,15 @@
     position: absolute;
     width: var(--sizeFull);
     top: 0;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 0;
   }
 
   .hero-heading {
