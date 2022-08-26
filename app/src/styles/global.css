@@ -206,4 +206,8 @@ main {
   .container {
     max-width: var(--containerWidth3Xl);
   }
+
+  main {
+    padding-top: var(--heroBgHeight);
+  }
 }
