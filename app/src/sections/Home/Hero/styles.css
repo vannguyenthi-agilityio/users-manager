@@ -1,6 +1,6 @@
 /* Just initialize */
 .hero {
-  width: 100%;
+  width: var(--sizeFull);
 }
 
 .hero-content {
@@ -63,10 +63,10 @@
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1024px) {
   .hero {
     position: absolute;
-    width: 100%;
+    width: var(--sizeFull);
     top: 0;
   }
 
