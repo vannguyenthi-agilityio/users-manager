@@ -133,6 +133,7 @@ table {
 a {
   color: var(---colorPrimary);
   cursor: pointer;
+  text-decoration: none;
 }
 
 a:hover,
@@ -143,8 +144,8 @@ a:active {
 
 body {
   font: var(--fontWeightNormal) var(--fontSizeBase) / 1 var(--fontFamilyPrimary);
-  color: var(--colorText);
-  background-color: var(--colorBackground);
+  color: var(--colorWhite);
+  background-color: var(--colorSecondary);
 }
 
 /* Common styles */
@@ -169,18 +170,6 @@ body {
   justify-content: center;
 }
 
-.text-center {
-  text-align: center;
-}
-
-main {
-  min-height: 100vh;
-}
-
-.mg-auto {
-  margin: auto;
-}
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
@@ -190,6 +179,17 @@ main {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .d-flex {
+    display: flex;
+  }
+
+  .d-flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   body {
     font-size: var(--fontSizeMd);
   }
@@ -226,9 +226,5 @@ main {
 @media (min-width: 1920px) {
   .container {
     max-width: var(--containerWidth3Xl);
-  }
-
-  main {
-    padding-top: var(--heroBgHeight);
   }
 }
