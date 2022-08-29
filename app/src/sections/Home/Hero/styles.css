@@ -60,7 +60,6 @@
 
 @media only screen and (min-width: 1200px) {
   .hero {
-    width: var(--sizeFull);
     padding-top: 0;
   }
 
