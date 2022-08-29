@@ -61,7 +61,7 @@
       "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
     ],
     "*.css": [
-      "pnp prettier -w",
+      "pnpm prettier -w",
       "npx stylelint src/**/*.css"
     ]
   },
