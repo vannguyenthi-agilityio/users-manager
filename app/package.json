@@ -48,10 +48,12 @@
     "@builder.io/partytown": "^0.6.4",
     "astro": "^1.0.5",
     "astro-compress": "^1.0.3",
+    "autoprefixer": "^10.4.8",
+    "msw": "^0.45.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "0.30.7",
-    "autoprefixer": "^10.4.8"
+    "timers": "^0.1.1"
   },
   "lint-staged": {
     "*.{js,ts,tsx,astro}": [
@@ -59,8 +61,11 @@
       "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
     ],
     "*.css": [
-      "pnpm prettier -w",
+      "pnp prettier -w",
       "npx stylelint src/**/*.css"
     ]
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
