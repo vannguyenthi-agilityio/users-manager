@@ -83,7 +83,12 @@ const THEME_BASE = {
   containerWidth3Xl: '1660px',
 
   // Min height
-  heroBgHeight: 'calc(920/1920 * 100vw)'
+  heroBgHeight: 'calc(920/1920 * 100vw)',
+
+  // Width
+  btnWidthSm: '164px',
+  btnWidthMd: '192px',
+  btnWidthLg: '243px'
 };
 
 export default THEME_BASE;

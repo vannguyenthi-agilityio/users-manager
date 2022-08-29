@@ -1,5 +1,5 @@
 .download-button-item {
-  width: 164px;
+  width: var(--btnWidthSm);
 }
 
 .app-store,
@@ -9,7 +9,7 @@
 }
 
 .download-button-list {
-  width: 343px;
+  width: calc((var(--btnWidthSm) + var(--btnWidthSm)) + 15px);
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
@@ -17,10 +17,10 @@
 
 @media (min-width: 768px) {
   .download-button-item {
-    width: 192px;
+    width: var(--btnWidthMd);
   }
 
   .download-button-list {
-    width: 400px;
+    width: calc((var(--btnWidthMd) + var(--btnWidthMd)) + 15px);
   }
 }
