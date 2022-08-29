@@ -1,31 +1,22 @@
 .download-button-item {
   width: var(--btnWidthSm);
-  display: flex;
-  justify-content: center;
-  padding: 11px 24px;
-  background-color: #151515;
-  border-radius: 10px;
-  box-shadow: '5px 5px 40px rgba(255, 255, 255, 5%)';
+}
+
+.download-button-item:first-child {
+  margin-right: 15px;
 }
 
 .download-button-list img {
   width: 100%;
-  height: auto;
 }
 
 .download-button-list {
-  width: calc((var(--btnWidthSm) + var(--btnWidthSm)) + 15px);
   margin-top: 40px;
   display: flex;
-  justify-content: space-between;
 }
 
 @media (min-width: 768px) {
   .download-button-item {
     width: var(--btnWidthMd);
-  }
-
-  .download-button-list {
-    width: calc((var(--btnWidthMd) + var(--btnWidthMd)) + 15px);
   }
 }
