@@ -63,11 +63,14 @@
 
   .secured-content {
     height: 300px;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     padding-top: 0;
     padding-bottom: 40px;
+  }
+
+  .secured-content.d-flex-column {
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   .secured-item {
