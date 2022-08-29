@@ -1,11 +1,15 @@
 /* Just initialize */
-.hero {
+.hero,
+.hero-button,
+.hero-form {
   width: var(--sizeFull);
+}
+
+.hero {
   padding-top: 137px;
 }
 
 .hero-content {
-  text-align: center;
   align-items: center;
 }
 
@@ -28,14 +32,8 @@
 }
 
 .hero-form {
-  display: flex;
   padding-top: 40px;
   margin-bottom: 20px;
-}
-
-.hero-button,
-.hero-form {
-  width: var(--sizeFull);
 }
 
 @media only screen and (min-width: 768px) {
