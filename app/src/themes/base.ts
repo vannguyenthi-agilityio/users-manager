@@ -7,6 +7,8 @@ const THEME_BASE = {
   colorWhite: '#fff',
   colorSuccess: '#68d391',
   colorError: '#fc8181',
+  colorBackground: '#1d172b',
+  colorText: '#fff',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',
@@ -56,6 +58,7 @@ const THEME_BASE = {
   borderRadiusSm: '5px',
   borderRadiusBase: '10px',
   borderRadiusMd: '12px',
+  borderRadiusLg: '30px',
   borderRadiusRound: '50%',
 
   // Sizes
