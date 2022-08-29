@@ -1,0 +1,19 @@
+---
+import './styles.css';
+
+export interface DownloadButtonListProps {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`download-button-list ${className}`}>
+  <a href="#" class="download-button-item">
+    <img src="/assets/images/icons/app-store.png" alt="DogeCard Apple Store" />
+  </a>
+  <a href="#" class="download-button-item">
+    <img src="/assets/images/icons/google-play.png" alt="DogeCard Google Play"
+    />
+  </a>
+</div>

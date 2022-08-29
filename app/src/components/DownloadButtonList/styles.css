@@ -2,8 +2,7 @@
   width: var(--btnWidthSm);
 }
 
-.app-store,
-.google-play {
+.download-button-list img {
   width: 100%;
   height: auto;
 }
