@@ -24,6 +24,7 @@ const THEME_BASE = {
   fontSize3Xl: '36px',
   fontSize4Xl: '40px',
   fontSize5Xl: '45px',
+  fontSize6Xl: '48px',
 
   fontWeightNormal: 400,
   fontWeightMedium: 500,
@@ -42,6 +43,7 @@ const THEME_BASE = {
   lineHeight5Xl: '48px',
   lineHeight6Xl: '50px',
   lineHeight7Xl: '54px',
+  lineHeight8Xl: '58px',
 
   // Z-indexes
   zIndexHide: -1,
@@ -59,6 +61,7 @@ const THEME_BASE = {
   borderRadiusBase: '10px',
   borderRadiusMd: '12px',
   borderRadiusLg: '30px',
+  borderRadiusXl: '50px',
   borderRadiusRound: '50%',
 
   // Sizes
