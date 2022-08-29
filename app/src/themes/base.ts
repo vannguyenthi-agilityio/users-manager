@@ -8,6 +8,7 @@ const THEME_BASE = {
   colorSuccess: '#68d391',
   colorError: '#fc8181',
   colorBackground: '#1d172b',
+  colorText: '#fff',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',
