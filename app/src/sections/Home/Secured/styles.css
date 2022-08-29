@@ -6,16 +6,18 @@
   background-color: var(--colorSecondary);
   border-radius: var(--borderRadiusLg);
   padding-bottom: 50px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .secured-description {
   max-width: 200px;
-  height: 60px;
   line-height: var(--lineHeightLg);
   align-self: center;
 }
 
 .secured-item {
+  flex-direction: column;
   margin-top: 50px;
 }
 
@@ -62,12 +64,11 @@
   }
 
   .secured-content {
-    height: 300px;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 40px;
   }
 
   .secured-item {
