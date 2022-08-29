@@ -13,7 +13,7 @@
 }
 
 .footer-logo {
-  font-size: 32px;
+  font-size: var(--logoTextFontSize);
   line-height: var(--lineHeight3Xl);
   font-weight: var(--fontWeightBold);
   text-decoration: none;
