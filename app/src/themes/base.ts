@@ -14,8 +14,6 @@ const THEME_BASE = {
   fontFamilyPrimary: 'Lato, sans-serif',
   fontFamilySecondary: 'Roboto, sans-serif',
 
-  logoTextFontSize: '32px',
-
   fontSizeXs: '12px',
   fontSizeSm: '14px',
   fontSizeBase: '16px',
@@ -27,6 +25,8 @@ const THEME_BASE = {
   fontSize4Xl: '40px',
   fontSize5Xl: '45px',
   fontSize6Xl: '48px',
+
+  logoTextFontSize: '32px',
 
   fontWeightNormal: 400,
   fontWeightMedium: 500,
