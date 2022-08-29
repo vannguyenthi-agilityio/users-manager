@@ -48,6 +48,9 @@
       "styles:*": [
         "src/styles/*.css"
       ],
+      "mocks": [
+        "src/mocks/index.ts"
+      ],
     }
   },
   "include": [
