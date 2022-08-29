@@ -166,8 +166,16 @@ body {
   flex-direction: column;
 }
 
-.justify-content-center {
-  justify-content: center;
+.text-bold {
+  font-weight: var(--fontWeightBold);
+}
+
+.text-normal {
+  font-weight: var(--fontWeightNormal);
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -178,17 +186,6 @@ body {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .d-flex {
-    display: flex;
-  }
-
-  .d-flex-column {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   body {
     font-size: var(--fontSizeMd);

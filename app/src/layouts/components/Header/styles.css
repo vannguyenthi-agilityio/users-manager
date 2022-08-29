@@ -1,5 +1,4 @@
 /* TODO: Style for header, just initialize */
-
 .header {
   position: relative;
   z-index: var(--zIndexHeader);
