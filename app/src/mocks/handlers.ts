@@ -6,11 +6,13 @@ export const handlers = [
   // Handles a POST /register request
   rest.post('/register', async (req, res, ctx) => {
     const data = await req.json();
-    const existingData = JSON.parse(getStorage('users'));
+    const existingData = getStorage('users')
+      ? JSON.parse(getStorage('users'))
+      : [];
 
     // 1 - Invalid account
     // 2 - Existing user
-    if (existingData.find((item) => item.username === data.username)) {
+    if (data && existingData.find((item) => item.username === data.username)) {
       return res(
         // Respond with a 200 status code
         ctx.status(400),
@@ -24,7 +26,8 @@ export const handlers = [
     const newUser = {
       ...data,
       id: uuid(),
-      referralCode: genReferralCode()
+      referralCode: genReferralCode(),
+      otp: '123456'
     };
     existingData.push(newUser);
 
@@ -40,7 +43,9 @@ export const handlers = [
   // Handles a POST /login request
   rest.post('/login', async (req, res, ctx) => {
     const { username, otp } = await req.json();
-    const existingData = JSON.parse(getStorage('users'));
+    const existingData = getStorage('users')
+      ? JSON.parse(getStorage('users'))
+      : [];
     if (
       existingData.find(
         (item) => item.username === username && item.otp === otp
@@ -66,8 +71,10 @@ export const handlers = [
     const { id } = req.params;
     // const userId = req.url.searchParams.get('userId')
     // Check if the user is authenticated in this session
-    const existingData = JSON.parse(getStorage('users'));
-    const user = existingData.find((item) => item.id === id);
+    const existingData = getStorage('users')
+      ? JSON.parse(getStorage('users'))
+      : [];
+    const user = existingData.find((item) => id && item.id === id);
     if (user) {
       // If authenticated, return a mocked user details
       return res(ctx.status(200), ctx.json(user));

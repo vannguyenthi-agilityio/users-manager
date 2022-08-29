@@ -16,5 +16,7 @@ export const uuid = (): string => {
  * @returns string: 6b9dg81y
  */
 export const genReferralCode = (): string => {
-  return Date.now().toString(16) + Math.random().toString(16).substring(2);
+  return (
+    Date.now().toString(16) + Math.random().toString(16).substring(2)
+  ).substring(0, 8);
 };
