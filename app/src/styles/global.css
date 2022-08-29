@@ -143,7 +143,7 @@ a:active {
 
 body {
   font: var(--fontWeightNormal) var(--fontSizeBase) / 1 var(--fontFamilyPrimary);
-  color: var(--colorWhite);
+  color: var(--colorText);
   background-color: var(--colorBackground);
 }
 
@@ -160,7 +160,8 @@ body {
   display: flex;
 }
 
-.flex-column {
+.d-flex-column {
+  display: flex;
   flex-direction: column;
 }
 
