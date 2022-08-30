@@ -170,6 +170,10 @@ body {
   justify-content: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-bold {
   font-weight: var(--fontWeightBold);
 }
@@ -184,10 +188,6 @@ main {
 
 .text-normal {
   font-weight: var(--fontWeightNormal);
-}
-
-.text-center {
-  text-align: center;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -207,10 +207,6 @@ main {
     padding-left: var(--containerPaddingMd);
     padding-right: var(--containerPaddingMd);
     max-width: var(--containerWidthMd);
-  }
-
-  main {
-    padding-top: var(--heroBgHeight);
   }
 }
 
@@ -239,5 +235,9 @@ main {
 @media (min-width: 1920px) {
   .container {
     max-width: var(--containerWidth3Xl);
+  }
+
+  main {
+    padding-top: var(--heroBgHeight);
   }
 }
