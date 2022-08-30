@@ -41,16 +41,15 @@
 }
 
 .hero-form-input {
-  border-radius: 12px;
-  height: 56px;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  border-radius: var(--borderRadiusMd);
+  outline: 1px solid transparent;
+  outline-offset: 1px;
   border: none;
   font-size: var(--fontSizeBase);
   min-width: var(--sizeFull);
   color: var(--colorBlack);
   line-height: 19px;
-  padding: 16px;
+  padding: 19px 16px;
   margin-bottom: 20px;
 }
 
