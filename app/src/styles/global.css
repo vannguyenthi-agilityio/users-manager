@@ -133,6 +133,7 @@ table {
 a {
   color: var(---colorPrimary);
   cursor: pointer;
+  text-decoration: none;
 }
 
 a:hover,
@@ -173,12 +174,20 @@ body {
   text-align: center;
 }
 
+.text-bold {
+  font-weight: var(--fontWeightBold);
+}
+
 main {
   min-height: 100vh;
 }
 
 .mg-auto {
   margin: auto;
+}
+
+.text-normal {
+  font-weight: var(--fontWeightNormal);
 }
 
 /* Small devices (landscape phones, 576px and up) */
