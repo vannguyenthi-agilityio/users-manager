@@ -2,6 +2,10 @@
   padding-top: 40px;
 }
 
-.get-card-main {
+.get-card-info-main {
   align-items: center;
+}
+
+.get-card-info-image {
+  padding-bottom: 40px;
 }
