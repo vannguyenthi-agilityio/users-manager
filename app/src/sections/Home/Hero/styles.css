@@ -22,11 +22,11 @@
 
 .hero-bg {
   color: var(---colorPrimary);
-  min-height: var(--heroBgHeight);
+  min-height: var(--heroBgHeightMobile);
   width: var(--sizeFull);
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('/assets/images/landing/hero.png');
+  background-image: url('/assets/images/home/bg-hero-mobile.png');
 }
 
 .hero-form {
@@ -49,6 +49,11 @@
   .hero-button {
     width: 192px;
   }
+
+  .hero-bg {
+    background-image: url('/assets/images/home/bg-hero-tablet.png');
+    min-height: var(--heroBgHeightTablet);
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -65,5 +70,10 @@
     text-align: left;
     align-items: flex-start;
     margin-top: 0;
+  }
+
+  .hero-bg {
+    background-image: url('/assets/images/home/bg-hero-desktop.png');
+    min-height: var(--heroBgHeightDesktop);
   }
 }
