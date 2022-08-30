@@ -32,13 +32,30 @@
   }
 }
 
-@media (min-width: 992px) {
-  .get-card-info-main {
-    flex-direction: row-reverse;
-    width: 100%;
+@media (min-width: 1200px) {
+  .get-card-info {
+    padding-top: 80px;
   }
 
-  .get-card-info-image {
-    width: 100%;
+  .get-card-info-main {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .get-card-info-content {
+    text-align: left;
+  }
+
+  .get-card-heading {
+    font-size: var(--fontSize3Xl);
+  }
+
+  .get-card-description {
+    padding: 32px 0 48px;
+  }
+
+  .get-card-button {
+    margin: 0;
   }
 }
