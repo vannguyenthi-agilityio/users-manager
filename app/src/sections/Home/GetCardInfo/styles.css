@@ -9,3 +9,12 @@
 .get-card-info-image {
   padding-bottom: 40px;
 }
+
+.get-card-info-content {
+  padding-top: 40px;
+}
+
+.get-card-description {
+  line-height: var(--lineHeightSm);
+  padding: 15px 0 50px;
+}
