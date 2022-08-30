@@ -6,8 +6,7 @@
 
 .header-content-wrapper {
   position: relative;
-  top: 20px;
-  margin-bottom: 50px;
+  margin: 20px 0 50px;
 }
 
 .header-content {
