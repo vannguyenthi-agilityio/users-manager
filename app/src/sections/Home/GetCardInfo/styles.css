@@ -48,6 +48,7 @@
   }
 
   .card-info-content {
+    width: 100%;
     text-align: left;
   }
 
@@ -61,5 +62,6 @@
 
   .card-info-button {
     min-width: var(--btnWidthLg);
+    margin-left: 0;
   }
 }
