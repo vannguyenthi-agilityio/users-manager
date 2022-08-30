@@ -50,6 +50,10 @@
   flex-direction: column;
 }
 
+.download-button-list {
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .footer-logo {
     margin-bottom: 0;
