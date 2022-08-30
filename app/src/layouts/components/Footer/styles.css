@@ -30,12 +30,12 @@
   justify-content: center;
 }
 
-.footer-description {
+.footer-info {
   flex-direction: column;
   text-align: center;
 }
 
-.footer-info {
+.footer-description {
   line-height: var(--lineHeightLg);
   margin-bottom: 24px;
 }
@@ -43,6 +43,7 @@
 .rewards-terms {
   color: var(--colorPrimary);
   font-weight: var(--fontWeightBold);
+  text-decoration: none;
 }
 
 .footer-content {
@@ -75,7 +76,7 @@
     margin-left: 56px;
   }
 
-  .footer-info {
+  .footer-description {
     font-size: var(--fontSizeMd);
   }
 }
@@ -116,13 +117,13 @@
     flex-direction: row;
   }
 
-  .footer-description {
+  .footer-info {
     padding-top: 18px;
     margin-left: 50px;
     text-align: left;
   }
 
-  .footer-info {
+  .footer-description {
     line-height: var(--lineHeightBase);
   }
 }
