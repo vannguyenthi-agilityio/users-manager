@@ -48,7 +48,10 @@
 .header-nav-link:active,
 .header-nav-link:hover {
   color: var(--colorPrimary);
-  font-weight: var(--fontWeightBold);
+}
+
+.header-nav-link.active {
+  color: var(--colorPrimary);
 }
 
 @media only screen and (min-width: 768px) {
