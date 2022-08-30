@@ -1,0 +1,22 @@
+.download-button-item {
+  width: var(--btnWidthSm);
+}
+
+.download-button-item:first-child {
+  margin-right: 15px;
+}
+
+.download-button-list img {
+  width: 100%;
+}
+
+.download-button-list {
+  margin-top: 40px;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .download-button-item {
+    width: var(--btnWidthMd);
+  }
+}
