@@ -190,6 +190,10 @@ main {
   font-weight: var(--fontWeightNormal);
 }
 
+.active {
+  color: var(--colorPrimary);
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
