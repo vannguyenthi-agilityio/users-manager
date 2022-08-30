@@ -32,7 +32,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .get-card-info {
     padding-top: 80px;
   }
@@ -40,7 +40,11 @@
   .get-card-info-main {
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  .get-card-info-image {
+    width: 100%;
   }
 
   .get-card-info-content {
