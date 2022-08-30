@@ -144,8 +144,8 @@ a:active {
 
 body {
   font: var(--fontWeightNormal) var(--fontSizeBase) / 1 var(--fontFamilyPrimary);
-  color: var(--colorWhite);
-  background-color: var(--colorSecondary);
+  color: var(--colorText);
+  background-color: var(--colorBackground);
 }
 
 /* Common styles */
@@ -166,8 +166,20 @@ body {
   flex-direction: column;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 .text-bold {
   font-weight: var(--fontWeightBold);
+}
+
+main {
+  min-height: 100vh;
+}
+
+.mg-auto {
+  margin: auto;
 }
 
 .text-normal {
@@ -186,7 +198,7 @@ body {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   body {
     font-size: var(--fontSizeMd);
   }
@@ -195,6 +207,10 @@ body {
     padding-left: var(--containerPaddingMd);
     padding-right: var(--containerPaddingMd);
     max-width: var(--containerWidthMd);
+  }
+
+  main {
+    padding-top: var(--heroBgHeight);
   }
 }
 
