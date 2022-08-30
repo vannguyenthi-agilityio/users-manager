@@ -18,3 +18,27 @@
   line-height: var(--lineHeightSm);
   padding: 15px 0 50px;
 }
+
+.get-card-button {
+  width: 192px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .get-card-description {
+    font-size: var(--fontSizeLg);
+    line-height: 32px;
+    width: 525px;
+  }
+}
+
+@media (min-width: 992px) {
+  .get-card-info-main {
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+
+  .get-card-info-image {
+    width: 100%;
+  }
+}
