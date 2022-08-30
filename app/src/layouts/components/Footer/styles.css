@@ -54,6 +54,33 @@
   justify-content: center;
 }
 
+.footer-post {
+  background-color: var(--colorDarker);
+  margin-top: 48px;
+}
+
+.footer-post-info {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.copyright {
+  font-size: var(--fontSizeSmallXs);
+  line-height: var(--lineHeightSmallXs);
+  margin-left: 5px;
+}
+
+.social-item {
+  align-items: center;
+}
+
+.social-item:not(:first-child) {
+  margin-left: 27px;
+}
+
 @media (min-width: 768px) {
   .footer-logo {
     margin-bottom: 0;
