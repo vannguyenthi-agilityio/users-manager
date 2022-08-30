@@ -46,7 +46,7 @@
   outline-offset: 1px;
   border: none;
   font-size: var(--fontSizeBase);
-  min-width: var(--sizeFull);
+  width: var(--sizeFull);
   color: var(--colorBlack);
   line-height: 19px;
   padding: 19px 16px;
