@@ -1,9 +1,63 @@
 ---
+import DownloadButtonList from 'components:DownloadButtonList/index';
 import './styles.css';
 ---
 
 <footer class="footer">
   <div class="container">
-    <h2>Footer</h2>
+    <div class="d-flex footer-content">
+      <nav class="d-flex footer-navbar">
+        <a class="footer-logo" href="#">DogeCard</a>
+        <ul class="d-flex footer-nav-list">
+          <li class="d-flex footer-nav-item">Help & Support</li>
+          <li class="d-flex footer-nav-item">Legal</li>
+          <li class="d-flex footer-nav-item">Terms of Service</li>
+        </ul>
+      </nav>
+      <div class="d-flex footer-info">
+        <p class="footer-description">
+          DogeCard is not a bank. Evolve Bank and Trust, Member FDIC, provides
+          banking services and issues the DogeCard Credit card.
+        </p>
+        <p class="footer-description">
+          * You will earn Doge with each qualifying purchase on your DogeCard
+          Card. Doge “rewards” are credited to you in accordance with our
+          <a class="footer-description-link" href="#">Rewards Terms</a>.
+          Qualifying Purchases do not include any other payment or transfer,
+          including incoming transactions, outgoing transactions where you are
+          the receiving party, peer to peer transactions, ACH Transactions, ATM
+          transactions, fees, chargebacks, adjustments, or wire transfers.
+          Dogecoin involves certain risks. For more information, see the
+          <a class="footer-description-link" href="#"> Rewards Terms</a>.
+        </p>
+        <p class="footer-description">
+          Early access to direct deposit funds depends on the timing of the
+          submission of the payment file from the payer. We generally make these
+          funds available on the day the payment file is received, which may be
+          up to 2 days earlier than the scheduled payment date.
+        </p>
+      </div>
+    </div>
+    <DownloadButtonList className="footer-button-download" />
+  </div>
+  <div class="footer-detail">
+    <div class="container">
+      <div class="d-flex footer-detail-info">
+        <p class="d-flex footer-copyright">
+          © 2021 DogeCard. All Rights Reserved.
+        </p>
+        <div class="d-flex social-menu">
+          <a class="d-flex social-item" href="#"
+            ><img src="assets/images/icons/twitter.svg" alt="twitter" />
+          </a>
+          <a class="d-flex social-item" href="#"
+            ><img src="assets/images/icons/tiktok.svg" alt="tiktok" />
+          </a>
+          <a class="d-flex social-item" href="#"
+            ><img src="assets/images/icons/instagram.svg" alt="instagram" />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>

@@ -9,11 +9,13 @@ const THEME_BASE = {
   colorError: '#fc8181',
   colorBackground: '#1d172b',
   colorText: '#fff',
+  colorBgFooterDetail: '#151515',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',
   fontFamilySecondary: 'Roboto, sans-serif',
 
+  fontSizeTiny: '10px',
   fontSizeXs: '12px',
   fontSizeSm: '14px',
   fontSizeBase: '16px',
@@ -24,12 +26,16 @@ const THEME_BASE = {
   fontSize3Xl: '36px',
   fontSize4Xl: '40px',
   fontSize5Xl: '45px',
+  fontSize6Xl: '48px',
+
+  logoTextFontSize: '32px',
 
   fontWeightNormal: 400,
   fontWeightMedium: 500,
   fontWeightBold: 700,
 
   // Line height
+  lineHeightTiny: '12px',
   lineHeightXs: '22px',
   lineHeightSm: '24px',
   lineHeightBase: '25px',
@@ -42,6 +48,7 @@ const THEME_BASE = {
   lineHeight5Xl: '48px',
   lineHeight6Xl: '50px',
   lineHeight7Xl: '54px',
+  lineHeight8Xl: '58px',
 
   // Z-indexes
   zIndexHide: -1,
@@ -59,6 +66,7 @@ const THEME_BASE = {
   borderRadiusBase: '10px',
   borderRadiusMd: '12px',
   borderRadiusLg: '30px',
+  borderRadiusXl: '50px',
   borderRadiusRound: '50%',
 
   // Sizes
