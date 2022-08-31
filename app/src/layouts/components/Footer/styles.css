@@ -73,6 +73,14 @@
   margin-left: 5px;
 }
 
+.social-item {
+  align-items: center;
+}
+
+.social-item:not(:first-child) {
+  margin-left: 27px;
+}
+
 @media (min-width: 768px) {
   .footer-logo {
     margin-bottom: 0;
