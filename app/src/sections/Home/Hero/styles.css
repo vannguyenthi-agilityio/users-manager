@@ -1,14 +1,12 @@
 /* Just initialize */
 .hero {
   width: var(--sizeFull);
+  padding-top: 137px;
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 40px 0;
 }
 
 .hero-heading {
@@ -32,6 +30,7 @@
 .hero-form {
   display: flex;
   padding-top: 40px;
+  margin-bottom: 20px;
 }
 
 .hero-button,
@@ -40,8 +39,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .hero {
+    padding-top: 167px;
+  }
+
   .hero-content {
-    margin-top: 23px;
     text-align: left;
     align-items: flex-start;
   }
@@ -58,9 +60,8 @@
 
 @media only screen and (min-width: 1200px) {
   .hero {
-    position: absolute;
     width: var(--sizeFull);
-    top: 0;
+    padding-top: 0;
   }
 
   .hero-content {

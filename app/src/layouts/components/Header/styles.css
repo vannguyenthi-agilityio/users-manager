@@ -1,7 +1,9 @@
 /* TODO: Style for header, just initialize */
 .header {
-  position: relative;
+  position: absolute;
   z-index: var(--zIndexHeader);
+  width: 100%;
+  top: 0;
 }
 
 .header-content-wrapper {
