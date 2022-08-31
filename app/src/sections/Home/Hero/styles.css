@@ -5,12 +5,9 @@
   width: var(--sizeFull);
 }
 
-.hero {
-  padding-top: 137px;
-}
-
 .hero-content {
   align-items: center;
+  padding: 20px 0 128px;
 }
 
 .hero-heading {
@@ -37,13 +34,10 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .hero {
-    padding-top: 167px;
-  }
-
   .hero-content {
     text-align: left;
     align-items: flex-start;
+    padding: 13px 0 47px;
   }
 
   .hero-button {

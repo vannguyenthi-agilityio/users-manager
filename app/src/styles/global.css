@@ -157,7 +157,7 @@ body {
   padding-right: var(--containerPaddingSm);
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: var(--sizeFull);
 }
 
 .d-flex {
@@ -179,10 +179,6 @@ body {
 
 .text-bold {
   font-weight: var(--fontWeightBold);
-}
-
-.main-content {
-  min-height: 100vh;
 }
 
 .mg-auto {
