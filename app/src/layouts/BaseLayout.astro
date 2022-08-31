@@ -8,9 +8,10 @@ import ApiProvider from './ApiProvider';
 export interface Props {
   title?: string;
   description?: string;
+  hasHeaderOverlap?: boolean;
 }
 
-const { title, description } = Astro.props as Props;
+const { title, description, hasHeaderOverlap } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ const { title, description } = Astro.props as Props;
   <body>
     <ApiProvider client:load>
       <!-- Header -->
-      <Header />
+      <Header className={`${hasHeaderOverlap ? 'header-overlap' : ''}`} />
 
       <!-- Main -->
       <main class="main-content">
