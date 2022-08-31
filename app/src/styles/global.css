@@ -181,7 +181,7 @@ body {
   font-weight: var(--fontWeightBold);
 }
 
-main {
+.main-content {
   min-height: 100vh;
 }
 
@@ -245,13 +245,13 @@ main {
     background-image: url('assets/images/bg-desktop.png');
   }
 
-  main {
+  .main-content {
     padding-top: calc(768 / 1915 * 100vw);
   }
 }
 
 @media (min-width: 1920px) {
-  main {
+  .main-content {
     padding-top: calc(var(--heroBgHeightDesktop));
   }
 }
