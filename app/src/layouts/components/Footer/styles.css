@@ -54,6 +54,33 @@
   justify-content: center;
 }
 
+.footer-detail {
+  background-color: var(--colorBgFooterDetail);
+  margin-top: 48px;
+}
+
+.footer-detail-info {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.footer-copyright {
+  font-size: var(--fontSizeTiny);
+  line-height: var(--lineHeightTiny);
+  margin-left: 5px;
+}
+
+.social-item {
+  align-items: center;
+}
+
+.social-item:not(:first-child) {
+  margin-left: 27px;
+}
+
 @media (min-width: 768px) {
   .footer-logo {
     margin-bottom: 0;
