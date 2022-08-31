@@ -9,13 +9,13 @@ const THEME_BASE = {
   colorError: '#fc8181',
   colorBackground: '#1d172b',
   colorText: '#fff',
-  colorDarker: '#151515',
+  colorBgFooterDetail: '#151515',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',
   fontFamilySecondary: 'Roboto, sans-serif',
 
-  fontSizeSmallXs: '10px',
+  fontSizeTiny: '10px',
   fontSizeXs: '12px',
   fontSizeSm: '14px',
   fontSizeBase: '16px',
@@ -35,7 +35,7 @@ const THEME_BASE = {
   fontWeightBold: 700,
 
   // Line height
-  lineHeightSmallXs: '12px',
+  lineHeightTiny: '12px',
   lineHeightXs: '22px',
   lineHeightSm: '24px',
   lineHeightBase: '25px',
