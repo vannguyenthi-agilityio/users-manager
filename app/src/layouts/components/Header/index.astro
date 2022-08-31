@@ -1,8 +1,14 @@
 ---
 import './styles.css';
+
+export interface HeaderProps {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
 ---
 
-<header class="header">
+<header class={`header ${className}`}>
   <div class="container">
     <div class="header-content-wrapper">
       <div class="d-flex-column text-center header-content">

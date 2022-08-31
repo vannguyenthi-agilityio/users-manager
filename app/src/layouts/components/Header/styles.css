@@ -1,9 +1,5 @@
-/* TODO: Style for header, just initialize */
 .header {
-  position: absolute;
-  z-index: var(--zIndexHeader);
   width: 100%;
-  top: 0;
 }
 
 .header-content-wrapper {
@@ -111,5 +107,13 @@
 
   .header-icon > img {
     width: 100px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .header-overlap {
+    position: absolute;
+    top: 0;
+    z-index: var(--zIndexHeader);
   }
 }
