@@ -86,7 +86,7 @@ const THEME_BASE = {
   heroBgHeightDesktop: 'calc(920/1915 * 100vw)',
   heroBgHeightTablet: 'calc(419/768 * 100vw)',
   heroBgHeightMobile: 'calc(330/375 * 100vw)',
-  heroBgHeightSmDesktop: 'calc(768 / 1915 * 100vw)',
+  heroBgHeightSmDesktop: 'calc(768/1915 * 100vw)',
 
   // Width
   btnWidthSm: '164px',
