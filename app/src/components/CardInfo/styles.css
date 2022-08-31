@@ -1,7 +1,3 @@
-.card-info {
-  margin-top: 40px;
-}
-
 .card-info-thumb {
   align-items: center;
 }
@@ -20,7 +16,6 @@
 }
 
 .card-info-button {
-  min-width: var(--btnWidthMd);
   margin: auto;
 }
 
@@ -32,7 +27,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .card-info {
     padding-top: 80px;
   }
@@ -61,7 +56,6 @@
   }
 
   .card-info-button {
-    min-width: var(--btnWidthLg);
     margin-left: 0;
   }
 }
