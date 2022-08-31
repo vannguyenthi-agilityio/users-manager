@@ -246,7 +246,7 @@ body {
   }
 
   .main-content {
-    padding-top: var(--heroBgHeightDesktopSmall);
+    padding-top: var(--heroBgHeightSmDesktop);
   }
 }
 
