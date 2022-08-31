@@ -77,9 +77,3 @@
     min-height: var(--heroBgHeightDesktop);
   }
 }
-
-@media only screen and (min-width: 1920px) {
-  .hero-content {
-    top: 50%;
-  }
-}

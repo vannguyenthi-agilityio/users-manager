@@ -246,6 +246,12 @@ main {
   }
 
   main {
-    padding-top: var(--heroBgHeightDesktop);
+    padding-top: calc(768 / 1915 * 100vw);
+  }
+}
+
+@media (min-width: 1920px) {
+  main {
+    padding-top: calc(var(--heroBgHeightDesktop));
   }
 }
