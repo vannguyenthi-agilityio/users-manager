@@ -246,12 +246,12 @@ body {
   }
 
   .main-content {
-    padding-top: calc(768 / 1915 * 100vw);
+    padding-top: var(--heroBgHeightDesktopSmall);
   }
 }
 
 @media (min-width: 1920px) {
   .main-content {
-    padding-top: calc(var(--heroBgHeightDesktop));
+    padding-top: var(--heroBgHeightDesktop);
   }
 }
