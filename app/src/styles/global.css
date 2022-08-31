@@ -146,7 +146,7 @@ body {
   font: var(--fontWeightNormal) var(--fontSizeBase) / 1 var(--fontFamilyPrimary);
   color: var(--colorText);
   background-color: var(--colorBackground);
-  background-image: url('assets/images/bg-mobile.png');
+  background-image: url('/assets/images/bg-mobile.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -181,7 +181,7 @@ body {
   font-weight: var(--fontWeightBold);
 }
 
-main {
+.main-content {
   min-height: 100vh;
 }
 
@@ -204,7 +204,7 @@ main {
 @media (min-width: 768px) {
   body {
     font-size: var(--fontSizeMd);
-    background-image: url('assets/images/bg-tablet.png');
+    background-image: url('/assets/images/bg-tablet.png');
   }
 
   .container {
@@ -235,17 +235,24 @@ main {
   }
 }
 
+/* 1200 and up */
+@media (min-width: 1200px) {
+  body {
+    background-image: url('/assets/images/bg-desktop.png');
+  }
+
+  .main-content {
+    padding-top: var(--heroBgHeightSmDesktop);
+  }
+}
+
 /* 1920 and up */
 @media (min-width: 1920px) {
   .container {
     max-width: var(--containerWidth3Xl);
   }
 
-  body {
-    background-image: url('assets/images/bg-desktop.png');
-  }
-
-  main {
-    padding-top: var(--heroBgHeight);
+  .main-content {
+    padding-top: var(--heroBgHeightDesktop);
   }
 }
