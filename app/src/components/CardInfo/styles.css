@@ -1,5 +1,7 @@
 .card-info-thumb {
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-info-image {
@@ -7,7 +9,10 @@
 }
 
 .card-info-content {
+  display: flex;
+  flex-direction: column;
   margin-top: 40px;
+  text-align: center;
 }
 
 .card-info-description {

@@ -20,11 +20,11 @@ const {
 } = Astro.props;
 ---
 
-<div class={`d-flex-column card-info-thumb ${className}`}>
+<div class={`card-info-thumb ${className}`}>
   <div class="text-center card-info-image">
     <img src={src} alt={alt} />
   </div>
-  <div class="text-center d-flex-column card-info-content">
+  <div class="card-info-content">
     <Heading size="sm" className="card-info-heading">{heading}</Heading>
     <p class="card-info-description">
       {description}
