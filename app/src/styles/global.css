@@ -236,19 +236,11 @@ body {
   body {
     background-image: url('/assets/images/bg-desktop.png');
   }
-
-  .main-content {
-    padding-top: var(--heroBgHeightSmDesktop);
-  }
 }
 
 /* 1920 and up */
 @media (min-width: 1920px) {
   .container {
     max-width: var(--containerWidth3Xl);
-  }
-
-  .main-content {
-    padding-top: var(--heroBgHeightDesktop);
   }
 }

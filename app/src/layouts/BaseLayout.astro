@@ -25,7 +25,7 @@ const { title, description, hasHeaderOverlap } = Astro.props as Props;
       <Header className={`${hasHeaderOverlap ? 'header-overlap' : ''}`} />
 
       <!-- Main -->
-      <main class="main-content">
+      <main>
         <slot />
       </main>
 

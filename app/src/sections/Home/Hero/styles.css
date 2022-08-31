@@ -7,6 +7,7 @@
 
 .hero-content {
   align-items: center;
+  text-align: center;
   padding: 20px 0 128px;
 }
 
@@ -40,19 +41,19 @@
     padding: 13px 0 47px;
   }
 
-  .hero-button {
-    width: 192px;
-  }
-
   .hero-bg {
     background-image: url('/assets/images/home/bg-hero-tablet.png');
     min-height: var(--heroBgHeightTablet);
+  }
+
+  .hero-button {
+    width: auto;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .hero {
-    padding-top: 0;
+    position: relative;
   }
 
   .hero-content {
@@ -60,8 +61,9 @@
     top: 50%;
     transform: translateY(-50%);
     text-align: left;
+    padding: 0;
     align-items: flex-start;
-    margin-top: 80px;
+    margin-top: 96px;
   }
 
   .hero-bg {
