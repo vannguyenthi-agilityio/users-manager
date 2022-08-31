@@ -1,0 +1,6 @@
+@media (min-width: 1200px) {
+  .card-info-rewards,
+  .card-info-grow {
+    flex-direction: row;
+  }
+}
