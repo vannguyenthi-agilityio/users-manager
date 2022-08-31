@@ -3,4 +3,14 @@
   .card-info-grow {
     flex-direction: row;
   }
+
+  .card-info-doge {
+    padding-bottom: 60px;
+  }
+
+  .card-info-rewards,
+  .card-info-grow,
+  .card-info-control {
+    padding: 60px 0;
+  }
 }
