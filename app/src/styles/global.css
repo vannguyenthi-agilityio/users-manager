@@ -235,8 +235,8 @@ main {
   }
 }
 
-/* 1920 and up */
-@media (min-width: 1920px) {
+/* 1200 and up */
+@media (min-width: 1200px) {
   .container {
     max-width: var(--containerWidth3Xl);
   }
@@ -246,6 +246,6 @@ main {
   }
 
   main {
-    padding-top: var(--heroBgHeight);
+    padding-top: var(--heroBgHeightDesktop);
   }
 }

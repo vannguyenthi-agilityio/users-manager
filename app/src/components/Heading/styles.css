@@ -29,7 +29,7 @@
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1200px) {
   .heading-sm {
     font-size: var(--fontSize3Xl);
     line-height: var(--lineHeight6Xl);
