@@ -2,20 +2,26 @@
   padding-block: 80px;
 }
 
-.list-item {
+.card-info-secure-item {
   list-style-type: decimal;
-  font-size: var(--fontSizeBase);
   line-height: var(--lineHeightBase);
   padding-left: 10px;
-  margin-left: 25px;
+  margin: 15px 0 0 25px;
 }
 
-.list-item::marker {
+.card-info-secure-item::marker {
   color: var(--colorPrimary);
 }
 
 .card-info-secure {
   text-align: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .card-info-secure-item {
+    line-height: var(--lineHeightXl);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -23,9 +29,13 @@
     flex-direction: row;
   }
 
-  .list-item {
-    font-size: var(--fontSizeLg);
-    line-height: var(--lineHeightXl);
+  .card-info-secure {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .card-info-secure-item {
+    line-height: var(--lineHeight6Xl);
   }
 }
 
@@ -33,12 +43,6 @@
   .card-info-secure {
     justify-content: flex-start;
     align-items: flex-start;
-    text-align: left;
     min-width: 910px;
-  }
-
-  .list-item {
-    font-size: 30px;
-    line-height: var(--lineHeight6Xl);
   }
 }

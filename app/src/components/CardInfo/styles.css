@@ -16,6 +16,7 @@
 }
 
 .card-info-description {
+  font-size: var(--fontSizeBase);
   line-height: var(--lineHeightSm);
   margin: 15px 0 50px;
 }
@@ -27,7 +28,7 @@
 @media (min-width: 768px) {
   .card-info-description {
     font-size: var(--fontSizeLg);
-    line-height: 32px;
+    line-height: var(--lineHeightXl);
     max-width: 525px;
   }
 }
@@ -54,6 +55,8 @@
 
   .card-info-description {
     margin: 32px 0 48px;
+    font-size: 30px;
+    line-height: var(--lineHeight6Xl);
   }
 
   .card-info-button {
