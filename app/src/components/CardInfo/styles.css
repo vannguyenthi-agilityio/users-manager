@@ -40,11 +40,11 @@
   }
 
   .card-image {
-    width: 100%;
+    width: var(--sizeFull);
   }
 
   .card-info-content {
-    width: 100%;
+    width: var(--sizeFull);
     text-align: left;
   }
 

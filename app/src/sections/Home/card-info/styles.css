@@ -3,7 +3,7 @@
 }
 
 @media (min-width: 1200px) {
-  .left {
+  .card-info-reverse {
     flex-direction: row;
   }
 }
