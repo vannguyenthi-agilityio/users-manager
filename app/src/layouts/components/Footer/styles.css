@@ -73,14 +73,6 @@
   margin-left: 5px;
 }
 
-.social-item {
-  align-items: center;
-}
-
-.social-item:not(:first-child) {
-  margin-left: 27px;
-}
-
 .footer-contact {
   flex-direction: column;
   max-width: 194px;
@@ -100,6 +92,11 @@
 
 .contact-icon {
   margin-right: 11px;
+}
+
+.tiktok-icon {
+  margin-left: 23px;
+  margin-right: 23px;
 }
 
 @media (min-width: 768px) {
