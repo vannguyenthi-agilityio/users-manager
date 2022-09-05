@@ -8,17 +8,19 @@ export interface CardInfoProps {
   imageUrl?: string;
   imageAlt?: string;
   heading?: string;
+  isReversed?: boolean;
 }
 
 const {
   className = '',
   imageUrl = '',
   heading = '',
-  imageAlt = heading
+  imageAlt = heading,
+  isReversed = false
 } = Astro.props;
 ---
 
-<div class={`card-info ${className}`}>
+<div class={`card-info ${className} ${isReversed ? 'card-info-reverse' : ''}`}>
   <div class="text-center card-image">
     <img src={imageUrl} alt={imageAlt} />
   </div>
