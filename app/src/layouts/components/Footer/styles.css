@@ -129,14 +129,12 @@
   }
 
   .footer-nav-list {
-    width: auto;
-    justify-content: space-between;
     flex-direction: column;
+    text-align: left;
   }
 
   .footer-nav-item {
     margin-bottom: 10px;
-    justify-content: flex-start;
   }
 
   .footer-nav-item:not(:first-child) {
