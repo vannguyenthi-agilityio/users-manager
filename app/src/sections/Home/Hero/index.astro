@@ -1,7 +1,13 @@
 ---
 import Button from 'components:Button/index';
+import Input from 'components:Input/index';
 import Heading from 'components:Heading/index';
 import DownloadButtonList from 'components:DownloadButtonList/index';
+
+// Constants
+import { PHONE } from 'src/constants/common';
+
+// Styles
 import './styles.css';
 ---
 
@@ -12,7 +18,17 @@ import './styles.css';
         Get your DogeCard
       </Heading>
       <p class="hero-description">In less than 5 minutes</p>
-      <form class="d-flex text-center hero-form">
+      <form class="hero-form">
+        <Input
+          autofocus
+          type="tel"
+          name="hero-input"
+          placeholder="Enter phone number"
+          required
+          pattern={PHONE.pattern}
+          maxlength={PHONE.maxLength}
+          className="hero-form-input"
+        />
         <Button className="hero-button">Sign Up</Button>
       </form>
       <p class="hero-text-term">

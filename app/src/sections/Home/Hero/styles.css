@@ -6,6 +6,7 @@
 
 .hero-content {
   align-items: center;
+  flex-direction: column;
   text-align: center;
   padding: 20px 0 128px;
 }
@@ -31,6 +32,8 @@
 .hero-form {
   padding-top: 40px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-text-term {
@@ -38,6 +41,10 @@
   line-height: 17px;
   margin-top: 20px;
   text-align: left;
+}
+
+.hero-form-input::placeholder {
+  color: var(--colorPlaceholder);
 }
 
 @media only screen and (min-width: 768px) {
@@ -54,6 +61,19 @@
 
   .hero-button {
     width: auto;
+  }
+
+  .hero-form {
+    flex-direction: row;
+  }
+
+  .hero-form-input {
+    max-width: 496px;
+    min-width: 400px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    font-size: var(--fontSizeMd);
+    line-height: var(--lineHeightXs);
   }
 }
 
