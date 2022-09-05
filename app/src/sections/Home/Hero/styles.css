@@ -1,14 +1,13 @@
-/* Just initialize */
-.hero {
+.hero,
+.hero-button,
+.hero-form {
   width: var(--sizeFull);
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   align-items: center;
-  padding: 40px 0;
+  text-align: center;
+  padding: 20px 0 128px;
 }
 
 .hero-heading {
@@ -30,37 +29,30 @@
 }
 
 .hero-form {
-  display: flex;
   padding-top: 40px;
-}
-
-.hero-button,
-.hero-form {
-  width: var(--sizeFull);
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .hero-content {
-    margin-top: 23px;
     text-align: left;
     align-items: flex-start;
-  }
-
-  .hero-button {
-    width: 192px;
+    padding: 13px 0 47px;
   }
 
   .hero-bg {
     background-image: url('/assets/images/home/bg-hero-tablet.png');
     min-height: var(--heroBgHeightTablet);
   }
+
+  .hero-button {
+    width: auto;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .hero {
-    position: absolute;
-    width: var(--sizeFull);
-    top: 0;
+    position: relative;
   }
 
   .hero-content {
@@ -68,8 +60,9 @@
     top: 50%;
     transform: translateY(-50%);
     text-align: left;
+    padding: 0;
     align-items: flex-start;
-    margin-top: 80px;
+    margin-top: 96px;
   }
 
   .hero-bg {
