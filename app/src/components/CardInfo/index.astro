@@ -5,30 +5,26 @@ import './styles.css';
 
 export interface CardInfoProps {
   className?: string;
-  src?: string;
+  imageUrl?: string;
   alt?: string;
   heading?: string;
-  description?: string;
 }
 
 const {
   className = '',
-  src = '',
-  alt = '',
+  imageUrl = '',
   heading = '',
-  description = ''
+  alt = heading
 } = Astro.props;
 ---
 
 <div class={`card-info-thumb ${className}`}>
   <div class="text-center card-info-image">
-    <img src={src} alt={alt} />
+    <img src={imageUrl} alt={alt} />
   </div>
   <div class="card-info-content">
     <Heading size="sm" className="card-info-heading">{heading}</Heading>
-    <p class="card-info-description">
-      {description}
-    </p>
+    <slot />
     <Button className="card-info-button">Sign Up</Button>
   </div>
 </div>
