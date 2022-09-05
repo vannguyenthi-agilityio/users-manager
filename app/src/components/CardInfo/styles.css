@@ -1,0 +1,62 @@
+.card-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  margin-bottom: 40px;
+}
+
+.card-info-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.card-info-description {
+  line-height: var(--lineHeightSm);
+  margin: 15px 0 50px;
+}
+
+.card-info-button {
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .card-info-description {
+    font-size: var(--fontSizeLg);
+    line-height: 32px;
+    max-width: 525px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-info {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-image {
+    width: var(--sizeFull);
+  }
+
+  .card-info-content {
+    width: var(--sizeFull);
+    text-align: left;
+  }
+
+  .card-info-heading {
+    font-size: var(--fontSize3Xl);
+  }
+
+  .card-info-description {
+    margin: 32px 0 48px;
+  }
+
+  .card-info-button {
+    margin-left: 0;
+  }
+}
