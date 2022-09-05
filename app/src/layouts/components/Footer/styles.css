@@ -182,10 +182,15 @@
     bottom: 100px;
     margin: 0;
   }
+
+  .footer-button-download {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 1920px) {
   .footer-contact {
-    bottom: 0;
+    position: relative;
+    bottom: 35px;
   }
 }
