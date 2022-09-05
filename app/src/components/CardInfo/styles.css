@@ -1,10 +1,10 @@
-.card-info-thumb {
+.card-info {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
-.card-info-image {
+.card-image {
   margin-bottom: 40px;
 }
 
@@ -34,16 +34,12 @@
 
 @media (min-width: 1200px) {
   .card-info {
-    padding-top: 80px;
-  }
-
-  .card-info-thumb {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
   }
 
-  .card-info-image {
+  .card-image {
     width: 100%;
   }
 
