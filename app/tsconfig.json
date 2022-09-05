@@ -45,6 +45,9 @@
       "utils": [
         "src/utils/index.ts"
       ],
+      "constants:*": [
+        "src/constants/index.ts"
+      ],
       "styles:*": [
         "src/styles/*.css"
       ],

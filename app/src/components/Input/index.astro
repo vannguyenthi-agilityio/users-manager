@@ -1,0 +1,32 @@
+---
+import './styles.css';
+
+export interface InputProps {
+  className?: string;
+  placeholder?: string;
+  name?: string;
+  type?: string;
+  pattern?: string;
+  maxlength?: string;
+}
+
+const {
+  className = '',
+  name = '',
+  type = '',
+  maxlength = '',
+  pattern = '',
+  placeholder = ''
+} = Astro.props;
+---
+
+<input
+  autofocus
+  type={type}
+  name={name}
+  placeholder={placeholder}
+  required
+  pattern={pattern}
+  maxlength={maxlength}
+  class={`input ${className}`}
+/>
