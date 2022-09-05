@@ -17,7 +17,7 @@
 
 .card-info-description {
   line-height: var(--lineHeightSm);
-  padding: 15px 0 50px;
+  margin: 15px 0 50px;
 }
 
 .card-info-button {
@@ -53,7 +53,7 @@
   }
 
   .card-info-description {
-    padding: 32px 0 48px;
+    margin: 32px 0 48px;
   }
 
   .card-info-button {
