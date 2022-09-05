@@ -22,7 +22,7 @@ const { title, description, hasHeaderOverlap } = Astro.props as Props;
   <body>
     <ApiProvider client:load>
       <!-- Header -->
-      <Header className={`${hasHeaderOverlap ? 'header-overlap' : ''}`} />
+      <Header hasOverlap={hasHeaderOverlap} />
 
       <!-- Main -->
       <main>

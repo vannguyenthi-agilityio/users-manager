@@ -3,12 +3,13 @@ import './styles.css';
 
 export interface HeaderProps {
   className?: string;
+  hasOverlap?: boolean;
 }
 
-const { className = '' } = Astro.props;
+const { className = '', hasOverlap = false } = Astro.props;
 ---
 
-<header class={`header ${className}`}>
+<header class={`header ${hasOverlap ? 'header-overlap' : ''} ${className}`}>
   <div class="container">
     <div class="header-content-wrapper">
       <div class="d-flex-column text-center header-content">
