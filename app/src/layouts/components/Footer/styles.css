@@ -81,6 +81,27 @@
   margin-left: 27px;
 }
 
+.footer-contact {
+  flex-direction: column;
+  max-width: 194px;
+  margin: auto;
+  margin-top: 24px;
+}
+
+.footer-content-item {
+  align-items: center;
+  font-size: var(--fontSizeSm);
+  line-height: var(--fontSizeBase);
+}
+
+.footer-content-item:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.contact-icon {
+  margin-right: 11px;
+}
+
 @media (min-width: 768px) {
   .footer-logo {
     margin-bottom: 0;
@@ -154,5 +175,17 @@
 
   .footer-description {
     line-height: var(--lineHeightBase);
+  }
+
+  .footer-contact {
+    position: relative;
+    bottom: 100px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .footer-contact {
+    bottom: 0;
   }
 }
