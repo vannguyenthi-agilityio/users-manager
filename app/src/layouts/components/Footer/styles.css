@@ -88,13 +88,13 @@
   margin-top: 24px;
 }
 
-.footer-contact-info {
+.footer-content-item {
   align-items: center;
   font-size: var(--fontSizeSm);
   line-height: var(--fontSizeBase);
 }
 
-.footer-contact-info:not(:last-child) {
+.footer-content-item:not(:last-child) {
   margin-bottom: 23px;
 }
 
