@@ -5,7 +5,7 @@ import Heading from 'components:Heading/index';
 import DownloadButtonList from 'components:DownloadButtonList/index';
 
 // Constants
-import { PARTNER_PHONE } from 'src/constants/common';
+import { PHONE } from 'src/constants/common';
 
 // Styles
 import './styles.css';
@@ -25,8 +25,8 @@ import './styles.css';
           name="hero-input"
           placeholder="Enter phone number"
           required
-          pattern={PARTNER_PHONE}
-          maxlength="14"
+          pattern={PHONE.pattern}
+          maxlength={PHONE.maxLength}
           className="hero-form-input"
         />
         <Button className="hero-button">Sign Up</Button>

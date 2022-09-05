@@ -1,1 +1,4 @@
-export const PARTNER_PHONE = '[0-9]{3}-[0-9]{3}-[0-9]{4}';
+export const PHONE = {
+  pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
+  maxLength: '14'
+};
