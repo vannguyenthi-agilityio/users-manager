@@ -14,7 +14,7 @@
   color: var(--colorPrimary);
 }
 
-.secure-info {
+.card-info-secure {
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
 }
 
 @media only screen and (min-width: 1920px) {
-  .secure-info {
+  .card-info-secure {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
