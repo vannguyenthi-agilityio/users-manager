@@ -40,6 +40,24 @@
   text-align: left;
 }
 
+.hero-form-input {
+  border-radius: 12px;
+  height: 56px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border: none;
+  font-size: var(--fontSizeBase);
+  min-width: var(--sizeFull);
+  color: var(--colorBlack);
+  line-height: 19px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-form-input::placeholder {
+  color: var(--colorPlaceholder);
+}
+
 @media only screen and (min-width: 768px) {
   .hero-content {
     text-align: left;
@@ -54,6 +72,18 @@
 
   .hero-button {
     width: auto;
+  }
+
+  .hero-form {
+    flex-direction: row;
+  }
+
+  .hero-form-input {
+    min-width: 496px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    font-size: var(--fontSizeMd);
+    line-height: var(--lineHeightXs);
   }
 }
 

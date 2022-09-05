@@ -11,6 +11,9 @@ const THEME_BASE = {
   colorText: '#fff',
   colorBgFooterDetail: '#151515',
 
+  colorPlaceholder: 'rgba(26, 24, 38, 25%)',
+  colorPlaceholderLight: 'rgba(255, 255, 255, 25%)',
+
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',
   fontFamilySecondary: 'Roboto, sans-serif',

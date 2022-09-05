@@ -12,7 +12,17 @@ import './styles.css';
         Get your DogeCard
       </Heading>
       <p class="hero-description">In less than 5 minutes</p>
-      <form class="d-flex text-center hero-form">
+      <form class="d-flex hero-form">
+        <input
+          autofocus
+          type="tel"
+          name="hero-input"
+          placeholder="Enter phone number"
+          required
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          maxlength="10"
+          class="hero-form-input"
+        />
         <Button className="hero-button">Sign Up</Button>
       </form>
       <p class="hero-text-term">
