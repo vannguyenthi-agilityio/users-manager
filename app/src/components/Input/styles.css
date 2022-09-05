@@ -1,0 +1,12 @@
+.input {
+  border-radius: var(--borderRadiusMd);
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  border: none;
+  font-size: var(--fontSizeBase);
+  width: var(--sizeFull);
+  color: var(--colorBlack);
+  line-height: 19px;
+  padding: 19px 16px;
+  margin-bottom: 20px;
+}

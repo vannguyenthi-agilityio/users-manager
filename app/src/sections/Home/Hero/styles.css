@@ -6,6 +6,7 @@
 
 .hero-content {
   align-items: center;
+  flex-direction: column;
   text-align: center;
   padding: 20px 0 128px;
 }
@@ -31,6 +32,8 @@
 .hero-form {
   padding-top: 40px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-text-term {
@@ -38,19 +41,6 @@
   line-height: 17px;
   margin-top: 20px;
   text-align: left;
-}
-
-.hero-form-input {
-  border-radius: var(--borderRadiusMd);
-  outline: 1px solid transparent;
-  outline-offset: 1px;
-  border: none;
-  font-size: var(--fontSizeBase);
-  width: var(--sizeFull);
-  color: var(--colorBlack);
-  line-height: 19px;
-  padding: 19px 16px;
-  margin-bottom: 20px;
 }
 
 .hero-form-input::placeholder {
@@ -78,7 +68,8 @@
   }
 
   .hero-form-input {
-    min-width: 496px;
+    max-width: 496px;
+    min-width: 400px;
     margin-right: 20px;
     margin-bottom: 0;
     font-size: var(--fontSizeMd);
