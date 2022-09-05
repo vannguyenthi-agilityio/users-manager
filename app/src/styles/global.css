@@ -181,6 +181,10 @@ body {
   font-weight: var(--fontWeightBold);
 }
 
+.text-highlight {
+  color: var(--colorPrimary);
+}
+
 .mg-auto {
   margin: auto;
 }

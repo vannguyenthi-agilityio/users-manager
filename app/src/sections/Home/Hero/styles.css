@@ -33,6 +33,13 @@
   margin-bottom: 20px;
 }
 
+.hero-text-term {
+  font-size: var(--fontSizeSm);
+  line-height: 17px;
+  margin-top: 20px;
+  text-align: left;
+}
+
 @media only screen and (min-width: 768px) {
   .hero-content {
     text-align: left;
@@ -68,5 +75,9 @@
   .hero-bg {
     background-image: url('/assets/images/home/bg-hero-desktop.png');
     min-height: var(--heroBgHeightDesktop);
+  }
+
+  .hero-text-term {
+    max-width: 351px;
   }
 }
