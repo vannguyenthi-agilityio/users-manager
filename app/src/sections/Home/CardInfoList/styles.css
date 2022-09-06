@@ -2,6 +2,10 @@
   width: auto;
 }
 
+.card-image-detail {
+  max-height: 398px;
+}
+
 .card-info-secure > li {
   line-height: var(--lineHeightBase);
   margin: 15px 0 0 25px;
