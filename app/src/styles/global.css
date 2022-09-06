@@ -193,6 +193,15 @@ body {
   font-weight: var(--fontWeightNormal);
 }
 
+.hightlight-list > li {
+  list-style-type: decimal;
+  padding-left: 10px;
+}
+
+.hightlight-list > li::marker {
+  color: var(--colorPrimary);
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {

@@ -2,8 +2,41 @@
   padding-block: 80px;
 }
 
+.card-info-secure > li {
+  line-height: var(--lineHeightBase);
+  margin: 15px 0 0 25px;
+}
+
+.card-info-secure {
+  text-align: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .card-info-secure > li {
+    line-height: var(--lineHeightXl);
+  }
+}
+
 @media (min-width: 1200px) {
   .card-info-reverse {
     flex-direction: row;
+  }
+
+  .card-info-secure {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .card-info-secure > li {
+    line-height: var(--lineHeight6Xl);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .card-info-secure {
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 910px;
   }
 }
