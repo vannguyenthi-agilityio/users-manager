@@ -179,7 +179,7 @@
 
   .footer-contact {
     position: relative;
-    bottom: 100px;
+    bottom: 190px;
     margin: 0;
   }
 
@@ -188,9 +188,20 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .footer-contact {
+    bottom: 140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer-contact {
+    bottom: 115px;
+  }
+}
+
 @media (min-width: 1920px) {
   .footer-contact {
-    position: relative;
     bottom: 35px;
   }
 }
