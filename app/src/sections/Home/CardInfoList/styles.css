@@ -2,17 +2,28 @@
   padding-block: 80px;
 }
 
+.card-image-secure .card-image {
+  width: auto;
+}
+
 .card-info-secure > li {
   line-height: var(--lineHeightBase);
-  margin: 15px 0 0 25px;
+  margin-bottom: 25px;
 }
 
 .card-info-secure {
   text-align: center;
   align-items: center;
+  padding: 0 22px;
+  font-family: var(--fontFamilySecondary);
 }
 
 @media (min-width: 768px) {
+  .card-info-secure {
+    max-width: none;
+    padding: 0;
+  }
+
   .card-info-secure > li {
     line-height: var(--lineHeightXl);
   }
