@@ -70,7 +70,6 @@
 .footer-copyright {
   font-size: var(--fontSizeTiny);
   line-height: var(--lineHeightTiny);
-  margin-left: 5px;
 }
 
 .footer-contact {
