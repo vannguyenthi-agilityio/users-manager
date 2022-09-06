@@ -1,5 +1,6 @@
 ---
 import DownloadButtonList from 'components:DownloadButtonList/index';
+import SocialIcon from 'components:SocialIcon/index';
 import './styles.css';
 ---
 
@@ -66,16 +67,22 @@ import './styles.css';
         <p class="d-flex footer-copyright">
           © 2021 DogeCard. All Rights Reserved.
         </p>
-        <div class="d-flex social-menu">
-          <a class="d-flex social-item" href="#"
-            ><img src="assets/images/icons/twitter.svg" alt="twitter" />
-          </a>
-          <a class="d-flex social-item" href="#"
-            ><img src="assets/images/icons/tiktok.svg" alt="tiktok" />
-          </a>
-          <a class="d-flex social-item" href="#"
-            ><img src="assets/images/icons/instagram.svg" alt="instagram" />
-          </a>
+        <div class="d-flex footer-social-icon">
+          <SocialIcon
+            href="#"
+            imageUrl="assets/images/icons/twitter.svg"
+            imageAlt="DogeCard Twitter"
+          />
+          <SocialIcon
+            href="#"
+            imageUrl="assets/images/icons/tiktok.svg"
+            imageAlt="DogeCard TikTok"
+          />
+          <SocialIcon
+            href="#"
+            imageUrl="assets/images/icons/instagram.svg"
+            imageAlt="DogeCard Instagram"
+          />
         </div>
       </div>
     </div>

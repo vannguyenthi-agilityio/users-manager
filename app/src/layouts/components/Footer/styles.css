@@ -70,15 +70,6 @@
 .footer-copyright {
   font-size: var(--fontSizeTiny);
   line-height: var(--lineHeightTiny);
-  margin-left: 5px;
-}
-
-.social-item {
-  align-items: center;
-}
-
-.social-item:not(:first-child) {
-  margin-left: 27px;
 }
 
 .footer-contact {
@@ -100,6 +91,10 @@
 
 .contact-icon {
   margin-right: 11px;
+}
+
+.footer-social-icon {
+  gap: 23px;
 }
 
 @media (min-width: 768px) {
