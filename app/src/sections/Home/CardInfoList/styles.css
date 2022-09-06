@@ -3,14 +3,8 @@
 }
 
 .card-info-secure-item {
-  list-style-type: decimal;
   line-height: var(--lineHeightBase);
-  padding-left: 10px;
   margin: 15px 0 0 25px;
-}
-
-.card-info-secure-item::marker {
-  color: var(--colorPrimary);
 }
 
 .card-info-secure {
