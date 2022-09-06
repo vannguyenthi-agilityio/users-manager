@@ -193,26 +193,13 @@ body {
   font-weight: var(--fontWeightNormal);
 }
 
-.hightlight-list {
-  list-style-type: none;
-  counter-reset: item;
-}
-
 .hightlight-list > li {
   list-style-type: decimal;
-  counter-increment: item;
+  list-style-position: inside;
 }
 
 .hightlight-list > li::marker {
-  content: '';
-}
-
-.hightlight-list > li::before {
-  content: counter(item) '.';
   color: var(--colorPrimary);
-  padding-right: 10px;
-  text-align: center;
-  display: inline-block;
 }
 
 /* Small devices (landscape phones, 576px and up) */
