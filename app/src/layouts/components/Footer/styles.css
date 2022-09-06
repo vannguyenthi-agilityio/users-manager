@@ -95,7 +95,7 @@
 }
 
 .footer-content-item:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom: 15px;
 }
 
 .contact-icon {
@@ -134,6 +134,10 @@
 }
 
 @media (min-width: 992px) {
+  .footer {
+    position: relative;
+  }
+
   .footer-logo {
     font-size: var(--fontSize6Xl);
     line-height: var(--lineHeight8Xl);
@@ -178,19 +182,12 @@
   }
 
   .footer-contact {
-    position: relative;
-    bottom: 100px;
+    position: absolute;
+    top: 312px;
     margin: 0;
   }
 
   .footer-button-download {
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 1920px) {
-  .footer-contact {
-    position: relative;
-    bottom: 35px;
+    margin-top: 46px;
   }
 }
