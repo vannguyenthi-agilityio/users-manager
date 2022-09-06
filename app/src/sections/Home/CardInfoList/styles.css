@@ -23,6 +23,11 @@
   font-family: var(--fontFamilySecondary);
 }
 
+.card-info-list-secure > li::before {
+  content: '';
+  padding-left: 8px;
+}
+
 @media (min-width: 768px) {
   .card-info-list-secure {
     max-width: none;
@@ -46,6 +51,10 @@
 
   .card-info-list-secure > li {
     line-height: var(--lineHeight6Xl);
+  }
+
+  .card-info-list-secure > li::before {
+    padding-left: 12px;
   }
 }
 
