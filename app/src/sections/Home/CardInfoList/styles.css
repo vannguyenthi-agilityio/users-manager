@@ -2,7 +2,7 @@
   padding-block: 80px;
 }
 
-.card-info-secure-item {
+.card-info-secure > li {
   line-height: var(--lineHeightBase);
   margin: 15px 0 0 25px;
 }
@@ -13,7 +13,7 @@
 }
 
 @media (min-width: 768px) {
-  .card-info-secure-item {
+  .card-info-secure > li {
     line-height: var(--lineHeightXl);
   }
 }
@@ -28,7 +28,7 @@
     align-items: flex-start;
   }
 
-  .card-info-secure-item {
+  .card-info-secure > li {
     line-height: var(--lineHeight6Xl);
   }
 }

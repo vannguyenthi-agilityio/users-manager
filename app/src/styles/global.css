@@ -193,12 +193,12 @@ body {
   font-weight: var(--fontWeightNormal);
 }
 
-.info-item-list {
+.hightlight-list > li {
   list-style-type: decimal;
   padding-left: 10px;
 }
 
-.info-item-list::marker {
+.hightlight-list > li::marker {
   color: var(--colorPrimary);
 }
 
