@@ -94,9 +94,9 @@
   margin-right: 11px;
 }
 
-.tiktok-icon {
-  margin-left: 23px;
-  margin-right: 23px;
+.footer-social-icon {
+  flex-wrap: wrap;
+  gap: 23px;
 }
 
 @media (min-width: 768px) {
