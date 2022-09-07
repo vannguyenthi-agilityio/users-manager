@@ -173,6 +173,12 @@ body {
   justify-content: center;
 }
 
+.d-flex-center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .text-center {
   text-align: center;
 }
