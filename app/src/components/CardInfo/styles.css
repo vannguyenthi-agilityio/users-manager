@@ -29,7 +29,6 @@
   .card-info-description {
     font-size: var(--fontSizeLg);
     line-height: var(--lineHeightXl);
-    max-width: 525px;
   }
 }
 

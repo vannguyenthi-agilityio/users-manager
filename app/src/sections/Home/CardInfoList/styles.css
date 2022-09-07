@@ -1,9 +1,10 @@
-.card-info {
-  padding-block: 80px;
-}
-
 .card-info-secure .card-image {
   width: auto;
+}
+
+.card-info-secure > li {
+  line-height: var(--lineHeightBase);
+  margin: 15px 0 0 25px;
 }
 
 .card-info-secure .card-info-content {
