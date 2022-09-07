@@ -1,12 +1,1 @@
-.referral {
-  flex-direction: column;
-}
-
-@media (min-width: 1200px) {
-  .referral {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-  }
-}
+/* Style for referral page */
