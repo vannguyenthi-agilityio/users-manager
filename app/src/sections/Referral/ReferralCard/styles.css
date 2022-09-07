@@ -13,6 +13,8 @@
   background-position: top center;
   max-width: 205px;
   min-height: 280px;
+  background-image: url('/assets/images/referral/cards/card-visa.png');
+  filter: var(--referralCardImage);
 }
 
 .referral-card-bg {
@@ -30,16 +32,6 @@
   padding-bottom: 32px;
   max-width: 273px;
   margin: -150px auto 0;
-}
-
-.referral-card-gold {
-  background-image: url('/assets/images/referral/cards/card-visa-gold.png');
-  filter: var(--referralCardGold);
-}
-
-.referral-card-black {
-  background-image: url('/assets/images/referral/cards/card-visa-black.png');
-  filter: var(--referralCardBlack);
 }
 
 @media only screen and (min-width: 768px) {

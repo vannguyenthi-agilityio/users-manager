@@ -3,16 +3,15 @@ import './styles.css';
 
 export interface ReferralCardProps {
   className?: string;
-  idCard?: string;
 }
 
-const { className = '', idCard = 'gold' } = Astro.props;
+const { className = '' } = Astro.props;
 ---
 
 <div class="referral-card">
   <div class={`referral-card-content ${className}`}>
     <div class="mg-auto referral-card-bg">
-      <div class={`mg-auto referral-card-image referral-card-${idCard}`}></div>
+      <div class={`mg-auto referral-card-image`}></div>
     </div>
     <div class="referral-card-list">
       <!-- implement feature list -->
