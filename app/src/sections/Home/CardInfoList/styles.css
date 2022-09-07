@@ -2,8 +2,8 @@
   width: auto;
 }
 
-.card-image-detail {
-  max-height: 398px;
+.card-image > img {
+  max-width: 218px;
 }
 
 .card-info-secure > li {
