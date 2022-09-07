@@ -2,15 +2,25 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 80px 0;
+}
+
+.card-info-heading {
+  max-width: 270px;
 }
 
 .card-image {
   margin-bottom: 40px;
 }
 
+.card-image > img {
+  max-width: 218px;
+}
+
 .card-info-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 40px;
   text-align: center;
 }
@@ -19,6 +29,7 @@
   font-size: var(--fontSizeBase);
   line-height: var(--lineHeightSm);
   margin: 15px 0 50px;
+  max-width: 327px;
 }
 
 .card-info-button {
@@ -26,6 +37,10 @@
 }
 
 @media (min-width: 768px) {
+  .card-info-heading {
+    max-width: 460px;
+  }
+
   .card-info-description {
     font-size: var(--fontSizeLg);
     line-height: var(--lineHeightXl);
@@ -40,26 +55,37 @@
     justify-content: space-between;
   }
 
+  .card-info-heading {
+    max-width: none;
+    font-size: var(--fontSize3Xl);
+  }
+
   .card-image {
     width: var(--sizeFull);
+  }
+
+  .card-image > img {
+    max-width: none;
   }
 
   .card-info-content {
     width: var(--sizeFull);
     text-align: left;
-  }
-
-  .card-info-heading {
-    font-size: var(--fontSize3Xl);
+    align-items: unset;
   }
 
   .card-info-description {
     margin: 32px 0 48px;
     font-size: 30px;
     line-height: var(--lineHeight6Xl);
+    max-width: 720px;
   }
 
   .card-info-button {
     margin-left: 0;
+  }
+
+  .card-info-reverse {
+    flex-direction: row;
   }
 }

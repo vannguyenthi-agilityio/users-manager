@@ -1,7 +1,3 @@
-.card-info {
-  padding-block: 80px;
-}
-
 .card-info-secure .card-image {
   width: auto;
 }
@@ -35,10 +31,6 @@
 }
 
 @media (min-width: 1200px) {
-  .card-info-reverse {
-    flex-direction: row;
-  }
-
   .card-info-secure-list {
     text-align: left;
     align-items: flex-start;
