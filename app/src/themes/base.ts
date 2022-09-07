@@ -10,6 +10,7 @@ const THEME_BASE = {
   colorBackground: '#1d172b',
   colorText: '#fff',
   colorBgFooterDetail: '#151515',
+  colorBgReferral: 'rgba(36, 30, 53, 50%)',
 
   colorPlaceholder: 'rgba(26, 24, 38, 25%)',
   colorPlaceholderLight: 'rgba(255, 255, 255, 25%)',
@@ -102,7 +103,12 @@ const THEME_BASE = {
   // Width
   btnWidthSm: '164px',
   btnWidthMd: '192px',
-  btnWidthLg: '243px'
+  btnWidthLg: '243px',
+
+  // Drop Shadow
+  referralCardGold: 'drop-shadow(0px 5.4744px 136.861px rgba(87, 79, 54, 25%))',
+  referralCardBlack:
+    'drop-shadow(5.8484px 5.8484px 140.364px rgba(255, 255, 255, 10%))'
 };
 
 export default THEME_BASE;

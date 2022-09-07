@@ -1,1 +1,74 @@
-/* Style for Referral Card */
+.referral-card {
+  padding: 122px 0 217px;
+}
+
+.referral-card-content {
+  max-width: 375px;
+  margin: auto;
+}
+
+.referral-card-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  max-width: 205px;
+  min-height: 280px;
+}
+
+.referral-card-bg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 380px;
+}
+
+.referral-card-list {
+  background: var(--colorBgReferral);
+  backdrop-filter: blur(35px);
+  border-radius: 20px;
+  padding-top: 80px;
+  padding-bottom: 32px;
+  max-width: 273px;
+  margin: -150px auto 0;
+}
+
+.referral-card-gold {
+  background-image: url('/assets/images/referral/cards/card-visa-gold.png');
+  filter: var(--referralCardGold);
+}
+
+.referral-card-black {
+  background-image: url('/assets/images/referral/cards/card-visa-black.png');
+  filter: var(--referralCardBlack);
+}
+
+@media only screen and (min-width: 768px) {
+  .referral-card-list {
+    padding-top: 162px;
+    max-width: 349px;
+    padding-bottom: 54px;
+  }
+
+  .referral-card-image {
+    max-width: 280px;
+    min-height: 330px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .referral-card-image {
+    max-width: inherit;
+    min-height: inherit;
+  }
+
+  .referral-card-content {
+    margin: 0;
+    max-width: 417px;
+  }
+
+  .referral-card-list {
+    padding-top: 217px;
+    max-width: 100%;
+    padding-bottom: 67px;
+  }
+}
