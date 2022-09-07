@@ -8,13 +8,11 @@ export interface ReferralCardProps {
 const { className = '' } = Astro.props;
 ---
 
-<div class="referral-card">
-  <div class={`referral-card-content ${className}`}>
-    <div class="mg-auto referral-card-bg">
-      <div class={`mg-auto referral-card-image`}></div>
-    </div>
-    <div class="referral-card-list">
-      <!-- implement feature list -->
-    </div>
+<div class={`referral-card ${className}`}>
+  <div class="mg-auto referral-card-bg">
+    <div class={`mg-auto referral-card-image`}></div>
+  </div>
+  <div class="referral-card-step-list">
+    <!-- implement feature list -->
   </div>
 </div>

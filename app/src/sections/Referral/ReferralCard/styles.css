@@ -1,8 +1,4 @@
 .referral-card {
-  padding: 122px 0 217px;
-}
-
-.referral-card-content {
   max-width: 375px;
   margin: auto;
 }
@@ -24,8 +20,8 @@
   min-height: 380px;
 }
 
-.referral-card-list {
-  background: var(--colorBgReferral);
+.referral-card-step-list {
+  background: var(--colorSecondary);
   backdrop-filter: blur(35px);
   border-radius: 20px;
   padding-top: 80px;
@@ -35,7 +31,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .referral-card-list {
+  .referral-card-step-list {
     padding-top: 162px;
     max-width: 349px;
     padding-bottom: 54px;
@@ -53,12 +49,12 @@
     min-height: inherit;
   }
 
-  .referral-card-content {
+  .referral-card {
     margin: 0;
     max-width: 417px;
   }
 
-  .referral-card-list {
+  .referral-card-step-list {
     padding-top: 217px;
     max-width: 100%;
     padding-bottom: 67px;
