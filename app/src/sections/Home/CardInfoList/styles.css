@@ -52,6 +52,10 @@
   .card-info-secure-list > li::before {
     padding-left: 12px;
   }
+
+  .card-info-description {
+    padding: unset;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
