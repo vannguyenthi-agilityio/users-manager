@@ -13,7 +13,7 @@
   filter: var(--referralCardImage);
 }
 
-.referral-card-bg {
+.referral-card-content {
   position: relative;
   z-index: 1;
   width: 100%;
