@@ -33,6 +33,14 @@
   .card-info-secure-list > li {
     line-height: var(--lineHeightXl);
   }
+
+  .card-info-heading {
+    max-width: 460px;
+  }
+
+  .card-info-description {
+    max-width: 525px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -53,13 +61,16 @@
     padding-left: 12px;
   }
 
-  .card-info-description {
-    padding: unset;
+  .card-info-content {
+    align-items: unset;
   }
 
-  .card-info-earn h2,
-  .card-info-buy h2,
-  .card-info-spend h2 {
+  .card-info-heading {
+    max-width: none;
+  }
+
+  .card-info-description {
+    max-width: 719px;
     padding: unset;
   }
 }
