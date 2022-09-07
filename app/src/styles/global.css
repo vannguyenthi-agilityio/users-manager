@@ -202,6 +202,11 @@ body {
   color: var(--colorPrimary);
 }
 
+.hightlight-list > li::before {
+  content: '';
+  padding-left: 8px;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
