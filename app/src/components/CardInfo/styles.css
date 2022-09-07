@@ -56,6 +56,7 @@
     margin: 32px 0 48px;
     font-size: 30px;
     line-height: var(--lineHeight6Xl);
+    max-width: 661px;
   }
 
   .card-info-button {
