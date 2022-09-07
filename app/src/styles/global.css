@@ -195,11 +195,16 @@ body {
 
 .hightlight-list > li {
   list-style-type: decimal;
-  padding-left: 10px;
+  list-style-position: inside;
 }
 
 .hightlight-list > li::marker {
   color: var(--colorPrimary);
+}
+
+.hightlight-list > li::before {
+  content: '';
+  padding-left: 8px;
 }
 
 /* Small devices (landscape phones, 576px and up) */
