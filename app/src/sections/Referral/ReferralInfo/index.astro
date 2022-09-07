@@ -1,7 +1,22 @@
 ---
+import Heading from 'components:Heading/index';
+
+// Styles
 import './styles.css';
 ---
 
-<div class="referral-info">
-  <h2>ReferralInfo section</h2>
-</div>
+<section class="referral-info">
+  <div class="container">
+    <div class="d-flex-column referral-info-wrapper">
+      <div class="text-center referral-info-header">
+        <p class="referral-info-text">Next</p>
+        <Heading size="sm" className="hero-heading" uppercase>
+          INVITE FRIENDS, GET $25 in DOGECOIN
+        </Heading>
+        <p class="referral-info-sub-title">
+          For each friend who uses your link
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
