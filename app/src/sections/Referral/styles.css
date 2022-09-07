@@ -1,0 +1,15 @@
+.referral {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .referral {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
