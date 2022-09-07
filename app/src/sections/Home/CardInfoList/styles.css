@@ -31,10 +31,6 @@
 }
 
 @media (min-width: 1200px) {
-  .card-info-reverse {
-    flex-direction: row;
-  }
-
   .card-info-secure-list {
     text-align: left;
     align-items: flex-start;
