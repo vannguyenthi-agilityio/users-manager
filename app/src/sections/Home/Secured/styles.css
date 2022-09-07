@@ -27,8 +27,9 @@
 }
 
 .secured-icon {
-  max-width: 150px;
-  align-self: center;
+  max-width: 120px;
+  height: 120px;
+  margin: auto;
 }
 
 @media (min-width: 768px) {
@@ -52,8 +53,8 @@
   }
 
   .secured-icon {
-    height: 160px;
-    align-self: center;
+    max-width: 150px;
+    height: 150px;
   }
 }
 
