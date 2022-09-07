@@ -33,21 +33,9 @@
   .card-info-secure-list > li {
     line-height: var(--lineHeightXl);
   }
-
-  .card-info-heading {
-    max-width: 460px;
-  }
-
-  .card-info-description {
-    max-width: 525px;
-  }
 }
 
 @media (min-width: 1200px) {
-  .card-info-reverse {
-    flex-direction: row;
-  }
-
   .card-info-secure-list {
     text-align: left;
     align-items: flex-start;
@@ -59,19 +47,6 @@
 
   .card-info-secure-list > li::before {
     padding-left: 12px;
-  }
-
-  .card-info-content {
-    align-items: unset;
-  }
-
-  .card-info-heading {
-    max-width: none;
-  }
-
-  .card-info-description {
-    max-width: 719px;
-    padding: unset;
   }
 }
 
