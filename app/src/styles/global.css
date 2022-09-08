@@ -207,7 +207,6 @@ body {
 
 .hightlight-list > li::marker {
   color: var(--colorPrimary);
-  font-weight: var(--fontWeightBold);
 }
 
 .hightlight-list > li::before {

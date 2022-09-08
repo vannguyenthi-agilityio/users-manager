@@ -8,14 +8,18 @@
   margin: 10px 0;
 }
 
-.referral-card-body .referral-info-heading {
+.referral-info-sub-heading {
   color: var(--colorPrimary);
   font-size: var(--fontSizeMd);
   margin: 20px 0 10px;
 }
 
-.referral-card-item {
+.referral-info-item {
   margin-top: 10px;
+}
+
+.hightlight-list > li::marker {
+  font-weight: var(--fontWeightBold);
 }
 
 .hightlight-list > li::before {
@@ -31,12 +35,12 @@
     font-size: var(--fontSizeXl);
   }
 
-  .referral-card-body .referral-info-heading,
+  .referral-info-sub-heading,
   .referral-card-head {
     text-align: start;
   }
 
-  .referral-card-body .referral-info-heading {
+  .referral-info-sub-heading {
     font-size: 30px;
   }
 
@@ -44,7 +48,7 @@
     line-height: var(--lineHeightXs);
   }
 
-  .referral-card-item {
+  .referral-info-item {
     font-size: var(--fontSizeXl);
   }
 }
