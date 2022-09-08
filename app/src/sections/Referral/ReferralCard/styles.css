@@ -24,8 +24,8 @@
   margin: -55px auto 0;
 }
 
-.referral-card-step-icon::before,
-.referral-card-step-icon::after {
+.referral-card-step-item > i::before,
+.referral-card-step-item > i::after {
   content: '';
   display: block;
   border-color: transparent;
