@@ -1,6 +1,6 @@
 .referral-card {
-  margin: auto;
   padding-top: 75px;
+  padding-bottom: 45px;
 }
 
 .referral-card-thumbnail > img {
@@ -71,7 +71,7 @@
 
 @media only screen and (min-width: 768px) {
   .referral-card {
-    padding-top: 45px;
+    padding: 45px 0 54px;
   }
 
   .referral-card-content {
