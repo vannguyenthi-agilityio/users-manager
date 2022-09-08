@@ -24,8 +24,8 @@
   margin: -55px auto 0;
 }
 
-.icon-check::before,
-.icon-check::after {
+.referral-card-step-icon::before,
+.referral-card-step-icon::after {
   content: '';
   display: block;
   border-color: transparent;
@@ -37,28 +37,28 @@
   width: 24px;
 }
 
-.icon-check::before {
+.referral-card-step-icon::before {
   height: 24px;
 }
 
-.icon-check::after {
+.referral-card-step-icon::after {
   height: 20px;
   background-image: url('/assets/images/referral/icons/vector.svg');
 }
 
-.check-ordered .icon-check::before {
+.referral-card-step-ordered .referral-card-step-icon::before {
   background-image: url('/assets/images/referral/icons/check-ordered.svg');
 }
 
-.check-send .icon-check::before {
+.referral-card-step-send .referral-card-step-icon::before {
   background-image: url('/assets/images/referral/icons/check-send.svg');
 }
 
-.check-location .icon-check::before {
+.referral-card-step-location .referral-card-step-icon::before {
   background-image: url('/assets/images/referral/icons/check-location.svg');
 }
 
-.check-location .icon-check::after {
+.referral-card-step-location .referral-card-step-icon::after {
   display: none;
 }
 
@@ -118,5 +118,6 @@
 
   .referral-card-thumbnail > img {
     transform: rotate(-12deg);
+    max-width: none;
   }
 }
