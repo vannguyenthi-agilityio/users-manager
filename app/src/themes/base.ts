@@ -102,7 +102,11 @@ const THEME_BASE = {
   // Width
   btnWidthSm: '164px',
   btnWidthMd: '192px',
-  btnWidthLg: '243px'
+  btnWidthLg: '243px',
+
+  // Drop Shadow
+  referralCardDropShadow:
+    'drop-shadow(0px 5.4744px 136.861px rgba(87, 79, 54, 25%))'
 };
 
 export default THEME_BASE;

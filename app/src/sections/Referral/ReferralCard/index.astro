@@ -1,7 +1,32 @@
 ---
 import './styles.css';
+
+export interface ReferralCardProps {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
 ---
 
-<div class="referral-card">
-  <h2>ReferralCard section</h2>
+<div class={`referral-card ${className}`}>
+  <div class="mg-auto d-flex justify-content-center referral-card-thumbnail">
+    <img src="/assets/images/referral/cards/card-visa.png" alt="Referral Card"
+    />
+  </div>
+  <div class="referral-card-content">
+    <ul class="referral-card-step-list">
+      <li class="d-flex">
+        <i class="referral-card-step-icon ordered"></i>
+        Joined waitlist
+      </li>
+      <li class="d-flex text-highlight">
+        <i class="referral-card-step-icon send"></i>
+        Send to friends
+      </li>
+      <li class="d-flex">
+        <i class="referral-card-step-icon location"></i>
+        Get DogeCard
+      </li>
+    </ul>
+  </div>
 </div>
