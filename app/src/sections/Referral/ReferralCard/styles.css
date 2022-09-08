@@ -1,10 +1,9 @@
 .referral-card {
-  width: 100%;
   margin: auto;
   padding-top: 65px;
 }
 
-.referral-card-image {
+.referral-card-thumbnail > img {
   max-width: 170px;
   transform: rotate(4.6deg);
   filter: var(--referralCardDropShadow);
@@ -32,19 +31,19 @@
 
   .referral-card-content {
     padding-top: 162px;
-    max-width: 349px;
+    max-width: 350px;
     padding-bottom: 54px;
     margin-top: -154px;
   }
 
-  .referral-card-image {
+  .referral-card-thumbnail > img {
     max-width: 280px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .referral-card {
-    width: 46%;
+    width: 45%;
     margin: 0;
     padding-top: 105px;
   }
