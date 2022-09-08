@@ -10,7 +10,6 @@ const THEME_BASE = {
   colorBackground: '#1d172b',
   colorText: '#fff',
   colorBgFooterDetail: '#151515',
-  colorBgReferral: 'rgba(36, 30, 53, 50%)',
 
   colorPlaceholder: 'rgba(26, 24, 38, 25%)',
   colorPlaceholderLight: 'rgba(255, 255, 255, 25%)',

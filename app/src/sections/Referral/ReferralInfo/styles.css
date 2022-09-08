@@ -4,9 +4,8 @@
   padding: 60px 20px 20px;
 }
 
-.referral-card-head .hero-heading {
+.referral-info-heading {
   margin: 10px 0;
-  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -18,23 +17,23 @@
     text-align: start;
   }
 
-  .hero-heading {
+  .referral-info-heading {
     font-size: var(--fontSizeXl);
   }
 
-  .referral-card-text {
+  .referral-card-description {
     line-height: var(--lineHeightXs);
   }
 }
 
 @media (min-width: 1200px) {
   .referral-card-info {
-    padding: 40px 0 60px 60px;
-    width: 54%;
+    padding: 40px 60px 60px;
+    width: 55%;
   }
 
-  .hero-heading {
-    font-size: 36px;
+  .referral-info-heading {
+    font-size: var(--fontSize3Xl);
     line-height: 43px;
   }
 }
