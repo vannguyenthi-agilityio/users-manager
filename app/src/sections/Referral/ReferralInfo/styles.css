@@ -8,21 +8,44 @@
   margin: 10px 0;
 }
 
+.referral-card-body .referral-info-heading {
+  color: var(--colorPrimary);
+  font-size: var(--fontSizeMd);
+  margin: 20px 0 10px;
+}
+
+.referral-card-item {
+  margin-top: 10px;
+}
+
+.hightlight-list > li::before {
+  padding-left: 5px;
+}
+
 @media (min-width: 768px) {
   .referral-card-info {
     padding: 50px 30px;
-  }
-
-  .referral-card-head {
-    text-align: start;
   }
 
   .referral-info-heading {
     font-size: var(--fontSizeXl);
   }
 
+  .referral-card-body .referral-info-heading,
+  .referral-card-head {
+    text-align: start;
+  }
+
+  .referral-card-body .referral-info-heading {
+    font-size: 30px;
+  }
+
   .referral-card-description {
     line-height: var(--lineHeightXs);
+  }
+
+  .referral-card-item {
+    font-size: var(--fontSizeXl);
   }
 }
 
