@@ -5,14 +5,10 @@
 }
 
 .referral-card-image {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top center;
   max-width: 170px;
   min-height: 280px;
   transform: rotate(4.6deg);
-  background-image: url('/assets/images/referral/cards/card-visa.png');
-  filter: var(--referralCardImage);
+  filter: var(--referralCardDropShadow);
 }
 
 .referral-card-thumbnail {
@@ -49,11 +45,6 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .referral-card-image {
-    max-width: 417px;
-    min-height: 426px;
-  }
-
   .referral-card {
     width: 46%;
     margin: 0;

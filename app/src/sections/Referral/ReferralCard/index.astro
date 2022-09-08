@@ -9,8 +9,12 @@ const { className = '' } = Astro.props;
 ---
 
 <div class={`referral-card ${className}`}>
-  <div class="mg-auto referral-card-thumbnail">
-    <div class="mg-auto referral-card-image"></div>
+  <div class="mg-auto referral-card-thumbnail d-flex justify-content-center">
+    <img
+      src="/assets/images/referral/cards/card-visa.png"
+      alt="Referral Card"
+      class="referral-card-image"
+    />
   </div>
   <div class="referral-card-content">
     <!-- implement feature list -->

@@ -105,7 +105,8 @@ const THEME_BASE = {
   btnWidthLg: '243px',
 
   // Drop Shadow
-  referralCardImage: 'drop-shadow(0px 5.4744px 136.861px rgba(87, 79, 54, 25%))'
+  referralCardDropShadow:
+    'drop-shadow(0px 5.4744px 136.861px rgba(87, 79, 54, 25%))'
 };
 
 export default THEME_BASE;
