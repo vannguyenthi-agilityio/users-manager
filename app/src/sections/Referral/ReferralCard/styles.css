@@ -6,7 +6,6 @@
 
 .referral-card-image {
   max-width: 170px;
-  min-height: 280px;
   transform: rotate(4.6deg);
   filter: var(--referralCardDropShadow);
 }
@@ -40,7 +39,6 @@
 
   .referral-card-image {
     max-width: 280px;
-    min-height: 375px;
   }
 }
 
