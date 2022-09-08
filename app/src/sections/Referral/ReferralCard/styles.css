@@ -14,7 +14,7 @@
   z-index: 1;
 }
 
-.referral-card-content {
+.referral-card-step-list {
   background: var(--colorSecondary);
   backdrop-filter: blur(35px);
   border-radius: 20px;
@@ -72,7 +72,7 @@
     padding-top: 45px;
   }
 
-  .referral-card-content {
+  .referral-card-step-list {
     padding-top: 195px;
     max-width: 350px;
     padding-bottom: 54px;
@@ -101,7 +101,7 @@
     padding-top: 130px;
   }
 
-  .referral-card-content {
+  .referral-card-step-list {
     padding-top: 200px;
     max-width: 417px;
     padding-bottom: 67px;
