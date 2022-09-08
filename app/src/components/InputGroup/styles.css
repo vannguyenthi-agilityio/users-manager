@@ -1,0 +1,35 @@
+.input-group {
+  flex-direction: column;
+}
+
+.input-link {
+  background-color: var(--colorInputGroup);
+  color: var(--colorText);
+  text-decoration: underline;
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .input-group {
+    position: relative;
+  }
+
+  .input-link {
+    height: 80px;
+    margin-bottom: 0;
+  }
+
+  .btn-copy-link {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .input-group {
+    max-width: 543px;
+  }
+}

@@ -1,0 +1,16 @@
+---
+import Button from 'components:Button/index';
+import Input from 'components:Input/index';
+import './styles.css';
+
+export interface InputGroupProps {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`d-flex input-group ${className}`}>
+  <Input className="input-link" readonly={true} value="dogecard.co/i8oas" />
+  <Button className="btn-copy-link">Copy link</Button>
+</div>

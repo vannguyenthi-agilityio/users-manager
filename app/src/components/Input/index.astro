@@ -8,6 +8,8 @@ export interface InputProps {
   type?: string;
   pattern?: string;
   maxlength?: string;
+  readonly?: boolean;
+  value?: string;
 }
 
 const {
@@ -16,11 +18,14 @@ const {
   type = '',
   maxlength = '',
   pattern = '',
-  placeholder = ''
+  placeholder = '',
+  readonly = false,
+  value = ''
 } = Astro.props;
 ---
 
 <input
+  readonly={readonly}
   autofocus
   type={type}
   name={name}
@@ -29,4 +34,5 @@ const {
   pattern={pattern}
   maxlength={maxlength}
   class={`input ${className}`}
+  value={value}
 />
