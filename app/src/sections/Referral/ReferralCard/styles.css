@@ -46,15 +46,15 @@
   background-image: url('/assets/images/referral/icons/vector.svg');
 }
 
-.referral-card-step-ordered .referral-card-step-icon::before {
+.referral-card-step-icon.ordered::before {
   background-image: url('/assets/images/referral/icons/check-ordered.svg');
 }
 
-.referral-card-step-send .referral-card-step-icon::before {
+.referral-card-step-icon.send::before {
   background-image: url('/assets/images/referral/icons/check-send.svg');
 }
 
-.referral-card-step-location .referral-card-step-icon::before {
+.referral-card-step-icon.location::before {
   background-image: url('/assets/images/referral/icons/check-location.svg');
 }
 
