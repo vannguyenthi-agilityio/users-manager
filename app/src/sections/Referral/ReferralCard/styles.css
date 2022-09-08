@@ -1,11 +1,11 @@
 .referral-card {
   margin: auto;
-  padding-top: 65px;
+  padding-top: 75px;
 }
 
 .referral-card-thumbnail > img {
-  max-width: 170px;
-  transform: rotate(4.6deg);
+  max-width: 130px;
+  transform: rotate(-7deg);
   filter: var(--referralCardDropShadow);
 }
 
@@ -18,26 +18,81 @@
   background: var(--colorSecondary);
   backdrop-filter: blur(35px);
   border-radius: 20px;
-  padding-top: 80px;
+  padding-top: 85px;
   padding-bottom: 32px;
   max-width: 273px;
-  margin: -123px auto 0;
+  margin: -55px auto 0;
+}
+
+.referral-card-step-icon::before,
+.referral-card-step-icon::after {
+  content: '';
+  display: block;
+  border-color: transparent;
+  background-color: transparent;
+  background-size: var(--sizeFull) var(--sizeFull);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  width: 24px;
+}
+
+.referral-card-step-icon::before {
+  height: 24px;
+}
+
+.referral-card-step-list
+  > li:not(:last-child)
+  > .referral-card-step-icon::after {
+  height: 20px;
+  background-image: url('/assets/images/referral/icons/vector.svg');
+}
+
+.referral-card-step-icon.ordered::before {
+  background-image: url('/assets/images/referral/icons/check-ordered.svg');
+}
+
+.referral-card-step-icon.send::before {
+  background-image: url('/assets/images/referral/icons/check-send.svg');
+}
+
+.referral-card-step-icon.location::before {
+  background-image: url('/assets/images/referral/icons/check-location.svg');
+}
+
+.referral-card-step-list {
+  padding-left: 30px;
+}
+
+.referral-card-step-list > li {
+  font-size: var(--fontSizeBase);
+  line-height: 19px;
 }
 
 @media only screen and (min-width: 768px) {
   .referral-card {
-    padding-top: 28px;
+    padding-top: 45px;
   }
 
   .referral-card-content {
-    padding-top: 162px;
+    padding-top: 195px;
     max-width: 350px;
     padding-bottom: 54px;
-    margin-top: -154px;
+    margin-top: -125px;
   }
 
   .referral-card-thumbnail > img {
-    max-width: 280px;
+    max-width: 210px;
+    transform: rotate(-12deg);
+  }
+
+  .referral-card-step-list > li {
+    font-size: var(--fontSizeMd);
+    line-height: var(--lineHeightXs);
+  }
+
+  .referral-card-step-list {
+    padding-left: 60px;
   }
 }
 
@@ -45,12 +100,22 @@
   .referral-card {
     width: 45%;
     margin: 0;
-    padding-top: 105px;
+    padding-top: 130px;
   }
 
   .referral-card-content {
-    padding-top: 217px;
+    padding-top: 200px;
     max-width: 417px;
     padding-bottom: 67px;
+    margin-top: -135px;
+  }
+
+  .referral-card-step-list {
+    padding-left: 65px;
+  }
+
+  .referral-card-thumbnail > img {
+    transform: rotate(-12deg);
+    max-width: none;
   }
 }
