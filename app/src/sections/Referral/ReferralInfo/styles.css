@@ -6,6 +6,7 @@
 
 .referral-card-head .hero-heading {
   margin: 10px 0;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
