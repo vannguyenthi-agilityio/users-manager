@@ -1,0 +1,17 @@
+---
+import SocialIcon from 'components:SocialIcon/index';
+
+export interface InstagramIconProps {
+  className?: string;
+  href?: string;
+}
+
+const { className = '', href = '' } = Astro.props;
+---
+
+<SocialIcon
+  className={className}
+  href={href}
+  imageUrl="assets/images/icons/instagram.svg"
+  imageAlt="DogeCard Instagram"
+/>
