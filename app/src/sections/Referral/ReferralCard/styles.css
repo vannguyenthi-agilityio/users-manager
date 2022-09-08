@@ -24,8 +24,8 @@
   margin: -55px auto 0;
 }
 
-.referral-card-step-item > i::before,
-.referral-card-step-item > i::after {
+.referral-card-info > li > i::before,
+.referral-card-info > li > i::after {
   content: '';
   display: block;
   border-color: transparent;
@@ -41,7 +41,7 @@
   height: 24px;
 }
 
-.referral-card-step-icon::after {
+.referral-card-info > li:not(:last-child) > i::after {
   height: 20px;
   background-image: url('/assets/images/referral/icons/vector.svg');
 }
@@ -56,10 +56,6 @@
 
 .referral-card-step-location .referral-card-step-icon::before {
   background-image: url('/assets/images/referral/icons/check-location.svg');
-}
-
-.referral-card-step-location .referral-card-step-icon::after {
-  display: none;
 }
 
 .referral-card-info {
