@@ -9,6 +9,10 @@
 }
 
 @media (min-width: 768px) {
+  .referral-card-info {
+    padding: 50px 30px;
+  }
+
   .referral-card-head {
     text-align: start;
   }
@@ -24,11 +28,8 @@
 
 @media (min-width: 1200px) {
   .referral-card-info {
+    padding: 40px 0 60px 60px;
     width: 54%;
-  }
-
-  .referral-card-head {
-    padding-left: 60px;
   }
 
   .hero-heading {
