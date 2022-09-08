@@ -41,7 +41,9 @@
   height: 24px;
 }
 
-.referral-card-info > li:not(:last-child) > i::after {
+.referral-card-step-list
+  > li:not(:last-child)
+  > .referral-card-step-icon::after {
   height: 20px;
   background-image: url('/assets/images/referral/icons/vector.svg');
 }
