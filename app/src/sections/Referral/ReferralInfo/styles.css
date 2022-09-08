@@ -41,7 +41,7 @@
   }
 
   .referral-info-sub-heading {
-    font-size: 30px;
+    font-size: var(--subTitleFontSize);
   }
 
   .referral-card-description {
