@@ -18,11 +18,11 @@
   margin-top: 10px;
 }
 
-.hightlight-list > li::marker {
+.referral-info-list > li::marker {
   font-weight: var(--fontWeightBold);
 }
 
-.hightlight-list > li::before {
+.referral-info-list > li::before {
   padding-left: 5px;
 }
 
