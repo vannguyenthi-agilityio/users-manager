@@ -10,3 +10,7 @@
   padding: 19px 16px;
   margin-bottom: 20px;
 }
+
+.input[type='dark'] {
+  background-color: var(--colorInputGroup);
+}

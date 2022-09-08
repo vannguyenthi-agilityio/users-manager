@@ -3,7 +3,6 @@
 }
 
 .input-link {
-  background-color: var(--colorInputGroup);
   color: var(--colorText);
   text-decoration: underline;
   height: 60px;
@@ -25,11 +24,5 @@
     top: 50%;
     transform: translateY(-50%);
     margin: auto;
-  }
-}
-
-@media (min-width: 992px) {
-  .input-group {
-    max-width: 543px;
   }
 }
