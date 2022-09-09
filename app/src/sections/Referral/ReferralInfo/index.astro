@@ -1,7 +1,34 @@
 ---
+import Heading from 'components:Heading/index';
+import TwitterIcon from 'components:SocialIcon/Twitter';
+import FacebookIcon from 'components:SocialIcon/Facebook';
+
+// Styles
 import './styles.css';
 ---
 
-<div class="referral-info">
-  <h2>ReferralInfo section</h2>
+<div class="d-flex-column referral-card-info">
+  <div class="text-center referral-card-head">
+    <p class="referral-card-description">Next</p>
+    <Heading size="sm" className="referral-info-heading" uppercase>
+      Invite Friends, Get $25 in Dogecoin
+    </Heading>
+    <p class="referral-card-description">For each friend who uses your link:</p>
+  </div>
+  <div class="referral-card-body">
+    <Heading size="sm" className="text-center referral-info-sub-heading"
+      >You and your friend get 🤝
+    </Heading>
+    <ol class="hightlight-list referral-info-list">
+      <li class="referral-info-item">$25 in Dogecoin</li>
+      <li class="referral-info-item">Move up waitlist</li>
+    </ol>
+  </div>
+  <div class="d-flex referral-content">
+    <p class="referral-social-description">Share:</p>
+    <div class="d-flex referral-social-icon">
+      <TwitterIcon href="#" />
+      <FacebookIcon href="#" />
+    </div>
+  </div>
 </div>

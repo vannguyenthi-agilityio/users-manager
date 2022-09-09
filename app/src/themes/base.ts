@@ -31,6 +31,7 @@ const THEME_BASE = {
   fontSize5Xl: '45px',
   fontSize6Xl: '48px',
 
+  subTitleFontSize: '30px',
   logoTextFontSize: '32px',
 
   fontWeightNormal: 400,
