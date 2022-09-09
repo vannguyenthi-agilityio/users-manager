@@ -11,13 +11,13 @@ export interface InputProps {
   readonly?: boolean;
   value?: string;
   colorScheme?: string;
-  size?: 'sm | md | lg' | string;
+  size?: 'sm | md | lg';
 }
 
 const {
   className = '',
   name = '',
-  type = '',
+  type = 'text',
   maxlength = '',
   pattern = '',
   placeholder = '',
@@ -37,7 +37,9 @@ const {
   required
   pattern={pattern}
   maxlength={maxlength}
-  class={`input ${className} ${colorScheme == 'dark' ? 'input-dark' : ''}`}
+  class={`input input-${size} ${className} ${
+    colorScheme == 'dark' ? 'input-dark' : 'input-light'
+  }`}
   value={value}
   size={size}
 />

@@ -3,26 +3,29 @@
   outline: 1px solid transparent;
   outline-offset: 1px;
   border: none;
-  font-size: var(--fontSizeBase);
   width: var(--sizeFull);
   line-height: 19px;
-  padding: 19px 16px;
 }
 
 .input-dark {
   background-color: var(--colorInputDark);
+  color: var(--colorText);
 }
 
-.input[size='sm'] {
+.input-light {
+  color: var(--colorBlack);
+}
+
+.input-sm {
   height: 56px;
 }
 
-.input[size='md'] {
+.input-md {
   height: 60px;
 }
 
 @media (min-width: 768px) {
-  .input[size='md'] {
+  .input-md {
     height: 80px;
   }
 }
