@@ -1,12 +1,15 @@
 ---
 import Layout from 'layouts:BaseLayout';
-import Hero from 'sections:Home/Hero/index';
+import HeroContainer from 'src/sections/Home/Hero/container';
 import Secured from 'sections:Home/Secured/index';
+import Hero from 'sections:Home/Hero/index';
 import CardInfoList from 'sections:Home/CardInfoList/index';
 ---
 
 <Layout hasHeaderOverlap={true}>
-  <Hero />
+  <HeroContainer client:load>
+    <Hero />
+  </HeroContainer>
   <Secured />
   <CardInfoList />
 </Layout>

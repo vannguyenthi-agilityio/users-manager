@@ -24,7 +24,9 @@ const {
   readonly = false,
   value = '',
   colorScheme = 'light',
-  size = 'sm'
+  size = 'sm',
+  onChange = () => {},
+  onBlur = () => {}
 } = Astro.props;
 ---
 
@@ -42,4 +44,6 @@ const {
   }`}
   value={value}
   size={size}
+  onchange={onChange}
+  onblur={onBlur}
 />
