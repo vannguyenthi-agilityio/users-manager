@@ -1,21 +1,26 @@
 .referral-card-info {
   background-color: var(--colorSecondary);
   border-radius: 20px;
-  padding: 60px 20px 20px;
+  padding: 55px 20px 20px;
 }
 
 .referral-info-heading {
-  margin: 10px 0;
+  margin: 12px 0;
+}
+
+.referral-card-head,
+.referral-info-sub-heading {
+  text-align: center;
 }
 
 .referral-info-sub-heading {
   color: var(--colorPrimary);
   font-size: var(--fontSizeMd);
-  margin: 20px 0 10px;
+  margin: 20px 0 15px;
 }
 
 .referral-info-item {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .referral-info-list > li::marker {
@@ -27,7 +32,7 @@
 }
 
 .referral-social-content {
-  margin-top: 30px;
+  margin-top: 32px;
   justify-content: space-between;
 }
 
@@ -42,26 +47,27 @@
 
 .referral-input-description {
   font-size: var(--fontSizeSm);
-  line-height: var(--lineHeight6Xl);
-  margin-bottom: 5px;
+  line-height: var(--lineHeight4Xl);
 }
 
 .referral-input-group {
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .input-group-item {
   text-decoration-line: underline;
+  padding: 20px;
 }
 
 @media (min-width: 768px) {
   .referral-card-info {
-    padding: 50px 30px;
+    padding: 55px 30px;
   }
 
   .referral-info-heading {
     font-size: var(--fontSizeXl);
+    margin: 5px 0;
   }
 
   .referral-info-sub-heading,
@@ -71,6 +77,7 @@
 
   .referral-info-sub-heading {
     font-size: var(--subTitleFontSize);
+    margin: 30px 0 20px;
   }
 
   .referral-card-description {
@@ -79,10 +86,12 @@
 
   .referral-info-item {
     font-size: var(--fontSizeXl);
+    margin-top: 15px;
   }
 
   .referral-social-content {
     flex-direction: column;
+    margin-top: 45px;
   }
 
   .referral-social-icon {
@@ -91,25 +100,45 @@
 
   .referral-input-description {
     font-size: var(--fontSizeMd);
+    line-height: var(--lineHeight6Xl);
   }
 
   .referral-input-group {
-    margin-top: 30px;
+    margin-top: 28px;
+  }
+
+  .input-group-item {
+    padding: 24px;
   }
 }
 
 @media (min-width: 1200px) {
   .referral-card-info {
-    padding: 40px 60px 60px;
+    margin-top: 80px;
+    padding: 45px 60px 60px 80px;
     width: 55%;
   }
 
   .referral-info-heading {
     font-size: var(--fontSize3Xl);
     line-height: 43px;
+    margin: 15px 0;
   }
 
   .referral-input-group {
-    margin-top: 45px;
+    margin-top: 40px;
+    max-width: 543px;
+  }
+
+  .referral-info-item {
+    margin-top: 15px;
+  }
+
+  .referral-info-sub-heading {
+    margin: 20px 0;
+  }
+
+  .referral-social-content {
+    margin-top: 20px;
   }
 }

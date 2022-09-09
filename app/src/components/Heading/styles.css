@@ -3,6 +3,11 @@
   font-weight: var(--fontWeightBold);
 }
 
+.heading-xs {
+  font-size: var(--fontSizeMd);
+  line-height: var(--lineHeight6Xl);
+}
+
 .heading-sm {
   font-size: var(--fontSizeLg);
   line-height: var(--lineHeightXl);
@@ -18,6 +23,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .heading-xs {
+    font-size: var(--subTitleFontSize);
+    line-height: var(--lineHeight6Xl);
+  }
+
   .heading-sm {
     font-size: var(--fontSizeXl);
     line-height: var(--lineHeight4Xl);
