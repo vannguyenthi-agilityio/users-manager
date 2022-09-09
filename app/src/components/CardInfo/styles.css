@@ -53,6 +53,7 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    padding: 135px 40px 173px;
   }
 
   .card-info-heading {
@@ -61,7 +62,9 @@
   }
 
   .card-image {
-    width: var(--sizeFull);
+    margin-bottom: 0;
+    width: 50%;
+    text-align: center;
   }
 
   .card-image > img {
@@ -69,16 +72,17 @@
   }
 
   .card-info-content {
-    width: var(--sizeFull);
+    width: 50%;
     text-align: left;
     align-items: unset;
+    margin-top: 0;
   }
 
   .card-info-description {
-    margin: 32px 0 48px;
+    margin: 32px 0 70px;
     font-size: 30px;
     line-height: var(--lineHeight6Xl);
-    max-width: 720px;
+    max-width: 716px;
   }
 
   .card-info-button {

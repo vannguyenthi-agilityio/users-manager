@@ -74,6 +74,7 @@
     max-width: 496px;
     min-width: 400px;
     margin-right: 20px;
+    padding-left: 24px;
     margin-bottom: 0;
     font-size: var(--fontSizeMd);
     line-height: var(--lineHeightXs);
@@ -92,7 +93,8 @@
     text-align: left;
     padding: 0;
     align-items: flex-start;
-    margin-top: 96px;
+    margin-top: 80px;
+    padding-left: 40px;
   }
 
   .hero-bg {
@@ -102,5 +104,13 @@
 
   .hero-text-term {
     max-width: 351px;
+  }
+
+  .hero-form {
+    padding-top: 30px;
+  }
+
+  .hero-form-input {
+    margin-right: 15px;
   }
 }

@@ -59,15 +59,20 @@
 }
 
 @media (min-width: 992px) {
+  .secured {
+    margin-top: 48px;
+    margin-bottom: 80px;
+  }
+
   .secured-heading {
     font-size: var(--fontSize3Xl);
     line-height: var(--lineHeight6Xl);
+    margin: 70px auto;
   }
 
   .secured-content {
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding: 35px 37px 95px;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -78,5 +83,22 @@
 
   .secured-description {
     max-width: 230px;
+  }
+
+  .secured-icon {
+    height: 177px;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .secured-icon > img {
+    height: 100px;
+    max-width: 300px;
+  }
+
+  .secured-info {
+    margin-top: 48px;
+    margin-bottom: 80px;
   }
 }
