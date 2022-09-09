@@ -3,10 +3,34 @@
   outline: 1px solid transparent;
   outline-offset: 1px;
   border: none;
-  font-size: var(--fontSizeBase);
   width: var(--sizeFull);
-  color: var(--colorBlack);
   line-height: 19px;
-  padding: 19px 16px;
-  margin-bottom: 20px;
+}
+
+.input-dark {
+  background-color: var(--colorInputDark);
+  color: var(--colorText);
+}
+
+.input-light {
+  color: var(--colorBlack);
+}
+
+.input-sm {
+  height: 56px;
+  padding: 17px 25px;
+  font-size: var(--fontSizeBase);
+}
+
+.input-md {
+  height: 60px;
+  font-size: var(--fontSizeBase);
+  padding: 30px;
+}
+
+@media (min-width: 768px) {
+  .input-md {
+    height: 80px;
+    font-size: var(--fontSizeMd);
+  }
 }

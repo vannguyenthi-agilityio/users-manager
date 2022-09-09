@@ -8,19 +8,28 @@ export interface InputProps {
   type?: string;
   pattern?: string;
   maxlength?: string;
+  readonly?: boolean;
+  value?: string;
+  colorScheme?: string;
+  size?: 'sm | md | lg';
 }
 
 const {
   className = '',
   name = '',
-  type = '',
+  type = 'text',
   maxlength = '',
   pattern = '',
-  placeholder = ''
+  placeholder = '',
+  readonly = false,
+  value = '',
+  colorScheme = 'light',
+  size = 'sm'
 } = Astro.props;
 ---
 
 <input
+  readonly={readonly}
   autofocus
   type={type}
   name={name}
@@ -28,5 +37,9 @@ const {
   required
   pattern={pattern}
   maxlength={maxlength}
-  class={`input ${className}`}
+  class={`input input-${size} ${className} ${
+    colorScheme == 'dark' ? 'input-dark' : 'input-light'
+  }`}
+  value={value}
+  size={size}
 />

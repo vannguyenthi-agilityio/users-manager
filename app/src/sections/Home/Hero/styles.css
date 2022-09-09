@@ -46,6 +46,10 @@
   color: var(--colorPlaceholder);
 }
 
+.hero-form-input {
+  margin-bottom: 20px;
+}
+
 @media only screen and (min-width: 768px) {
   .hero-content {
     text-align: left;

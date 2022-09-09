@@ -1,0 +1,24 @@
+.input-group {
+  flex-direction: column;
+}
+
+.input-group-item {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .input-group {
+    background-color: var(--colorInputDark);
+    border-radius: var(--borderRadiusMd);
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .input-group-item {
+    margin-bottom: 0;
+  }
+
+  .input-group-content {
+    margin-right: 12px;
+  }
+}
