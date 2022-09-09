@@ -2,22 +2,21 @@
   flex-direction: column;
 }
 
-.input.input-group-item {
+.input-group-item {
   color: var(--colorText);
   text-decoration: underline;
-  height: 60px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
   .input-group {
-    background-color: var(--colorInputGroup);
+    background-color: var(--colorInputDark);
     border-radius: var(--borderRadiusMd);
-    height: 80px;
     flex-direction: row;
     align-items: center;
   }
 
-  input.input-group-item {
+  .input-group-item {
     margin-bottom: 0;
   }
 

@@ -11,6 +11,7 @@ export interface InputProps {
   readonly?: boolean;
   value?: string;
   colorScheme?: string;
+  size?: 'sm | md | lg' | string;
 }
 
 const {
@@ -22,7 +23,8 @@ const {
   placeholder = '',
   readonly = false,
   value = '',
-  colorScheme = 'light'
+  colorScheme = 'light',
+  size = 'sm'
 } = Astro.props;
 ---
 
@@ -35,6 +37,7 @@ const {
   required
   pattern={pattern}
   maxlength={maxlength}
-  class={`input ${className} ${colorScheme == 'dark' ? 'bg-input-dark' : ''}`}
+  class={`input ${className} ${colorScheme == 'dark' ? 'input-dark' : ''}`}
   value={value}
+  size={size}
 />

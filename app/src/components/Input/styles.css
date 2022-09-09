@@ -5,12 +5,24 @@
   border: none;
   font-size: var(--fontSizeBase);
   width: var(--sizeFull);
-  color: var(--colorBlack);
   line-height: 19px;
   padding: 19px 16px;
-  margin-bottom: 20px;
 }
 
-.bg-input-dark {
-  background-color: var(--colorInputGroup);
+.input-dark {
+  background-color: var(--colorInputDark);
+}
+
+.input[size='sm'] {
+  height: 56px;
+}
+
+.input[size='md'] {
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .input[size='md'] {
+    height: 80px;
+  }
 }
