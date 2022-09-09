@@ -3,6 +3,8 @@ import THEME_BASE from 'themes:base';
 import BaseHead from 'layouts:components/BaseHead/index';
 import Header from 'layouts:components/Header/index';
 import Footer from 'layouts:components/Footer/index';
+// import AuthGuard from 'src/contexts/AuthGuard';
+// import { AuthProvider } from 'src/contexts/AuthContext';
 import ApiProvider from './ApiProvider';
 
 export interface Props {
@@ -21,6 +23,8 @@ const { title, description, hasHeaderOverlap } = Astro.props as Props;
   </head>
   <body>
     <ApiProvider client:load>
+      <!-- <AuthProvider client:load> -->
+      <!-- <AuthGuard> -->
       <!-- Header -->
       <Header hasOverlap={hasHeaderOverlap} />
 
@@ -31,6 +35,8 @@ const { title, description, hasHeaderOverlap } = Astro.props as Props;
 
       <!-- Footer -->
       <Footer />
+      <!-- </AuthGuard> -->
+      <!-- </AuthProvider> -->
     </ApiProvider>
     <!-- Global styles -->
     <style
