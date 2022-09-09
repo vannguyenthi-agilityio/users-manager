@@ -18,14 +18,14 @@
 
 .input-sm {
   height: 56px;
-  padding-left: 25px;
+  padding: 17px 25px;
   font-size: var(--fontSizeBase);
 }
 
 .input-md {
   height: 60px;
   font-size: var(--fontSizeBase);
-  padding-left: 30px;
+  padding: 30px;
 }
 
 @media (min-width: 768px) {
