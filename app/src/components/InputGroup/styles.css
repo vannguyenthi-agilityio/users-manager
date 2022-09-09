@@ -3,8 +3,6 @@
 }
 
 .input-group-item {
-  font-size: var(--fontSizeBase);
-  padding-left: 30px;
   margin-bottom: 20px;
 }
 
@@ -17,7 +15,6 @@
   }
 
   .input-group-item {
-    font-size: var(--fontSizeMd);
     margin-bottom: 0;
   }
 

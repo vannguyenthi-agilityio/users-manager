@@ -47,9 +47,7 @@
 }
 
 .hero-form-input {
-  padding: 19px 16px;
   margin-bottom: 20px;
-  font-size: var(--fontSizeBase);
 }
 
 @media only screen and (min-width: 768px) {
