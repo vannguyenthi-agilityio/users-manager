@@ -25,7 +25,6 @@
 @media only screen and (min-width: 768px) {
   .heading-xs {
     font-size: var(--subTitleFontSize);
-    line-height: var(--lineHeight6Xl);
   }
 
   .heading-sm {
@@ -42,7 +41,6 @@
 @media only screen and (min-width: 1200px) {
   .heading-sm {
     font-size: var(--fontSize3Xl);
-    line-height: var(--lineHeight6Xl);
   }
 
   .heading-md {
