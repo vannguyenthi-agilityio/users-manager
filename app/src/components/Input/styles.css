@@ -11,6 +11,6 @@
   margin-bottom: 20px;
 }
 
-.input[type='dark'] {
+.bg-input-dark {
   background-color: var(--colorInputGroup);
 }

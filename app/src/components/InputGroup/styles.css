@@ -2,7 +2,7 @@
   flex-direction: column;
 }
 
-.input-link {
+.input.input-group-item {
   color: var(--colorText);
   text-decoration: underline;
   height: 60px;
@@ -10,19 +10,18 @@
 
 @media (min-width: 768px) {
   .input-group {
-    position: relative;
+    background-color: var(--colorInputGroup);
+    border-radius: var(--borderRadiusMd);
+    height: 80px;
+    flex-direction: row;
+    align-items: center;
   }
 
-  .input-link {
-    height: 80px;
+  input.input-group-item {
     margin-bottom: 0;
   }
 
-  .btn-copy-link {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: auto;
+  .input-group-content {
+    margin-right: 12px;
   }
 }
