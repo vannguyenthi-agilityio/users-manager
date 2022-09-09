@@ -2,6 +2,9 @@
 import Heading from 'components:Heading/index';
 import TwitterIcon from 'components:SocialIcon/Twitter';
 import FacebookIcon from 'components:SocialIcon/Facebook';
+import Button from 'components:Button/index';
+import Input from 'components:Input/index';
+import InputGroup from 'components:InputGroup/index';
 
 // Styles
 import './styles.css';
@@ -30,5 +33,18 @@ import './styles.css';
       <TwitterIcon href="#" />
       <FacebookIcon href="#" />
     </div>
+  </div>
+  <div class="d-flex referral-input-group">
+    <p class="referral-input-description">Your unique link</p>
+    <InputGroup>
+      <Input
+        size="md"
+        className="input-group-item"
+        colorScheme="dark"
+        readonly={true}
+        value="dogecard.co/i8oas"
+      />
+      <Button className="input-group-content">Copy link</Button>
+    </InputGroup>
   </div>
 </div>
