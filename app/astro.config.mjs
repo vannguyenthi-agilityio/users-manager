@@ -16,7 +16,7 @@ export default defineConfig({
   integrations: [
     react(),
     compress({
-			css: true,
+			css: false,
 			html: true,
 			js: true,
 			img: true,
