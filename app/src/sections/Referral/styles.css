@@ -1,1 +1,10 @@
 /* Style for referral page */
+.referral-content {
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1200px) {
+  .referral-content {
+    flex-direction: row;
+  }
+}
