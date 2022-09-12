@@ -55,7 +55,6 @@
 
 .input-group-item {
   text-decoration-line: underline;
-  padding: 20px;
 }
 
 @media (min-width: 768px) {
@@ -103,10 +102,6 @@
 
   .referral-input-group {
     margin-top: 28px;
-  }
-
-  .input-group-item {
-    padding: 24px;
   }
 }
 
