@@ -1,7 +1,8 @@
-import React, { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 
-// Hooks
-import useAuth from 'src/hooks/useAuth';
+// Shared Context
+import { useSharedContext } from 'src/libs/SharedContext/React';
+import { User } from 'src/models/user';
 
 // Const
 import { ROUTES } from 'src/constants/routes';
@@ -23,17 +24,17 @@ interface RedirectPageProps {
 }
 
 const RedirectPage = ({ children, error }: RedirectPageProps) => {
-  const { isAuthenticated } = useAuth();
+  const isAuthenticated = useSharedContext(User.isAuthenticated);
   // Make sure we're in the browser
-  if (isBrowser && error) {
+  if (isBrowser) {
     const currentLocation = window.location.pathname;
-    if (!isAuthenticated && currentLocation === ROUTES.REFERRAL) {
-      // navigate(ROUTES.HOME);
-      window.location.href = ROUTES.HOME;
-
-      return <Splash />;
-    } else {
-      return children;
+    if (error) {
+      if (!isAuthenticated && currentLocation === ROUTES.REFERRAL) {
+        window.location.href = ROUTES.HOME;
+        return <Splash />;
+      } else {
+        return children;
+      }
     }
   }
 
@@ -41,7 +42,14 @@ const RedirectPage = ({ children, error }: RedirectPageProps) => {
 };
 
 const AuthGuard = ({ children }: AuthGuardProps) => {
-  const { isAuthenticated } = useAuth();
+  const isAuthenticated = useSharedContext(User.isAuthenticated);
+  const isInitialized = useSharedContext(User.isInitialized);
+
+  useEffect(() => {
+    if (!isInitialized) {
+      User.initialize();
+    }
+  }, []);
 
   return (
     <Suspense fallback={<Splash />}>

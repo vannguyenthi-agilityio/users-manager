@@ -1,18 +1,26 @@
-import { useState, useRef, MutableRefObject, useContext } from 'react';
+import { useEffect, useRef, MutableRefObject, useContext } from 'react';
 import Button from 'src/components/Button/button';
 import Input from 'src/components/Input/input';
 import Heading from 'src/components/Heading/heading';
 import DownloadButtonList from 'src/components/DownloadButtonList/buttonGroup';
 
 // Hooks
-import useAuth from 'src/hooks/useAuth';
+// import useAuth from 'src/hooks/useAuth';
 
 // Styles
 import './styles.css';
 
+import { useSharedContext } from 'src/libs/SharedContext/React';
+import { User } from 'src/models/user';
+import { ROUTES } from 'src/constants/routes';
+
 export default function Hero() {
-  const authContext = useAuth();
-  console.log('hereeeee', authContext);
+  // const user = useSharedContext(User.user)
+  // const isAuthenticated = useSharedContext(User.isAuthenticated)
+  // console.log('Hero: ', user, isAuthenticated)
+
+  // const authContext = useAuth();
+  // console.log('Hero component', authContext);
   const inputRef = useRef({
     value: ''
   });
@@ -32,10 +40,20 @@ export default function Hero() {
   const handleSignup = () => {
     const username = (inputRef as MutableRefObject<{ value: string }>)?.current
       ?.value;
-    console.log('handleSignup', authContext.signUp, username);
-    authContext.signUp({
-      username
-    });
+    console.log('handleSignup', username);
+    User.signUp(
+      {
+        username
+      },
+      // onError
+      () => {},
+      // onSuccess
+      () => {
+        // Show success alert and then
+        // Navigate to Referral page
+        window.location.href = ROUTES.REFERRAL;
+      }
+    );
   };
 
   return (
