@@ -5,7 +5,7 @@
 .secured-content {
   background-color: var(--colorSecondary);
   border-radius: var(--borderRadiusLg);
-  padding-bottom: 50px;
+  padding-bottom: 0;
   flex-direction: column;
   justify-content: center;
   padding-top: 50px;
@@ -47,6 +47,7 @@
 
   .secured-content {
     padding-top: 30px;
+    padding-bottom: 50px;
   }
 
   .secured-item {
@@ -101,8 +102,12 @@
   }
 
   .secured-icon > img {
-    height: 100px;
+    height: auto;
     max-width: 300px;
+  }
+
+  .sercure-icon-authentication > img {
+    height: 100px;
   }
 
   .secured-info {
