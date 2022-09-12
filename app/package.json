@@ -61,7 +61,8 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx,astro}": [
-      "pnpm prettier -w src/**/*.astro"
+      "pnpm prettier -w src/**/*.astro",
+      "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
     ],
     "*.css": [
       "pnpm prettier -w",
