@@ -2,8 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 30px 0;
-  margin: 100px 0;
+  margin-bottom: 180px;
 }
 
 .card-info-heading {
@@ -11,7 +10,11 @@
 }
 
 .card-image {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
+}
+
+.card-info-secure .card-image {
+  margin-bottom: 0;
 }
 
 .card-image > img {
@@ -22,7 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -39,7 +42,7 @@
 
 @media (min-width: 768px) {
   .card-info-heading {
-    max-width: 460px;
+    max-width: 475px;
   }
 
   .card-info-description {
@@ -49,7 +52,11 @@
   }
 
   .card-info {
-    margin: 150px 0;
+    margin-bottom: 175px;
+  }
+
+  .card-info-secure .card-info-content {
+    margin-top: 90px;
   }
 }
 
@@ -59,7 +66,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 35px 40px 70px;
-    margin: 175px 0;
+    margin-bottom: 198px;
   }
 
   .card-info-heading {

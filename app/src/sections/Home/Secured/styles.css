@@ -46,13 +46,14 @@
   }
 
   .secured-content {
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 45px;
+    padding-bottom: 25px;
   }
 
   .secured-item {
     flex-direction: column-reverse;
-    margin-top: 30px;
+    margin-top: 35px;
+    margin-bottom: 45px;
   }
 
   .secured-description {
@@ -61,8 +62,8 @@
   }
 
   .secured-icon {
-    max-width: 160px;
-    height: 160px;
+    max-width: 193px;
+    height: 175px;
   }
 }
 
@@ -80,7 +81,7 @@
 
   .secured-content {
     align-items: center;
-    padding: 35px 37px 95px;
+    padding: 10px 37px 95px;
     flex-direction: row;
     justify-content: space-around;
   }
