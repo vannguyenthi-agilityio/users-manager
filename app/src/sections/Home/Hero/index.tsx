@@ -1,52 +1,31 @@
-import { useEffect, useRef, MutableRefObject, useContext } from 'react';
+import { useRef, MutableRefObject } from 'react';
 import Button from 'src/components/Button/button';
 import Input from 'src/components/Input/input';
 import Heading from 'src/components/Heading/heading';
 import DownloadButtonList from 'src/components/DownloadButtonList/buttonGroup';
 
-// Hooks
-// import useAuth from 'src/hooks/useAuth';
-
 // Styles
 import './styles.css';
 
-import { useSharedContext } from 'src/libs/SharedContext/React';
 import { User } from 'src/models/user';
 import { ROUTES } from 'src/constants/routes';
 
 export default function Hero() {
-  // const user = useSharedContext(User.user)
-  // const isAuthenticated = useSharedContext(User.isAuthenticated)
-  // console.log('Hero: ', user, isAuthenticated)
-
-  // const authContext = useAuth();
-  // console.log('Hero component', authContext);
   const inputRef = useRef({
     value: ''
   });
 
-  // const handleBlurUsername = (e) => {
-  //   // TODO: Validate
-  //   setUsername(e.target.value);
-  // };
-
-  // const handleLogin = () => {
-  //   logIn({
-  //     username,
-  //     otp: '123456',
-  //   });
-  // };
-
   const handleSignup = () => {
     const username = (inputRef as MutableRefObject<{ value: string }>)?.current
       ?.value;
-    console.log('handleSignup', username);
     User.signUp(
       {
         username
       },
       // onError
-      () => {},
+      () => {
+        // Show error alert and then
+      },
       // onSuccess
       () => {
         // Show success alert and then
