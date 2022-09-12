@@ -148,26 +148,27 @@ export namespace User {
     onSuccess?: () => void
   ) {
     try {
-      signUpApi(data.username)
-        .then(function (res) {
-          const response = res.json();
-          response.then((r) => {
-            setStorage(LOCAL_STORAGE_KEYS.USER_INFO, JSON.stringify(r));
+      signUpApi(data.username).then(function (res) {
+        const response = res.json();
+        response.then((r) => {
+          if (Object.keys(r).indexOf('errorMessage') > -1) {
+            onError(r.errorMessage);
+            setStorage(LOCAL_STORAGE_KEYS.USER_INFO, JSON.stringify({}));
+            return;
+          }
 
-            service.send({
-              type: 'SIGNUP',
-              payload: {
-                user: r as any,
-                isAuthenticated: true
-              }
-            });
-
-            onSuccess();
+          setStorage(LOCAL_STORAGE_KEYS.USER_INFO, JSON.stringify(r));
+          service.send({
+            type: 'SIGNUP',
+            payload: {
+              user: r as any,
+              isAuthenticated: true
+            }
           });
-        })
-        .catch((error) => {
-          console.log(error);
+
+          onSuccess();
         });
+      });
     } catch (error) {
       const errorMessage =
         error.message.indexOf(403) > -1

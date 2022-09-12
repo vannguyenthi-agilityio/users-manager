@@ -23,8 +23,9 @@ export default function Hero() {
         username
       },
       // onError
-      () => {
-        // Show error alert and then
+      (error) => {
+        // Show error error
+        console.log('Hero', error);
       },
       // onSuccess
       () => {

@@ -15,7 +15,7 @@ export const handlers = [
     if (data && existingData.find((item) => item.username === data.username)) {
       return res(
         // Respond with a 200 status code
-        ctx.status(400),
+        ctx.status(403),
         ctx.json({
           errorMessage: 'User has already been existing'
         })
