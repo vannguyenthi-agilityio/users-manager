@@ -1,5 +1,5 @@
 .secured-heading {
-  margin: 80px auto;
+  margin: 70px auto 40px;
 }
 
 .secured-content {
@@ -8,6 +8,7 @@
   padding-bottom: 50px;
   flex-direction: column;
   justify-content: center;
+  padding-top: 50px;
 }
 
 .secured-description {
@@ -18,7 +19,7 @@
 
 .secured-item {
   flex-direction: column;
-  margin-top: 50px;
+  margin-bottom: 62px;
 }
 
 .secured-description-visa {
@@ -32,19 +33,25 @@
   margin: auto;
 }
 
+.secured-icon-visa {
+  height: 160px;
+  max-width: 193px;
+}
+
 @media (min-width: 768px) {
   .secured-heading {
     font-size: var(--fontSizeXl);
     line-height: var(--lineHeight4Xl);
+    margin-top: 80px;
   }
 
   .secured-content {
-    padding-top: 80px;
+    padding-top: 30px;
   }
 
   .secured-item {
     flex-direction: column-reverse;
-    margin: 0;
+    margin-top: 30px;
   }
 
   .secured-description {
@@ -53,8 +60,8 @@
   }
 
   .secured-icon {
-    max-width: 150px;
-    height: 150px;
+    max-width: 160px;
+    height: 160px;
   }
 }
 
@@ -79,6 +86,7 @@
 
   .secured-item {
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   .secured-description {

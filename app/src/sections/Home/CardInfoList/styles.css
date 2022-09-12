@@ -1,5 +1,9 @@
 .card-info-secure .card-image {
-  width: auto;
+  width: 100%;
+}
+
+.card-info-secure .card-image > img {
+  max-width: 296px;
 }
 
 .card-info-secure .card-info-content {
@@ -15,7 +19,7 @@
   text-align: center;
   align-items: center;
   padding: 0 25px;
-  margin-top: 32px;
+  margin-top: 35px;
   font-family: var(--fontFamilySecondary);
 }
 
@@ -60,5 +64,9 @@
 
   .card-info-secure .card-info-content {
     width: auto;
+  }
+
+  .card-info-list {
+    padding-bottom: 135px;
   }
 }

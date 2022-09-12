@@ -19,4 +19,16 @@
   .download-button-item {
     width: var(--btnWidthMd);
   }
+
+  .download-button-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .download-button-list {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
