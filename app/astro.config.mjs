@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
+import svelte from '@astrojs/svelte';
 import compress from 'astro-compress';
 
 // https://astro.build/config
@@ -11,10 +12,11 @@ export default defineConfig({
   build: {
     // site: 'http://example.com', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
     sitemap: true,
-    format: 'file' // Generate sitemap (set to "false" to disable)     
+    format: 'file', // Generate sitemap (set to "false" to disable)     
   },
   integrations: [
     react(),
+    svelte(),
     compress({
 			css: false,
 			html: true,
@@ -26,6 +28,13 @@ export default defineConfig({
   trailingSlash: 'ignore',
   server: { 
     port: 3000, 
-    host: true
-  }
+    host: true,
+    
+  },
+  vite: {
+    ssr: {
+      // Example: Force a broken package to skip SSR processing, if needed
+      external: ['@xstate/svelte'],
+    },
+  },
 })

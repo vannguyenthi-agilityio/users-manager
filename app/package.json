@@ -45,7 +45,9 @@
   },
   "dependencies": {
     "@astrojs/react": "^1.0.0",
+    "@astrojs/svelte": "^1.0.0",
     "@builder.io/partytown": "^0.6.4",
+    "@xstate/svelte": "^1.0.0",
     "astro": "^1.0.5",
     "astro-compress": "^1.0.3",
     "autoprefixer": "^10.4.8",
@@ -53,12 +55,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "0.30.7",
-    "timers": "^0.1.1"
+    "svelte": "^3.47.0",
+    "timers": "^0.1.1",
+    "xstate": "^4.31.0"
   },
   "lint-staged": {
     "*.{js,ts,tsx,astro}": [
-      "pnpm prettier -w src/**/*.astro",
-      "eslint src/*.{js,jsx,ts,tsx,astro} --fix-dry-run --no-error-on-unmatched-pattern"
+      "pnpm prettier -w src/**/*.astro"
     ],
     "*.css": [
       "pnpm prettier -w",
