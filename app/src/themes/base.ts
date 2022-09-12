@@ -88,6 +88,7 @@ const THEME_BASE = {
   // Container
   containerPaddingSm: '15px',
   containerPaddingMd: '30px',
+  containerPaddingLg: '70px',
   containerWidthSm: '540px',
   containerWidthMd: '768px',
   containerWidthLg: '960px',

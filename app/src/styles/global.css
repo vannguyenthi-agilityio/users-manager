@@ -267,5 +267,7 @@ body {
 @media (min-width: 1920px) {
   .container {
     max-width: var(--containerWidth3Xl);
+    padding-left: var(--containerPaddingLg);
+    padding-right: var(--containerPaddingLg);
   }
 }

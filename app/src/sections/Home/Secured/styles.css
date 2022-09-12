@@ -1,5 +1,5 @@
 .secured-heading {
-  margin: 70px auto 40px;
+  margin: 80px auto 40px;
 }
 
 .secured-content {
@@ -8,7 +8,7 @@
   padding-bottom: 0;
   flex-direction: column;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 45px;
 }
 
 .secured-description {
@@ -36,6 +36,14 @@
 .secured-icon-visa {
   height: 160px;
   max-width: 193px;
+}
+
+.sercure-icon-authentication {
+  min-width: 100px;
+}
+
+.sercure-icon-authentication > img {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -71,6 +79,11 @@
   .secured {
     margin-top: 48px;
     margin-bottom: 80px;
+  }
+
+  .secured .container {
+    padding-left: var(--containerPaddingMd);
+    padding-right: var(--containerPaddingMd);
   }
 
   .secured-heading {
