@@ -3,9 +3,9 @@ import THEME_BASE from 'themes:base';
 import BaseHead from 'layouts:components/BaseHead/index';
 import Header from 'layouts:components/Header/index';
 import Footer from 'layouts:components/Footer/index';
-// import AuthGuard from 'src/contexts/AuthGuard';
-// import { AuthProvider } from 'src/contexts/AuthContext';
-import ApiProvider from './ApiProvider';
+import AuthGuard from 'src/contexts/AuthGuard';
+import AuthProvider from 'src/contexts/AuthContext';
+// import ApiProvider from './ApiProvider';
 
 export interface Props {
   title?: string;
@@ -22,22 +22,24 @@ const { title, description, hasHeaderOverlap } = Astro.props as Props;
     <BaseHead title={title} description={description} />
   </head>
   <body>
-    <ApiProvider client:load>
-      <!-- <AuthProvider client:load> -->
-      <!-- <AuthGuard> -->
-      <!-- Header -->
-      <Header hasOverlap={hasHeaderOverlap} />
+    <!-- <ApiProvider client:load> -->
 
-      <!-- Main -->
-      <main>
-        <slot />
-      </main>
+    <!-- Header -->
+    <Header hasOverlap={hasHeaderOverlap} />
 
-      <!-- Footer -->
-      <Footer />
-      <!-- </AuthGuard> -->
-      <!-- </AuthProvider> -->
-    </ApiProvider>
+    <!-- Main -->
+    <main>
+      <AuthProvider client:load>
+        <AuthGuard client:load>
+          <slot />
+        </AuthGuard>
+      </AuthProvider>
+    </main>
+
+    <!-- Footer -->
+    <Footer />
+
+    <!-- </ApiProvider> -->
     <!-- Global styles -->
     <style
       is:global

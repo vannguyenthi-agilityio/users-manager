@@ -24,15 +24,17 @@ interface RedirectPageProps {
 
 const RedirectPage = ({ children, error }: RedirectPageProps) => {
   const { isAuthenticated } = useAuth();
-  console.log(window.location);
   // Make sure we're in the browser
-  if (isBrowser && error && window.location.href === ROUTES.REFERRAL) {
-    if (!isAuthenticated) {
+  if (isBrowser && error) {
+    const currentLocation = window.location.pathname;
+    if (!isAuthenticated && currentLocation === ROUTES.REFERRAL) {
       // navigate(ROUTES.HOME);
       window.location.href = ROUTES.HOME;
-    }
 
-    return <Splash />;
+      return <Splash />;
+    } else {
+      return children;
+    }
   }
 
   return children;

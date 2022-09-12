@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import React, { createContext, useEffect, useReducer } from 'react';
 
 // Components
@@ -15,6 +14,7 @@ import {
   login as loginApi
 } from 'src/apis';
 import { getStorage, setStorage, clearStorage } from 'src/utils/storages';
+import { initMocks } from 'mocks';
 
 interface User {
   id: string;
@@ -107,9 +107,9 @@ const reducer = (state: AuthState, action: Action): AuthState => {
   switch (action.type) {
     case 'INITIALIZE': {
       const { isAuthenticated } = action.payload;
-
+      const tmp = { ...state };
       return {
-        ...state,
+        ...tmp,
         isAuthenticated,
         isInitialized: true,
         user: action.payload.user,
@@ -152,7 +152,7 @@ const reducer = (state: AuthState, action: Action): AuthState => {
   }
 };
 
-const AuthContext = createContext<AuthContextValue>({
+export const AuthContext = createContext<AuthContextValue>({
   ...initialAuthState,
   logOut: () => {},
   logIn: () => {},
@@ -160,9 +160,9 @@ const AuthContext = createContext<AuthContextValue>({
   getUserInfo: () => {}
 });
 
-export const AuthProvider = ({ children }: AuthProviderProps) => {
+export default function AuthProvider({ children }: AuthProviderProps) {
   const [state, dispatch] = useReducer(reducer, initialAuthState);
-
+  console.log('reducer state', state);
   const logOut = async (
     onError?: (error: string) => void,
     onSuccess?: () => void
@@ -222,6 +222,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     onSuccess?: () => void
   ) => {
     try {
+      console.log('signUp context', data.username);
       const res = await signUpApi(data.username);
 
       setStorage(LOCAL_STORAGE_KEYS.USER_INFO, res);
@@ -273,37 +274,43 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     }
   };
 
-  useEffect(() => {
-    const initialize = async () => {
-      try {
-        const user = getStorage(LOCAL_STORAGE_KEYS.USER_INFO);
+  const initialize = () => {
+    try {
+      const user = getStorage(LOCAL_STORAGE_KEYS.USER_INFO);
+      console.log('initialize=====', user);
+      dispatch({
+        type: 'INITIALIZE',
+        payload: {
+          user,
+          isAuthenticated: false
+        }
+      });
+    } catch (error) {
+      dispatch({
+        type: 'INITIALIZE',
+        payload: {
+          user: null,
+          isAuthenticated: false
+        }
+      });
+    }
+  };
 
-        dispatch({
-          type: 'INITIALIZE',
-          payload: {
-            user,
-            isAuthenticated: false
-          }
-        });
-      } catch (error) {
-        dispatch({
-          type: 'INITIALIZE',
-          payload: {
-            user: null,
-            isAuthenticated: false
-          }
-        });
-      }
-    };
+  useEffect(() => {
+    if (import.meta.env.PUBLIC_API_MOCKING === 'enabled') {
+      (async () => {
+        await initMocks();
+      })();
+    }
 
     if (state && !state.isInitialized) {
       initialize();
     }
   }, []);
 
-  if (!state.isInitialized) {
-    return <Splash />;
-  }
+  // if (!state.isInitialized) {
+  //   return <Splash />;
+  // }
 
   return (
     <AuthContext.Provider
@@ -318,6 +325,4 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       {children}
     </AuthContext.Provider>
   );
-};
-
-export default AuthContext;
+}
