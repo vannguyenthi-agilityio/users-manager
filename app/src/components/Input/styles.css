@@ -25,12 +25,13 @@
 .input-md {
   height: 60px;
   font-size: var(--fontSizeBase);
-  padding: 30px;
+  padding: 20px;
 }
 
 @media (min-width: 768px) {
   .input-md {
     height: 80px;
     font-size: var(--fontSizeMd);
+    padding: 30px;
   }
 }
