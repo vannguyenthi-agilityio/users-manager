@@ -66,7 +66,7 @@ export default function Hero() {
             </Button>
             {/* TODO: Show Alert components */}
             {/* <Alert
-              className="hero-alert"
+              className="hero-form-alert"
               title="We sent you a text to download the app"
               description="If you don’t receive one, please check the number and try again"
             /> */}

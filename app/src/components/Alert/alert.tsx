@@ -14,7 +14,7 @@ export default function Alert({
 }: AlertProps) {
   return (
     <div className={`alert ${className}`}>
-      <p className="text-bold alert-title">{title}</p>
+      <h2 className="text-bold alert-heading">{title}</h2>
       <p className="alert-description">{description}</p>
     </div>
   );

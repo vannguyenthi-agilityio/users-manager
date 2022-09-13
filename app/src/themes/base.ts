@@ -75,7 +75,7 @@ const THEME_BASE = {
   borderRadiusLg: '30px',
   borderRadiusXl: '50px',
   borderRadiusRound: '50%',
-  borderRadiusAlert: '8px',
+  borderRadiusTiny: '8px',
 
   // Sizes
   sizeFull: '100%',
