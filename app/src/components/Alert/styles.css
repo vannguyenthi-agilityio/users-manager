@@ -1,4 +1,4 @@
-.alert-content {
+.alert {
   font-size: var(--fontSizeXs);
   line-height: var(--fontSizeBase);
   color: var(--colorTextAlert);
@@ -6,10 +6,7 @@
   backdrop-filter: blur(40px);
   border-radius: var(--borderRadiusAlert);
   padding: 12px;
-  max-width: 300px;
   text-align: left;
-  position: absolute;
-  top: 106px;
 }
 
 .alert-title {

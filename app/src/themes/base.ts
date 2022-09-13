@@ -10,7 +10,6 @@ const THEME_BASE = {
   colorBackground: '#1d172b',
   colorText: '#fff',
   colorBgFooterDetail: '#151515',
-  // colorBgAlert: '#d1d5db',
   colorInputDark: '#191524',
   colorTextAlert: '#1a1826',
 

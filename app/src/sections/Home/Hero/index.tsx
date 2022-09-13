@@ -2,6 +2,7 @@ import { useRef, MutableRefObject, useState } from 'react';
 import Button from 'src/components/Button/button';
 import Input from 'src/components/Input/input';
 import Heading from 'src/components/Heading/heading';
+// import Alert from 'src/components/Alert/alert';
 import DownloadButtonList from 'src/components/DownloadButtonList/buttonGroup';
 
 // Styles
@@ -63,6 +64,12 @@ export default function Hero() {
             <Button className="hero-button" onclick={handleSignup}>
               Sign Up
             </Button>
+            {/* TODO: Show Alert components */}
+            {/* <Alert
+              className="hero-alert"
+              title="We sent you a text to download the app"
+              description="If you don’t receive one, please check the number and try again"
+            /> */}
           </div>
           {/** TODO: Label error */}
           {apiError && (
