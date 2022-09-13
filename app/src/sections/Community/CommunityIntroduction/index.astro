@@ -1,0 +1,13 @@
+---
+import './styles.css';
+
+export interface CommunityIntroProps {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`community-introduction ${className}`}>
+  <h2>Community Introduction Section</h2>
+</div>
