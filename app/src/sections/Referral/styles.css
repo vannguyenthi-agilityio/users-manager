@@ -1,11 +1,10 @@
 /* Style for referral page */
 .referral {
-  margin: 65px 0 120px;
+  margin: 113px 0 120px;
 }
 
 .referral-content {
   flex-direction: column;
-  padding: 40px 15px 0;
 }
 
 @media only screen and (min-width: 768px) {
