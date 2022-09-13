@@ -41,7 +41,6 @@ const Input = ({
         maxLength={maxlength}
         pattern={pattern}
         value={value}
-        accept={errorMessage}
       />
 
       {errorMessage && (
