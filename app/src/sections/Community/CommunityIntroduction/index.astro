@@ -1,7 +1,26 @@
 ---
+import Heading from 'components:Heading/index';
+
+// Styles
 import './styles.css';
 ---
 
-<div class="community-introduction">
-  <h2>Community Introduction Section</h2>
-</div>
+<section class="community-introduction">
+  <div class="container">
+    <div class="community-feature">
+      <div class="community-thumb">
+        <img
+          src="assets/images/community/doge_community_introduction.png"
+          alt="doge_community"
+        />
+      </div>
+      <Heading class="community-content">
+        <Heading size="md" className="community-heading" uppercase />Built for
+        the Dogecoin community.
+      </Heading>
+      <p class="community-description">
+        DogeCard is built for, and by the Doge community.
+      </p>
+    </div>
+  </div>
+</section>
