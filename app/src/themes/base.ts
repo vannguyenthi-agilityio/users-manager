@@ -11,9 +11,11 @@ const THEME_BASE = {
   colorText: '#fff',
   colorBgFooterDetail: '#151515',
   colorInputDark: '#191524',
+  colorTextAlert: '#1a1826',
 
   colorPlaceholder: 'rgba(26, 24, 38, 25%)',
   colorPlaceholderLight: 'rgba(255, 255, 255, 25%)',
+  colorBgAlert: 'rgba(255, 255, 255, 50%)',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',
@@ -73,6 +75,7 @@ const THEME_BASE = {
   borderRadiusLg: '30px',
   borderRadiusXl: '50px',
   borderRadiusRound: '50%',
+  borderRadiusTiny: '8px',
 
   // Sizes
   sizeFull: '100%',

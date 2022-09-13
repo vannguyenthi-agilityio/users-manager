@@ -1,0 +1,14 @@
+.alert {
+  font-size: var(--fontSizeXs);
+  line-height: var(--fontSizeBase);
+  color: var(--colorTextAlert);
+  background-color: var(--colorBgAlert);
+  backdrop-filter: blur(40px);
+  border-radius: var(--borderRadiusTiny);
+  padding: 12px;
+  text-align: left;
+}
+
+.alert-heading {
+  margin-bottom: 2px;
+}

@@ -33,6 +33,7 @@
   padding-top: 40px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .hero-text-term {
@@ -47,6 +48,12 @@
 
 .hero-form-input {
   margin-bottom: 20px;
+}
+
+.hero-form-alert {
+  max-width: 300px;
+  position: absolute;
+  top: 106px;
 }
 
 @media only screen and (min-width: 768px) {
