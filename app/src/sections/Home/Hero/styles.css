@@ -48,10 +48,6 @@
   color: var(--colorPlaceholder);
 }
 
-.hero-form-input {
-  margin-bottom: 20px;
-}
-
 .hero-form-alert {
   max-width: 300px;
   position: absolute;
@@ -92,6 +88,14 @@
     margin-bottom: 0;
     font-size: var(--fontSizeMd);
     line-height: var(--lineHeightXs);
+  }
+
+  .hero-form-error {
+    margin-bottom: 0;
+  }
+
+  .hero-form-not-error {
+    margin-bottom: 20px;
   }
 }
 

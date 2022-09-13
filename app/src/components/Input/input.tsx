@@ -35,7 +35,7 @@ const Input = ({
         required
         className={`input input-${size} ${className} ${
           colorScheme == 'dark' ? 'input-dark' : 'input-light'
-        } ${errorMessage ? 'error-border' : ''}`}
+        } ${errorMessage ? 'input-error' : ''}`}
         onChange={onChange}
         onBlur={onBlur}
         maxLength={maxlength}
@@ -44,7 +44,9 @@ const Input = ({
         accept={errorMessage}
       />
 
-      {errorMessage && <label className="error-message">{errorMessage}</label>}
+      {errorMessage && (
+        <label className="input-error-message">{errorMessage}</label>
+      )}
     </div>
   );
 };

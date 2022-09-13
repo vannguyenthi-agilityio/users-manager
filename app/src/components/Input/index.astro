@@ -47,7 +47,7 @@ const {
     required={required}
     class={`input input-${size} ${className} ${
       colorScheme == 'dark' ? 'input-dark' : 'input-light'
-    } ${errorMessage ? 'error-border' : ''}`}
+    } ${errorMessage ? 'input-error' : ''}`}
     value={value}
     size={size}
     onchange={onChange}
@@ -55,5 +55,5 @@ const {
     accept={errorMessage}
   />
 
-  {errorMessage && <label class="error-message">{errorMessage}</label>}
+  {errorMessage && <label class="input-error-message">{errorMessage}</label>}
 </div>

@@ -28,12 +28,13 @@
   padding: 20px;
 }
 
-.error-message {
+.input-error-message {
   color: var(--colorError);
   text-align: left;
+  margin-top: 20px;
 }
 
-.error-border {
+.input-error {
   border: 1px solid var(--colorError);
 }
 
@@ -44,7 +45,7 @@
     padding: 30px;
   }
 
-  .error-message {
+  .input-error-message {
     margin-top: 10px;
     margin-bottom: 10px;
   }
