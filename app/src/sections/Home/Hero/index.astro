@@ -1,0 +1,49 @@
+---
+import Button from 'components:Button/index';
+import Input from 'components:Input/index';
+import Heading from 'components:Heading/index';
+// import Alert from 'components:Alert/index';
+import DownloadButtonList from 'components:DownloadButtonList/index';
+
+// Constants
+import { PHONE } from 'constants:index';
+
+// Styles
+import './styles.css';
+---
+
+<section class="d-flex-column hero">
+  <div class="container">
+    <div class="d-flex-column hero-content">
+      <Heading size="md" className="hero-heading" uppercase>
+        Get your DogeCard
+      </Heading>
+      <p class="hero-description">In less than 5 minutes</p>
+      <form class="hero-form">
+        <Input
+          autofocus
+          type="tel"
+          name="hero-input"
+          placeholder="Enter phone number"
+          required
+          pattern={PHONE.pattern}
+          maxlength={PHONE.maxLength}
+          className="hero-form-input"
+          size="sm"
+        />
+        <Button className="hero-button">Sign Up</Button>
+        <!-- Show Alert component after sign up successfully  -->
+        <!-- <Alert /> -->
+      </form>
+      <p class="hero-text-term">
+        By tapping ‘Sign Up’, you agree to our
+        <a href="#" class="text-highlight">Terms,</a>
+        <a href="#" class="text-highlight">E-sign Consent</a>
+        and
+        <a href="#" class="text-highlight">Privacy Policy.</a>
+      </p>
+      <DownloadButtonList />
+    </div>
+  </div>
+  <div class="hero-bg"></div>
+</section>

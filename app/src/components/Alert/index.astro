@@ -1,0 +1,16 @@
+---
+import './styles.css';
+
+export interface AlertProps {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`alert-content ${className}`}>
+  <p class="text-bold alert-title">We sent you a text to download the app</p>
+  <p class="alert-description">
+    If you don’t receive one, please check the number and try again
+  </p>
+</div>
