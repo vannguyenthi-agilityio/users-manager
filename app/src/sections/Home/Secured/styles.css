@@ -1,13 +1,14 @@
 .secured-heading {
-  margin: 80px auto;
+  margin: 80px auto 40px;
 }
 
 .secured-content {
   background-color: var(--colorSecondary);
   border-radius: var(--borderRadiusLg);
-  padding-bottom: 50px;
+  padding-bottom: 0;
   flex-direction: column;
   justify-content: center;
+  padding-top: 35px;
 }
 
 .secured-description {
@@ -18,7 +19,7 @@
 
 .secured-item {
   flex-direction: column;
-  margin-top: 50px;
+  margin-bottom: 62px;
 }
 
 .secured-description-visa {
@@ -27,24 +28,32 @@
 }
 
 .secured-icon {
-  max-width: 120px;
-  height: 120px;
+  max-width: 130px;
+  min-width: 75px;
+  height: 130px;
   margin: auto;
+}
+
+.secured-icon > img {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .secured-heading {
     font-size: var(--fontSizeXl);
     line-height: var(--lineHeight4Xl);
+    margin-top: 80px;
   }
 
   .secured-content {
-    padding-top: 80px;
+    padding-top: 45px;
+    padding-bottom: 25px;
   }
 
   .secured-item {
     flex-direction: column-reverse;
-    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 45px;
   }
 
   .secured-description {
@@ -53,30 +62,60 @@
   }
 
   .secured-icon {
-    max-width: 150px;
-    height: 150px;
+    max-width: 193px;
+    height: 175px;
+    min-width: 100px;
   }
 }
 
 @media (min-width: 992px) {
+  .secured {
+    margin-top: 48px;
+    margin-bottom: 80px;
+  }
+
+  .secured .container {
+    padding-left: var(--containerPaddingMd);
+    padding-right: var(--containerPaddingMd);
+  }
+
   .secured-heading {
     font-size: var(--fontSize3Xl);
     line-height: var(--lineHeight6Xl);
+    margin: 70px auto;
   }
 
   .secured-content {
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding: 10px 37px 95px;
     flex-direction: row;
     justify-content: space-around;
   }
 
   .secured-item {
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   .secured-description {
     max-width: 230px;
+  }
+
+  .secured-icon {
+    height: 177px;
+    max-width: 300px;
+    min-width: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .secured-icon > img {
+    height: auto;
+    max-width: 300px;
+  }
+
+  .secured-info {
+    margin-top: 48px;
+    margin-bottom: 80px;
   }
 }

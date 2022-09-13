@@ -58,6 +58,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 32px;
   }
 
   .header-content {
@@ -87,7 +88,7 @@
   .header-content-wrapper {
     flex-direction: row;
     align-items: flex-start;
-    margin-top: 40px;
+    margin-top: 60px;
   }
 
   .header-logo-heading {
@@ -97,20 +98,19 @@
 
   .header-nav-list {
     justify-content: space-evenly;
-    margin-top: 40px;
+    margin-top: 46px;
+    gap: 82px;
   }
 
   .header-logo > img {
-    width: 105px;
-    height: 105px;
+    width: 120px;
+    height: 120px;
   }
 
   .header-icon > img {
     width: 100px;
   }
-}
 
-@media only screen and (min-width: 1200px) {
   .header-overlap {
     position: absolute;
     top: 0;

@@ -91,6 +91,7 @@ const THEME_BASE = {
   // Container
   containerPaddingSm: '15px',
   containerPaddingMd: '30px',
+  containerPaddingLg: '70px',
   containerWidthSm: '540px',
   containerWidthMd: '768px',
   containerWidthLg: '960px',
@@ -99,10 +100,10 @@ const THEME_BASE = {
   containerWidth3Xl: '1660px',
 
   // Min height
-  heroBgHeightDesktop: 'calc(920/1915 * 100vw)',
+  heroBgHeightDesktop: 'calc(920/1920 * 100vw)',
   heroBgHeightTablet: 'calc(419/768 * 100vw)',
   heroBgHeightMobile: 'calc(330/375 * 100vw)',
-  heroBgHeightSmDesktop: 'calc(768/1915 * 100vw)',
+  heroBgHeightSmDesktop: 'calc(768/1920 * 100vw)',
 
   // Width
   btnWidthSm: '164px',
