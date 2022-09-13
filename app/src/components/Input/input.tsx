@@ -20,26 +20,32 @@ const Input = ({
   onChange = () => {},
   onBlur = () => {},
   value,
-  innerRef
+  innerRef,
+  errorMessage = ''
 }: InputProps) => {
   return (
-    <input
-      ref={innerRef as RefObject<HTMLInputElement>}
-      readOnly={readonly}
-      autoFocus={autoFocus}
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      required
-      className={`input input-${size} ${className} ${
-        colorScheme == 'dark' ? 'input-dark' : 'input-light'
-      }`}
-      onChange={onChange}
-      onBlur={onBlur}
-      maxLength={maxlength}
-      pattern={pattern}
-      value={value}
-    />
+    <div className="d-flex-column">
+      <input
+        ref={innerRef as RefObject<HTMLInputElement>}
+        readOnly={readonly}
+        autoFocus={autoFocus}
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        required
+        className={`input input-${size} ${className} ${
+          colorScheme == 'dark' ? 'input-dark' : 'input-light'
+        } ${errorMessage ? 'error-border' : ''}`}
+        onChange={onChange}
+        onBlur={onBlur}
+        maxLength={maxlength}
+        pattern={pattern}
+        value={value}
+        accept={errorMessage}
+      />
+
+      {errorMessage && <label className="error-message">{errorMessage}</label>}
+    </div>
   );
 };
 

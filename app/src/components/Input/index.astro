@@ -16,6 +16,7 @@ export interface InputProps {
   size?: 'sm' | 'md' | 'lg';
   onChange?: () => void;
   onBlur?: () => void;
+  errorMessage?: string;
 }
 
 const {
@@ -31,22 +32,28 @@ const {
   size = 'sm',
   onChange = () => {},
   onBlur = () => {},
-  required = false
+  required = false,
+  errorMessage = ''
 } = Astro.props;
 ---
 
-<input
-  readonly={readonly}
-  autofocus
-  type={type}
-  name={name}
-  placeholder={placeholder}
-  required={required}
-  class={`input input-${size} ${className} ${
-    colorScheme == 'dark' ? 'input-dark' : 'input-light'
-  }`}
-  value={value}
-  size={size}
-  onchange={onChange}
-  onblur={onBlur}
-/>
+<div class="d-flex-column">
+  <input
+    readonly={readonly}
+    autofocus
+    type={type}
+    name={name}
+    placeholder={placeholder}
+    required={required}
+    class={`input input-${size} ${className} ${
+      colorScheme == 'dark' ? 'input-dark' : 'input-light'
+    } ${errorMessage ? 'error-border' : ''}`}
+    value={value}
+    size={size}
+    onchange={onChange}
+    onblur={onBlur}
+    accept={errorMessage}
+  />
+
+  {errorMessage && <label class="error-message">{errorMessage}</label>}
+</div>

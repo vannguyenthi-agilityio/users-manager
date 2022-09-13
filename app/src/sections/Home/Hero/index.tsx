@@ -60,6 +60,7 @@ export default function Hero() {
               className="hero-form-input"
               size="sm"
               innerRef={inputRef}
+              errorMessage={apiError}
             />
             <Button className="hero-button" onclick={handleSignup}>
               Sign Up
@@ -71,14 +72,6 @@ export default function Hero() {
               description="If you don’t receive one, please check the number and try again"
             /> */}
           </div>
-          {/** TODO: Label error */}
-          {apiError && (
-            <label
-              style={{ color: 'red', marginBottom: '20px', marginTop: '10px' }}
-            >
-              {apiError}
-            </label>
-          )}
           <p className="hero-text-term">
             By tapping ‘Sign Up’, you agree to our
             <a href="#" className="text-highlight letter-spacing">
