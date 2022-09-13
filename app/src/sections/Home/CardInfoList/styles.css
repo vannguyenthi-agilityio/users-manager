@@ -48,6 +48,10 @@
 }
 
 @media (min-width: 1200px) {
+  .card-info-secure .card-image {
+    width: 32%;
+  }
+
   .card-info-secure-list {
     text-align: left;
     align-items: flex-start;
@@ -73,10 +77,6 @@
   .card-info-secure {
     margin-top: 242px;
     margin-bottom: 260px;
-  }
-
-  .card-info-secure .card-image {
-    width: 32%;
   }
 
   .card-info-secure .card-image > img {
