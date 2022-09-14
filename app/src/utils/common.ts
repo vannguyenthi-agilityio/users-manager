@@ -1,3 +1,5 @@
+const PHONE_PATTERN = /^(\d{3})(\d{3})(\d{4})$/;
+
 export const getBaseUrl = (assetUrl: string) => {
   const domain = import.meta.env.PUBLIC_DOMAIN;
   return assetUrl ? new URL(assetUrl, domain) : domain;
@@ -34,3 +36,19 @@ export const formalizePhone = (value) => {
  * @returns
  */
 export const santizerPhone = (value = '') => `${value.replace(/\D+/g, '')}`;
+
+/**
+ * Validate phone whether is correct for not
+ * @param value: validation message
+ * @returns
+ */
+export const validatePhone = (value = ''): string => {
+  if (!value) {
+    return 'Phone number is required';
+  }
+  const formattedValue = value.replace(/\D+/g, '');
+  if (!(formattedValue.length === 10 && formattedValue.match(PHONE_PATTERN))) {
+    return 'Phone number is invalid';
+  }
+  return '';
+};
