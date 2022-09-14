@@ -1,4 +1,4 @@
-import { useRef, MutableRefObject, useState } from 'react';
+import { useRef, MutableRefObject, useState, useCallback } from 'react';
 import Button from 'src/components/Button/button';
 import Input from 'src/components/Input/input';
 import Heading from 'src/components/Heading/heading';
@@ -10,12 +10,18 @@ import './styles.css';
 
 import { User } from 'src/models/user';
 import { ROUTES } from 'src/constants/routes';
+import { formalizePhone } from 'src/utils/common';
 
 export default function Hero() {
   const inputRef = useRef({
     value: ''
   });
   const [apiError, setApiError] = useState('');
+  const [account, setAccount] = useState('');
+
+  const handleChangeAccount = (e: { target: HTMLInputElement }) => {
+    setAccount(formalizePhone(e.target.value));
+  };
 
   // TODO: Validate for phone number
   const handleSignup = () => {
@@ -62,6 +68,8 @@ export default function Hero() {
                 size="sm"
                 innerRef={inputRef}
                 errorMessage={apiError}
+                value={account}
+                onChange={handleChangeAccount}
               />
             </div>
             <Button className="hero-button" onclick={handleSignup}>
