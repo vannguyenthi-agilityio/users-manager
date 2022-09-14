@@ -20,26 +20,32 @@ const Input = ({
   onChange = () => {},
   onBlur = () => {},
   value,
-  innerRef
+  innerRef,
+  errorMessage = ''
 }: InputProps) => {
   return (
-    <input
-      ref={innerRef as RefObject<HTMLInputElement>}
-      readOnly={readonly}
-      autoFocus={autoFocus}
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      required
-      className={`input input-${size} ${className} ${
-        colorScheme == 'dark' ? 'input-dark' : 'input-light'
-      }`}
-      onChange={onChange}
-      onBlur={onBlur}
-      maxLength={maxlength}
-      pattern={pattern}
-      value={value}
-    />
+    <>
+      <input
+        ref={innerRef as RefObject<HTMLInputElement>}
+        readOnly={readonly}
+        autoFocus={autoFocus}
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        required
+        className={`input input-${size} ${
+          colorScheme == 'dark' ? 'input-dark' : 'input-light'
+        } ${errorMessage ? 'input-error' : ''} ${className}`}
+        onChange={onChange}
+        onBlur={onBlur}
+        maxLength={maxlength}
+        pattern={pattern}
+        value={value}
+      />
+      {errorMessage && (
+        <label className="input-error-message">{errorMessage}</label>
+      )}
+    </>
   );
 };
 

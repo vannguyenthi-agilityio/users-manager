@@ -28,6 +28,16 @@
   padding: 20px;
 }
 
+.input-error-message {
+  color: var(--colorError);
+  text-align: left;
+  margin-top: 10px;
+}
+
+.input-error {
+  border: 1px solid var(--colorError);
+}
+
 @media (min-width: 768px) {
   .input-md {
     height: 80px;

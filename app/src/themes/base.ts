@@ -6,7 +6,7 @@ const THEME_BASE = {
   colorBlack: '#000',
   colorWhite: '#fff',
   colorSuccess: '#68d391',
-  colorError: '#fc8181',
+  colorError: '#ff0000',
   colorBackground: '#1d172b',
   colorText: '#fff',
   colorBgFooterDetail: '#151515',

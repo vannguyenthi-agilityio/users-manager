@@ -35,6 +35,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: 20px;
 }
 
 .hero-text-term {
@@ -47,14 +48,14 @@
   color: var(--colorPlaceholder);
 }
 
-.hero-form-input {
-  margin-bottom: 20px;
-}
-
 .hero-form-alert {
   max-width: 300px;
   position: absolute;
   top: 106px;
+}
+
+.hero-button {
+  height: fit-content;
 }
 
 @media only screen and (min-width: 768px) {
@@ -71,6 +72,7 @@
 
   .hero-button {
     width: auto;
+    margin-bottom: 0;
   }
 
   .hero-form {
@@ -85,6 +87,10 @@
     margin-bottom: 0;
     font-size: var(--fontSizeMd);
     line-height: var(--lineHeightXs);
+  }
+
+  .hero-input-wrapper {
+    margin-bottom: 10px;
   }
 }
 
