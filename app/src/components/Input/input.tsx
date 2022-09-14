@@ -33,9 +33,9 @@ const Input = ({
         name={name}
         placeholder={placeholder}
         required
-        className={`input input-${size} ${className} ${
+        className={`input input-${size} ${
           colorScheme == 'dark' ? 'input-dark' : 'input-light'
-        } ${errorMessage ? 'input-error' : ''}`}
+        } ${errorMessage ? 'input-error' : ''} ${className}`}
         onChange={onChange}
         onBlur={onBlur}
         maxLength={maxlength}
