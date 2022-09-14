@@ -4,7 +4,7 @@
 }
 
 .community-image > img {
-  max-width: 150px;
+  max-width: 300px;
 }
 
 .community-description {
@@ -36,5 +36,6 @@
 
   .community-image {
     flex-grow: 1;
+    padding-inline: 60px;
   }
 }
