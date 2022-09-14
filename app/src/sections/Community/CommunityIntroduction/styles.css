@@ -1,1 +1,19 @@
 /* Styles for Community Introduction Section */
+.community-content {
+  text-align: center;
+  gap: 20px;
+}
+
+.community-thumbnail > img {
+  max-width: 150px;
+}
+
+.community-description {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .community-thumbnail > img {
+    max-width: 200px;
+  }
+}
