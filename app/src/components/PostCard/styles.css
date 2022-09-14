@@ -10,13 +10,13 @@
   align-items: center;
 }
 
-.post-card-name,
+.post-card-user-fullname,
 .post-card-username {
   font-size: var(--fontSizeMd);
   line-height: var(--lineHeightBase);
 }
 
-.post-card-user-fullname {
+.post-card-username {
   color: var(--colorTextUserNamePostCard);
 }
 

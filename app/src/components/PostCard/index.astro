@@ -33,10 +33,10 @@ const { data } = Astro.props as PostCardProps;
         class="post-card-avatar"
       />
       <div class="d-flex-column">
-        <span class="text-bold post-card-name">{data.user.name}</span>
+        <span class="text-bold post-card-user-fullname">{data.user.name}</span>
         {
           data.source === 'twitter' && (
-            <span class="post-card-user-fullname">{`@${data.user.username}`}</span>
+            <span class="post-card-username">{`@${data.user.username}`}</span>
           )
         }
       </div>
