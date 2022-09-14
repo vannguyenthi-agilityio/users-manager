@@ -1,51 +1,47 @@
 ---
 import './styles.css';
 
-export interface PostCardProps {
-  description?: string;
-  avatarUrl?: string;
-  avatarAlt?: string;
-  thumbnail?: string;
-  thumbnailAlt?: string;
-  profileUrl?: string;
-  profileAlt?: string;
-  altUrl?: string;
-  name?: string;
-  userName?: string;
-  url?: string;
-  source?: string;
+interface PostCard {
+  user: {
+    name: '';
+    username: '';
+    profileUrl: '';
+    avatarUrl: '';
+  };
+  description: '';
+  thumbnailUrl: '';
+  source: '';
+  url: '';
 }
 
-const {
-  avatarAlt = '',
-  avatarUrl = '',
-  thumbnail = '',
-  thumbnailAlt = '',
-  profileUrl = '',
-  profileAlt = '',
-  description = '',
-  name = '',
-  userName = '',
-  url = '',
-  source = ''
-} = Astro.props as PostCardProps;
+export interface PostCardProps {
+  data: PostCard;
+}
+
+const { data } = Astro.props as PostCardProps;
 ---
 
-<div class="post-card">
-  <div class="d-flex post-card-user">
-    <div class="d-flex post-card-profile">
-      <img src={avatarUrl} alt={avatarAlt} class="post-card-avatar" />
+<article class="post-card">
+  <div class="d-flex post-card-header">
+    <a href="#" class="d-flex post-card-user">
+      <img
+        src={data.user.avatarUrl}
+        alt={data.user.name || data.user.username}
+        class="post-card-avatar"
+      />
       <div class="d-flex-column post-card-detail">
-        <span class="text-bold post-card-name">{name}</span>
-        <span class="post-card-username">{userName}</span>
+        <span class="text-bold post-card-name">{data.user.name}</span>
+        <span class="post-card-username">{data.user.username}</span>
       </div>
-    </div>
-    <a href="#" class="post-card-icon"
-      ><img src={profileUrl} alt={profileAlt} />
+    </a>
+    <a href={data.url} class="post-card-url"
+      ><img src={data.source} alt={data.description} />
     </a>
   </div>
-  <p class="post-card-description">{description}</p>
-  <div class="d-flex post-card-image">
-    <img src={thumbnail} alt={thumbnailAlt} />
+  <div class="post-card-body">
+    <p class="post-card-description">{data.description}</p>
+    <a href="#" class="d-flex post-card-thumbnail">
+      <img src={data.thumbnailUrl} alt={data.description} />
+    </a>
   </div>
-</div>
+</article>

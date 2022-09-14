@@ -5,8 +5,8 @@
   backdrop-filter: blur(35px);
 }
 
-.post-card-profile,
-.post-card-user {
+.post-card-user,
+.post-card-header {
   align-items: center;
 }
 
@@ -21,13 +21,13 @@
 }
 
 .post-card-avatar {
-  max-width: 64px;
+  width: 64px;
   height: 64px;
   vertical-align: middle;
   border-radius: var(--borderRadiusRound);
 }
 
-.post-card-user {
+.post-card-header {
   justify-content: space-between;
 }
 
@@ -41,15 +41,21 @@
   line-height: var(--lineHeight2Xl);
 }
 
-.post-card-image {
+.post-card-thumbnail {
   border-radius: 15px;
 }
 
-.post-card-image > img {
+.post-card-thumbnail > img {
   width: 100%;
 }
 
 @media (min-width: 768px) {
+  .post-card {
+    width: calc(1 / 2 * 100%);
+  }
+}
+
+@media (min-width: 1200px) {
   .post-card {
     width: calc(1 / 3 * 100%);
   }
