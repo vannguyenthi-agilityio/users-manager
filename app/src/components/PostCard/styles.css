@@ -17,7 +17,7 @@
 }
 
 .post-card-username {
-  color: var(--colorTextUserNamePostCard);
+  color: var(--colorTextPostCardUsername);
 }
 
 .post-card-avatar {
