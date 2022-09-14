@@ -33,4 +33,12 @@
   .community-description {
     margin-top: 27px;
   }
+
+  .community-info {
+    flex-grow: 2;
+  }
+
+  .community-thumbnail {
+    flex-grow: 1;
+  }
 }
