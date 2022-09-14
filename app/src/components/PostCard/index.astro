@@ -1,17 +1,20 @@
 ---
+import TwitterIcon from 'components:SocialIcon/Twitter';
+import FacebookIcon from 'components:SocialIcon/Facebook';
+import InstagramIcon from 'components:SocialIcon/Instagram';
 import './styles.css';
 
 interface PostCard {
   user: {
-    name: '';
-    username: '';
-    profileUrl: '';
-    avatarUrl: '';
+    name?: string;
+    username?: string;
+    profileUrl?: string;
+    avatarUrl?: string;
   };
-  description: '';
-  thumbnailUrl: '';
-  source: '';
-  url: '';
+  description?: string;
+  thumbnailUrl?: string;
+  source?: string;
+  url?: string;
 }
 
 export interface PostCardProps {
@@ -23,24 +26,28 @@ const { data } = Astro.props as PostCardProps;
 
 <article class="post-card">
   <div class="d-flex post-card-header">
-    <a href="#" class="d-flex post-card-user">
+    <a href={data.url} class="d-flex post-card-user">
       <img
         src={data.user.avatarUrl}
         alt={data.user.name || data.user.username}
         class="post-card-avatar"
       />
-      <div class="d-flex-column post-card-detail">
+      <div class="d-flex-column">
         <span class="text-bold post-card-name">{data.user.name}</span>
-        <span class="post-card-username">{data.user.username}</span>
+        {
+          data.source === 'twitter' && (
+            <span class="post-card-user-fullname">{`@${data.user.username}`}</span>
+          )
+        }
       </div>
     </a>
-    <a href={data.url} class="post-card-url"
-      ><img src={data.source} alt={data.description} />
-    </a>
+    {data.source === 'twitter' && <TwitterIcon />}
+    {data.source === 'facebook' && <FacebookIcon />}
+    {data.source === 'instagram' && <InstagramIcon />}
   </div>
   <div class="post-card-body">
     <p class="post-card-description">{data.description}</p>
-    <a href="#" class="d-flex post-card-thumbnail">
+    <a href={data.url} class="d-flex post-card-thumbnail">
       <img src={data.thumbnailUrl} alt={data.description} />
     </a>
   </div>

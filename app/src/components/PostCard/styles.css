@@ -16,7 +16,7 @@
   line-height: var(--lineHeightBase);
 }
 
-.post-card-username {
+.post-card-user-fullname {
   color: var(--colorTextUserNamePostCard);
 }
 
@@ -25,14 +25,11 @@
   height: 64px;
   vertical-align: middle;
   border-radius: var(--borderRadiusRound);
+  margin-right: 12px;
 }
 
 .post-card-header {
   justify-content: space-between;
-}
-
-.post-card-detail {
-  margin-left: 12px;
 }
 
 .post-card-description {
