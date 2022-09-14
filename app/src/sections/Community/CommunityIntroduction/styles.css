@@ -12,8 +12,8 @@
 }
 
 @media (min-width: 768px) {
-  .community-thumbnail > img {
-    max-width: 200px;
+  .community-image > img {
+    max-width: 440px;
   }
 }
 
@@ -24,10 +24,6 @@
     align-items: center;
     justify-content: space-between;
     text-align: start;
-  }
-
-  .community-image > img {
-    max-width: 500px;
   }
 
   .community-description {
