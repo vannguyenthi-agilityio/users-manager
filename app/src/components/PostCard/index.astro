@@ -8,6 +8,11 @@ export interface PostCardProps {
   avatarAlt?: string;
   imageUrl?: string;
   imageAlt?: string;
+  iconUrl?: string;
+  iconAlt?: string;
+  altUrl?: string;
+  profileName?: string;
+  profileUserName?: string;
 }
 
 const {
@@ -15,7 +20,12 @@ const {
   avatarAlt = 'Avatar',
   avatarUrl = 'https://www.w3schools.com/howto/img_avatar.png',
   imageUrl = 'assets/images/community/card-post/card-post-one.png',
-  imageAlt = 'Card'
+  imageAlt = 'Card',
+  iconUrl = '',
+  iconAlt = '',
+  description = '',
+  profileName = '',
+  profileUserName = ''
 } = Astro.props as PostCardProps;
 ---
 
@@ -24,18 +34,13 @@ const {
     <a class="d-flex post-card-profile" href={href}>
       <img src={avatarUrl} alt={avatarAlt} class="post-card-profile-avatar" />
       <div class="d-flex-column post-card-profile-details">
-        <span class="text-bold post-card-profile-name"> Doge Ninja</span>
-        <span class="post-card-profile-username">doge ninja</span>
+        <span class="text-bold post-card-profile-name">{profileName}</span>
+        <span class="post-card-profile-username">{profileUserName}</span>
       </div>
     </a>
-    <a class="post-card-context"
-      ><img src="assets/images/icons/twitter.svg" alt="twitter" />
-    </a>
+    <a class="post-card-context"><img src={iconUrl} alt={iconAlt} /></a>
   </div>
-  <p class="post-card-description">
-    Dogecoin to $5 is inevitable when Visa/PTD release this #Dogecoin debit card
-    that you can theoretically spend almpost anywhere!
-  </p>
+  <p class="post-card-description">{description}</p>
   <a class="d-flex post-card-image" href="#"
     ><img src={imageUrl} alt={imageAlt} />
   </a>
