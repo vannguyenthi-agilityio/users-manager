@@ -1,5 +1,4 @@
 .post-card {
-  width: calc(1 / 3 * 100%);
   border-radius: 20px;
   padding: 24px;
   background: var(--colorBgPostCard);
@@ -7,32 +6,32 @@
 }
 
 .post-card-profile,
-.post-card-info {
+.post-card-user {
   align-items: center;
 }
 
-.post-card-profile-name,
-.post-card-profile-username {
+.post-card-name,
+.post-card-username {
   font-size: var(--fontSizeMd);
   line-height: var(--lineHeightBase);
 }
 
-.post-card-profile-username {
+.post-card-username {
   color: var(--colorTextUserNamePostCard);
 }
 
-.post-card-profile-avatar {
-  width: 64px;
+.post-card-avatar {
+  max-width: 64px;
   height: 64px;
   vertical-align: middle;
   border-radius: var(--borderRadiusRound);
 }
 
-.post-card-info {
+.post-card-user {
   justify-content: space-between;
 }
 
-.post-card-profile-details {
+.post-card-detail {
   margin-left: 12px;
 }
 
@@ -44,4 +43,14 @@
 
 .post-card-image {
   border-radius: 15px;
+}
+
+.post-card-image > img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .post-card {
+    width: calc(1 / 3 * 100%);
+  }
 }

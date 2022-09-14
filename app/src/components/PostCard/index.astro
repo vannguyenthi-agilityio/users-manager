@@ -3,45 +3,49 @@ import './styles.css';
 
 export interface PostCardProps {
   description?: string;
-  href?: string;
   avatarUrl?: string;
   avatarAlt?: string;
-  imageUrl?: string;
-  imageAlt?: string;
-  iconUrl?: string;
-  iconAlt?: string;
+  thumbnail?: string;
+  thumbnailAlt?: string;
+  profileUrl?: string;
+  profileAlt?: string;
   altUrl?: string;
-  profileName?: string;
-  profileUserName?: string;
+  name?: string;
+  userName?: string;
+  url?: string;
+  source?: string;
 }
 
 const {
-  href,
-  avatarAlt = 'Avatar',
-  avatarUrl = 'https://www.w3schools.com/howto/img_avatar.png',
-  imageUrl = 'assets/images/community/card-post/card-post-one.png',
-  imageAlt = 'Card',
-  iconUrl = '',
-  iconAlt = '',
+  avatarAlt = '',
+  avatarUrl = '',
+  thumbnail = '',
+  thumbnailAlt = '',
+  profileUrl = '',
+  profileAlt = '',
   description = '',
-  profileName = '',
-  profileUserName = ''
+  name = '',
+  userName = '',
+  url = '',
+  source = ''
 } = Astro.props as PostCardProps;
 ---
 
 <div class="post-card">
-  <div class="d-flex post-card-info">
-    <a class="d-flex post-card-profile" href={href}>
-      <img src={avatarUrl} alt={avatarAlt} class="post-card-profile-avatar" />
-      <div class="d-flex-column post-card-profile-details">
-        <span class="text-bold post-card-profile-name">{profileName}</span>
-        <span class="post-card-profile-username">{profileUserName}</span>
+  <div class="d-flex post-card-user">
+    <div class="d-flex post-card-profile">
+      <img src={avatarUrl} alt={avatarAlt} class="post-card-avatar" />
+      <div class="d-flex-column post-card-detail">
+        <span class="text-bold post-card-name">{name}</span>
+        <span class="post-card-username">{userName}</span>
       </div>
+    </div>
+    <a href="#" class="post-card-icon"
+      ><img src={profileUrl} alt={profileAlt} />
     </a>
-    <a class="post-card-context"><img src={iconUrl} alt={iconAlt} /></a>
   </div>
   <p class="post-card-description">{description}</p>
-  <a class="d-flex post-card-image" href="#"
-    ><img src={imageUrl} alt={imageAlt} />
-  </a>
+  <div class="d-flex post-card-image">
+    <img src={thumbnail} alt={thumbnailAlt} />
+  </div>
 </div>
