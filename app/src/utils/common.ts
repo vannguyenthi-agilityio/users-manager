@@ -27,3 +27,10 @@ export const formalizePhone = (value) => {
   const phoneNumber = value.replace(/[^\d]/g, '');
   return phoneNumber.replace(/(\d{3})(\d{3})(\d)/, '($1)-$2-$3');
 };
+
+/**
+ * Santizer phone number: 8019010123 to send to api
+ * @param value: (801)-901-0123
+ * @returns
+ */
+export const santizerPhone = (value = '') => `${value.replace(/\D+/g, '')}`;

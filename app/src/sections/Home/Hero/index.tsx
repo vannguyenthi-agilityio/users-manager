@@ -10,11 +10,11 @@ import './styles.css';
 
 import { User } from 'src/models/user';
 import { ROUTES } from 'src/constants/routes';
-import { formalizePhone } from 'src/utils/common';
+import { formalizePhone, santizerPhone } from 'src/utils/common';
 
 export default function Hero() {
   const inputRef = useRef({
-    value: ''
+    value: '',
   });
   const [apiError, setApiError] = useState('');
   const [account, setAccount] = useState('');
@@ -29,7 +29,7 @@ export default function Hero() {
       ?.value;
     User.signUp(
       {
-        username
+        username: santizerPhone(username),
       },
       // onError
       (error) => {
@@ -41,7 +41,7 @@ export default function Hero() {
         // Show success alert and then
         // Navigate to Referral page
         window.location.href = ROUTES.REFERRAL;
-      }
+      },
     );
   };
 
