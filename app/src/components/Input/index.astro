@@ -15,7 +15,7 @@ export interface InputProps {
   colorScheme?: string;
   size?: 'sm' | 'md' | 'lg';
   onChange?: (e: { target: HTMLInputElement }) => void;
-  onBlur?: () => void;
+  onBlur?: (e: { target: HTMLInputElement }) => void;
   errorMessage?: string;
 }
 
@@ -33,7 +33,7 @@ const {
   onChange = () => {},
   onBlur = () => {},
   required = false,
-  errorMessage = ''
+  errorMessage = '',
 } = Astro.props;
 ---
 

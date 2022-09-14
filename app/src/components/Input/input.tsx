@@ -21,7 +21,7 @@ const Input = ({
   onBlur = () => {},
   value,
   innerRef,
-  errorMessage = ''
+  errorMessage = '',
 }: InputProps) => {
   return (
     <>
