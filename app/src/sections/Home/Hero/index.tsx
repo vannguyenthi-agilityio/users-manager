@@ -51,7 +51,7 @@ export default function Hero() {
       },
       // onSuccess
       () => {
-        // Show success alert in 5s
+        // Show success alert in 3s
         setSuccess(true);
 
         setTimeout(() => {
