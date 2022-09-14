@@ -49,19 +49,21 @@ export default function Hero() {
           <p className="hero-description">In less than 5 minutes</p>
           <div
             className="hero-form"
-            style={apiError ? {} : { marginBottom: '20px' }}
+            style={apiError ? {} : { marginBottom: '10px' }}
           >
-            <Input
-              autoFocus={true}
-              type="tel"
-              name="hero-input"
-              placeholder="Enter phone number"
-              required={true}
-              className="hero-form-input"
-              size="sm"
-              innerRef={inputRef}
-              errorMessage={apiError}
-            />
+            <div className="d-flex-column hero-input-wrapper">
+              <Input
+                autoFocus={true}
+                type="tel"
+                name="hero-input"
+                placeholder="Enter phone number"
+                required={true}
+                className="hero-form-input"
+                size="sm"
+                innerRef={inputRef}
+                errorMessage={apiError}
+              />
+            </div>
             <Button className="hero-button" onclick={handleSignup}>
               Sign Up
             </Button>

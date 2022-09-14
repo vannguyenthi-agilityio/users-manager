@@ -37,22 +37,19 @@ const {
 } = Astro.props;
 ---
 
-<div class="d-flex-column">
-  <input
-    readonly={readonly}
-    autofocus
-    type={type}
-    name={name}
-    placeholder={placeholder}
-    required={required}
-    class={`input input-${size} ${
-      colorScheme == 'dark' ? 'input-dark' : 'input-light'
-    } ${errorMessage ? 'input-error' : ''} ${className}`}
-    value={value}
-    size={size}
-    onchange={onChange}
-    onblur={onBlur}
-  />
-
-  {errorMessage && <label class="input-error-message">{errorMessage}</label>}
-</div>
+<input
+  readonly={readonly}
+  autofocus
+  type={type}
+  name={name}
+  placeholder={placeholder}
+  required={required}
+  class={`input input-${size} ${
+    colorScheme == 'dark' ? 'input-dark' : 'input-light'
+  } ${errorMessage ? 'input-error' : ''} ${className}`}
+  value={value}
+  size={size}
+  onchange={onChange}
+  onblur={onBlur}
+/>
+{errorMessage && <label class="input-error-message">{errorMessage}</label>}

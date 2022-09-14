@@ -24,7 +24,7 @@ const Input = ({
   errorMessage = ''
 }: InputProps) => {
   return (
-    <div className="d-flex-column">
+    <>
       <input
         ref={innerRef as RefObject<HTMLInputElement>}
         readOnly={readonly}
@@ -42,11 +42,10 @@ const Input = ({
         pattern={pattern}
         value={value}
       />
-
       {errorMessage && (
         <label className="input-error-message">{errorMessage}</label>
       )}
-    </div>
+    </>
   );
 };
 

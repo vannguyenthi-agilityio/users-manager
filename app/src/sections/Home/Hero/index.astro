@@ -19,19 +19,21 @@ import './styles.css';
         Get your DogeCard
       </Heading>
       <p class="hero-description">In less than 5 minutes</p>
-      <form class="hero-form" style={apiError ? {} : { marginBottom: '20px' }}>
-        <Input
-          autofocus
-          type="tel"
-          name="hero-input"
-          placeholder="Enter phone number"
-          required
-          pattern={PHONE.pattern}
-          maxlength={PHONE.maxLength}
-          className="hero-form-input"
-          size="sm"
-          errorMessage={apiError}
-        />
+      <form class="hero-form" style={apiError ? {} : { marginBottom: '10px' }}>
+        <div class="d-flex-column hero-input-wrapper">
+          <Input
+            autofocus
+            type="tel"
+            name="hero-input"
+            placeholder="Enter phone number"
+            required
+            pattern={PHONE.pattern}
+            maxlength={PHONE.maxLength}
+            className="hero-form-input"
+            size="sm"
+            errorMessage={apiError}
+          />
+        </div>
         <Button className="hero-button">Sign Up</Button>
         <!-- Show Alert component after sign up successfully  -->
         <!-- <Alert
