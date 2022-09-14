@@ -2,5 +2,7 @@ export const ROUTES = {
   HOME: '/',
   REFERRAL: '/referral',
   LOGIN: '/login',
-  NOT_FOUND: '/404'
+  COMMUNITY: '/community',
+  ABOUT_US: '/about',
+  NOT_FOUND: '/404',
 };

@@ -1,5 +1,6 @@
 ---
 import './styles.css';
+import { ROUTES } from 'src/constants/routes';
 
 export interface HeaderProps {
   className?: string;
@@ -22,13 +23,13 @@ const { className = '', hasOverlap = false } = Astro.props;
         <nav class="header-nav">
           <ul class="d-flex header-nav-list">
             <li class="header-nav-item">
-              <a class="header-nav-link active" href="#">Benefits</a>
+              <a class="header-nav-link active" href={ROUTES.HOME}>Benefits</a>
             </li>
             <li class="header-nav-item">
-              <a class="header-nav-link" href="#">Community</a>
+              <a class="header-nav-link" href={ROUTES.COMMUNITY}>Community</a>
             </li>
             <li class="header-nav-item">
-              <a class="header-nav-link" href="#">About us</a>
+              <a class="header-nav-link" href={ROUTES.ABOUT_US}>About us</a>
             </li>
           </ul>
         </nav>
