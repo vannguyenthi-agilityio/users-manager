@@ -81,14 +81,14 @@ export default function Hero() {
           )}
           <p className="hero-text-term">
             By tapping ‘Sign Up’, you agree to our
-            <a href="#" className="text-highlight">
+            <a href="#" className="text-highlight letter-spacing">
               Terms,
             </a>
-            <a href="#" className="text-highlight">
+            <a href="#" className="text-highlight letter-spacing">
               E-sign Consent
             </a>
             and
-            <a href="#" className="text-highlight">
+            <a href="#" className="text-highlight letter-spacing">
               Privacy Policy.
             </a>
           </p>
