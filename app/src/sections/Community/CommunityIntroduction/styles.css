@@ -1,10 +1,9 @@
 /* Styles for Community Introduction Section */
-.community-content {
+.community-introduction {
   text-align: center;
-  gap: 20px;
 }
 
-.community-thumbnail > img {
+.community-image > img {
   max-width: 150px;
 }
 
@@ -19,14 +18,15 @@
 }
 
 @media (min-width: 1200px) {
-  .community-content {
+  .community-introduction {
+    display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     text-align: start;
   }
 
-  .community-thumbnail > img {
+  .community-image > img {
     max-width: 440px;
   }
 
@@ -34,11 +34,11 @@
     margin-top: 27px;
   }
 
-  .community-info {
+  .community-content {
     flex-grow: 2;
   }
 
-  .community-thumbnail {
+  .community-image {
     flex-grow: 1;
   }
 }

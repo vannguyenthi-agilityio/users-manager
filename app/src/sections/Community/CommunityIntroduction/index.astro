@@ -5,21 +5,14 @@ import Heading from 'components:Heading/index';
 import './styles.css';
 ---
 
-<section class="community-introduction">
-  <div class="d-flex-column community-content">
-    <div class="community-thumbnail">
-      <img
-        src="assets/images/community/doge_community_introduction.png"
-        alt="doge_community"
-      />
-    </div>
-    <div class="community-info">
-      <Heading size="md" className="community-heading"
-        >Built for the Dogecoin community.
-      </Heading>
-      <p class="community-description">
-        DogeCard is built for, and by the Doge community.
-      </p>
-    </div>
+<div class="community-introduction">
+  <div class="community-image">
+    <img src="assets/images/community/community.png" alt="DogeCard community" />
   </div>
-</section>
+  <div class="community-content">
+    <Heading size="md">Built for the Dogecoin community.</Heading>
+    <p class="community-description">
+      DogeCard is built for, and by the Doge community.
+    </p>
+  </div>
+</div>
