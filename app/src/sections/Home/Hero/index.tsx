@@ -48,9 +48,8 @@ export default function Hero() {
           </Heading>
           <p className="hero-description">In less than 5 minutes</p>
           <div
-            className={`hero-form ${
-              apiError ? 'hero-form-error' : 'hero-form-not-error'
-            }`}
+            className="hero-form"
+            style={apiError ? {} : { marginBottom: '20px' }}
           >
             <Input
               autoFocus={true}

@@ -19,11 +19,7 @@ import './styles.css';
         Get your DogeCard
       </Heading>
       <p class="hero-description">In less than 5 minutes</p>
-      <form
-        class={`hero-form ${
-          apiError ? 'hero-form-error' : 'hero-form-not-error'
-        }`}
-      >
+      <form class="hero-form" style={apiError ? {} : { marginBottom: '20px' }}>
         <Input
           autofocus
           type="tel"

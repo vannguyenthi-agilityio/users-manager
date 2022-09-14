@@ -90,12 +90,8 @@
     line-height: var(--lineHeightXs);
   }
 
-  .hero-form-error {
-    margin-bottom: 0;
-  }
-
-  .hero-form-not-error {
-    margin-bottom: 20px;
+  .input-error-message {
+    margin-bottom: 10px;
   }
 }
 

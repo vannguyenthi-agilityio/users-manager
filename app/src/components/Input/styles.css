@@ -31,7 +31,7 @@
 .input-error-message {
   color: var(--colorError);
   text-align: left;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .input-error {
@@ -43,10 +43,5 @@
     height: 80px;
     font-size: var(--fontSizeMd);
     padding: 30px;
-  }
-
-  .input-error-message {
-    margin-top: 10px;
-    margin-bottom: 10px;
   }
 }
