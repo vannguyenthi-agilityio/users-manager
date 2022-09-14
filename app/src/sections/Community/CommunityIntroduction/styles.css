@@ -3,8 +3,12 @@
   text-align: center;
 }
 
+.community-content {
+  margin-top: 40px;
+}
+
 .community-image > img {
-  max-width: 300px;
+  max-width: 150px;
 }
 
 .community-description {
