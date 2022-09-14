@@ -45,9 +45,9 @@ const {
     name={name}
     placeholder={placeholder}
     required={required}
-    class={`input input-${size} ${className} ${
+    class={`input input-${size} ${
       colorScheme == 'dark' ? 'input-dark' : 'input-light'
-    } ${errorMessage ? 'input-error' : ''}`}
+    } ${errorMessage ? 'input-error' : ''} ${className}`}
     value={value}
     size={size}
     onchange={onChange}
