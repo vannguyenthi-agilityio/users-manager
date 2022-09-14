@@ -16,6 +16,8 @@ const THEME_BASE = {
   colorPlaceholder: 'rgba(26, 24, 38, 25%)',
   colorPlaceholderLight: 'rgba(255, 255, 255, 25%)',
   colorBgAlert: 'rgba(255, 255, 255, 50%)',
+  colorBgPostCard: 'rgba(36, 30, 53, 0.5)',
+  colorTextUserNamePostCard: 'rgba(255, 255, 255, 70%)',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',

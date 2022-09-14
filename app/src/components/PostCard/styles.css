@@ -1,0 +1,47 @@
+.post-card {
+  width: calc(1 / 3 * 100%);
+  border-radius: 20px;
+  padding: 24px;
+  background: var(--colorBgPostCard);
+  backdrop-filter: blur(35px);
+}
+
+.post-card-profile,
+.post-card-info {
+  align-items: center;
+}
+
+.post-card-profile-name,
+.post-card-profile-username {
+  font-size: var(--fontSizeMd);
+  line-height: var(--lineHeightBase);
+}
+
+.post-card-profile-username {
+  color: var(--colorTextUserNamePostCard);
+}
+
+.post-card-profile-avatar {
+  width: 64px;
+  height: 64px;
+  vertical-align: middle;
+  border-radius: var(--borderRadiusRound);
+}
+
+.post-card-info {
+  justify-content: space-between;
+}
+
+.post-card-profile-details {
+  margin-left: 12px;
+}
+
+.post-card-description {
+  margin: 24px 0 16px;
+  font-size: var(--fontSizeXl);
+  line-height: var(--lineHeight2Xl);
+}
+
+.post-card-image {
+  border-radius: 15px;
+}
