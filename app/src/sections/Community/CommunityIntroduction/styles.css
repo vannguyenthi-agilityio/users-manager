@@ -30,12 +30,13 @@
     text-align: start;
   }
 
-  .community-description {
-    margin-top: 27px;
-  }
-
   .community-content {
     flex-grow: 2;
+    margin-top: unset;
+  }
+
+  .community-description {
+    margin-top: 27px;
   }
 
   .community-image {
