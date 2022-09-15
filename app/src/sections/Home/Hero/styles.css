@@ -115,6 +115,7 @@
   }
 
   .hero-text-term {
+    font-size: var(--fontSizeBase);
     max-width: 351px;
   }
 
