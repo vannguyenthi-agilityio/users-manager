@@ -17,7 +17,7 @@
 
 @media (min-width: 768px) {
   .community-image > img {
-    max-width: 440px;
+    max-width: 250px;
   }
 }
 
@@ -28,6 +28,10 @@
     align-items: center;
     justify-content: space-between;
     text-align: start;
+  }
+
+  .community-image > img {
+    max-width: 440px;
   }
 
   .community-content {
