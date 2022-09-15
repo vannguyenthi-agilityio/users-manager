@@ -17,7 +17,7 @@ export const POST_CARD_LIST = [
   {
     user: {
       name: 'Nick Name',
-      username: '@nickname',
+      username: 'nickname',
       profileUrl: 'assets/images/icons/twitter.svg',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
@@ -25,12 +25,12 @@ export const POST_CARD_LIST = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
     thumbnailUrl: 'assets/images/community/card-post-one.jpg',
     source: 'twitter',
-    url: '',
+    url: '#',
   },
   {
     user: {
       name: 'Nick Name',
-      username: '@nickname',
+      username: 'nickname',
       profileUrl: 'assets/images/icons/twitter.svg',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
@@ -38,12 +38,12 @@ export const POST_CARD_LIST = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
     thumbnailUrl: 'assets/images/community/card-post-two.jpg',
     source: 'twitter',
-    url: '',
+    url: '#',
   },
   {
     user: {
       name: 'Nick Name',
-      username: '@nickname',
+      username: 'nickname',
       profileUrl: 'assets/images/icons/twitter.svg',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
@@ -56,7 +56,7 @@ export const POST_CARD_LIST = [
   {
     user: {
       name: 'Nick Name',
-      username: '@nickname',
+      username: 'nickname',
       profileUrl: 'assets/images/icons/twitter.svg',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
@@ -64,12 +64,12 @@ export const POST_CARD_LIST = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
     thumbnailUrl: 'assets/images/community/card-post-one.jpg',
     source: 'twitter',
-    url: '',
+    url: '#',
   },
   {
     user: {
       name: 'Nick Name',
-      username: '@nickname',
+      username: 'nickname',
       profileUrl: 'assets/images/icons/twitter.svg',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
@@ -77,12 +77,12 @@ export const POST_CARD_LIST = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
     thumbnailUrl: 'assets/images/community/card-post-two.jpg',
     source: 'twitter',
-    url: '',
+    url: '#',
   },
   {
     user: {
       name: 'Nick Name',
-      username: '@nickname',
+      username: 'nickname',
       profileUrl: 'assets/images/icons/twitter.svg',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
@@ -90,6 +90,6 @@ export const POST_CARD_LIST = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
     thumbnailUrl: 'assets/images/community/card-post-three.jpg',
     source: 'twitter',
-    url: '',
+    url: '#',
   },
 ];
