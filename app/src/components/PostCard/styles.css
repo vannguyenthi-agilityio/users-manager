@@ -38,7 +38,8 @@
   line-height: var(--lineHeight2Xl);
 }
 
-.post-card-thumbnail {
+.post-card-thumbnail,
+.post-card-thumbnail > img {
   border-radius: 15px;
 }
 

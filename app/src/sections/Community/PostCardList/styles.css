@@ -6,11 +6,6 @@
   margin-bottom: 400px;
 }
 
-.community-post-card-list .post-card-thumbnail,
-.community-post-card-list .post-card img {
-  border-radius: 15px;
-}
-
 @media (min-width: 768px) {
   .community-post-card-list {
     flex-direction: row;
