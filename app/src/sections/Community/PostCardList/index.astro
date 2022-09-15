@@ -1,0 +1,15 @@
+---
+import PostCard from 'components:PostCard/index';
+import { POST_CARD_LIST } from 'constants:index';
+import './styles.css';
+---
+
+<div class="d-flex community-post-card-list">
+  <div class="community-post-card-group">
+    {
+      POST_CARD_LIST.map((item, index) => {
+        return <PostCard data={item} />;
+      })
+    }
+  </div>
+</div>

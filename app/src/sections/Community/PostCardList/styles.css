@@ -1,0 +1,27 @@
+.community-post-card-list {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 25px;
+  margin-top: 230px;
+  margin-bottom: 400px;
+}
+
+@media (min-width: 768px) {
+  .community-post-card-list {
+    flex-direction: row;
+  }
+
+  .community-post-card-group {
+    column-count: 2;
+  }
+
+  .community-post-card-group .post-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .community-post-card-group {
+    column-count: 3;
+  }
+}
