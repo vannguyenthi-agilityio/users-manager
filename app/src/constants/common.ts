@@ -1,3 +1,6 @@
+// Const
+import { ROUTES } from 'src/constants/routes';
+
 export const PHONE = {
   pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
   maxLength: '14',
@@ -12,6 +15,12 @@ export const POST_SOURES = {
   FACEBOOK: 'facebook',
   INSTAGRAM: 'instagram',
 };
+
+export const NAV_HEADER = [
+  { label: 'Benefits', href: ROUTES.HOME },
+  { label: 'Community', href: ROUTES.COMMUNITY },
+  { label: 'About us', href: ROUTES.ABOUT_US },
+];
 
 export const POST_CARD_LIST = [
   {
