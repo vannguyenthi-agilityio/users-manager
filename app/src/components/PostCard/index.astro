@@ -20,12 +20,13 @@ interface PostCard {
 
 export interface PostCardProps {
   data: PostCard;
+  className: string;
 }
 
-const { data } = Astro.props as PostCardProps;
+const { data, className } = Astro.props as PostCardProps;
 ---
 
-<article class="post-card">
+<article class={`post-card ${className}`}>
   <div class="d-flex post-card-header">
     <a href={data.user.profileUrl} class="d-flex post-card-user">
       <img
