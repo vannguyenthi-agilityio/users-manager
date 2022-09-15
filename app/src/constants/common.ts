@@ -15,113 +15,81 @@ export const POST_SOURES = {
 
 export const POST_CARD_LIST = [
   {
-    postCardProfile: {
-      pastCardProfileAvatar: {
-        url: 'assets/images/community/avatar/avatar-one.png',
-        alt: 'Avatar',
-      },
-      postCardProfileInfo: {
-        name: 'Doge',
-        username: 'Doge nịna',
-      },
-      postCardProfileIcon: {
-        url: 'assets/images/community/icon/twitter.svg',
-        alt: '',
-      },
+    user: {
+      name: 'Nick Name',
+      username: '@nickname',
+      profileUrl: 'assets/images/icons/twitter.svg',
+      avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
-    postCardDiscription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
-    postCardImage: {
-      url: 'assets/images/community/card-post/card-post-one.png',
-      alt: 'Card post one',
-    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
+    thumbnailUrl: 'assets/images/community/card-post-one.jpg',
+    source: 'twitter',
+    url: '',
   },
   {
-    postCardProfile: {
-      pastCardProfileAvatar: {
-        url: 'assets/images/community/avatar/avatar-one.png',
-        alt: 'Avatar',
-      },
-      postCardProfileInfo: {
-        name: 'Doge',
-        username: 'Doge nịna',
-      },
-      postCardProfileIcon: {
-        url: 'assets/images/community/icon/twitter.svg',
-        alt: '',
-      },
+    user: {
+      name: 'Nick Name',
+      username: '@nickname',
+      profileUrl: 'assets/images/icons/twitter.svg',
+      avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
-    postCardDiscription:
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
+    thumbnailUrl: 'assets/images/community/card-post-two.jpg',
+    source: 'twitter',
+    url: '',
+  },
+  {
+    user: {
+      name: 'Nick Name',
+      username: '@nickname',
+      profileUrl: 'assets/images/icons/twitter.svg',
+      avatarUrl: 'assets/images/community/avatar/avatar-one.png',
+    },
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
-    postCardImage: {
-      url: 'assets/images/community/card-post/card-post-one.png',
-      alt: 'Card post one',
-    },
+    thumbnailUrl: 'assets/images/community/card-post-three.jpg',
+    source: 'twitter',
+    url: '',
   },
   {
-    postCardProfile: {
-      pastCardProfileAvatar: {
-        url: 'assets/images/community/avatar/avatar-one.png',
-        alt: 'Avatar',
-      },
-      postCardProfileInfo: {
-        name: 'Doge',
-        username: 'Doge nịna',
-      },
-      postCardProfileIcon: {
-        url: 'assets/images/community/icon/twitter.svg',
-        alt: '',
-      },
+    user: {
+      name: 'Nick Name',
+      username: '@nickname',
+      profileUrl: 'assets/images/icons/twitter.svg',
+      avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
-    postCardDiscription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
-    postCardImage: {
-      url: 'assets/images/community/card-post/card-post-one.png',
-      alt: 'Card post one',
-    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
+    thumbnailUrl: 'assets/images/community/card-post-one.jpg',
+    source: 'twitter',
+    url: '',
   },
   {
-    postCardProfile: {
-      pastCardProfileAvatar: {
-        url: 'assets/images/community/avatar/avatar-one.png',
-        alt: 'Avatar',
-      },
-      postCardProfileInfo: {
-        name: 'Doge',
-        username: 'Doge nịna',
-      },
-      postCardProfileIcon: {
-        url: 'assets/images/community/icon/twitter.svg',
-        alt: '',
-      },
+    user: {
+      name: 'Nick Name',
+      username: '@nickname',
+      profileUrl: 'assets/images/icons/twitter.svg',
+      avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
-    postCardDiscription:
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
-    postCardImage: {
-      url: 'assets/images/community/card-post/card-post-one.png',
-      alt: 'Card post one',
-    },
+    thumbnailUrl: 'assets/images/community/card-post-two.jpg',
+    source: 'twitter',
+    url: '',
   },
   {
-    postCardProfile: {
-      pastCardProfileAvatar: {
-        url: 'assets/images/community/avatar/avatar-one.png',
-        alt: 'Avatar',
-      },
-      postCardProfileInfo: {
-        name: 'Doge',
-        username: 'Doge nịna',
-      },
-      postCardProfileIcon: {
-        url: 'assets/images/community/icon/twitter.svg',
-        alt: '',
-      },
+    user: {
+      name: 'Nick Name',
+      username: '@nickname',
+      profileUrl: 'assets/images/icons/twitter.svg',
+      avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
-    postCardDiscription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
-    postCardImage: {
-      url: 'assets/images/community/card-post/card-post-one.png',
-      alt: 'Card post one',
-    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
+    thumbnailUrl: 'assets/images/community/card-post-three.jpg',
+    source: 'twitter',
+    url: '',
   },
 ];

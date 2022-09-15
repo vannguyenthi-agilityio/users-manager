@@ -1,16 +1,14 @@
-/* TODO will update style to post card commponent */
-.post-card {
-  margin-bottom: 20px;
-}
-
-.post-card img {
-  width: 100%;
-}
-
 .community-post-card-list {
   flex-direction: column;
   justify-content: flex-start;
   gap: 25px;
+  margin-top: 230px;
+  margin-bottom: 400px;
+}
+
+.community-post-card-list .post-card-thumbnail,
+.community-post-card-list .post-card img {
+  border-radius: 15px;
 }
 
 @media (min-width: 768px) {
