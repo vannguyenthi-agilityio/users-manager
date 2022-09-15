@@ -1,8 +1,14 @@
 export const PHONE = {
   pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
-  maxLength: '14'
+  maxLength: '14',
 };
 
 export const LOCAL_STORAGE_KEYS = {
-  USER_INFO: 'userInfo'
+  USER_INFO: 'userInfo',
+};
+
+export const SOURCE_LIST = {
+  TWITTER: 'twitter',
+  FACEBOOK: 'facebook',
+  INSTAGRAM: 'instagram',
 };
