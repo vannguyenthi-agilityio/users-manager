@@ -111,10 +111,11 @@
 
   .hero-bg {
     background-image: url('/assets/images/home/bg-hero-desktop.png');
-    min-height: var(--heroBgHeightDesktop);
+    min-height: var(--heroBgHeightMdDesktop);
   }
 
   .hero-text-term {
+    font-size: var(--fontSizeBase);
     max-width: 351px;
   }
 
@@ -124,5 +125,11 @@
 
   .hero-form-input {
     margin-right: 15px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .hero-bg {
+    min-height: var(--heroBgHeightDesktop);
   }
 }
