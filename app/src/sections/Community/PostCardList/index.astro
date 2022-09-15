@@ -1,25 +1,15 @@
 ---
 import PostCard from 'components:PostCard/index';
 import { POST_CARD_LIST } from 'constants:index';
-import { sliceArr } from 'utils';
 import './styles.css';
-
-const numberColunm = 3;
-const numberCardsColunm =
-  POST_CARD_LIST.length % numberColunm === 0
-    ? POST_CARD_LIST.length / numberColunm
-    : POST_CARD_LIST.length / numberColunm + 1;
 ---
 
 <div class="d-flex community-post-card-list">
-  {
-    sliceArr(POST_CARD_LIST, numberCardsColunm).map((items) => (
-      <div class="d-flex-column community-post-card-group">
-        {items.map((item, index) => {
-          const key = `item-${index}`;
-          return <PostCard data={item} />;
-        })}
-      </div>
-    ))
-  }
+  <div class="community-post-card-group">
+    {
+      POST_CARD_LIST.map((item, index) => {
+        return <PostCard data={item} />;
+      })
+    }
+  </div>
 </div>
