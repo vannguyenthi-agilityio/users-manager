@@ -14,7 +14,7 @@ const numberCardsColunm =
 <div class="d-flex community-post-card-list">
   {
     sliceArr(POST_CARD_LIST, numberCardsColunm).map((items) => (
-      <div class="d-flex-column community-post-card-item">
+      <div class="d-flex-column community-post-card-group">
         {items.map((item, index) => {
           const key = `item-${index}`;
           return <PostCard data={item} />;
