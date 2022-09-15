@@ -18,7 +18,7 @@ export const POST_CARD_LIST = [
     user: {
       name: 'Nick Name',
       username: 'nickname',
-      profileUrl: 'assets/images/icons/twitter.svg',
+      profileUrl: '#',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
     description:
@@ -31,7 +31,7 @@ export const POST_CARD_LIST = [
     user: {
       name: 'Nick Name',
       username: 'nickname',
-      profileUrl: 'assets/images/icons/twitter.svg',
+      profileUrl: '#',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
     description:
@@ -44,7 +44,7 @@ export const POST_CARD_LIST = [
     user: {
       name: 'Nick Name',
       username: 'nickname',
-      profileUrl: 'assets/images/icons/twitter.svg',
+      profileUrl: '#',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
     description:
@@ -57,7 +57,7 @@ export const POST_CARD_LIST = [
     user: {
       name: 'Nick Name',
       username: 'nickname',
-      profileUrl: 'assets/images/icons/twitter.svg',
+      profileUrl: '#',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
     description:
@@ -70,7 +70,7 @@ export const POST_CARD_LIST = [
     user: {
       name: 'Nick Name',
       username: 'nickname',
-      profileUrl: 'assets/images/icons/twitter.svg',
+      profileUrl: '#',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
     description:
@@ -83,7 +83,7 @@ export const POST_CARD_LIST = [
     user: {
       name: 'Nick Name',
       username: 'nickname',
-      profileUrl: 'assets/images/icons/twitter.svg',
+      profileUrl: '#',
       avatarUrl: 'assets/images/community/avatar/avatar-one.png',
     },
     description:
