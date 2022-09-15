@@ -16,6 +16,8 @@ const THEME_BASE = {
   colorPlaceholder: 'rgba(26, 24, 38, 25%)',
   colorPlaceholderLight: 'rgba(255, 255, 255, 25%)',
   colorBgAlert: 'rgba(255, 255, 255, 50%)',
+  colorBgPostCard: 'rgba(36, 30, 53, 50%)',
+  colorTextPostCardUsername: 'rgba(255, 255, 255, 70%);',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',
@@ -112,7 +114,7 @@ const THEME_BASE = {
 
   // Drop Shadow
   referralCardDropShadow:
-    'drop-shadow(0px 5.4744px 136.861px rgba(87, 79, 54, 25%))'
+    'drop-shadow(0px 5.4744px 136.861px rgba(87, 79, 54, 25%))',
 };
 
 export default THEME_BASE;
