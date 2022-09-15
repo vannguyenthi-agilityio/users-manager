@@ -1,7 +1,55 @@
 ---
+import { POST_CARD_LIST } from 'constants:index';
+import { sliceArr } from 'utils';
 import './styles.css';
 ---
 
-<div class="community-post-card-list">
-  <h2>Community PostCards Section</h2>
+<div class="d-flex community-post-card-list">
+  {
+    sliceArr(POST_CARD_LIST, 2).map((items) => (
+      <div class="d-flex-column community-post-card-item">
+        {items.map((item, index) => {
+          const key = `item-${index}`;
+          const avatarUrl = item.postCardProfile.pastCardProfileAvatar.url;
+          const avatarAlt = item.postCardProfile.pastCardProfileAvatar.alt;
+          const profileName = item.postCardProfile.postCardProfileInfo.name;
+          const profileUserName =
+            item.postCardProfile.postCardProfileInfo.username;
+          const iconUrl = item.postCardProfile.postCardProfileIcon.url;
+          const iconAlt = item.postCardProfile.postCardProfileIcon.alt;
+          const discription = item.postCardDiscription;
+          const imageUrl = item.postCardImage.url;
+          const imageAlt = item.postCardImage.alt;
+          return (
+            <div class="post-card">
+              <div class="d-flex post-card-info">
+                <a class="d-flex post-card-profile" href="#">
+                  <img
+                    src={avatarUrl}
+                    alt={avatarAlt}
+                    class="post-card-profile-avatar"
+                  />
+                  <div class="d-flex-column post-card-profile-details">
+                    <span class="text-bold post-card-profile-name">
+                      {profileName}
+                    </span>
+                    <span class="post-card-profile-username">
+                      {profileUserName}
+                    </span>
+                  </div>
+                </a>
+                <a class="post-card-context">
+                  <img src={iconUrl} alt={iconAlt} />
+                </a>
+              </div>
+              <p class="post-card-description">{discription}</p>
+              <a class="d-flex post-card-image" href="#">
+                <img src={imageUrl} alt={imageAlt} />
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    ))
+  }
 </div>

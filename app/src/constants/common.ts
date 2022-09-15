@@ -12,3 +12,116 @@ export const POST_SOURES = {
   FACEBOOK: 'facebook',
   INSTAGRAM: 'instagram',
 };
+
+export const POST_CARD_LIST = [
+  {
+    postCardProfile: {
+      pastCardProfileAvatar: {
+        url: 'assets/images/community/avatar/avatar-one.png',
+        alt: 'Avatar',
+      },
+      postCardProfileInfo: {
+        name: 'Doge',
+        username: 'Doge nịna',
+      },
+      postCardProfileIcon: {
+        url: 'assets/images/community/icon/twitter.svg',
+        alt: '',
+      },
+    },
+    postCardDiscription:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
+    postCardImage: {
+      url: 'assets/images/community/card-post/card-post-one.png',
+      alt: 'Card post one',
+    },
+  },
+  {
+    postCardProfile: {
+      pastCardProfileAvatar: {
+        url: 'assets/images/community/avatar/avatar-one.png',
+        alt: 'Avatar',
+      },
+      postCardProfileInfo: {
+        name: 'Doge',
+        username: 'Doge nịna',
+      },
+      postCardProfileIcon: {
+        url: 'assets/images/community/icon/twitter.svg',
+        alt: '',
+      },
+    },
+    postCardDiscription:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
+    postCardImage: {
+      url: 'assets/images/community/card-post/card-post-one.png',
+      alt: 'Card post one',
+    },
+  },
+  {
+    postCardProfile: {
+      pastCardProfileAvatar: {
+        url: 'assets/images/community/avatar/avatar-one.png',
+        alt: 'Avatar',
+      },
+      postCardProfileInfo: {
+        name: 'Doge',
+        username: 'Doge nịna',
+      },
+      postCardProfileIcon: {
+        url: 'assets/images/community/icon/twitter.svg',
+        alt: '',
+      },
+    },
+    postCardDiscription:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
+    postCardImage: {
+      url: 'assets/images/community/card-post/card-post-one.png',
+      alt: 'Card post one',
+    },
+  },
+  {
+    postCardProfile: {
+      pastCardProfileAvatar: {
+        url: 'assets/images/community/avatar/avatar-one.png',
+        alt: 'Avatar',
+      },
+      postCardProfileInfo: {
+        name: 'Doge',
+        username: 'Doge nịna',
+      },
+      postCardProfileIcon: {
+        url: 'assets/images/community/icon/twitter.svg',
+        alt: '',
+      },
+    },
+    postCardDiscription:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
+    postCardImage: {
+      url: 'assets/images/community/card-post/card-post-one.png',
+      alt: 'Card post one',
+    },
+  },
+  {
+    postCardProfile: {
+      pastCardProfileAvatar: {
+        url: 'assets/images/community/avatar/avatar-one.png',
+        alt: 'Avatar',
+      },
+      postCardProfileInfo: {
+        name: 'Doge',
+        username: 'Doge nịna',
+      },
+      postCardProfileIcon: {
+        url: 'assets/images/community/icon/twitter.svg',
+        alt: '',
+      },
+    },
+    postCardDiscription:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque.',
+    postCardImage: {
+      url: 'assets/images/community/card-post/card-post-one.png',
+      alt: 'Card post one',
+    },
+  },
+];

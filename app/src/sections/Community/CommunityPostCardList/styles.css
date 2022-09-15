@@ -1,1 +1,24 @@
-/* Styles for Community PostCards Section */
+/* TODO will update style to post card commponent */
+.post-card {
+  margin-bottom: 20px;
+}
+
+.post-card img {
+  width: 100%;
+}
+
+.community-post-card-list {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .community-post-card-list {
+    flex-direction: row;
+  }
+
+  .community-post-card-item {
+    width: calc(1 / 3 * 100%);
+  }
+}
