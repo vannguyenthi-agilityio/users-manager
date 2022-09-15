@@ -20,10 +20,10 @@ interface PostCard {
 
 export interface PostCardProps {
   data: PostCard;
-  className: string;
+  className?: string;
 }
 
-const { data, className } = Astro.props as PostCardProps;
+const { data, className = '' } = Astro.props as PostCardProps;
 ---
 
 <article class={`post-card ${className}`}>
