@@ -1,0 +1,50 @@
+/* Styles for Community Introduction Section */
+.community-introduction {
+  text-align: center;
+}
+
+.community-content {
+  margin-top: 40px;
+}
+
+.community-image > img {
+  max-width: 150px;
+}
+
+.community-description {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .community-image > img {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .community-introduction {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    text-align: start;
+  }
+
+  .community-image > img {
+    max-width: 440px;
+  }
+
+  .community-content {
+    flex-grow: 2;
+    margin-top: unset;
+  }
+
+  .community-description {
+    margin-top: 27px;
+  }
+
+  .community-image {
+    flex-grow: 1;
+    padding-inline: 60px;
+  }
+}
