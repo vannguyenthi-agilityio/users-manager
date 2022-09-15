@@ -7,7 +7,7 @@ export const LOCAL_STORAGE_KEYS = {
   USER_INFO: 'userInfo',
 };
 
-export const SOURCE_LIST = {
+export const POST_SOURES = {
   TWITTER: 'twitter',
   FACEBOOK: 'facebook',
   INSTAGRAM: 'instagram',
