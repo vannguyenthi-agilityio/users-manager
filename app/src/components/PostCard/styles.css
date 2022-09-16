@@ -34,8 +34,8 @@
 
 .post-card-description {
   margin: 24px 0 16px;
-  font-size: var(--fontSizeXl);
-  line-height: var(--lineHeight2Xl);
+  font-size: var(--fontSizeMd);
+  line-height: var(--lineHeightLg);
 }
 
 .post-card-thumbnail,
@@ -45,4 +45,11 @@
 
 .post-card-thumbnail > img {
   width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .post-card-description {
+    font-size: var(--fontSizeXl);
+    line-height: var(--lineHeight2Xl);
+  }
 }
