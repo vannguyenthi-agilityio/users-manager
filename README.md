@@ -1,6 +1,6 @@
 # HOOPA - SHIPCARD
 ## Workflow
-![Flowchart](./Flowcharts.png)
+![Flowchart](./app/Flowcharts.png)
 
 ## APP STRUCTURE
 ### Tech stacks:
@@ -17,6 +17,12 @@
 - [commitlint](https://github.com/conventional-changelog/commitlint): checks if your commit messages meet the conventional commit format
 
 ### Commands
+Before running these commands, please add `.env` file in root of the project folder with these values:
+```
+PUBLIC_DOMAIN=http://localhost:3000
+PUBLIC_API_MOCKING=enabled
+```
+
 All commands are run from the root of the project, from a terminal:
 
 | Command                 | Action                                             |
@@ -32,3 +38,14 @@ All commands are run from the root of the project, from a terminal:
 ## API STRUCTURE
 ### Tech stacks:
 - [MSW](https://mswjs.io/): Mock Service Worker is an API mocking library that uses Service Worker API to intercept actual requests.
+
+To test MSW in browser mode, you need to run `preview` mode:
+- Build source code by:
+```
+pnpm run build
+```
+
+- Start preview mode:
+```
+pnpm run preview
+```
