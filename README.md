@@ -38,3 +38,14 @@ All commands are run from the root of the project, from a terminal:
 ## API STRUCTURE
 ### Tech stacks:
 - [MSW](https://mswjs.io/): Mock Service Worker is an API mocking library that uses Service Worker API to intercept actual requests.
+
+To test MSW in browser mode, you need to run `preview` mode:
+- Build source code by:
+```
+pnpm run build
+```
+
+- Start preview mode:
+```
+pnpm run preview
+```
