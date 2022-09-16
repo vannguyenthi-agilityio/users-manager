@@ -50,7 +50,9 @@ const { data, className = '' } = Astro.props as PostCardProps;
   <div class="post-card-body">
     {
       data.description && (
-        <p class="post-card-description">{data.description}</p>
+        <p class="multiline-truncate post-card-description">
+          {data.description}
+        </p>
       )
     }
     <a href={data.url} class="d-flex post-card-thumbnail">
