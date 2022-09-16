@@ -1,6 +1,6 @@
 ---
 import './styles.css';
-import { ROUTES } from 'src/constants/routes';
+import { NAVIGATION } from 'constants:index';
 
 export interface HeaderProps {
   className?: string;
@@ -8,6 +8,8 @@ export interface HeaderProps {
 }
 
 const { className = '', hasOverlap = false } = Astro.props;
+
+const urlPathName = Astro.url.pathname;
 ---
 
 <header class={`header ${hasOverlap ? 'header-overlap' : ''} ${className}`}>
@@ -22,15 +24,20 @@ const { className = '', hasOverlap = false } = Astro.props;
         </a>
         <nav class="header-nav">
           <ul class="d-flex header-nav-list">
-            <li class="header-nav-item">
-              <a class="header-nav-link active" href={ROUTES.HOME}>Benefits</a>
-            </li>
-            <li class="header-nav-item">
-              <a class="header-nav-link" href={ROUTES.COMMUNITY}>Community</a>
-            </li>
-            <li class="header-nav-item">
-              <a class="header-nav-link" href={ROUTES.ABOUT_US}>About us</a>
-            </li>
+            {
+              NAVIGATION.map((item, index) => (
+                <li class="header-nav-item">
+                  <a
+                    class={`header-nav-link ${
+                      urlPathName === item.href ? 'active' : ''
+                    }`}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </nav>
       </div>
