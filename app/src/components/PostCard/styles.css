@@ -1,8 +1,8 @@
 .post-card {
   border-radius: 20px;
-  padding: 24px;
   background: var(--colorBgPostCard);
   backdrop-filter: blur(35px);
+  padding: 24px;
 }
 
 .post-card-user,
