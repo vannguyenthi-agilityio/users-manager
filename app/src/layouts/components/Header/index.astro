@@ -1,6 +1,6 @@
 ---
 import './styles.css';
-import { NAV_HEADER } from 'constants:index';
+import { NAVIGATION } from 'constants:index';
 
 export interface HeaderProps {
   className?: string;
@@ -25,7 +25,7 @@ const urlPathName = Astro.url.pathname;
         <nav class="header-nav">
           <ul class="d-flex header-nav-list">
             {
-              NAV_HEADER.map((item, index) => (
+              NAVIGATION.map((item, index) => (
                 <li class="header-nav-item">
                   <a
                     class={`header-nav-link ${

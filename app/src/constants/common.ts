@@ -16,7 +16,7 @@ export const POST_SOURES = {
   INSTAGRAM: 'instagram',
 };
 
-export const NAV_HEADER = [
+export const NAVIGATION = [
   { label: 'Benefits', href: ROUTES.HOME },
   { label: 'Community', href: ROUTES.COMMUNITY },
   { label: 'About us', href: ROUTES.ABOUT_US },
