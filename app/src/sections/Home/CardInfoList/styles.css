@@ -64,6 +64,11 @@
   .card-info-secure-list > li::before {
     padding-left: 12px;
   }
+
+  .card-info-secure .card-info-content {
+    width: auto;
+    padding-right: 50px;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -81,10 +86,6 @@
 
   .card-info-secure .card-image > img {
     max-width: inherit;
-  }
-
-  .card-info-secure .card-info-content {
-    width: auto;
   }
 
   .card-info-list {
