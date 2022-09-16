@@ -40,8 +40,9 @@
 
 .hero-text-term {
   font-size: var(--fontSizeSm);
-  line-height: 17px;
+  line-height: 20px;
   text-align: left;
+  margin-top: 10px;
 }
 
 .hero-form-input::placeholder {
@@ -91,6 +92,10 @@
 
   .hero-input-wrapper {
     margin-bottom: 10px;
+  }
+
+  .hero-text-term {
+    margin-top: 0;
   }
 }
 
