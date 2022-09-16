@@ -60,7 +60,7 @@ export const POST_CARD_LIST = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Pellentesque massa id condimentum pellentesque at netus quam sed. Sit eu ultricies massa, eros, aliquam. Vivamus in enim, mattis adipiscing massa pretium.',
     thumbnailUrl: 'assets/images/community/card-post-three.jpg',
     source: 'twitter',
-    url: '',
+    url: '#',
   },
   {
     user: {
@@ -99,6 +99,6 @@ export const POST_CARD_LIST = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Pellentesque massa id condimentum pellentesque at netus quam sed. Sit eu ultricies massa, eros, aliquam. Vivamus in enim, mattis adipiscing massa pretium.',
     thumbnailUrl: 'assets/images/community/card-post-three.jpg',
     source: 'twitter',
-    url: '',
+    url: '#',
   },
 ];
