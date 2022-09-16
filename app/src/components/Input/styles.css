@@ -30,6 +30,7 @@
 
 .input-error-message {
   color: var(--colorError);
+  font-size: var(--fontSizeSm);
   text-align: left;
   margin-top: 10px;
 }
@@ -43,5 +44,9 @@
     height: 80px;
     font-size: var(--fontSizeMd);
     padding: 30px;
+  }
+
+  .input-error-message {
+    font-size: var(--fontSizeBase);
   }
 }
