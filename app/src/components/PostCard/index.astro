@@ -24,6 +24,10 @@ export interface PostCardProps {
 }
 
 const { data, className = '' } = Astro.props as PostCardProps;
+
+const numberCharacters = 220;
+const descriptionLength = data.description.trim().length;
+const descriptionContentSlice = data.description.slice(0, numberCharacters);
 ---
 
 <article class={`post-card ${className}`}>
@@ -50,8 +54,13 @@ const { data, className = '' } = Astro.props as PostCardProps;
   <div class="post-card-body">
     {
       data.description && (
-        <p class="multiline-truncate post-card-description">
-          {data.description}
+        <p
+          class={`${
+            descriptionLength > numberCharacters ? 'multiline-truncate' : ''
+          } post-card-description`}
+        >
+          {descriptionContentSlice}
+          {descriptionLength > numberCharacters && <span>...</span>}
         </p>
       )
     }

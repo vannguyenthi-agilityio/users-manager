@@ -222,19 +222,9 @@ body {
 
 .multiline-truncate {
   display: inline-block;
-  position: relative;
-  max-height: 104px;
-  padding-right: 20px;
+  max-height: 280px;
   overflow: hidden;
   word-break: break-all;
-}
-
-.multiline-truncate::after {
-  content: '...';
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 /* Small devices (landscape phones, 576px and up) */
