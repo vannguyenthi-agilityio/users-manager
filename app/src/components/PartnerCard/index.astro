@@ -1,0 +1,22 @@
+---
+import Heading from 'components:Heading/index';
+import './styles.css';
+
+export interface PartnerCardProps {
+  className?: string;
+  imageUrl?: string;
+  heading?: string;
+}
+
+const { className = '', imageUrl = '', heading = '' } = Astro.props;
+---
+
+<div class={`d-flex partner-card ${className}`}>
+  <div class="d-flex partner-card-info">
+    <img src={imageUrl} alt={heading} />
+  </div>
+  <div class="partner-card-content">
+    <Heading size="sm" className="partner-card-heading">{heading}</Heading>
+    <slot />
+  </div>
+</div>

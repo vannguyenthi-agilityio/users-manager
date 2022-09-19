@@ -12,6 +12,7 @@ const THEME_BASE = {
   colorBgFooterDetail: '#151515',
   colorInputDark: '#191524',
   colorTextAlert: '#1a1826',
+  colorPartnerCard: '#191524',
 
   colorPlaceholder: 'rgba(26, 24, 38, 25%)',
   colorPlaceholderLight: 'rgba(255, 255, 255, 25%)',
