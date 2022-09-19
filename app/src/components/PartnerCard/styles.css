@@ -5,13 +5,13 @@
 }
 
 .partner-card-info {
-  background-color: var(--colorInputDark);
+  background-color: var(--colorPartnerCard);
   border-radius: var(--borderRadiusMd);
-  width: 180px;
+  width: 200px;
   height: 144px;
   justify-content: center;
   margin-bottom: 20px;
-  padding: 24px 16px;
+  padding: 24px 22px;
 }
 
 .partner-card-heading {
@@ -35,7 +35,6 @@
 
 @media (min-width: 1200px) {
   .partner-card-info {
-    width: 200px;
     height: 160px;
   }
 
