@@ -2,7 +2,7 @@
 import TwitterIcon from 'components:SocialIcon/Twitter';
 import FacebookIcon from 'components:SocialIcon/Facebook';
 import InstagramIcon from 'components:SocialIcon/Instagram';
-import { POST_SOURES } from 'constants:index';
+import { POST_SOURES, POST_CARD_DESCRIPTION_MAX_WORDS } from 'constants:index';
 import './styles.css';
 
 interface PostCard {
@@ -24,6 +24,17 @@ export interface PostCardProps {
 }
 
 const { data, className = '' } = Astro.props as PostCardProps;
+
+const descriptionWordsLength = data.description.split(' ').length;
+let description = data.description;
+
+if (descriptionWordsLength > POST_CARD_DESCRIPTION_MAX_WORDS) {
+  description =
+    data.description
+      .split(/\s+/)
+      .slice(0, POST_CARD_DESCRIPTION_MAX_WORDS)
+      .join(' ') + ' ...';
+}
 ---
 
 <article class={`post-card ${className}`}>
@@ -48,13 +59,7 @@ const { data, className = '' } = Astro.props as PostCardProps;
     {data.source === POST_SOURES.INSTAGRAM && <InstagramIcon href={data.url} />}
   </div>
   <div class="post-card-body">
-    {
-      data.description && (
-        <p class="multiline-truncate post-card-description">
-          {data.description}
-        </p>
-      )
-    }
+    {data.description && <p class="post-card-description">{description}</p>}
     <a href={data.url} class="d-flex post-card-thumbnail">
       <img src={data.thumbnailUrl} alt={data.description} />
     </a>

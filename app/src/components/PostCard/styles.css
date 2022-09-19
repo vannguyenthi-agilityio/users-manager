@@ -3,6 +3,7 @@
   background: var(--colorBgPostCard);
   backdrop-filter: blur(35px);
   padding: 24px;
+  display: inline-block;
 }
 
 .post-card-user,
@@ -36,6 +37,7 @@
   margin: 24px 0 16px;
   font-size: var(--fontSizeMd);
   line-height: var(--lineHeightLg);
+  display: inline-block;
 }
 
 .post-card-thumbnail,
