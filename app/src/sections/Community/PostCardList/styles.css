@@ -2,7 +2,7 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 25px;
-  margin: 150px 0;
+  margin: 80px 0;
 }
 
 .community-post-card-group .post-card {
@@ -12,6 +12,7 @@
 @media (min-width: 768px) {
   .community-post-card-list {
     flex-direction: row;
+    margin: 150px 0;
   }
 
   .community-post-card-group {
