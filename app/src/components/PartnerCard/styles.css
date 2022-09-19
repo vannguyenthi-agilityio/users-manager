@@ -1,0 +1,45 @@
+.partner-card {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.partner-card-info {
+  background-color: var(--colorInputDark);
+  border-radius: var(--borderRadiusMd);
+  width: 180px;
+  height: 144px;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 24px 16px;
+}
+
+.partner-card-heading {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+  .partner-card {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .partner-card-info {
+    margin-bottom: 0;
+  }
+
+  .partner-card-content {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .partner-card-info {
+    width: 200px;
+    height: 160px;
+  }
+
+  .partner-card-content {
+    margin-left: 40px;
+  }
+}
