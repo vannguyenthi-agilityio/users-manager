@@ -146,7 +146,7 @@ body {
   font: var(--fontWeightNormal) var(--fontSizeBase) / 1 var(--fontFamilyPrimary);
   color: var(--colorText);
   background-color: var(--colorBackground);
-  background-image: url('/assets/images/bg-mobile.webp');
+  background-image: url('/assets/images/bg-mobile.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -248,7 +248,7 @@ body {
 @media (min-width: 768px) {
   body {
     font-size: var(--fontSizeMd);
-    background-image: url('/assets/images/bg-tablet.webp');
+    background-image: url('/assets/images/bg-tablet.png');
   }
 
   .container {
@@ -282,7 +282,7 @@ body {
 /* 1200 and up */
 @media (min-width: 1200px) {
   body {
-    background-image: url('/assets/images/bg-desktop.webp');
+    background-image: url('/assets/images/bg-desktop.png');
   }
 }
 
