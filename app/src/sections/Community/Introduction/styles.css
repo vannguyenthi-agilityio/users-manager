@@ -9,7 +9,6 @@
 
 .community-image > img {
   max-width: 150px;
-  border-radius: var(--borderRadiusRound);
 }
 
 .community-description {
