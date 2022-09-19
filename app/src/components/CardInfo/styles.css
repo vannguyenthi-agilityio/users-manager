@@ -19,6 +19,12 @@
 
 .card-image > img {
   max-width: 225px;
+  border-radius: 30px;
+  transform: rotate(6.99deg);
+}
+
+.card-info-reverse .card-image > img {
+  transform: rotate(-8.01deg);
 }
 
 .card-info-content {

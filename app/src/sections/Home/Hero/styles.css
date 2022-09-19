@@ -27,7 +27,7 @@
   width: var(--sizeFull);
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('/assets/images/home/bg-hero-mobile.png');
+  background-image: url('/assets/images/home/bg-hero-mobile.webp');
 }
 
 .hero-form {
@@ -67,7 +67,7 @@
   }
 
   .hero-bg {
-    background-image: url('/assets/images/home/bg-hero-tablet.png');
+    background-image: url('/assets/images/home/bg-hero-tablet.webp');
     min-height: var(--heroBgHeightTablet);
   }
 
@@ -115,7 +115,7 @@
   }
 
   .hero-bg {
-    background-image: url('/assets/images/home/bg-hero-desktop.png');
+    background-image: url('/assets/images/home/bg-hero-desktop.webp');
     min-height: var(--heroBgHeightMdDesktop);
   }
 

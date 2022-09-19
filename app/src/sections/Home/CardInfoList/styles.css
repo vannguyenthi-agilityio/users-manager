@@ -8,6 +8,8 @@
 
 .card-info-secure .card-image > img {
   max-width: 296px;
+  transform: rotate(-16.25deg);
+  border-radius: 0;
 }
 
 .card-info-list {

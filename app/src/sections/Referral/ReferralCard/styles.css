@@ -44,19 +44,19 @@
   > li:not(:last-child)
   > .referral-card-step-icon::after {
   height: 20px;
-  background-image: url('/assets/images/referral/icons/vector.svg');
+  background-image: url('/assets/images/icons/vector.svg');
 }
 
 .referral-card-step-icon.ordered::before {
-  background-image: url('/assets/images/referral/icons/check-ordered.svg');
+  background-image: url('/assets/images/icons/check-ordered.svg');
 }
 
 .referral-card-step-icon.send::before {
-  background-image: url('/assets/images/referral/icons/check-send.svg');
+  background-image: url('/assets/images/icons/check-send.svg');
 }
 
 .referral-card-step-icon.location::before {
-  background-image: url('/assets/images/referral/icons/check-location.svg');
+  background-image: url('/assets/images/icons/check-location.svg');
 }
 
 .referral-card-step-list {
