@@ -36,6 +36,8 @@
   margin: 24px 0 16px;
   font-size: var(--fontSizeMd);
   line-height: var(--lineHeightLg);
+  display: inline-block;
+  overflow: hidden;
 }
 
 .post-card-thumbnail,

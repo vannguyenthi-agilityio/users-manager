@@ -22,6 +22,8 @@ export const NAVIGATION = [
   { label: 'About us', href: ROUTES.ABOUT_US },
 ];
 
+export const POST_CARD_DESCRIPTION_MAX_WORDS = 20;
+
 export const POST_CARD_LIST = [
   {
     user: {
