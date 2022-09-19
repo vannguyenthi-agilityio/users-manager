@@ -25,11 +25,16 @@ export interface PostCardProps {
 
 const { data, className = '' } = Astro.props as PostCardProps;
 
-const descriptionLength = data.description.split(' ').length;
-let description = data.description
-  .split(/\s+/)
-  .slice(0, POST_CARD_DESCRIPTION_MAX_WORDS)
-  .join(' ');
+const descriptionWordsLength = data.description.split(' ').length;
+let description = data.description;
+
+if (descriptionWordsLength > POST_CARD_DESCRIPTION_MAX_WORDS) {
+  description =
+    data.description
+      .split(/\s+/)
+      .slice(0, POST_CARD_DESCRIPTION_MAX_WORDS)
+      .join(' ') + ' ...';
+}
 ---
 
 <article class={`post-card ${className}`}>
@@ -54,16 +59,7 @@ let description = data.description
     {data.source === POST_SOURES.INSTAGRAM && <InstagramIcon href={data.url} />}
   </div>
   <div class="post-card-body">
-    {
-      data.description && (
-        <p class="post-card-description">
-          {description}
-          {descriptionLength > POST_CARD_DESCRIPTION_MAX_WORDS && (
-            <span>...</span>
-          )}
-        </p>
-      )
-    }
+    {data.description && <p class="post-card-description">{description}</p>}
     <a href={data.url} class="d-flex post-card-thumbnail">
       <img src={data.thumbnailUrl} alt={data.description} />
     </a>
