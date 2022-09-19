@@ -8,9 +8,10 @@ import DownloadButtonList from 'src/components/DownloadButtonList/buttonGroup';
 // Styles
 import './styles.css';
 
-import { User } from 'src/models/user';
+// import { User } from 'src/models/user';
 import { ROUTES } from 'src/constants/routes';
 import { formalizePhone, santizerPhone, validatePhone } from 'src/utils/common';
+import useAuth from 'src/hooks/useAuth';
 
 export default function Hero() {
   const inputRef = useRef({
@@ -19,7 +20,7 @@ export default function Hero() {
   const [apiError, setApiError] = useState('');
   const [account, setAccount] = useState('');
   const [success, setSuccess] = useState(false);
-
+  const { signUp } = useAuth();
   const handleChangeAccount = useCallback((e: { target: HTMLInputElement }) => {
     setAccount(formalizePhone(e.target.value));
   }, []);
@@ -40,7 +41,7 @@ export default function Hero() {
     // Reset api error
     setApiError('');
 
-    User.signUp(
+    signUp(
       {
         username: santizerPhone(username),
       },
@@ -48,6 +49,7 @@ export default function Hero() {
       (error) => {
         // Show error error
         setApiError(error);
+        return;
       },
       // onSuccess
       () => {
