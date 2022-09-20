@@ -21,7 +21,6 @@ interface RedirectPageProps {
   children: any;
   error?: string;
   isAuthenticated?: boolean;
-  user?: any;
 }
 
 const RedirectPage = ({
@@ -34,7 +33,7 @@ const RedirectPage = ({
     const currentLocation = window.location.pathname;
     if (error) {
       if (!isAuthenticated && currentLocation === ROUTES.REFERRAL) {
-        window.location.href = ROUTES.HOME;
+        // window.location.href = ROUTES.HOME;
         return <Splash />;
       } else {
         return children;
@@ -46,9 +45,7 @@ const RedirectPage = ({
 };
 
 const AuthGuard = ({ children }: AuthGuardProps) => {
-  const authState = useAuth();
-  const { isAuthenticated } = authState;
-
+  const { isAuthenticated } = useAuth();
   return (
     <Suspense fallback={<Splash />}>
       {isAuthenticated ? (

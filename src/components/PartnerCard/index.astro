@@ -13,7 +13,7 @@ const { className = '', imageUrl = '', heading = '' } = Astro.props;
 
 <div class={`d-flex partner-card ${className}`}>
   <div class="d-flex partner-card-info">
-    <img src={imageUrl} alt={heading} loading="lazy"/>
+    <img src={imageUrl} alt={heading} />
   </div>
   <div class="partner-card-content">
     <Heading size="sm" className="partner-card-heading">{heading}</Heading>

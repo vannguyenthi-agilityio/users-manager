@@ -53,24 +53,11 @@
   margin-top: 15px;
 }
 
-.referral-input-group-success {
-  position: relative;
-}
-
 .input-group-item {
   text-decoration-line: underline;
 }
 
-.referral-form-alert {
-  bottom: 10px;
-  position: absolute;
-}
-
 @media (min-width: 768px) {
-  .referral-form-alert {
-    bottom: -65px;
-  }
-
   .referral-card-info {
     padding: 55px 30px;
   }

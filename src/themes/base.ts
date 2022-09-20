@@ -19,7 +19,6 @@ const THEME_BASE = {
   colorBgAlert: 'rgba(255, 255, 255, 50%)',
   colorBgPostCard: 'rgba(36, 30, 53, 50%)',
   colorTextPostCardUsername: 'rgba(255, 255, 255, 70%);',
-  colorTextAboutUs: 'rgba(255, 255, 255, 70%);',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',
