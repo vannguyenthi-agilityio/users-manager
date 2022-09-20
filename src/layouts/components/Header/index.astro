@@ -42,7 +42,20 @@ const urlPathName = Astro.url.pathname;
         </nav>
       </div>
       <a class="header-icon" href="#">
-        <img src="assets/images/icons/fdic.svg" alt="Member FDIC" />
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="assets/images/icons/fdic.svg"
+            width="88"
+            height="100%"
+          />
+          <img
+            src="assets/images/icons/fdic.svg"
+            alt="Member FDIC"
+            width="44"
+            height="27"
+          />
+        </picture>
       </a>
     </div>
   </div>
