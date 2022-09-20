@@ -29,7 +29,7 @@ export default function ButtonGroup({ className = '' }: OriginalProps) {
             height="100%"
           />
           <img
-            src="/assets/images/icons/app-store.svg"
+            src="/assets/images/icons/google-play.svg"
             alt="DogeCard Google Play"
             width="164"
             height="56"
