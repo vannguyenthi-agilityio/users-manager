@@ -17,6 +17,7 @@ export default function ButtonGroup({ className = '' }: OriginalProps) {
             alt="DogeCard Apple Store"
             width="164"
             height="56"
+            loading="lazy"
           />
         </picture>
       </a>
@@ -33,6 +34,7 @@ export default function ButtonGroup({ className = '' }: OriginalProps) {
             alt="DogeCard Google Play"
             width="164"
             height="56"
+            loading="lazy"
           />
         </picture>
       </a>

@@ -44,6 +44,7 @@ if (descriptionWordsLength > POST_CARD_DESCRIPTION_MAX_WORDS) {
         src={data.user.avatarUrl}
         alt={data.user.name || data.user.username}
         class="post-card-avatar"
+        loading="lazy"
       />
       <div class="d-flex-column">
         <span class="text-bold post-card-user-fullname">{data.user.name}</span>
@@ -61,7 +62,7 @@ if (descriptionWordsLength > POST_CARD_DESCRIPTION_MAX_WORDS) {
   <div class="post-card-body">
     {data.description && <p class="post-card-description">{description}</p>}
     <a href={data.url} class="d-flex post-card-thumbnail">
-      <img src={data.thumbnailUrl} alt={data.description} />
+      <img src={data.thumbnailUrl} alt={data.description} loading="lazy" />
     </a>
   </div>
 </article>

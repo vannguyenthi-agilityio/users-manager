@@ -18,7 +18,7 @@ export default function SocialIcon({
       href={href}
       target={target}
     >
-      <img src={imageUrl} alt={imageAlt} />
+      <img src={imageUrl} alt={imageAlt} loading="lazy" />
     </a>
   );
 }
