@@ -1,8 +1,58 @@
 ---
-// Styles
+import Heading from 'components:Heading/index';
+import PartnerCard from 'components:PartnerCard/index';
 import './styles.css';
 ---
 
-<div class="about-partner">
-  <h2>Our partners</h2>
+<div class="d-flex about-partner">
+  <Heading size="sm" className="about-partner-heading">Our partners</Heading>
+  <p class="about-partner-description">
+    We have partnered with some of the best
+  </p>
+  <div class="d-flex about-partner-list">
+    <PartnerCard
+      imageUrl="assets/images/icons/bank-trust.svg"
+      heading="Evolve Bank and Trust"
+      className="about-partner-card"
+    >
+      <p class="about-partner-card-description">
+        For 95 years, Evolve Bank and Trust has served com-munities, large and
+        small. Liquidity is proud to be backed by one of the leading, full
+        service financial organizations with offices through the country.
+      </p>
+    </PartnerCard>
+    <PartnerCard
+      imageUrl="assets/images/icons/solid.svg"
+      heading="Solid"
+      className="about-partner-card"
+    >
+      <p class="about-partner-card-description">
+        Solid powers a fully integrated & compliant suite of FinTech services
+        for Liquidity Financial customers.
+      </p>
+    </PartnerCard>
+    <PartnerCard
+      imageUrl="assets/images/icons/zero-hash.svg"
+      heading="Zero Hash"
+      className="about-partner-card"
+    >
+      <p class="about-partner-card-description">
+        Zero Hash is an institutional settlement utility for the digital asset
+        space. Offering a suite of institutional-grade post-trade settlement
+        services, Zero Hash is the leading multi-platform and multi-custodial
+        settlement .
+      </p>
+    </PartnerCard>
+    <PartnerCard
+      imageUrl="assets/images/icons/secured-visa.svg"
+      heading="Visa"
+      className="about-partner-card"
+    >
+      <p class="about-partner-card-description">
+        The world leader in credit cards. Visa is accepted at millions of
+        locations across the United States. Visa offers our users Liability
+        Insurance and controls.
+      </p>
+    </PartnerCard>
+  </div>
 </div>

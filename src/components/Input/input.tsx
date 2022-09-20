@@ -3,7 +3,7 @@ import './styles.css';
 import { InputProps as OriginalProps } from './index.astro';
 
 export interface InputProps extends OriginalProps {
-  innerRef: MutableRefObject<{ value: string }>;
+  innerRef?: MutableRefObject<{ value: string }>;
 }
 
 const Input = ({

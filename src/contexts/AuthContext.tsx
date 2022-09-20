@@ -4,6 +4,9 @@ import React, { createContext, useEffect, useReducer } from 'react';
 import { API_ERROR } from 'src/constants/errors';
 import { LOCAL_STORAGE_KEYS } from 'src/constants/common';
 
+// Components
+import { Splash } from 'src/components/Splash';
+
 // Utils
 import {
   register as signUpApi,
@@ -278,12 +281,12 @@ export default function AuthProvider({ children }: AuthProviderProps) {
 
   const initialize = () => {
     try {
-      const user = getStorage(LOCAL_STORAGE_KEYS.USER_INFO);
+      const user = JSON.parse(getStorage(LOCAL_STORAGE_KEYS.USER_INFO));
       dispatch({
         type: 'INITIALIZE',
         payload: {
           user,
-          isAuthenticated: !!user,
+          isAuthenticated: !!user?.id,
         },
       });
     } catch (error) {
@@ -302,6 +305,10 @@ export default function AuthProvider({ children }: AuthProviderProps) {
       initialize();
     }
   }, []);
+
+  if (!state.isInitialized) {
+    return <Splash />;
+  }
 
   return (
     <AuthContext.Provider

@@ -52,3 +52,7 @@ export const validatePhone = (value = ''): string => {
   }
   return '';
 };
+
+export const copyToClipboard = (content = '') => {
+  navigator.clipboard.writeText(content);
+};

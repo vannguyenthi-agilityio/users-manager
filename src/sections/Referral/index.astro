@@ -1,6 +1,6 @@
 ---
 import ReferralCard from 'sections:Referral/ReferralCard/index';
-import ReferralInfo from 'sections:Referral/ReferralInfo/index';
+import ReferralInfo from 'src/sections/Referral/ReferralInfo/index';
 import './styles.css';
 ---
 
@@ -8,7 +8,7 @@ import './styles.css';
   <div class="container">
     <div class="d-flex referral-content">
       <ReferralCard />
-      <ReferralInfo />
+      <ReferralInfo client:load />
     </div>
   </div>
 </section>
