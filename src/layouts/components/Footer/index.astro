@@ -45,19 +45,39 @@ import './styles.css';
     </div>
     <address class="d-flex footer-contact">
       <p class="d-flex footer-content-item">
-        <img
-          class="contact-icon"
-          src="assets/images/icons/phone.svg"
-          alt="DogeCard phone number"
-        />
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/icons/phone.sv"
+            width="18"
+            height="100%"
+          />
+          <img
+            class="contact-icon"
+            src="assets/images/icons/phone.sv"
+            alt="DogeCard phone number"
+            width="18"
+            height="18"
+          />
+        </picture>
         <a href="tel:8552179378">(855) 217-9378</a>
       </p>
       <div class="d-flex footer-content-item">
-        <img
-          class="contact-icon"
-          src="assets/images/icons/calendar.svg"
-          alt="DogeCard calendar"
-        />
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/icons/calendar.svg"
+            width="24"
+            height="100%"
+          />
+          <img
+            class="contact-icon"
+            src="assets/images/icons/calendar.svg"
+            alt="DogeCard calendar"
+            width="24"
+            height="24"
+          />
+        </picture>
         <p>Mon-Sun <time>9am</time>-<time>5pm</time> PT</p>
       </div>
     </address>

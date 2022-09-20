@@ -9,6 +9,20 @@ export interface SocialiconProps {
 const { className = '', imageUrl = '', imageAlt = '', href = '' } = Astro.props;
 ---
 
-<a class={`d-flex social-icon ${className}`} href={href}
-  ><img src={imageUrl} alt={imageAlt} />
+<a class={`d-flex social-icon ${className}`} href={href}>
+  <picture>
+    <source
+      media="(min-width: 768px)"
+      src={imageUrl}
+      width="100%"
+      height="100%"
+    />
+    <img
+      class="contact-icon"
+      src={imageUrl}
+      alt={imageAlt}
+      width="100%"
+      height="100%"
+    />
+  </picture>
 </a>
