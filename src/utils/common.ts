@@ -1,7 +1,7 @@
 const PHONE_PATTERN = /^(\d{3})(\d{3})(\d{4})$/;
 
 export const getBaseUrl = (assetUrl: string) => {
-  const domain = import.meta.env.PUBLIC_DOMAIN;
+  const domain = 'https://hoopa-dogecard-vannguyen-agilityio.vercel.app/';
   return assetUrl ? new URL(assetUrl, domain) : domain;
 };
 export const isBrowser = typeof window !== 'undefined';
