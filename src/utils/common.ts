@@ -1,7 +1,7 @@
 const PHONE_PATTERN = /^(\d{3})(\d{3})(\d{4})$/;
 
 export const getBaseUrl = (assetUrl: string) => {
-  const domain = 'https://dev-hoopa-shibcard.vercel.app/';
+  const domain = 'https://hoopa-dogecard-vannguyen-agilityio.vercel.app/';
   return assetUrl ? new URL(assetUrl, domain) : domain;
 };
 export const isBrowser = typeof window !== 'undefined';
