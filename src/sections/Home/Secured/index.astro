@@ -12,7 +12,20 @@ import './styles.css';
       <div class="d-flex text-center secured-content">
         <div class="d-flex secured-item">
           <div class="d-flex secured-icon">
-            <img src="assets/images/icons/secured-fdic.svg" alt="FDIC" />
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="assets/images/icons/tablet/secured-fdic.svg"
+                width="140"
+                height="100%"
+              />
+              <img
+                src="assets/images/icons/secured-fdic.svg"
+                alt="FDIC"
+                width="106"
+                height="65"
+              />
+            </picture>
           </div>
           <p class="d-flex secured-description">
             $250,000 FDIC insured Evolve Bank & Trust
@@ -20,10 +33,20 @@ import './styles.css';
         </div>
         <div class="d-flex secured-item">
           <div class="d-flex secured-icon">
-            <img
-              src="assets/images/icons/secured-authentication.svg"
-              alt="Authentication"
-            />
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="assets/images/icons/tablet/secured-authentication.svg"
+                width="82"
+                height="100%"
+              />
+              <img
+                src="assets/images/icons/secured-authentication.svg"
+                alt="Authentication"
+                width="66"
+                height="72"
+              />
+            </picture>
           </div>
           <p class="d-flex secured-description">
             Bank-grade encryption and authentication
@@ -31,7 +54,20 @@ import './styles.css';
         </div>
         <div class="d-flex secured-item">
           <div class="d-flex secured-icon">
-            <img src="assets/images/icons/secured-visa.svg" alt="VISA" />
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="assets/images/icons/tablet/secured-visa.svg"
+                width="193"
+                height="100%"
+              />
+              <img
+                src="assets/images/icons/secured-visa.svg"
+                alt="VISA"
+                width="150"
+                height="150"
+              />
+            </picture>
           </div>
           <p class="d-flex secured-description">
             Fraud Protection Zero-Liability guarantee
