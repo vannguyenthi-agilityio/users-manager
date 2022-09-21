@@ -5,15 +5,25 @@ import './styles.css';
 
 export interface CardInfoProps {
   className?: string;
-  imageUrl?: string;
+  imageUrl?: object;
   imageAlt?: string;
+  imageSize?: object;
   heading?: string;
   isReversed?: boolean;
 }
 
 const {
   className = '',
-  imageUrl = '',
+  imageUrl = {
+    mobile: '',
+    tablet: '',
+    desktop: '',
+  },
+  imageWidth = {
+    mobile: '',
+    tablet: '',
+    desktop: '',
+  },
   heading = '',
   imageAlt = heading,
   isReversed = false,
@@ -21,9 +31,34 @@ const {
 ---
 
 <div class={`card-info ${isReversed ? 'card-info-reverse' : ''} ${className}`}>
-  <div class="text-center card-image">
-    <img src={imageUrl} alt={imageAlt} />
-  </div>
+  <picture class="text-center card-image">
+    {
+      imageUrl.tablet && (
+        <source
+          media="(min-width: 768px)"
+          srcset={imageUrl.tablet}
+          width={imageWidth.tablet}
+          height="100%"
+        />
+      )
+    }
+    {
+      imageUrl.desktop && (
+        <source
+          media="(min-width: 1200px)"
+          srcset={imageUrl.desktop}
+          width={imageWidth.desktop}
+          height="100%"
+        />
+      )
+    }
+    <img
+      src={imageUrl.mobile}
+      alt={imageAlt}
+      width={imageWidth.mobile}
+      height="100%"
+    />
+  </picture>
   <div class="card-info-content">
     <Heading size="sm" className="card-info-heading">{heading}</Heading>
     <slot />

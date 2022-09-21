@@ -17,13 +17,13 @@
   margin-bottom: 0;
 }
 
-.card-image > img {
+.card-image img {
   max-width: 225px;
   border-radius: 30px;
   transform: rotate(6.99deg);
 }
 
-.card-info-reverse .card-image > img {
+.card-info-reverse .card-image img {
   transform: rotate(-8.01deg);
 }
 
@@ -90,8 +90,8 @@
     text-align: center;
   }
 
-  .card-image > img {
-    max-width: none;
+  .card-image img {
+    max-width: 292px;
   }
 
   .card-info-content {
