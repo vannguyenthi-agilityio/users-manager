@@ -9,8 +9,8 @@
 }
 
 .referral-card-thumbnail {
-  /* position: relative; */
-  /* z-index: 1; */
+  position: relative;
+  z-index: 1;
 }
 
 .referral-card-content {
