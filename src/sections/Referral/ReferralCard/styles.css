@@ -103,6 +103,7 @@
     width: 45%;
     margin: 0;
     padding-top: 45px;
+    min-height: 724px;
   }
 
   .referral-card-content {
@@ -117,6 +118,10 @@
     padding-left: 65px;
   }
 
+  .referral-card-thumbnail {
+    min-height: 333px;
+  }
+  
   .referral-card-thumbnail > img {
     transform: rotate(-12deg);
   }
