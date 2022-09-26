@@ -10,10 +10,12 @@
 
 .referral-card-thumbnail {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .referral-card-content {
+  position: relative;
+  z-index: 1;
   background: var(--colorSecondary);
   backdrop-filter: blur(35px);
   border-radius: 20px;
