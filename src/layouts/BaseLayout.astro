@@ -11,24 +11,45 @@ export interface Props {
   description?: string;
   hasHeaderOverlap?: boolean;
   showHero?: boolean;
+  showReferral?: boolean;
+  showContact?: boolean;
+  privateRoute?: boolean;
 }
 
-const { title, description, hasHeaderOverlap, showHero } = Astro.props as Props;
+const {
+  title,
+  description,
+  hasHeaderOverlap,
+  showHero,
+  showReferral,
+  showContact,
+} = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
+    <script>
+      // Require secured password to access system
+      if (!localStorage.getItem('securedPassword')) {
+        location.replace('/');
+      }
+    </script>
   </head>
   <body>
     <!-- Header -->
     <Header hasOverlap={hasHeaderOverlap} />
 
     <!-- Main -->
-    <main>
+    <main class={hasHeaderOverlap ? 'main-content-overlap' : 'main-content'}>
       <ApiProvider client:load>
-        <HydrateProvider client:load showHero={showHero}>
+        <HydrateProvider
+          client:load
+          showHero={showHero}
+          showReferral={showReferral}
+          showContact={showContact}
+        >
           <slot />
         </HydrateProvider>
       </ApiProvider>
@@ -50,6 +71,15 @@ const { title, description, hasHeaderOverlap, showHero } = Astro.props as Props;
       var global = global || window;
       var Buffer = Buffer || [];
       var process = process || { env: { DEBUG: undefined }, version: [] };
+    </script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get('code');
+      if (code && code.length === 8) {
+        localStorage.setItem('referralCode', JSON.stringify(code));
+        window.location.href = '/home';
+      }
     </script>
   </body>
 </html>

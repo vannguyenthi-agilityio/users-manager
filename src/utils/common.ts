@@ -1,7 +1,10 @@
 const PHONE_PATTERN = /^(\d{3})(\d{3})(\d{4})$/;
+const EMAIL_PATTERN =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+export const isEmail = (value = '') => value.match(EMAIL_PATTERN);
 
 export const getBaseUrl = (assetUrl: string) => {
-  const domain = 'https://hoopa-dogecard-vannguyen-agilityio.vercel.app/';
+  const domain = import.meta.env.PUBLIC_DOMAIN;
   return assetUrl ? new URL(assetUrl, domain) : domain;
 };
 export const isBrowser = typeof window !== 'undefined';
@@ -55,4 +58,17 @@ export const validatePhone = (value = ''): string => {
 
 export const copyToClipboard = (content = '') => {
   navigator.clipboard.writeText(content);
+};
+
+export const validateInputValue = (value = '', type = '') => {
+  if (!value) {
+    return `${type} is required`;
+  }
+
+  switch (type.toLowerCase()) {
+    case 'email':
+      return isEmail(value) ? '' : 'Email is invalid';
+    default:
+      return '';
+  }
 };

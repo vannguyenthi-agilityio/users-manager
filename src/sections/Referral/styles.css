@@ -24,5 +24,6 @@
 
   .referral-content {
     flex-direction: row;
+    padding: 0 20px 60px;
   }
 }

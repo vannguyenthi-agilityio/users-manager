@@ -4,16 +4,24 @@ import './styles.css';
 
 export interface PartnerCardProps {
   className?: string;
-  imageUrl?: string;
   heading?: string;
+  imageUrl?: string;
+  imageWidth?: string;
+  imageHeight?: string;
 }
 
-const { className = '', imageUrl = '', heading = '' } = Astro.props;
+const {
+  className = '',
+  imageUrl = '',
+  heading = '',
+  imageWidth = '',
+  imageHeight = '',
+} = Astro.props;
 ---
 
 <div class={`d-flex partner-card ${className}`}>
   <div class="d-flex partner-card-info">
-    <img src={imageUrl} alt={heading} />
+    <img src={imageUrl} alt={heading} width={imageWidth} height={imageHeight} />
   </div>
   <div class="partner-card-content">
     <Heading size="sm" className="partner-card-heading">{heading}</Heading>

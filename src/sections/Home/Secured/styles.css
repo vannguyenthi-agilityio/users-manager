@@ -31,11 +31,9 @@
   max-width: 130px;
   min-width: 75px;
   height: 130px;
+  justify-content: center;
+  align-items: center;
   margin: auto;
-}
-
-.secured-icon > img {
-  width: 100%;
 }
 
 @media (min-width: 768px) {

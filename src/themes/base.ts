@@ -1,3 +1,5 @@
+const contactInfoWidth = 'calc(361 * 100% / 1520)';
+
 const THEME_BASE = {
   // Colors
   colorPrimary: '#f0c13b',
@@ -19,6 +21,9 @@ const THEME_BASE = {
   colorBgAlert: 'rgba(255, 255, 255, 50%)',
   colorBgPostCard: 'rgba(36, 30, 53, 50%)',
   colorTextPostCardUsername: 'rgba(255, 255, 255, 70%);',
+  colorTextAboutUs: 'rgba(255, 255, 255, 70%);',
+  colorBgMemberCard:
+    'linear-gradient(90deg, transparent 50%, #1d1d1d 0, #1d1d1d),linear-gradient(90deg,hsla(0, 0%, 100%, 10%),hsla(0, 0%, 100%, 20%),hsla(0, 0%, 100%, 50%),hsla(0, 0%, 100%, 50%),hsla(0, 0%, 100%, 50%),hsla(0, 0%, 100%, 20%),hsla(0, 0%, 100%, 10%))',
 
   // Fonts
   fontFamilyPrimary: 'Lato, sans-serif',
@@ -79,6 +84,7 @@ const THEME_BASE = {
   borderRadiusXl: '50px',
   borderRadiusRound: '50%',
   borderRadiusTiny: '8px',
+  borderRadiusNormal: '20px',
 
   // Sizes
   sizeFull: '100%',
@@ -113,10 +119,18 @@ const THEME_BASE = {
   btnWidthSm: '164px',
   btnWidthMd: '192px',
   btnWidthLg: '243px',
+  contactInfoWidth: contactInfoWidth,
+  contactFormWidth: `calc(100% - ${contactInfoWidth})`,
 
   // Drop Shadow
   referralCardDropShadow:
-    'drop-shadow(0px 5.4744px 136.861px rgba(87, 79, 54, 25%))',
+    'drop-shadow(0px 4.695px 117.388px rgba(227, 179, 34, 25%))',
+  memberCardDropShadow: 'drop-shadow(0 3px 30px rgba(231, 167, 69, 20%))',
+
+  // Opacity
+  opacitySm: '0.25',
+  opacityMd: '0.5',
+  opacityBase: '0.75',
 };
 
 export default THEME_BASE;

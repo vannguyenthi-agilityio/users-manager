@@ -1,0 +1,12 @@
+.page-heading {
+  margin-bottom: 20px;
+}
+
+.input-password {
+  margin-bottom: 5px;
+}
+
+.btn-submit {
+  margin-top: 10px;
+  width: var(--sizeFull);
+}

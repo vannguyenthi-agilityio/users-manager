@@ -53,11 +53,24 @@
   margin-top: 15px;
 }
 
+.referral-input-group-success {
+  position: relative;
+}
+
 .input-group-item {
   text-decoration-line: underline;
 }
 
+.referral-form-alert {
+  bottom: 10px;
+  position: absolute;
+}
+
 @media (min-width: 768px) {
+  .referral-form-alert {
+    bottom: -65px;
+  }
+
   .referral-card-info {
     padding: 55px 30px;
   }
@@ -108,7 +121,7 @@
 @media (min-width: 1200px) {
   .referral-card-info {
     margin-top: 80px;
-    padding: 45px 60px 60px 80px;
+    padding: 30px;
     width: 55%;
   }
 
@@ -133,5 +146,11 @@
 
   .referral-social-content {
     margin-top: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .referral-card-info {
+    padding: 45px 60px 60px 80px;
   }
 }

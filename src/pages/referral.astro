@@ -1,8 +1,9 @@
 ---
 import Layout from 'layouts:BaseLayout';
-import Referral from 'sections:Referral/index';
+import ReferralCard from 'sections:Referral/ReferralCard/index';
+import 'src/sections/Referral/styles.css';
 ---
 
-<Layout>
-  <Referral />
+<Layout showReferral={true}>
+  <ReferralCard />
 </Layout>

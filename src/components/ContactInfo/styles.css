@@ -1,0 +1,19 @@
+.contact-info {
+  flex-direction: column;
+}
+
+.contact-info-item {
+  align-items: center;
+  font-size: var(--fontSizeSm);
+  line-height: var(--fontSizeBase);
+}
+
+.contact-info-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.contact-info-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 11px;
+}

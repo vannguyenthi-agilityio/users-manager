@@ -1,8 +1,20 @@
 ---
+import MemberCard from 'components:Member/index';
+import Heading from 'components:Heading/index';
+import { MEMBER_LIST } from 'constants:index';
 // Styles
 import './styles.css';
 ---
 
 <div class="about-team">
-  <h2>Our team</h2>
+  <Heading size="sm" className="about-team-heading">Our team</Heading>
+  <ul class="about-team-list">
+    {
+      MEMBER_LIST.map((item, index) => (
+        <li class="about-team-list-item" key={index}>
+          <MemberCard data={item} />
+        </li>
+      ))
+    }
+  </ul>
 </div>

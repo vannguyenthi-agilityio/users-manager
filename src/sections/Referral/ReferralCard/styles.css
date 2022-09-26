@@ -29,7 +29,6 @@
   display: block;
   border-color: transparent;
   background-color: transparent;
-  background-size: var(--sizeFull) var(--sizeFull);
   background-position: center;
   background-repeat: no-repeat;
   margin-right: 10px;
@@ -38,6 +37,7 @@
 
 .referral-card-step-icon::before {
   height: 24px;
+  background-size: var(--sizeFull) var(--sizeFull);
 }
 
 .referral-card-step-list

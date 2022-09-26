@@ -1,10 +1,11 @@
 ---
-import Layout from 'layouts:BaseLayout';
-import Secured from 'sections:Home/Secured/index';
-import CardInfoList from 'sections:Home/CardInfoList/index';
+import Layout from 'layouts:PublicPageLayout';
+import Login from 'src/sections/Login/index';
 ---
 
-<Layout hasHeaderOverlap={true} showHero={true}>
-  <Secured />
-  <CardInfoList />
+<Layout
+  title="Secured Password"
+  description="Secured Password is required to access system"
+>
+  <Login client:load />
 </Layout>

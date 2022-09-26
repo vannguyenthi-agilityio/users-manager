@@ -7,11 +7,12 @@
 .partner-card-info {
   background-color: var(--colorPartnerCard);
   border-radius: var(--borderRadiusMd);
-  width: 200px;
+  min-width: 200px;
   height: 160px;
   justify-content: center;
   margin-bottom: 20px;
   padding: 24px 22px;
+  align-items: center;
 }
 
 .partner-card-heading {

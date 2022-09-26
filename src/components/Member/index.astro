@@ -1,0 +1,96 @@
+---
+import Heading from 'components:Heading/index';
+
+//styles
+import './styles.css';
+
+interface MemberCard {
+  className?: string;
+  name?: string;
+  role?: string;
+  avatarUrl?: string;
+  avatarAlt?: string;
+  introRersonal?: string;
+  introExperiences?: string;
+  address?: {
+    phone?: string;
+    personalEmail?: string;
+    workEmail?: string;
+  };
+  arcDeg?: {
+    start?: '85';
+    end?: '45';
+  };
+  linkProfile?: [
+    {
+      href?: string;
+      name?: string;
+    },
+  ];
+}
+
+export interface MemberCardProps {
+  data: MemberCard;
+  className?: string;
+}
+
+const { data, className = '' } = Astro.props as MemberCardProps;
+---
+
+<article class={`member-card ${className}`}>
+  <div class="arc-filter member-card-header">
+    <div class={`arc arc-start arc-start-${data.arcDeg.start}`}></div>
+    <div class={`arc arc-end arc-end-${data.arcDeg.end}`}></div>
+    <div class="member-card-image">
+      <img src={data.avatarUrl} alt={data.avatarAlt} width="100%" />
+    </div>
+  </div>
+  <div class="member-card-content">
+    <Heading size="xs">{`${data.name}, ${data.role}`}</Heading>
+    {
+      data.introRersonal && (
+        <p class="member-card-introduction">{data.introRersonal}</p>
+      )
+    }
+    {
+      data.introExperiences && (
+        <p class="member-card-introduction">{data.introExperiences}</p>
+      )
+    }
+  </div>
+  <div class="member-card-divider"></div>
+  <div class="d-flex member-card-contact">
+    {
+      data.address?.phone && (
+        <a href={`tel:${data.address?.phone}`}>
+          Personal Cell: {data.address?.phone}
+        </a>
+      )
+    }
+    {
+      data.address?.personalEmail && (
+        <a href={`mailto:${data.address?.personalEmail}`}>
+          Personal Email: {data.address?.personalEmail}
+        </a>
+      )
+    }
+    {
+      data.address?.workEmail && (
+        <a href={`mailto:${data.address?.workEmail}`}>
+          Work Email: {data.address?.workEmail}
+        </a>
+      )
+    }
+  </div>
+
+  <ul class="d-flex member-card-link">
+    {
+      data.linkProfile?.map((item, index) => (
+        <li key={index} class="member-card-link-item">
+          <a href={item.href}>{item.name}</a>
+          {!!item.href && index < data.linkProfile.length - 1 && <span>|</span>}
+        </li>
+      ))
+    }
+  </ul>
+</article>

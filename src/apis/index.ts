@@ -1,14 +1,15 @@
-export const register = (username) => {
+export const register = (username, code = '') => {
   return fetch('/register', {
     method: 'POST',
     body: JSON.stringify({
-      username
-    })
+      username,
+      code,
+    }),
   });
 };
 export const getUserInfo = (id) => {
   return fetch(`/user/${id}`, {
-    method: 'GET'
+    method: 'GET',
   });
 };
 export const login = ({ username, otp }) => {
@@ -16,7 +17,7 @@ export const login = ({ username, otp }) => {
     method: 'POST',
     body: JSON.stringify({
       username,
-      otp
-    })
+      otp,
+    }),
   });
 };

@@ -1,0 +1,28 @@
+---
+import './styles.css';
+
+export interface ContactProps {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<address class={`d-flex contact-info ${className}`}>
+  <p class="d-flex contact-info-item">
+    <img
+      class="contact-info-icon"
+      src="assets/images/icons/phone.svg"
+      alt="DogeCard phone number"
+    />
+    <a href="tel:8552179378">(855) 217-9378</a>
+  </p>
+  <div class="d-flex contact-info-item">
+    <img
+      class="contact-info-icon"
+      src="assets/images/icons/calendar.svg"
+      alt="DogeCard calendar"
+    />
+    <p>Mon-Sun <time>9am</time>-<time>5pm</time> PT</p>
+  </div>
+</address>

@@ -3,6 +3,7 @@
 interface ImportMetaEnv {
   readonly PUBLIC_DOMAIN: string;
   readonly PUBLIC_API_MOCKING: string;
+  readonly PUBLIC_SECURED_PASSWORD: string;
   // more env variables...
 }
 

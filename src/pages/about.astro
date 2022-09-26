@@ -1,8 +1,12 @@
 ---
 import Layout from 'layouts:BaseLayout';
-import About from 'sections:About/index';
+import Introduction from 'sections:About/Introduction/index';
+import OurPartners from 'sections:About/OurPartners/index';
+import OurTeam from 'sections:About/OurTeam/index';
 ---
 
-<Layout>
-  <About />
+<Layout showContact={true}>
+  <Introduction />
+  <OurPartners />
+  <OurTeam />
 </Layout>
