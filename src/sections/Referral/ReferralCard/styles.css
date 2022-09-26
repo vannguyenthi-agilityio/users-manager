@@ -83,7 +83,7 @@
   }
 
   .referral-card-thumbnail  picture > img {
-    max-width: 210px;
+    max-width: 209px;
     transform: rotate(-12deg);
     filter: var(--referralCardDropShadow);
   }
