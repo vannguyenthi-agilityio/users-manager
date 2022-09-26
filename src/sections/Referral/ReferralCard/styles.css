@@ -88,10 +88,10 @@
     transform: rotate(-12deg);
   } */
 
-  .referral-card-thumbnail  picture > img {
-    /* max-width: 385px; */
+  /* .referral-card-thumbnail  picture > img {
+    max-width: 385px;
     filter: var(--referralCardDropShadow);
-  }
+  } */
 
   .referral-card-step-list > li {
     font-size: var(--fontSizeMd);
