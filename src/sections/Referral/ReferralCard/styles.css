@@ -5,7 +5,7 @@
 .referral-card-thumbnail > img {
   max-width: 130px;
   transform: rotate(-7deg);
-  /* filter: var(--referralCardDropShadow); */
+  filter: var(--referralCardDropShadow);
 }
 
 .referral-card-thumbnail {
