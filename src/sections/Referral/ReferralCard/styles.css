@@ -84,9 +84,9 @@
     margin-top: -125px;
   }
 
-  /* .referral-card-thumbnail  > picture {
+  .referral-card-thumbnail  > picture {
     transform: rotate(-12deg);
-  } */
+  }
 
   /* .referral-card-thumbnail  picture > img {
     max-width: 385px;
@@ -128,7 +128,8 @@
     max-height: 428px;
   }
   
-  /* .referral-card-thumbnail > picture {
-    transform: rotate(-12deg);
-  } */
+  .referral-card-thumbnail > picture {
+    /* transform: rotate(-12deg); */
+    transform: none;
+  }
 }
