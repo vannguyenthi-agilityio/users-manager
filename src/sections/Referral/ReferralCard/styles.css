@@ -5,12 +5,12 @@
 .referral-card-thumbnail > img {
   max-width: 130px;
   /* transform: rotate(-7deg); */
-  filter: var(--referralCardDropShadow);
+  /* filter: var(--referralCardDropShadow); */
 }
 
 .referral-card-thumbnail {
-  position: relative;
-  z-index: 1;
+  /* position: relative; */
+  /* z-index: 1; */
 }
 
 .referral-card-content {
@@ -115,6 +115,5 @@
 
   .referral-card-thumbnail > img {
     transform: rotate(-12deg);
-    max-width: none;
   }
 }
