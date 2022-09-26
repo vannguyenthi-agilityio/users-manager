@@ -5,7 +5,7 @@
 .referral-card-thumbnail > img {
   max-width: 130px;
   transform: rotate(-7deg);
-  filter: var(--referralCardDropShadow);
+  /* filter: var(--referralCardDropShadow); */
 }
 
 .referral-card-thumbnail {
@@ -85,6 +85,7 @@
   .referral-card-thumbnail > img {
     max-width: 210px;
     transform: rotate(-12deg);
+    filter: var(--referralCardDropShadow);
   }
 
   .referral-card-step-list > li {
@@ -109,6 +110,7 @@
     max-width: 417px;
     padding-bottom: 67px;
     margin-top: -135px;
+    min-height: 379px;
   }
 
   .referral-card-step-list {
