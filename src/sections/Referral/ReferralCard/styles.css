@@ -125,6 +125,7 @@
 
   .referral-card-thumbnail {
     min-height: 428px;
+    max-height: 428px;
   }
   
   /* .referral-card-thumbnail > picture {
