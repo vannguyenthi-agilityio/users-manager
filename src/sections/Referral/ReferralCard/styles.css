@@ -2,10 +2,10 @@
   padding-bottom: 45px;
 }
 
-.referral-card-thumbnail > picture {
+/* .referral-card-thumbnail > picture {
   transform: rotate(-7deg);
   /* filter: var(--referralCardDropShadow); */
-}
+} */
 
 .referral-card-thumbnail picture > img {
   max-width: 130px;
@@ -91,7 +91,7 @@
   }
 
   .referral-card-thumbnail  picture > img {
-    max-width: 209px;
+    max-width: 385px;
     filter: var(--referralCardDropShadow);
   }
 
@@ -129,7 +129,7 @@
     min-height: 350px;
   }
   
-  .referral-card-thumbnail > picture {
+  /* .referral-card-thumbnail > picture {
     transform: rotate(-12deg);
-  }
+  } */
 }
