@@ -9,12 +9,26 @@ const { className = '' } = Astro.props;
 ---
 
 <div class={`referral-card ${className}`}>
+  <picture
+    class="mg-auto d-flex justify-content-center referral-card-thumbnail"
+  >
+    <source
+      media="(min-width: 1200px)"
+      srcset="assets/images/referral/tablet/card-visa.webp"
+      width="385"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="assets/images/referral/tablet/card-visa.webp"
+      width="330"
+    />
     <img
       src="assets/images/referral/mobile/card-visa.png"
       alt="Referral Card"
       width="204"
       height="100%"
     />
+  </picture>
   <div class="referral-card-content">
     <ul class="referral-card-step-list">
       <li class="d-flex">
