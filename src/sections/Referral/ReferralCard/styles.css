@@ -1,18 +1,17 @@
 .referral-card {
   padding-bottom: 45px;
+  min-height: 427px;
 }
 
-/* .referral-card-thumbnail > picture {
-  transform: rotate(-7deg);
-} */
-
-/* .referral-card-thumbnail picture > img {
+.referral-card-thumbnail picture > img {
   max-width: 130px;
-} */
+  transform: rotate(-7deg);
+}
 
 .referral-card-thumbnail {
   position: relative;
   z-index: 2;
+  min-height: 208px;
 }
 
 .referral-card-content {
@@ -25,6 +24,7 @@
   padding-bottom: 32px;
   max-width: 273px;
   margin: -55px auto 0;
+  min-height: 230px;
 }
 
 .referral-card-step-icon::before,
@@ -84,14 +84,11 @@
     margin-top: -125px;
   }
 
-  .referral-card-thumbnail  > picture {
+  .referral-card-thumbnail picture > img {
+    max-width: 210px;
     transform: rotate(-12deg);
-  }
-
-  /* .referral-card-thumbnail  picture > img {
-    max-width: 385px;
     filter: var(--referralCardDropShadow);
-  } */
+  }
 
   .referral-card-step-list > li {
     font-size: var(--fontSizeMd);
@@ -116,7 +113,7 @@
     max-width: 417px;
     padding-bottom: 67px;
     margin-top: -135px;
-    min-height: 379px;
+    min-height: 380px;
   }
 
   .referral-card-step-list {
@@ -124,12 +121,11 @@
   }
 
   .referral-card-thumbnail {
-    min-height: 428px;
-    max-height: 428px;
+    min-height: 389px;
   }
-  
-  .referral-card-thumbnail > picture {
-    /* transform: rotate(-12deg); */
-    transform: none;
+
+  .referral-card-thumbnail picture > img {
+    transform: rotate(-12deg);
+    max-width: 243px;
   }
 }
