@@ -1,12 +1,36 @@
-.page-heading {
-  margin-bottom: 20px;
+.login-form {
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 430px;
+  background-color: var(--colorSecondary);
+  border-radius: var(--borderRadiusNormal);
 }
 
-.input-password {
+.login-form-group {
+  min-height: 77px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.login-form-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form-input {
   margin-bottom: 5px;
 }
 
-.btn-submit {
+.login-form-submit {
   margin-top: 10px;
   width: var(--sizeFull);
+}
+
+@media only screen and (min-width: 768px) {
+  .login-form {
+    width: auto;
+    max-width: auto;
+    padding: 40px 30px;
+    min-width: 430px;
+  }
 }

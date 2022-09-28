@@ -13,7 +13,7 @@
 }
 
 .footer-logo {
-  font-size: var(--logoTextFontSize);
+  font-size: var(--fontSize4Xl);
   line-height: var(--lineHeight3Xl);
   font-weight: var(--fontWeightBold);
   text-decoration: none;
@@ -119,7 +119,7 @@
 
 @media (min-width: 992px) {
   .footer-logo {
-    font-size: var(--fontSize6Xl);
+    font-size: var(--fontSize8Xl);
     line-height: var(--lineHeight8Xl);
     margin-bottom: 48px;
   }

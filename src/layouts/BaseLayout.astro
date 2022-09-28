@@ -7,7 +7,6 @@ import ApiProvider from './ApiProvider';
 import HydrateProvider from 'src/layouts/HydrateProvider';
 
 export interface Props {
-  className?: string;
   title?: string;
   description?: string;
   hasHeaderOverlap?: boolean;
@@ -24,7 +23,6 @@ const {
   showHero,
   showReferral,
   showContact,
-  className,
 } = Astro.props as Props;
 ---
 
@@ -44,11 +42,7 @@ const {
     <Header hasOverlap={hasHeaderOverlap} />
 
     <!-- Main -->
-    <main
-      class={`${
-        hasHeaderOverlap ? 'main-content-overlap' : className || 'main-content'
-      }`}
-    >
+    <main class={hasHeaderOverlap ? 'main-content-overlap' : 'main-content'}>
       <ApiProvider client:load>
         <HydrateProvider
           client:load

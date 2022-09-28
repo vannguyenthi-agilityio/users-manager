@@ -2,10 +2,6 @@
   margin-bottom: 170px;
 }
 
-.card-info-secure .card-image {
-  width: 100%;
-}
-
 .card-info-secure .card-image img {
   max-width: 296px;
   transform: rotate(-16.25deg);

@@ -49,6 +49,7 @@
 
 @media (min-width: 1200px) {
   .about-partner-heading {
+    font-size: var(--fontSize5Xl);
     line-height: var(--lineHeight6Xl);
   }
 

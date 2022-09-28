@@ -1,9 +1,8 @@
 .referral-card {
   padding-bottom: 45px;
-  min-height: 427px;
 }
 
-.referral-card-thumbnail picture > img {
+.referral-card-thumbnail > img {
   max-width: 130px;
   transform: rotate(-7deg);
 }
@@ -11,7 +10,6 @@
 .referral-card-thumbnail {
   position: relative;
   z-index: 2;
-  min-height: 208px;
 }
 
 .referral-card-content {
@@ -24,7 +22,6 @@
   padding-bottom: 32px;
   max-width: 273px;
   margin: -55px auto 0;
-  min-height: 230px;
 }
 
 .referral-card-step-icon::before,
@@ -84,7 +81,7 @@
     margin-top: -125px;
   }
 
-  .referral-card-thumbnail picture > img {
+  .referral-card-thumbnail > img {
     max-width: 210px;
     transform: rotate(-12deg);
     filter: var(--referralCardDropShadow);
@@ -105,7 +102,6 @@
     width: 45%;
     margin: 0;
     padding-top: 45px;
-    min-height: 724px;
   }
 
   .referral-card-content {
@@ -113,19 +109,13 @@
     max-width: 417px;
     padding-bottom: 67px;
     margin-top: -135px;
-    min-height: 380px;
   }
 
   .referral-card-step-list {
     padding-left: 65px;
   }
 
-  .referral-card-thumbnail {
-    min-height: 389px;
-  }
-
-  .referral-card-thumbnail picture > img {
+  .referral-card-thumbnail > img {
     transform: rotate(-12deg);
-    max-width: 243px;
   }
 }

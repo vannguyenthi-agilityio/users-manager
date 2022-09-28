@@ -169,10 +169,6 @@ body:not(.public-page-layout) {
   min-height: 100vh;
 }
 
-.main-content-referral {
-  min-height: 990px;
-}
-
 .container {
   padding-left: var(--containerPaddingSm);
   padding-right: var(--containerPaddingSm);

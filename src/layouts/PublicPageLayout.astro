@@ -1,4 +1,5 @@
 ---
+import { getBaseUrl } from 'utils';
 import THEME_BASE from 'themes:base';
 import 'styles:global';
 export interface Props {
@@ -17,6 +18,13 @@ const { title, description } = Astro.props as Props;
 <html lang="en">
   <head>
     <title>{title}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href={getBaseUrl('assets/images/favicon.ico')}
+    />
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <!-- Fonts -->

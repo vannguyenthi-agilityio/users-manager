@@ -120,6 +120,7 @@
   }
 
   .contact-form-heading {
+    font-size: var(--fontSize5Xl);
     line-height: var(--lineHeight6Xl);
   }
 

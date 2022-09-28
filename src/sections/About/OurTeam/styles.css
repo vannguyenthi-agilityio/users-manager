@@ -36,6 +36,10 @@
     margin: 100px 0;
   }
 
+  .about-team-heading {
+    font-size: var(--fontSize5Xl);
+  }
+
   .about-team-list {
     column-count: 3;
   }

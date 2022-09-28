@@ -13,6 +13,7 @@
 
 .community-description {
   margin-top: 10px;
+  opacity: var(--opacityBase);
 }
 
 @media (min-width: 768px) {
@@ -41,6 +42,8 @@
 
   .community-description {
     margin-top: 27px;
+    font-size: var(--fontSize2Xl);
+    line-height: var(--lineHeight4Xl);
   }
 
   .community-image {

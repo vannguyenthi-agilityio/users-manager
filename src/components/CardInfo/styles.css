@@ -13,10 +13,6 @@
   margin-bottom: 45px;
 }
 
-.card-info-secure .card-image {
-  margin-bottom: 0;
-}
-
 .card-image img {
   max-width: 225px;
   border-radius: 30px;
@@ -68,6 +64,10 @@
   .card-info-secure .card-info-content {
     margin-top: 90px;
   }
+
+  .card-info-secure .card-image {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -81,7 +81,7 @@
 
   .card-info-heading {
     max-width: none;
-    font-size: var(--fontSize3Xl);
+    font-size: var(--fontSize5Xl);
   }
 
   .card-image {
@@ -103,7 +103,7 @@
 
   .card-info-description {
     margin: 32px 0 70px;
-    font-size: 30px;
+    font-size: var(--fontSize3Xl);
     line-height: var(--lineHeight6Xl);
     max-width: 716px;
   }

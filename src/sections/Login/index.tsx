@@ -38,25 +38,25 @@ export default function Login() {
   }, []);
 
   return (
-    <div>
-      <Heading size="sm" className="page-heading" uppercase>
+    <div className="login-form">
+      <Heading size="sm" className="login-form-heading" uppercase>
         Secured Password
       </Heading>
-      <div className="input-group">
+      <div className="login-form-group">
         <Input
           autoFocus={true}
           type="password"
           name="input-password"
           placeholder="Enter secured password"
           required={true}
-          className="input-password"
+          className="login-form-input"
           size="sm"
           innerRef={inputRef}
           errorMessage={error}
           onBlur={handleBlur}
         />
       </div>
-      <Button className="btn-submit" onclick={handleSubmit}>
+      <Button className="login-form-submit" onclick={handleSubmit}>
         Submit
       </Button>
     </div>

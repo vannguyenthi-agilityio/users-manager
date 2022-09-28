@@ -78,7 +78,7 @@
   }
 
   .secured-heading {
-    font-size: var(--fontSize3Xl);
+    font-size: var(--fontSize5Xl);
     line-height: var(--lineHeight6Xl);
     margin: 70px auto;
   }

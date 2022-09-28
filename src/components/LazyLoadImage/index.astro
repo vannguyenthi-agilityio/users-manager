@@ -18,10 +18,11 @@ export interface ImageProps {
     mobile?: string;
     tablet?: string;
     desktop?: string;
-  }
+  };
 }
 
-const { imageAlt, imageUrl, imageWidth, imageHeight, className } = Astro.props as ImageProps;
+const { imageAlt, imageUrl, imageWidth, imageHeight, className } =
+  Astro.props as ImageProps;
 ---
 
 <picture class={`${className}`}>
@@ -32,6 +33,7 @@ const { imageAlt, imageUrl, imageWidth, imageHeight, className } = Astro.props a
         srcset={imageUrl.desktop}
         width={imageWidth.desktop}
         height={imageHeight.desktop}
+        height={imageHeight.desktop ? imageHeight.desktop : '100%'}
       />
     )
   }
@@ -41,7 +43,7 @@ const { imageAlt, imageUrl, imageWidth, imageHeight, className } = Astro.props a
         media="(min-width: 768px)"
         srcset={imageUrl.tablet}
         width={imageWidth.tablet}
-        height={imageHeight.tablet}
+        height={imageHeight.tablet ? imageHeight.tablet : '100%'}
       />
     )
   }
@@ -49,6 +51,7 @@ const { imageAlt, imageUrl, imageWidth, imageHeight, className } = Astro.props a
     src={imageUrl.mobile}
     alt={imageAlt}
     width={imageWidth.mobile}
-    height={imageHeight.mobile}
+    height={imageHeight.mobile ? imageHeight.mobile : '100%'}
+    loading="lazy"
   />
 </picture>

@@ -23,7 +23,7 @@
 
 @media only screen and (min-width: 768px) {
   .heading-xs {
-    font-size: var(--subTitleFontSize);
+    font-size: var(--fontSize3Xl);
   }
 
   .heading-sm {
@@ -32,7 +32,7 @@
   }
 
   .heading-md {
-    font-size: var(--fontSize4Xl);
+    font-size: var(--fontSize6Xl);
     line-height: var(--lineHeight5Xl);
   }
 }
@@ -43,7 +43,7 @@
   }
 
   .heading-md {
-    font-size: var(--fontSize5Xl);
+    font-size: var(--fontSize7Xl);
     line-height: var(--lineHeight7Xl);
   }
 }

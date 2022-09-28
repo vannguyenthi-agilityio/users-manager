@@ -86,7 +86,7 @@
   }
 
   .referral-info-sub-heading {
-    font-size: var(--subTitleFontSize);
+    font-size: var(--fontSize3Xl);
     margin: 30px 0 20px;
   }
 
