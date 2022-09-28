@@ -56,7 +56,7 @@ export default function Login() {
           onBlur={handleBlur}
         />
       </div>
-      <Button className="login-form-submit" onclick={handleSubmit}>
+      <Button className="login-form-btn" onclick={handleSubmit}>
         Submit
       </Button>
     </div>

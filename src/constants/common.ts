@@ -36,7 +36,10 @@ export const POST_CARD_LIST = [
     },
     description:
       'Dogecoin to $5 is inevitable when Visa/PTD release this #Dogecoin debit card that you can theoretically spend almost anywhere!',
-    thumbnailUrl: 'assets/images/community/card-post-one.webp',
+    thumbnailUrl: {
+      tablet: 'assets/images/community/tablet/card-post-one.webp',
+      mobile: 'assets/images/community/mobile/card-post-one.webp',
+    },
     source: 'twitter',
     url: '#',
   },
@@ -49,7 +52,10 @@ export const POST_CARD_LIST = [
     },
     description:
       'Dogecoin to $5 is inevitable when Visa/PTD release this #Dogecoin debit card that you can theoretically spend almost anywhere!',
-    thumbnailUrl: 'assets/images/community/card-post-two.webp',
+    thumbnailUrl: {
+      tablet: 'assets/images/community/tablet/card-post-two.webp',
+      mobile: 'assets/images/community/mobile/card-post-two.webp',
+    },
     source: 'twitter',
     url: '#',
   },
@@ -62,7 +68,10 @@ export const POST_CARD_LIST = [
     },
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Pellentesque massa id condimentum pellentesque at netus quam sed. Sit eu ultricies massa, eros, aliquam. Vivamus in enim, mattis adipiscing massa pretium.',
-    thumbnailUrl: 'assets/images/community/card-post-three.webp',
+    thumbnailUrl: {
+      tablet: 'assets/images/community/tablet/card-post-three.webp',
+      mobile: 'assets/images/community/mobile/card-post-three.webp',
+    },
     source: 'twitter',
     url: '#',
   },
@@ -75,7 +84,10 @@ export const POST_CARD_LIST = [
     },
     description:
       'Dogecoin to $5 is inevitable when Visa/PTD release this #Dogecoin debit card that you can theoretically spend almost anywhere!',
-    thumbnailUrl: 'assets/images/community/card-post-one.webp',
+    thumbnailUrl: {
+      tablet: 'assets/images/community/tablet/card-post-one.webp',
+      mobile: 'assets/images/community/mobile/card-post-one.webp',
+    },
     source: 'twitter',
     url: '#',
   },
@@ -88,7 +100,10 @@ export const POST_CARD_LIST = [
     },
     description:
       'Dogecoin to $5 is inevitable when Visa/PTD release this #Dogecoin debit card that you can theoretically spend almost anywhere!',
-    thumbnailUrl: 'assets/images/community/card-post-two.webp',
+    thumbnailUrl: {
+      tablet: 'assets/images/community/tablet/card-post-two.webp',
+      mobile: 'assets/images/community/mobile/card-post-two.webp',
+    },
     source: 'twitter',
     url: '#',
   },
@@ -101,7 +116,10 @@ export const POST_CARD_LIST = [
     },
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget egestas vitae, volutpat ut neque. Pellentesque massa id condimentum pellentesque at netus quam sed. Sit eu ultricies massa, eros, aliquam. Vivamus in enim, mattis adipiscing massa pretium.',
-    thumbnailUrl: 'assets/images/community/card-post-three.webp',
+    thumbnailUrl: {
+      tablet: 'assets/images/community/tablet/card-post-three.webp',
+      mobile: 'assets/images/community/mobile/card-post-three.webp',
+    },
     source: 'twitter',
     url: '#',
   },

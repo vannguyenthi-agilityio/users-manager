@@ -21,6 +21,7 @@
     "@types/react-dom": "18.0.5",
     "@typescript-eslint/eslint-plugin": "~5.24.0",
     "@typescript-eslint/parser": "~5.24.0",
+    "astro-html-minifier": "^0.2.0",
     "babel-loader": "8.1.0",
     "eslint": "~8.15.0",
     "eslint-config-airbnb-typescript": "^17.0.0",

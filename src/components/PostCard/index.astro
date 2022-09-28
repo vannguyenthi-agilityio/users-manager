@@ -13,7 +13,11 @@ interface PostCard {
     avatarUrl?: string;
   };
   description?: string;
-  thumbnailUrl?: string;
+  thumbnailUrl?: {
+    mobile?: string;
+    tablet?: string;
+    desktop?: string;
+  };
   source?: string;
   url?: string;
 }
@@ -60,8 +64,16 @@ if (descriptionWordsLength > POST_CARD_DESCRIPTION_MAX_WORDS) {
   </div>
   <div class="post-card-body">
     {data.description && <p class="post-card-description">{description}</p>}
-    <a href={data.url} class="d-flex post-card-thumbnail">
-      <img src={data.thumbnailUrl} alt={data.description} />
+    <a href={data.url}>
+      <picture class="d-flex post-card-thumbnail">
+        <source media="(min-width: 768px)" srcset={data.thumbnailUrl.tablet} />
+        <img
+          src={data.thumbnailUrl.mobile}
+          alt={data.description}
+          width="100%"
+          height="100%"
+        />
+      </picture>
     </a>
   </div>
 </article>
