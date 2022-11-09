@@ -2,68 +2,20 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": false,
-    "strictNullChecks": false,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
-    "importsNotUsedAsValues": "remove",
-    "types": [
-      "astro/client",
-      "@types/jest"
-    ],
-    "typeRoots": [
-      "./src/types",
-      "node_modules/@types"
-    ],
-    "paths": {
-      "components:*": [
-        "src/components/*.astro"
-      ],
-      "layouts:*": [
-        "src/layouts/*.astro"
-      ],
-      "sections:*": [
-        "src/sections/*.astro"
-      ],
-      "themes:*": [
-        "src/themes/*.ts"
-      ],
-      "utils": [
-        "src/utils/index.ts"
-      ],
-      "constants:*": [
-        "src/constants/index.ts"
-      ],
-      "styles:*": [
-        "src/styles/*.css"
-      ],
-      "mocks": [
-        "src/mocks/index.ts"
-      ],
-    }
+    "incremental": true
   },
-  "include": [
-    ".",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.astro",
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*stories.astro",
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

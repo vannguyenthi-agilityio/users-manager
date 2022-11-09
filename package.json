@@ -1,78 +1,92 @@
 {
-  "name": "Hoopa-ShibCard",
-  "version": "0.0.1",
+  "name": "users-manager",
   "private": true,
   "scripts": {
-    "start": "pnpm run partytown && astro dev",
-    "build": "pnpm run partytown && astro build",
-    "preview": "pnpm run partytown && astro preview --port 9000",
-    "astro": "astro",
-    "partytown": "partytown copylib public/~partytown",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 9000",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public",
+    "build-static": "next build && next export",
     "pre-commit-lint": "pnpm lint-staged",
     "pre-push-lint": "pnpm build",
     "prepare": "cd .. && husky install app/.husky",
-    "install-prod": "pnpm install --only=production --ignore-scripts && npm rebuild --arch=x64 --platform=linux sharp"
+    "server-start": "json-server --watch datas/db.json  --port 3001"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^1.0.17",
+    "@chakra-ui/react": "^1.6.12",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
+    "@fontsource/inter": "^4.3.0",
+    "@tanstack/react-query": "^4.0.8",
+    "@types/react-custom-scrollbars": "^4.0.9",
+    "@types/react-scroll": "^1.8.3",
+    "framer-motion": "4",
+    "husky": "^8.0.1",
+    "json-server": "0.17.0",
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.33.1",
+    "react-router-dom": "^5.3.0",
+    "react-table": "^7.8.0"
+  },
+  "volta": {
+    "node": "16.13.0",
+    "yarn": "1.22.15",
+    "pnpm": "6.25.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@types/node": "^18.6.4",
-    "@types/react": "18.0.13",
     "@types/react-dom": "18.0.5",
-    "@typescript-eslint/eslint-plugin": "~5.24.0",
-    "@typescript-eslint/parser": "~5.24.0",
-    "astro-html-minifier": "^0.2.0",
-    "babel-loader": "8.1.0",
-    "eslint": "~8.15.0",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-prettier": "8.1.0",
     "eslint-plugin-astro": "^0.17.1",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-mdx": "^2.0.2",
-    "eslint-plugin-react": "7.30.0",
-    "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.0",
     "jest": "27.5.1",
-    "lint-staged": "13.0.2",
     "postcss": "^8.4.16",
-    "prettier": "2.6.2",
     "prettier-plugin-astro": "^0.5.0",
     "stylelint": "^14.10.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^27.0.0",
     "ts-node": "10.8.0",
-    "typescript": "4.7.2"
+    "@babel/core": "^7.14.3",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-storysource": "^6.2.9",
+    "@storybook/react": "^6.3.12",
+    "@types/react": "^18.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "babel-loader": "^8.2.2",
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-typescript": "^6.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-mdx": "^2.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "lint-staged": "^11.2.6",
+    "prettier": "^2.7.1",
+    "typescript": "^4.2.4"
   },
-  "dependencies": {
-    "@astrojs/react": "^1.0.0",
-    "@astrojs/svelte": "^1.0.0",
-    "@builder.io/partytown": "^0.6.4",
-    "@xstate/svelte": "^1.0.0",
-    "astro": "^1.0.5",
-    "astro-compress": "^1.0.3",
-    "autoprefixer": "^10.4.8",
-    "msw": "^0.45.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sharp": "0.30.7",
-    "svelte": "^3.47.0",
-    "timers": "^0.1.1",
-    "xstate": "^4.31.0"
+  "husky": {
+    "hooks": {
+      "pre-push": "pnpm run build-static",
+      "pre-commit": "lint-staged",
+      "pre-merge": "pnpm run build-static"
+    }
   },
   "lint-staged": {
-    "*.{js,ts,tsx,astro}": [
-      "pnpm prettier -w src/**/*.astro"
-    ],
-    "*.{js,ts,tsx}": [
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
       "eslint src/*.{js,jsx,ts,tsx} --fix-dry-run --no-error-on-unmatched-pattern"
-    ],
-    "*.css": [
-      "pnpm prettier -w",
-      "npx stylelint src/**/*.css"
     ]
-  },
-  "msw": {
-    "workerDirectory": "public"
   }
 }

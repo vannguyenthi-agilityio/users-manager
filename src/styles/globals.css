@@ -1,0 +1,9 @@
+.table-users:hover > .table-users-icon-sort {
+  display: flex;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
