@@ -48,6 +48,7 @@ specifiers:
   react-dom: 18.2.0
   react-hook-form: ^7.33.1
   react-router-dom: ^5.3.0
+  react-table: ^7.8.0
   stylelint: ^14.10.0
   stylelint-config-prettier: ^9.0.3
   stylelint-config-standard: ^27.0.0
@@ -55,7 +56,7 @@ specifiers:
   typescript: ^4.2.4
 
 dependencies:
-  '@chakra-ui/icons': 1.1.7_react@18.2.0
+  '@chakra-ui/icons': 1.1.7_yqb4f7rvu3s265vnjrhxvzkv3i
   '@chakra-ui/react': 1.8.9_7d35e3xijsl37ddh2c2uwxfqz4
   '@emotion/react': 11.10.5_5ihuxrpe4zse4p4tf6ubxcyzuu
   '@emotion/styled': 11.10.5_z7x6wqqd37fzu777gq3gq2bxru
@@ -72,22 +73,23 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.38.0_react@18.2.0
   react-router-dom: 5.3.4_react@18.2.0
+  react-table: 7.8.0_react@18.2.0
 
 devDependencies:
   '@babel/core': 7.19.6
   '@commitlint/cli': 17.2.0
   '@commitlint/config-conventional': 17.2.0
   '@storybook/addon-actions': 6.5.13_biqbaboplfbrettd7655fr4n2y
-  '@storybook/addon-essentials': 6.5.13_ciq27xyevxzwuiof7ushq46uvy
+  '@storybook/addon-essentials': 6.5.13_omqnlifzc4qsu24fac67ycdar4
   '@storybook/addon-links': 6.5.13_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-storysource': 6.5.13_biqbaboplfbrettd7655fr4n2y
-  '@storybook/react': 6.5.13_ciq27xyevxzwuiof7ushq46uvy
+  '@storybook/react': 6.5.13_rqxxgk6l7gvzxoocvsvukgyb5q
   '@types/node': 18.11.9
   '@types/react': 18.0.24
   '@types/react-dom': 18.0.5
   '@typescript-eslint/eslint-plugin': 5.42.0_6xw5wg2354iw4zujk2f3vyfrzu
   '@typescript-eslint/parser': 5.42.0_wyqvi574yv7oiwfeinomdzmc3m
-  babel-loader: 8.2.5_@babel+core@7.19.6
+  babel-loader: 8.2.5_6zc4kxld457avlfyhj3lzsljlm
   eslint: 8.26.0
   eslint-config-airbnb: 18.2.1_uz3uj7dektweghdbspsplxgnbm
   eslint-config-airbnb-typescript: 6.3.2_bqxdegbq34jdz6eav3iv5um6yq
@@ -1777,16 +1779,6 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@chakra-ui/icon/2.0.5_react@18.2.0:
-    resolution: {integrity: sha512-ZrqRvCCIxGr4qFd/r1pmtd9tobRmv8KAxV7ygFoc/t4vOSKTcVIjhE12gsI3FzgvXM15ZFVwsxa1zodwgo5neQ==}
-    peerDependencies:
-      '@chakra-ui/system': '>=1.0.0'
-      react: '>=16.8.6'
-    dependencies:
-      '@chakra-ui/utils': 1.10.4
-      react: 18.2.0
-    dev: false
-
   /@chakra-ui/icon/2.0.5_yqb4f7rvu3s265vnjrhxvzkv3i:
     resolution: {integrity: sha512-ZrqRvCCIxGr4qFd/r1pmtd9tobRmv8KAxV7ygFoc/t4vOSKTcVIjhE12gsI3FzgvXM15ZFVwsxa1zodwgo5neQ==}
     peerDependencies:
@@ -1798,13 +1790,14 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@chakra-ui/icons/1.1.7_react@18.2.0:
+  /@chakra-ui/icons/1.1.7_yqb4f7rvu3s265vnjrhxvzkv3i:
     resolution: {integrity: sha512-YIHxey/B4M2PyFASlHXtAWFyW+tsAtGAChOJ8dsM2kpu1MbVUqm/6nMI1KIFd7Te5IWuNYA75rAHBdLI0Yu61A==}
     peerDependencies:
       '@chakra-ui/system': '>=1.0.0'
       react: '>=16.8.6'
     dependencies:
-      '@chakra-ui/icon': 2.0.5_react@18.2.0
+      '@chakra-ui/icon': 2.0.5_yqb4f7rvu3s265vnjrhxvzkv3i
+      '@chakra-ui/system': 1.12.1_dovxhg2tvkkxkdnqyoum6wzcxm
       '@types/react': 17.0.52
       react: 18.2.0
     dev: false
@@ -3457,7 +3450,7 @@ packages:
       - webpack-command
     dev: true
 
-  /@storybook/addon-docs/6.5.13_ciq27xyevxzwuiof7ushq46uvy:
+  /@storybook/addon-docs/6.5.13_omqnlifzc4qsu24fac67ycdar4:
     resolution: {integrity: sha512-RG/NjsheD9FixZ789RJlNyNccaR2Cuy7CtAwph4oUNi3aDFjtOI8Oe9L+FOT7qtVnZLw/YMjF+pZxoDqJNKLPw==}
     peerDependencies:
       '@storybook/mdx2-csf': ^0.0.3
@@ -3489,7 +3482,7 @@ packages:
       '@storybook/source-loader': 6.5.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/store': 6.5.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/theming': 6.5.13_biqbaboplfbrettd7655fr4n2y
-      babel-loader: 8.2.5_@babel+core@7.19.6
+      babel-loader: 8.2.5_6zc4kxld457avlfyhj3lzsljlm
       core-js: 3.26.0
       fast-deep-equal: 3.1.3
       global: 4.4.0
@@ -3512,7 +3505,7 @@ packages:
       - webpack-command
     dev: true
 
-  /@storybook/addon-essentials/6.5.13_ciq27xyevxzwuiof7ushq46uvy:
+  /@storybook/addon-essentials/6.5.13_omqnlifzc4qsu24fac67ycdar4:
     resolution: {integrity: sha512-G9FVAWV7ixjVLWeLgIX+VT90tcAk6yQxfZQegfg5ucRilGysJCDaNnoab4xuuvm1R40TfFhba3iAGZtQYsddmw==}
     peerDependencies:
       '@babel/core': ^7.9.6
@@ -3573,7 +3566,7 @@ packages:
       '@storybook/addon-actions': 6.5.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-backgrounds': 6.5.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-controls': 6.5.13_lepdvhpfl4ktcue7v6mt34wuv4
-      '@storybook/addon-docs': 6.5.13_ciq27xyevxzwuiof7ushq46uvy
+      '@storybook/addon-docs': 6.5.13_omqnlifzc4qsu24fac67ycdar4
       '@storybook/addon-measure': 6.5.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-outline': 6.5.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-toolbars': 6.5.13_biqbaboplfbrettd7655fr4n2y
@@ -3587,6 +3580,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
       regenerator-runtime: 0.13.10
       ts-dedent: 2.2.0
+      webpack: 5.74.0
     transitivePeerDependencies:
       - '@storybook/mdx2-csf'
       - eslint
@@ -4400,7 +4394,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/react/6.5.13_ciq27xyevxzwuiof7ushq46uvy:
+  /@storybook/react/6.5.13_rqxxgk6l7gvzxoocvsvukgyb5q:
     resolution: {integrity: sha512-4gO8qihEkVZ8RNm9iQd7G2iZz4rRAHizJ6T5m58Sn21fxfyg9zAMzhgd0JzXuPXR8lTTj4AvRyPv1Qx7b43smg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -4463,6 +4457,7 @@ packages:
       react-refresh: 0.11.0
       read-pkg-up: 7.0.1
       regenerator-runtime: 0.13.10
+      require-from-string: 2.0.2
       ts-dedent: 2.2.0
       typescript: 4.8.4
       util-deprecate: 1.0.2
@@ -5950,7 +5945,7 @@ packages:
       - supports-color
     dev: true
 
-  /babel-loader/8.2.5_@babel+core@7.19.6:
+  /babel-loader/8.2.5_6zc4kxld457avlfyhj3lzsljlm:
     resolution: {integrity: sha512-OSiFfH89LrEMiWd4pLNqGz4CwJDtbs2ZVc+iGu2HrkRfPxId9F2anQj38IxWpmRfsUY0aBZYi1EFcd3mhtRMLQ==}
     engines: {node: '>= 8.9'}
     peerDependencies:
@@ -5962,6 +5957,7 @@ packages:
       loader-utils: 2.0.3
       make-dir: 3.1.0
       schema-utils: 2.7.1
+      webpack: 5.74.0
     dev: true
 
   /babel-loader/8.2.5_q4ydpsrmbqywduja5orgah6fgq:
@@ -13421,6 +13417,14 @@ packages:
       react: 18.2.0
       refractor: 3.6.0
     dev: true
+
+  /react-table/7.8.0_react@18.2.0:
+    resolution: {integrity: sha512-hNaz4ygkZO4bESeFfnfOft73iBUj8K5oKi1EcSHPAibEydfsX2MyU6Z8KCr3mv3C9Kqqh71U+DhZkFvibbnPbA==}
+    peerDependencies:
+      react: ^16.8.3 || ^17.0.0-0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
