@@ -45,6 +45,8 @@ export const Pagination = ({
     }
   });
   const pageCount = Math.ceil(totalCount / data.pageSizeState);
+  const valueStartPage = data.pageSizeState * data.currentPage - data.pageSizeState + 1;
+  const valueEndPage = data.pageSizeState * data.currentPage > totalCount ? totalCount : data.pageSizeState * data.currentPage;
 
   const nextPageChange = () => {
     const newOffset: number = offset + data.pageSizeState;
@@ -107,8 +109,8 @@ export const Pagination = ({
             ))}
           </Select>
           <Text flexShrink={0} ml={2} color="default.grey.600">
-            {data.pageSizeState * data.currentPage - data.pageSizeState + 1} -{' '}
-            {data.pageSizeState * data.currentPage} of {totalCount}
+            {valueStartPage} -{' '}
+            {valueEndPage} of {totalCount}
           </Text>
         </Flex>
         <Flex minW="85px" justifyContent="space-between">

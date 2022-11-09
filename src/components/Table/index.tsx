@@ -331,7 +331,7 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
       {page.length > 0 ? (
         <Pagination
           pageSize={10}
-          totalCount={100}
+          totalCount={data.length}
           currentPage={1}
           onPageSizeChange={setPageSize}
           nextPage={nextPage}
