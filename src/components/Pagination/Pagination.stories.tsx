@@ -15,8 +15,7 @@ const Template: Storybook.ComponentStory<typeof Pagination> = (args) => (
 
 export const PaginationDefault = Template.bind({});
 PaginationDefault.args = {
-  pageName: 'Users',
   pageSize: 10,
-  totalCount: 100,
+  totalCount: 40,
   currentPage: 1
 };
