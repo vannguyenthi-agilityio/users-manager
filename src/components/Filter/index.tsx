@@ -41,6 +41,7 @@ export const Filter = ({
       variant="outline"
       placeholder={`Select ${header}`}
       color="default.grey.500"
+      focusBorderColor="secondary.100"
       minW="150px"
       h={14}
       onChange={(e) => {
