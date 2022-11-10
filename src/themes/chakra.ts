@@ -10,11 +10,13 @@ import { space } from './commons/spacing';
 // Components
 import { Text } from './components/text';
 import { Badge } from './components/badge';
+import { Button } from './components/button';
 
 const overrides = {
   components: {
     Text,
-    Badge
+    Badge,
+    Button
   },
   fontSizes,
   fonts,

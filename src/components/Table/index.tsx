@@ -19,7 +19,6 @@ import {
   Tr,
   Flex,
   Box,
-  Button,
   Checkbox,
   Menu,
   MenuButton,
@@ -46,6 +45,7 @@ import { getBadgeVariant } from '../../utils/table';
 
 import { StatusLabel } from '../StatusLabel';
 import { Pagination } from '../Pagination';
+import { Button } from '../Button';
 
 interface ColumnType {
   Header: string;
@@ -102,6 +102,10 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
   const allChecked = checkedItems.every(Boolean);
   const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
 
+  const handleAddUser = () => {
+    console.log('Handle Add User');
+  };
+
   return (
     <TableContainer>
       <Flex
@@ -149,14 +153,22 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
             fontSize="14px"
             py={5}
             textTransform="uppercase"
+            label="Export"
           >
-            <ExternalLinkIcon w={4} h={4} mr={3} />
-            Export
+            <ExternalLinkIcon w={4} h={4} ml={3} />
           </Button>
-          <Search
-            globalSearch={state.globalFilter}
-            setGlobalSearch={setGlobalFilter}
-          />
+          <Flex>
+            <Search
+              globalSearch={state.globalFilter}
+              setGlobalSearch={setGlobalFilter}
+            />
+            <Button
+              label="Add User"
+              size="default"
+              ml={6}
+              onClick={handleAddUser}
+            />
+          </Flex>
         </Flex>
       </Box>
       <Table {...getTableProps()} variant={variant || 'simple'} size="sm">

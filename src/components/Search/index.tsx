@@ -1,4 +1,3 @@
-/* eslint-disable object-shorthand, operator-linebreak */
 import { useState } from 'react';
 import { useAsyncDebounce } from 'react-table';
 import { Input, Box } from '@chakra-ui/react';

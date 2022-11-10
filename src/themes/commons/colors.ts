@@ -4,7 +4,7 @@ export const colors = {
     dark: '#000',
     gray: '#232323',
     yellow: '#e7b51d',
-    red: '#a74545',
+    red: 'rgb(255, 76, 81)',
     placeholder: 'rgba(138, 141, 147, 0.8)',
     inputLabel: 'rgba(255, 255, 255, 0.5)',
     bgHeadTable: 'rgb(249, 250, 252)',
