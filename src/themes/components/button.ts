@@ -4,7 +4,9 @@ export const Button = {
       px: '20px',
       py: '11px',
       fontWeight: '500',
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
+      boxShadow: 'rgb(19 17 32 / 42%) 0px 4px 8px -4px',
+      letterSpacing: '0.3px'
     },
     autoSize: {},
     small: {
