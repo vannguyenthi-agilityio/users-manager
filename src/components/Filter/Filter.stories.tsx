@@ -18,23 +18,22 @@ const filterRows = [
   {
     id: 2,
     values: {
-      plan: 'Enterprise',
-      role: 'Editor',
-      status: 'Active'
+      plan: 'Basic',
+      role: 'Author',
+      status: 'Pending'
     }
   },
   {
     id: 3,
     values: {
-      plan: 'Enterprise',
-      role: 'Editor',
-      status: 'Active'
+      plan: 'Team',
+      role: 'Admin',
+      status: 'Inactive'
     }
   }
 ];
 
 const columnsFilter = {
-  filterValue: 'Editor',
   setFilter: (val) => val,
   preFilteredRows: filterRows,
   header: 'Role',
@@ -48,6 +47,7 @@ const Template: Storybook.ComponentStory<typeof Filter> = (args) => (
 export const FillterText = Template.bind({});
 FillterText.args = {
   type: 'text',
+  label: 'Select Role',
   placeholder: 'Filter by role',
   size: 'md'
 };

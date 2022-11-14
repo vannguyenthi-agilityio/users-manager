@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useState } from 'react';
 import { Select, Text, Flex, IconButton, Tooltip } from '@chakra-ui/react';
 
@@ -12,8 +11,8 @@ interface PaginationProps {
   pageSize?: number;
   from?: number;
   to?: number;
-  canNextPage?: boolean;
-  canPreviousPage?: boolean;
+  hasNextPage?: boolean;
+  hasPreviousPage?: boolean;
   previousPage?: () => void;
   nextPage?: () => void;
   onPageSizeChange?: (pageSizeValue: number) => void;
@@ -27,13 +26,13 @@ export const Pagination = ({
   nextPage,
   previousPage,
   pageSize = 10,
-  canNextPage = true,
-  canPreviousPage = true,
+  hasNextPage = true,
+  hasPreviousPage = true,
   from = 1,
   to = 10,
   onPageSizeChange
 }: PaginationProps) => {
-  const [data, setData] = useState({
+  const [pagination, setPagination] = useState({
     pageOffset: offset,
     pageSizeState: pageSize,
     currentPage: currentPage,
@@ -44,42 +43,57 @@ export const Pagination = ({
       value: pageSize.toString()
     }
   });
-  const pageCount = Math.ceil(totalCount / data.pageSizeState);
-  const valueStartPage = data.pageSizeState * data.currentPage - data.pageSizeState + 1;
-  const valueEndPage = data.pageSizeState * data.currentPage > totalCount ? totalCount : data.pageSizeState * data.currentPage;
+  const pageCount = Math.ceil(totalCount / pagination.pageSizeState);
+  const checkTotalCount =
+    pagination.pageSizeState * pagination.currentPage > totalCount;
+  const valueStartPage = checkTotalCount
+    ? totalCount
+    : pagination.pageSizeState * pagination.currentPage -
+      pagination.pageSizeState +
+      1;
+  const valueEndPage = checkTotalCount
+    ? totalCount
+    : pagination.pageSizeState * pagination.currentPage;
 
   const nextPageChange = () => {
-    const newOffset: number = offset + data.pageSizeState;
+    const newOffset: number = offset + pagination.pageSizeState;
     nextPage();
-    setData({ ...data, pageOffset: newOffset });
-    setData({
-      ...data,
+    setPagination({ ...pagination, pageOffset: newOffset });
+    setPagination({
+      ...pagination,
       currentPage:
-        data.currentPage < pageCount ? data.currentPage + 1 : data.currentPage
+        pagination.currentPage < pageCount
+          ? pagination.currentPage + 1
+          : pagination.currentPage
     });
+    return;
   };
 
   const previousPageChange = () => {
     const newOffset: number =
-      data.pageOffset - data.pageSizeState >= 0
-        ? data.pageOffset - data.pageSizeState
+      pagination.pageOffset - pagination.pageSizeState >= 0
+        ? pagination.pageOffset - pagination.pageSizeState
         : 0;
-    setData({ ...data, pageOffset: newOffset });
+    setPagination({ ...pagination, pageOffset: newOffset });
     previousPage();
-    setData({
-      ...data,
+    setPagination({
+      ...pagination,
       currentPage:
-        data.currentPage > 1 ? data.currentPage - 1 : data.currentPage
+        pagination.currentPage > 1
+          ? pagination.currentPage - 1
+          : pagination.currentPage
     });
+    return;
   };
 
   const setPageSize = (value: number) => {
     onPageSizeChange(value);
-    setData({
-      ...data,
+    setPagination({
+      ...pagination,
       pageSizeState: value,
-      currentPage: data.currentPage > 2 ? 2 : data.currentPage
+      currentPage: pagination.currentPage > 2 ? 2 : pagination.currentPage
     });
+    return;
   };
 
   return (
@@ -97,7 +111,7 @@ export const Pagination = ({
           </Text>
           <Select
             w={20}
-            value={data.pageSizeState}
+            value={pagination.pageSizeState}
             onChange={(e) => {
               setPageSize(Number(e.target.value));
             }}
@@ -109,8 +123,7 @@ export const Pagination = ({
             ))}
           </Select>
           <Text flexShrink={0} ml={2} color="default.grey.600">
-            {valueStartPage} -{' '}
-            {valueEndPage} of {totalCount}
+            {valueStartPage} - {valueEndPage} of {totalCount}
           </Text>
         </Flex>
         <Flex minW="85px" justifyContent="space-between">
@@ -118,7 +131,7 @@ export const Pagination = ({
             <IconButton
               aria-label="previous"
               onClick={previousPageChange}
-              isDisabled={!canPreviousPage}
+              isDisabled={!hasPreviousPage}
               icon={<ChevronLeftIcon h={6} w={6} />}
             />
           </Tooltip>
@@ -126,7 +139,7 @@ export const Pagination = ({
             <IconButton
               aria-label="next"
               onClick={nextPageChange}
-              isDisabled={!canNextPage}
+              isDisabled={!hasNextPage}
               icon={<ChevronRightIcon h={6} w={6} />}
             />
           </Tooltip>

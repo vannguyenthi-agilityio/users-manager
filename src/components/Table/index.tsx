@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-curly-newline, react/jsx-one-expression-per-line, operator-linebreak */
 import React, { useState } from 'react';
 import {
   useSortBy,
@@ -43,9 +42,11 @@ import { Search, DefaultSearchForColumn } from '../Search';
 // Utils
 import { getBadgeVariant } from '../../utils/table';
 
+// Components
 import { StatusLabel } from '../StatusLabel';
 import { Pagination } from '../Pagination';
 import { Button } from '../Button';
+import AddUserModal from '../AddUserModal';
 
 interface ColumnType {
   Header: string;
@@ -101,10 +102,6 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
 
   const allChecked = checkedItems.every(Boolean);
   const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
-
-  const handleAddUser = () => {
-    console.log('Handle Add User');
-  };
 
   return (
     <TableContainer>
@@ -162,12 +159,7 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
               globalSearch={state.globalFilter}
               setGlobalSearch={setGlobalFilter}
             />
-            <Button
-              label="Add User"
-              size="default"
-              ml={6}
-              onClick={handleAddUser}
-            />
+            <AddUserModal />
           </Flex>
         </Flex>
       </Box>
@@ -348,8 +340,8 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
           onPageSizeChange={setPageSize}
           nextPage={nextPage}
           previousPage={previousPage}
-          canNextPage={canNextPage}
-          canPreviousPage={canPreviousPage}
+          hasNextPage={canNextPage}
+          hasPreviousPage={canPreviousPage}
         />
       ) : (
         <Box w="100%" textAlign="center" py={8}>

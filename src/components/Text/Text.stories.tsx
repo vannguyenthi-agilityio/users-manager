@@ -1,4 +1,3 @@
-import React from 'react';
 import Storybook from '@storybook/react';
 import { Text } from './index';
 
@@ -7,7 +6,7 @@ export default {
   component: Text
 };
 
-const Template: Storybook.ComponentStory<typeof Text> = args => (
+const Template: Storybook.ComponentStory<typeof Text> = (args) => (
   <Text value="Login" {...args} />
 );
 

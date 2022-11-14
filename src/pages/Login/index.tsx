@@ -1,4 +1,3 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
 import {
   FormErrorMessage,
@@ -64,9 +63,9 @@ const LoginForm = () => {
                 }
               })}
             />
-            <FormErrorMessage>
-              {errors.email && errors.email.message}
-            </FormErrorMessage>
+            {errors.email && (
+              <FormErrorMessage>{errors.email.message}</FormErrorMessage>
+            )}
           </Box>
         </FormControl>
         <FormControl isInvalid={!!errors.password}>
@@ -91,9 +90,9 @@ const LoginForm = () => {
               })}
               placeholder="Password"
             />
-            <FormErrorMessage>
-              {errors.password && errors.password.message}
-            </FormErrorMessage>
+            {errors.password && (
+              <FormErrorMessage>{errors.password.message}</FormErrorMessage>
+            )}
           </Box>
 
           <Box display="flex" justifyContent="center">

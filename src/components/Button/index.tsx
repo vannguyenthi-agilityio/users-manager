@@ -11,9 +11,16 @@ interface ButtonProps extends ButtonPropsChakra {
   isLoading?: boolean;
   isDisabled?: boolean;
   primary?: boolean;
+  ref?: React.LegacyRef<HTMLButtonElement>;
   backgroundColor?: string;
-  size?: 'default' | 'autoSize' | 'large' | 'medium' | 'small'
-  variant?: 'colorDefault' | 'status' | 'transparent' | 'border' | 'muted';
+  size?: 'default' | 'autoSize' | 'large' | 'medium' | 'small';
+  variant?:
+    | 'colorDefault'
+    | 'status'
+    | 'transparent'
+    | 'border'
+    | 'muted'
+    | 'cancel';
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -21,25 +28,25 @@ export const Button = ({
   size = 'default',
   children,
   label,
+  ref,
   backgroundColor,
   isDisabled = false,
   onClick,
   className = '',
   variant = 'colorDefault',
   ...props
-}: ButtonProps) => {
-  return (
-    <ButtonChakra
-      size={size}
-      onClick={onClick}
-      variant={variant}
-      backgroundColor={backgroundColor}
-      isDisabled={isDisabled}
-      className={className}
-      {...props}
-    >
-      {label}
-      {children}
-    </ButtonChakra>
-  );
-};
+}: ButtonProps) => (
+  <ButtonChakra
+    size={size}
+    onClick={onClick}
+    variant={variant}
+    backgroundColor={backgroundColor}
+    isDisabled={isDisabled}
+    className={className}
+    ref={ref}
+    {...props}
+  >
+    {label}
+    {children}
+  </ButtonChakra>
+);

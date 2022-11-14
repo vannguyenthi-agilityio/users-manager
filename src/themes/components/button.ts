@@ -4,9 +4,7 @@ export const Button = {
       px: '20px',
       py: '11px',
       fontWeight: '500',
-      textTransform: 'uppercase',
-      boxShadow: 'rgb(19 17 32 / 42%) 0px 4px 8px -4px',
-      letterSpacing: '0.3px'
+      textTransform: 'uppercase'
     },
     autoSize: {},
     small: {
@@ -20,25 +18,28 @@ export const Button = {
   variants: {
     colorDefault: {
       bg: 'secondary.100',
-      color: 'default.light',
+      color: 'default.grey.400',
       fontSize: '14px'
     },
 
-    status: {
-      bg: 'default.gray',
-      fontSize: '14px'
+    cancel: {
+      bg: 'transparent',
+      borderWidth: '1px',
+      fontSize: '14px',
+      color: 'default.grey.600',
+      borderColor: 'default.grey.600'
     },
 
     transparent: {
       bg: 'transparent',
-      color: 'default.light',
+      color: 'default.gray.500',
       fontSize: '14px'
     },
 
     border: {
       borderWidth: '1px',
       borderColor: 'default.red',
-      fontSize: '14px',
+      fontSize: '14px'
     },
 
     muted: {

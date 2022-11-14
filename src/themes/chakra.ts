@@ -11,12 +11,22 @@ import { space } from './commons/spacing';
 import { Text } from './components/text';
 import { Badge } from './components/badge';
 import { Button } from './components/button';
+import { Modal } from './components/modal';
+import { Input } from './components/input';
+import { Form } from './components/form';
+import { Select } from './components/select';
+import { NumberInput } from './components/numberinput';
 
 const overrides = {
   components: {
     Text,
     Badge,
-    Button
+    Button,
+    Modal,
+    Input,
+    Form,
+    Select,
+    NumberInput
   },
   fontSizes,
   fonts,

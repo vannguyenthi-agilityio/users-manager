@@ -1,4 +1,3 @@
-import React from 'react';
 import Storybook from '@storybook/react';
 
 // Components

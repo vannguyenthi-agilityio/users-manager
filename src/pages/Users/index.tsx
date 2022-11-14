@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline, function-paren-newline */
 import { Box, Avatar, HStack, Heading } from '@chakra-ui/react';
 import Link from 'next/link';
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query';

@@ -28,7 +28,7 @@ interface SearchProps {
 
 // Component for Global Search
 export const Search = ({ globalSearch, setGlobalSearch }: SearchProps) => {
-  const [value, setValue] = useState(globalSearch);
+  const [value, setValue] = useState<string>(globalSearch);
 
   const onChange = useAsyncDebounce((valueSearch) => {
     setGlobalSearch(valueSearch || undefined);

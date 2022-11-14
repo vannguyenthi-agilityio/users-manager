@@ -10,8 +10,8 @@ export default {
   }
 } as Storybook.ComponentMeta<typeof Button>;
 
-const Template: Storybook.ComponentStory<typeof Button> = args => (
-  <Button label='Edit' {...args} />
+const Template: Storybook.ComponentStory<typeof Button> = (args) => (
+  <Button label="Edit" {...args} />
 );
 
 export const Secondary = Template.bind({});
@@ -28,12 +28,12 @@ Transparent.args = {
   variant: 'border'
 };
 
-export const Status = Template.bind({});
-Status.args = {
+export const Cancel = Template.bind({});
+Cancel.args = {
   size: 'default',
-  variant: 'status',
-  color: 'default.green.100',
-  bg: 'default.gray'
+  variant: 'cancel',
+  color: 'default.grey.600',
+  bg: 'transparent'
 };
 
 export const Loading = Template.bind({});

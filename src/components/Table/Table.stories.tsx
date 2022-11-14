@@ -1,4 +1,3 @@
-/* eslint-disable object-shorthand, operator-linebreak */
 import Storybook from '@storybook/react';
 
 // Components
