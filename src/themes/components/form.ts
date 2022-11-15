@@ -13,6 +13,9 @@ export const Form = {
             ...activeLabelStyles
           }
         },
+        "input:not(:placeholder-shown) + label, .chakra-select__wrapper + label, textarea:not(:placeholder-shown) ~ label": {
+          ...activeLabelStyles
+        },
         label: {
           top: 0,
           left: 0,

@@ -1,4 +1,4 @@
-import { KeyboardEvent, FocusEvent, ChangeEvent } from 'react';
+import { KeyboardEvent, FocusEvent, ChangeEvent, useState } from 'react';
 
 import {
   FormErrorMessage,
@@ -50,6 +50,7 @@ const inputNumberStyles = {
 interface FormInputProps extends InputPropsChakra {
   id?: string;
   value?: string;
+  valueNumber?: number;
   label?: string;
   type?: string;
   placeholder?: string;
@@ -92,58 +93,75 @@ export const FormInput = ({
   readOnly = false,
   autoFocus = false,
   ...props
-}: FormInputProps) => (
-  <Box py={3}>
-    <FormControl variant="floating" isRequired={isRequired} isInvalid={!!error}>
-      {type !== 'number' ? (
-        <InputChakra
-          value={value}
-          label={label}
-          placeholder={placeholder}
-          isDisabled={isDisabled}
-          type={type}
-          defaultValue={defaultValue}
-          onChange={onChange}
-          onBlur={onBlur}
-          onKeyDown={onKeyDown}
-          className={className}
-          size={size}
-          variant={variant}
-          backgroundColor={backgroundColor}
-          color={color}
-          readOnly={readOnly}
-          autoFocus={autoFocus}
-          {...props}
-        />
-      ) : (
-        <>
-          <NumberInput defaultValue={0} style={{ ...inputNumberStyles }}>
-            <NumberInputField style={{ ...inputNumberStyles }} />
-            <NumberInputStepper style={{ ...stepperStyles }}>
-              <NumberIncrementStepper
-                bg="default.placeholder"
-                _active={{ bg: 'default.placeholder' }}
-                style={{ ...stepperButtonStyles }}
+}: FormInputProps) => {
+  
+  const [valueNumber, setValue] = useState<number>(0);
+  
+  const handleChange = valueNumber => setValue(valueNumber);
+
+  return (
+    <Box py={3}>
+      <FormControl variant="floating" isRequired={isRequired} isInvalid={!!error}>
+        {type !== 'number' ? (
+          <>
+            <InputChakra
+              value={value}
+              label={label}
+              placeholder={placeholder}
+              isDisabled={isDisabled}
+              type={type}
+              defaultValue={defaultValue}
+              onChange={onChange}
+              onBlur={onBlur}
+              onKeyDown={onKeyDown}
+              className={className}
+              size={size}
+              error={error}
+              variant={variant}
+              backgroundColor={backgroundColor}
+              color={color}
+              readOnly={readOnly}
+              autoFocus={autoFocus}
+              {...props}
+            />
+            <FormLabel>{label}</FormLabel>
+          </>
+        ) : (
+          <>
+            <NumberInput
+              defaultValue={valueNumber}
+              value={valueNumber}
+              onBlur={onBlur}
+              onChange={handleChange}
+              style={{ ...inputNumberStyles }}
               >
-                <TriangleUpIcon />
-              </NumberIncrementStepper>
-              <NumberDecrementStepper
-                bg="default.placeholder"
-                _active={{ bg: 'default.placeholder' }}
-                style={{ ...stepperButtonStyles }}
-              >
-                <TriangleDownIcon />
-              </NumberDecrementStepper>
-            </NumberInputStepper>
-          </NumberInput>
-        </>
-      )}
-      <FormLabel>{label}</FormLabel>
-      {error && (
-        <FormErrorMessage mt={1} fontSize="sm">
-          {error}
-        </FormErrorMessage>
-      )}
-    </FormControl>
-  </Box>
-);
+              <NumberInputField style={{ ...inputNumberStyles }} />
+              <FormLabel>{label}</FormLabel>
+              <NumberInputStepper style={{ ...stepperStyles }}>
+                <NumberIncrementStepper
+                  bg="default.placeholder"
+                  _active={{ bg: 'default.placeholder' }}
+                  style={{ ...stepperButtonStyles }}
+                >
+                  <TriangleUpIcon />
+                </NumberIncrementStepper>
+                <NumberDecrementStepper
+                  bg="default.placeholder"
+                  _active={{ bg: 'default.placeholder' }}
+                  style={{ ...stepperButtonStyles }}
+                >
+                  <TriangleDownIcon />
+                </NumberDecrementStepper>
+              </NumberInputStepper>
+            </NumberInput>
+          </>
+        )}
+        {error && (
+          <FormErrorMessage mt={1} fontSize="sm">
+            {error}
+          </FormErrorMessage>
+        )}
+      </FormControl>
+    </Box>
+  )
+};

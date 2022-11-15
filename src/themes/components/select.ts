@@ -14,7 +14,7 @@ export const Select = {
     default: {
       field: {
         bg: 'transparent',
-        borderColor: 'default.grey.800',
+        borderColor: 'default.grey.700',
         borderWidth: '1px',
         borderStyle: 'solid',
         color: 'default.grey.600',

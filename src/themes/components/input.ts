@@ -19,7 +19,7 @@ export const Input = {
     default: {
       field: {
         bg: 'transparent',
-        borderColor: 'default.grey.800',
+        borderColor: 'default.grey.700',
         borderWidth: '1px',
         borderStyle: 'solid',
         color: 'default.grey.600',
@@ -31,7 +31,10 @@ export const Input = {
           _placeholder: {
             color: 'default.placeholder'
           }
-        }
+        },
+        _invalid: {
+          borderColor: 'default.red',
+        },
       }
     },
     outline: {

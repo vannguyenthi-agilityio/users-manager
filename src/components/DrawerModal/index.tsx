@@ -15,6 +15,7 @@ import { Button } from '../Button';
 
 export interface DrawerProps extends DrawerPropsChakra {
   isDisabledSubmit?: boolean;
+  isError?: boolean;
   children: React.ReactNode;
   title?: string;
   submitButtonText?: string;
@@ -28,6 +29,7 @@ export const DrawerModal = ({
   cancelButtonText = 'Cancel',
   submitButtonText = 'Submit',
   isDisabledSubmit,
+  isError = true,
   isOpen = false,
   onClose,
   onSubmit,
@@ -47,8 +49,11 @@ export const DrawerModal = ({
     return;
   };
 
-  const onSubmitHandler = () => {
-    setOpenAddUserModal(false);
+  const handleSubmit = (e) => {
+    onSubmit(e);
+    if (!isError) {
+      setOpenAddUserModal(false);
+    }
     return;
   };
 
@@ -75,7 +80,7 @@ export const DrawerModal = ({
             <Button variant="cancel" mr={3} onClick={onCloseModal}>
               {cancelButtonText}
             </Button>
-            <Button isDisabled={isDisabledSubmit} onClick={onSubmitHandler}>{submitButtonText}</Button>
+            <Button isDisabled={isDisabledSubmit} onClick={(e) => handleSubmit(e)}>{submitButtonText}</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
