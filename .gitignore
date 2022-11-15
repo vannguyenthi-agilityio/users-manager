@@ -2,7 +2,7 @@
 dist/
 .output/
 .next/
-storybook-static
+storybook-static/
 
 # dependencies
 node_modules/
