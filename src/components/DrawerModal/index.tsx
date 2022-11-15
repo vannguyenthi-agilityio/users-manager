@@ -47,6 +47,11 @@ export const DrawerModal = ({
     return;
   };
 
+  const onSubmitHandler = () => {
+    setOpenAddUserModal(false);
+    return;
+  };
+
   return (
     <>
       <Button ref={btnRef} onClick={onOpenModal} ml={3}>
@@ -70,7 +75,7 @@ export const DrawerModal = ({
             <Button variant="cancel" mr={3} onClick={onCloseModal}>
               {cancelButtonText}
             </Button>
-            <Button isDisabled={isDisabledSubmit}>{submitButtonText}</Button>
+            <Button isDisabled={isDisabledSubmit} onClick={onSubmitHandler}>{submitButtonText}</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

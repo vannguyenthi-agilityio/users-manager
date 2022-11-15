@@ -55,8 +55,6 @@ const AddUserModal = ({
   isOpen = false,
   isDisabledSubmit,
   onChange,
-  onBlur,
-  onSubmit
 }: AddUserModalProps) => {
   const [valueFilterRole, setValueRole] = useState<string>('Editor');
   const [valueFilterPlan, setValuePlan] = useState<string>('Basic');
@@ -76,6 +74,10 @@ const AddUserModal = ({
     setOpenModal(false);
     return;
   };
+
+  const handleSubmit = () => {
+    setOpenModal(false);
+  }
 
   const columnsFilterRole = {
     filterValue: valueFilterRole,
@@ -106,7 +108,7 @@ const AddUserModal = ({
       isOpen={isOpenModal}
       onClose={handleClose}
       isDisabledSubmit={isDisabledSubmit}
-      onSubmit={onSubmit}
+      onSubmit={handleSubmit}
     >
       <Box my="40px">
         <Text
