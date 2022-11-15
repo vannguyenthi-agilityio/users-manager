@@ -80,7 +80,12 @@ export const DrawerModal = ({
             <Button variant="cancel" mr={3} onClick={onCloseModal}>
               {cancelButtonText}
             </Button>
-            <Button isDisabled={isDisabledSubmit} onClick={(e) => handleSubmit(e)}>{submitButtonText}</Button>
+            <Button
+              isDisabled={isDisabledSubmit}
+              onClick={(e) => handleSubmit(e)}
+            >
+              {submitButtonText}
+            </Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

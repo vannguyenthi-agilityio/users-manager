@@ -3,28 +3,18 @@ import React, { useState } from 'react';
 // Chakra ui lib
 import { Box } from '@chakra-ui/react';
 
+// Utils
+import { validation } from 'src/utils/helper';
+
 // Components
 import { FormInput } from '../FormInput';
 import { Text } from '../Text';
 import { DrawerModal } from '../DrawerModal';
 import { Filter } from '../Filter';
 
-// Utils
-import {
-  validation,
-} from 'src/utils/helper';
-
 interface AddUserModalProps {
   value?: string;
-  error?: string;
   isOpen?: boolean;
-  isDisabledSubmit?: boolean;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>, value: string) => void;
-  onBlur?: (
-    e: React.FocusEvent<HTMLInputElement, Element>,
-    value: string
-  ) => void;
-  onSubmit?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const filterRows = [
@@ -54,14 +44,10 @@ const filterRows = [
   }
 ];
 
-const AddUserModal = ({
-  value,
-  isOpen = false,
-}: AddUserModalProps) => {
+const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
   const [valueFilterRole, setValueRole] = useState<string>('Editor');
   const [valueFilterPlan, setValuePlan] = useState<string>('Basic');
   const [isOpenModal, setOpenModal] = useState<boolean>(isOpen);
-  
 
   const [userInfo, setUserInfo] = useState({
     error: {
@@ -78,9 +64,9 @@ const AddUserModal = ({
       email: '',
       company: '',
       country: '',
-      contact: 0,
+      contact: 0
     },
-    submittedSuccess: true,
+    submittedSuccess: true
   });
 
   const handleSetFilterRole = (val) => {
@@ -100,26 +86,8 @@ const AddUserModal = ({
 
   const checkDisableSubmit = () => {
     const errorList = Object.values(userInfo.error);
-    const hasError = errorList.findIndex(e => !!e) > -1;
+    const hasError = errorList.findIndex((e) => !!e) > -1;
     return hasError;
-  };
-
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    setUserInfo({
-      ...userInfo,
-      error: {
-        ...userInfo.error,
-        ['fullname']: validateInput(userInfo.info?.fullname, 'fullname').errorMsg,
-        ['username']: validateInput(userInfo.info?.username, 'username').errorMsg,
-        ['email']: validateInput(userInfo.info?.email, 'email').errorMsg,
-        ['company']: validateInput(userInfo.info?.company, 'company').errorMsg,
-        ['country']: validateInput(userInfo.info?.country, 'country').errorMsg,
-        ['contact']: validateInput(userInfo.info?.contact, 'contact').errorMsg,
-      },
-      submittedSuccess: !checkDisableSubmit()
-    });
-    return;
   };
 
   const validateInput = (value, key) => {
@@ -130,8 +98,26 @@ const AddUserModal = ({
     };
   };
 
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setUserInfo({
+      ...userInfo,
+      error: {
+        ...userInfo.error,
+        fullname: validateInput(userInfo.info?.fullname, 'fullname').errorMsg,
+        username: validateInput(userInfo.info?.username, 'username').errorMsg,
+        email: validateInput(userInfo.info?.email, 'email').errorMsg,
+        company: validateInput(userInfo.info?.company, 'company').errorMsg,
+        country: validateInput(userInfo.info?.country, 'country').errorMsg,
+        contact: validateInput(userInfo.info?.contact, 'contact').errorMsg
+      },
+      submittedSuccess: !checkDisableSubmit()
+    });
+    return;
+  };
+
   const handleBlurInput = (event, key) => {
-    const value = event.target.value;
+    const { value } = event.target;
     setUserInfo({
       ...userInfo,
       info: {
@@ -210,7 +196,7 @@ const AddUserModal = ({
           value={userInfo.info?.fullname}
           error={userInfo.error?.fullname}
           onChange={(e) => handleChangeInput(e, 'fullname')}
-          onBlur={event => handleBlurInput(event, 'fullname')}
+          onBlur={(event) => handleBlurInput(event, 'fullname')}
         />
         <FormInput
           placeholder="UserName"
@@ -220,7 +206,7 @@ const AddUserModal = ({
           value={userInfo.info?.username}
           error={userInfo.error?.username}
           onChange={(e) => handleChangeInput(e, 'username')}
-          onBlur={event => handleBlurInput(event, 'username')}
+          onBlur={(event) => handleBlurInput(event, 'username')}
         />
         <FormInput
           placeholder="Jonhdoe@email.com"
@@ -230,7 +216,7 @@ const AddUserModal = ({
           value={userInfo.info?.email}
           error={userInfo.error?.email}
           onChange={(e) => handleChangeInput(e, 'email')}
-          onBlur={event => handleBlurInput(event, 'email')}
+          onBlur={(event) => handleBlurInput(event, 'email')}
         />
         <FormInput
           placeholder="Company"
@@ -240,7 +226,7 @@ const AddUserModal = ({
           value={userInfo.info.company}
           error={userInfo.error?.company}
           onChange={(e) => handleChangeInput(e, 'company')}
-          onBlur={event => handleBlurInput(event, 'company')}
+          onBlur={(event) => handleBlurInput(event, 'company')}
         />
         <FormInput
           placeholder="Country"
@@ -250,7 +236,7 @@ const AddUserModal = ({
           value={userInfo.info?.country}
           error={userInfo.error?.country}
           onChange={(e) => handleChangeInput(e, 'country')}
-          onBlur={event => handleBlurInput(event, 'country')}
+          onBlur={(event) => handleBlurInput(event, 'country')}
         />
         <FormInput
           placeholder="Contact"
@@ -260,7 +246,7 @@ const AddUserModal = ({
           value={userInfo.info?.contact.toString()}
           error={userInfo.error?.contact}
           onChange={(e) => handleChangeInput(e, 'contact')}
-          onBlur={event => handleBlurInput(event, 'contact')}
+          onBlur={(event) => handleBlurInput(event, 'contact')}
         />
         <Box mt={3}>
           <Filter column={columnsFilterRole} />

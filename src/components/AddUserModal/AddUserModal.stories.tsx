@@ -10,7 +10,7 @@ export default {
 } as Storybook.ComponentMeta<typeof AddUserModal>;
 
 const Template: Storybook.ComponentStory<typeof AddUserModal> = (args) => (
-  <AddUserModal onSubmit={action('onSubmitHandler')} {...args} />
+  <AddUserModal {...args} />
 );
 
 export const AddUserModalDefault = Template.bind({});

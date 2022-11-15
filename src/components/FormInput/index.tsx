@@ -94,14 +94,17 @@ export const FormInput = ({
   autoFocus = false,
   ...props
 }: FormInputProps) => {
-  
   const [valueNumber, setValue] = useState<number>(0);
-  
-  const handleChange = valueNumber => setValue(valueNumber);
+
+  const handleChange = (valueNumber) => setValue(valueNumber);
 
   return (
     <Box py={3}>
-      <FormControl variant="floating" isRequired={isRequired} isInvalid={!!error}>
+      <FormControl
+        variant="floating"
+        isRequired={isRequired}
+        isInvalid={!!error}
+      >
         {type !== 'number' ? (
           <>
             <InputChakra
@@ -134,7 +137,7 @@ export const FormInput = ({
               onBlur={onBlur}
               onChange={handleChange}
               style={{ ...inputNumberStyles }}
-              >
+            >
               <NumberInputField style={{ ...inputNumberStyles }} />
               <FormLabel>{label}</FormLabel>
               <NumberInputStepper style={{ ...stepperStyles }}>
@@ -163,5 +166,5 @@ export const FormInput = ({
         )}
       </FormControl>
     </Box>
-  )
+  );
 };

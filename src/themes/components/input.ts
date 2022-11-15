@@ -33,8 +33,8 @@ export const Input = {
           }
         },
         _invalid: {
-          borderColor: 'default.red',
-        },
+          borderColor: 'default.red'
+        }
       }
     },
     outline: {
