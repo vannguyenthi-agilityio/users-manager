@@ -6,6 +6,7 @@ import { fonts } from './commons/fonts';
 import { colors } from './commons/colors';
 import { lineHeights } from './commons/lineHeights';
 import { space } from './commons/spacing';
+import { radii } from './commons/borderRadius';
 
 // Components
 import { Text } from './components/text';
@@ -15,6 +16,7 @@ import { Modal } from './components/modal';
 import { Input } from './components/input';
 import { Form } from './components/form';
 import { Select } from './components/select';
+import { Menu } from './components/menu';
 import { NumberInput } from './components/numberinput';
 
 const overrides = {
@@ -26,12 +28,14 @@ const overrides = {
     Input,
     Form,
     Select,
-    NumberInput
+    NumberInput,
+    Menu
   },
   fontSizes,
   fonts,
   colors,
   space,
+  radii,
   lineHeights
 };
 

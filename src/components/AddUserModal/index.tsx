@@ -17,6 +17,26 @@ interface AddUserModalProps {
   isOpen?: boolean;
 }
 
+interface StateUser {
+  error: {
+    fullName: string;
+    userName: string;
+    email: string;
+    company: string;
+    country: string;
+    contact: string;
+  };
+  info: {
+    fullName: string;
+    userName: string;
+    email: string;
+    company: string;
+    country: string;
+    contact: number;
+  };
+  errorValidation: boolean;
+}
+
 const filterRows = [
   {
     id: 1,
@@ -49,25 +69,28 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
   const [valueFilterPlan, setValuePlan] = useState<string>('Basic');
   const [isOpenModal, setOpenModal] = useState<boolean>(isOpen);
 
-  const [userInfo, setUserInfo] = useState({
+  const [userInfo, setUserInfo] = useState<StateUser>({
     error: {
-      fullname: '',
-      username: '',
+      fullName: '',
+      userName: '',
       email: '',
       company: '',
       country: '',
       contact: ''
     },
     info: {
-      fullname: '',
-      username: '',
+      fullName: '',
+      userName: '',
       email: '',
       company: '',
       country: '',
       contact: 0
     },
-    submittedSuccess: true
+    errorValidation: true
   });
+
+  const disabledSubmit =
+    Object.values(userInfo.error).findIndex((e) => !!e) > -1;
 
   const handleSetFilterRole = (val) => {
     setValueRole(val);
@@ -84,13 +107,7 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
     return;
   };
 
-  const checkDisableSubmit = () => {
-    const errorList = Object.values(userInfo.error);
-    const hasError = errorList.findIndex((e) => !!e) > -1;
-    return hasError;
-  };
-
-  const validateInput = (value, key) => {
+  const validateInput = (value: string, key: string) => {
     const errorMsg = validation({ value, key });
     return {
       key,
@@ -104,16 +121,16 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
       ...userInfo,
       error: {
         ...userInfo.error,
-        fullname: validateInput(userInfo.info?.fullname, 'fullname').errorMsg,
-        username: validateInput(userInfo.info?.username, 'username').errorMsg,
+        fullName: validateInput(userInfo.info?.fullName, 'fullName').errorMsg,
+        userName: validateInput(userInfo.info?.userName, 'userName').errorMsg,
         email: validateInput(userInfo.info?.email, 'email').errorMsg,
         company: validateInput(userInfo.info?.company, 'company').errorMsg,
         country: validateInput(userInfo.info?.country, 'country').errorMsg,
-        contact: validateInput(userInfo.info?.contact, 'contact').errorMsg
+        contact: validateInput(userInfo.info?.contact.toString(), 'contact')
+          .errorMsg
       },
-      submittedSuccess: !checkDisableSubmit()
+      errorValidation: disabledSubmit
     });
-    return;
   };
 
   const handleBlurInput = (event, key) => {
@@ -128,8 +145,9 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
         ...userInfo.error,
         [key]: validateInput(value, key).errorMsg
       },
-      submittedSuccess: !checkDisableSubmit()
+      errorValidation: disabledSubmit
     });
+    return;
   };
 
   const handleChangeInput = (e, key) => {
@@ -144,8 +162,9 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
         ...userInfo.error,
         [key]: validateInput(value, key).errorMsg
       },
-      submittedSuccess: !checkDisableSubmit()
+      errorValidation: disabledSubmit
     });
+    return;
   };
 
   const columnsFilterRole = {
@@ -176,8 +195,8 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
       size="sm"
       isOpen={isOpenModal}
       onClose={handleClose}
-      isError={userInfo.submittedSuccess}
-      isDisabledSubmit={checkDisableSubmit()}
+      isError={userInfo.errorValidation}
+      isDisabledSubmit={disabledSubmit}
       onSubmit={handleSubmit}
     >
       <Box my="40px">
@@ -193,20 +212,20 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
           label="FullName"
           type="text"
           size="default"
-          value={userInfo.info?.fullname}
-          error={userInfo.error?.fullname}
-          onChange={(e) => handleChangeInput(e, 'fullname')}
-          onBlur={(event) => handleBlurInput(event, 'fullname')}
+          value={userInfo.info?.fullName}
+          error={userInfo.error?.fullName}
+          onChange={(e) => handleChangeInput(e, 'fullName')}
+          onBlur={(event) => handleBlurInput(event, 'fullName')}
         />
         <FormInput
           placeholder="UserName"
           label="UserName"
           type="text"
           size="default"
-          value={userInfo.info?.username}
-          error={userInfo.error?.username}
-          onChange={(e) => handleChangeInput(e, 'username')}
-          onBlur={(event) => handleBlurInput(event, 'username')}
+          value={userInfo.info?.userName}
+          error={userInfo.error?.userName}
+          onChange={(e) => handleChangeInput(e, 'userName')}
+          onBlur={(event) => handleBlurInput(event, 'userName')}
         />
         <FormInput
           placeholder="Jonhdoe@email.com"

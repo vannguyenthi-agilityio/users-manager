@@ -4,13 +4,18 @@ const NAME_PATTERN = /\d*(?:[a-zA-Z]){3,}\d*/;
 export const isEmail = (value = '') => value.match(EMAIL_PATTERN);
 export const isUserName = (value = '') => value.match(NAME_PATTERN);
 
+export const capitalizeFirstLetter = (str: string) =>
+  str[0].toUpperCase() + str.slice(1);
+
 export const validation = ({
   value = '',
   key = 'Email' // Email
 }) => {
   if (!value) {
     return `${
-      key !== 'Email' ? `Enter your ${key.toLowerCase()}` : 'Enter your email'
+      key !== 'Email'
+        ? `Enter your ${capitalizeFirstLetter(key)}`
+        : 'Enter your email'
     }`;
   }
 

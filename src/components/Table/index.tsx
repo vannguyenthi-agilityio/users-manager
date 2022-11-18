@@ -139,7 +139,7 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
           my={4}
         >
           <Button
-            h="30px"
+            h="48px"
             bg="transparent"
             w="130px"
             minW="30px"
@@ -148,7 +148,7 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
             borderColor="buttons.export"
             color="rgb(138, 141, 147)"
             fontSize="14px"
-            py={5}
+            mr={3}
             textTransform="uppercase"
             label="Export"
           >

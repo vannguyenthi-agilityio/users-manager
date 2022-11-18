@@ -1,5 +1,4 @@
 import Storybook from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 
 // Components
 import AddUserModal from './index';
