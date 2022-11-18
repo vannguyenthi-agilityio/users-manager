@@ -53,14 +53,16 @@ export const Menu = {
           bg: 'default.grey.800'
         },
         _expanded: {
-          bg: 'default.grey.800'
+          boxShadow: 'rgb(19 17 32 / 42%) 0px 4px 8px -4px',
+          backgroundImage: 'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
         },
         _focus: {
-          boxShadow: 'none',
-          bg: 'default.grey.800'
+          boxShadow: 'rgb(19 17 32 / 42%) 0px 4px 8px -4px',
+          backgroundImage: 'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
         },
         _active: {
-          bg: 'default.grey.800'
+          boxShadow: 'rgb(19 17 32 / 42%) 0px 4px 8px -4px',
+          backgroundImage: 'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
         }
       },
       menu: {
