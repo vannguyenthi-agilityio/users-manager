@@ -65,7 +65,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           w="100%"
           textAlign="left"
           onClick={() => {
-            setIsOpen(!isOpenMenu)}
+            setIsOpen(!isOpenMenu) }
           }
         >
           <Flex alignItems="center" justifyContent="space-between">
