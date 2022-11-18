@@ -86,6 +86,23 @@ export const Menu = {
       list: {
         bg: 'transparent',
         border: 'none'
+      },
+      button: {
+        px: 4,
+        py: 3,
+        bgColor: 'default.grey.800',
+        transition: 'all 0.2s',
+        borderRadius: 'sidebar',
+        borderWidth: 'none',
+        _hover: {
+          bg: 'gray.400'
+        },
+        _expanded: {
+          bg: 'default.grey.800'
+        },
+        _focus: {
+          boxShadow: 'none'
+        }
       }
     }
   },

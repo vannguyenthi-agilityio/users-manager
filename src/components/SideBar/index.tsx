@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import {
   IconButton,
   Avatar,
@@ -22,8 +22,8 @@ import {
   MenuList
 } from '@chakra-ui/react';
 import { FiMenu, FiBell, FiChevronDown } from 'react-icons/fi';
-import { FaUserAlt, FaSistrix } from 'react-icons/fa';
-import { MdChevronRight } from 'react-icons/md';
+import { FaUserAlt, FaSistrix, FaGenderless, FaAngleRight, FaAngleDown } from 'react-icons/fa';
+import { MdArrowUpward } from 'react-icons/md';
 
 import { CSSTransition } from 'react-transition-group';
 
@@ -35,59 +35,60 @@ interface SidebarMobileProps extends FlexProps {
   onOpen: () => void;
 }
 
-const SidebarContent = ({ onClose, ...rest }: SidebarProps) => (
-  <Box
-    transition="3s ease"
-    bgColor="secondary.200"
-    borderRight="1px"
-    w={{ base: 'full', md: 60 }}
-    pos="fixed"
-    h="full"
-    {...rest}
-  >
-    <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-      <Text fontSize="2xl" fontWeight="bold">
-        Logo
-      </Text>
-      <CloseButton
-        color="default.light"
-        display={{ base: 'flex', md: 'none' }}
-        onClick={onClose}
-      />
-    </Flex>
-    <Menu closeOnSelect={false} variant="sidebar">
-      <MenuButton
-        color="default.light"
-        w="100%"
-        textAlign="left"
-        p={4}
-        bgColor="default.grey.800"
-        transition="all 0.2s"
-        borderRadius="sidebar"
-        borderWidth="none"
-        _hover={{ bg: 'gray.400' }}
-        _expanded={{ bg: 'default.grey.800' }}
-        _focus={{ boxShadow: 'none' }}
+const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+  const [isOpenMenu, setIsOpen] = useState(false);
+  return (
+    <Box
+      transition="3s ease"
+      bgColor="secondary.200"
+      borderRight="1px"
+      w={{ base: 'full', md: 60 }}
+      pos="fixed"
+      h="full"
+      {...rest}
+    >
+      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
+        <Text fontSize="2xl" fontWeight="bold">
+          Logo
+        </Text>
+        <CloseButton
+          color="default.light"
+          display={{ base: 'flex', md: 'none' }}
+          onClick={onClose}
+        />
+      </Flex>
+      <Menu
+        closeOnSelect={false}
+        variant="sidebar"
       >
-        <Flex alignItems="center" justifyContent="space-between">
-          <Flex alignItems="center">
-            <FaUserAlt />
-            <Text ml={5}>User</Text>
+        <MenuButton
+          color="default.light"
+          w="100%"
+          textAlign="left"
+          onClick={() => {
+            setIsOpen(!isOpenMenu)}
+          }
+        >
+          <Flex alignItems="center" justifyContent="space-between">
+            <Flex alignItems="center">
+              <FaUserAlt />
+              <Text ml={5}>User</Text>
+            </Flex>
+            {isOpenMenu ? <FaAngleDown /> : <FaAngleRight />}
           </Flex>
-          <MdChevronRight />
-        </Flex>
-      </MenuButton>
-      <MenuList pl={2}>
-        <CSSTransition in="main" timeout={500} unmountOnExit>
-          <Box ml={{ base: '-10px', md: '-22px' }}>
-            <MenuItem>List</MenuItem>
-            <MenuItem>View</MenuItem>
-          </Box>
-        </CSSTransition>
-      </MenuList>
-    </Menu>
-  </Box>
-);
+        </MenuButton>
+        <MenuList pl={2} py={0}>
+          <CSSTransition in="main" timeout={500} unmountOnExit>
+            <Box ml={{ base: '-10px', md: '-22px' }}>
+              <MenuItem><FaGenderless size="20" /> <Text ml={5}>List</Text></MenuItem>
+              <MenuItem><FaGenderless size="20" /> <Text ml={5}>View</Text></MenuItem>
+            </Box>
+          </CSSTransition>
+        </MenuList>
+      </Menu>
+    </Box>
+  )
+};
 
 const MobileNav = ({ onOpen, ...rest }: SidebarMobileProps) => (
   <Flex
