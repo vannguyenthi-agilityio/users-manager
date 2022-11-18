@@ -23,7 +23,6 @@ import {
 } from '@chakra-ui/react';
 import { FiMenu, FiBell, FiChevronDown } from 'react-icons/fi';
 import { FaUserAlt, FaSistrix, FaGenderless, FaAngleRight, FaAngleDown } from 'react-icons/fa';
-import { MdArrowUpward } from 'react-icons/md';
 
 import { CSSTransition } from 'react-transition-group';
 
