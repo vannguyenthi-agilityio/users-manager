@@ -29,6 +29,9 @@ import {
   FaRegFileAlt
 } from 'react-icons/fa';
 
+// Constants
+import { ROUTES } from 'src/constants/routes';
+
 // Components
 import { Menu } from '../Menu';
 
@@ -45,8 +48,8 @@ const itemsUserMenu = {
   items: [
     {
       links: [
-        { name: 'List', icon: FaGenderless },
-        { name: 'View', icon: FaGenderless }
+        { name: 'List', icon: FaGenderless, href: ROUTES.USERS },
+        { name: 'View', icon: FaGenderless, href: ROUTES.USER_DETAIL.URL }
       ]
     }
   ]
@@ -57,9 +60,9 @@ const itemsInvoiceMenu = {
   items: [
     {
       links: [
-        { name: 'List', icon: FaGenderless },
-        { name: 'Preview', icon: FaGenderless },
-        { name: 'Edit', icon: FaGenderless }
+        { name: 'List', icon: FaGenderless, href: '#' },
+        { name: 'Preview', icon: FaGenderless, href: '#' },
+        { name: 'Edit', icon: FaGenderless, href: '#' }
       ]
     }
   ]
@@ -70,15 +73,15 @@ const itemsMenuHeader = {
   items: [
     {
       links: [
-        { name: 'Profile', icon: FiUser },
-        { name: 'Inbox', icon: FiMail },
-        { name: 'Chat', icon: FiMessageCircle }
+        { name: 'Profile', icon: FiUser, href: '#' },
+        { name: 'Inbox', icon: FiMail, href: '#' },
+        { name: 'Chat', icon: FiMessageCircle, href: '#' }
       ]
     },
     {
       links: [
-        { name: 'Setting', icon: FiSettings },
-        { name: 'Pricing', icon: FiDollarSign }
+        { name: 'Setting', icon: FiSettings, href: '#' },
+        { name: 'Pricing', icon: FiDollarSign, href: '#' }
       ]
     }
   ]

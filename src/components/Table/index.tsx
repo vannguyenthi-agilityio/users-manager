@@ -23,7 +23,9 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  Divider
+  Divider,
+  Link,
+  Text
 } from '@chakra-ui/react';
 
 import {
@@ -36,6 +38,9 @@ import {
   DeleteIcon,
   ExternalLinkIcon
 } from '@chakra-ui/icons';
+
+// Constants
+import { ROUTES } from 'src/constants/routes';
 
 import { Search, DefaultSearchForColumn } from '../Search';
 
@@ -310,16 +315,22 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
                             fontSize="16px"
                           >
                             <MenuItem value="view" py={3}>
-                              <ViewIcon w={4} h={4} mr={3} />
-                              View
+                              <Link href={ROUTES.USER_DETAIL.URL} display="flex" w="100%">
+                                <ViewIcon w={4} h={4} mr={3} />
+                                <Text color="default.grey.600">View</Text>
+                              </Link>
                             </MenuItem>
                             <MenuItem value="edit" py={3}>
-                              <EditIcon w={4} h={4} mr={3} />
-                              Edit
+                              <Flex>
+                                <EditIcon w={4} h={4} mr={3} />
+                                <Text color="default.grey.600">View</Text>
+                              </Flex>
                             </MenuItem>
                             <MenuItem value="delete" py={3}>
-                              <DeleteIcon w={4} h={4} mr={3} />
-                              Delete
+                              <Flex>
+                                <DeleteIcon w={4} h={4} mr={3} />
+                                <Text color="default.grey.600">Delete</Text>
+                              </Flex>
                             </MenuItem>
                           </MenuList>
                         </Menu>

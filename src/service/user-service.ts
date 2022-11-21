@@ -5,4 +5,9 @@ const getUsers = () => {
   return fetch(api + ConfigHelper.USERS).then((res) => res.json());
 };
 
-export { getUsers };
+const getUser = (id?: number) => {
+  const api = ConfigHelper.API + ConfigHelper.USERS + '/' + id;
+  return fetch(api).then((res) => res.json());
+}
+
+export { getUsers, getUser };

@@ -11,7 +11,8 @@ import {
   HStack,
   Avatar,
   AvatarBadge,
-  MenuDivider
+  MenuDivider,
+  Link
 } from '@chakra-ui/react';
 
 import { IconType } from 'react-icons';
@@ -23,6 +24,7 @@ import { CSSTransition } from 'react-transition-group';
 
 interface LinkItemProps {
   name: string;
+  href: string;
   icon?: IconType;
 }
 
@@ -67,8 +69,8 @@ export const Menu = ({
     items: [
       {
         links: [
-          { name: 'Preview', icon: null },
-          { name: 'Edit', icon: null }
+          { name: 'Preview', href: '#', icon: null },
+          { name: 'Edit', href: '#', icon: null }
         ]
       }
     ]
@@ -144,10 +146,12 @@ export const Menu = ({
                       <>
                         {item?.links?.map((link) => (
                           <MenuItem>
-                            {link.icon && <link.icon size="20" />}
-                            <Text ml={5} color="default.grey.600">
-                              {link.name}
-                            </Text>
+                            <Link href={link.href} display="flex" width="100%">
+                              {link.icon && <link.icon size="20" />}
+                              <Text ml={5} color="default.grey.600">
+                                {link.name}
+                              </Text>
+                            </Link>
                           </MenuItem>
                         ))}
                         <MenuDivider />
@@ -165,8 +169,10 @@ export const Menu = ({
                     {itemsMenu?.items?.map((item) =>
                       item?.links?.map((link) => (
                         <MenuItem>
-                          {link.icon && <link.icon size="20" />}
-                          <Text ml={5}>{link.name}</Text>
+                          <Link href={link.href} display="flex" width="100%">
+                            {link.icon && <link.icon size="20" />}
+                            <Text ml={5}>{link.name}</Text>
+                          </Link>
                         </MenuItem>
                       ))
                     )}

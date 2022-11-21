@@ -26,7 +26,7 @@ const Users = () => {
               h={8}
             />
             <Box>
-              <Link href={`${ROUTES.USER_DETAIL.URL}${user.id}`}>
+              <Link href={`${ROUTES.USER_DETAIL.URL}`}>
                 {user.fullName}
               </Link>
               <Text
