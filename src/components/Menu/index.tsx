@@ -146,7 +146,7 @@ export const Menu = ({
                       <>
                         {item?.links?.map((link) => (
                           <MenuItem>
-                            <Link href={link.href} display="flex" width="100%">
+                            <Link href={link.href} display="flex">
                               {link.icon && <link.icon size="20" />}
                               <Text ml={5} color="default.grey.600">
                                 {link.name}
