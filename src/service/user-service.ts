@@ -7,9 +7,7 @@ const getUsers = () => {
 
 const getUser = (id?: number) => {
   const api = ConfigHelper.API;
-  return fetch(`${api} + ${ConfigHelper.USERS} + '/' + ${id}`).then((res) =>
-    res.json()
-  );
+  return fetch(`${api + ConfigHelper.USERS}${id}`).then((res) => res.json());
 };
 
 export { getUsers, getUser };

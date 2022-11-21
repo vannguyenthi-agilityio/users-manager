@@ -165,11 +165,16 @@ export const Menu = ({
                     </MenuItem>
                   </Box>
                 ) : (
-                  <Box ml={{ base: '-10px', md: '-22px' }}>
+                  <Box>
                     {itemsMenu?.items?.map((item) =>
                       item?.links?.map((link) => (
                         <MenuItem>
-                          <Link href={link.href} display="flex" width="100%">
+                          <Link
+                            href={link.href}
+                            display="flex"
+                            width="100%"
+                            alignItems="center"
+                          >
                             {link.icon && <link.icon size="20" />}
                             <Text ml={5}>{link.name}</Text>
                           </Link>

@@ -30,7 +30,7 @@ import {
 } from 'react-icons/fa';
 
 // Constants
-import { ROUTES } from 'src/constants/routes';
+import { ROUTES } from '../../constants/routes';
 
 // Components
 import { Menu } from '../Menu';

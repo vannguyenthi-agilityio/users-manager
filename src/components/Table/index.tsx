@@ -40,7 +40,7 @@ import {
 } from '@chakra-ui/icons';
 
 // Constants
-import { ROUTES } from 'src/constants/routes';
+import { ROUTES } from '../../constants/routes';
 
 import { Search, DefaultSearchForColumn } from '../Search';
 

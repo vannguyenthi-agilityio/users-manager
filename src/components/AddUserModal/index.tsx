@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Box } from '@chakra-ui/react';
 
 // Utils
-import { validation } from 'src/utils/helper';
+import { validation } from '../../utils/helper';
 
 // Components
 import { FormInput } from '../FormInput';
