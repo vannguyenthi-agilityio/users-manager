@@ -1,30 +1,36 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 import {
   IconButton,
-  Avatar,
-  AvatarBadge,
   Box,
   CloseButton,
   Flex,
   HStack,
-  VStack,
   useColorModeValue,
   Drawer,
   DrawerContent,
   Text,
   useDisclosure,
   BoxProps,
-  FlexProps,
-  Menu,
-  MenuButton,
-  MenuDivider,
-  MenuItem,
-  MenuList
+  FlexProps
 } from '@chakra-ui/react';
-import { FiMenu, FiBell, FiChevronDown } from 'react-icons/fi';
-import { FaUserAlt, FaSistrix, FaGenderless, FaAngleRight, FaAngleDown } from 'react-icons/fa';
+import {
+  FiMenu,
+  FiBell,
+  FiUser,
+  FiMail,
+  FiSettings,
+  FiDollarSign,
+  FiMessageCircle
+} from 'react-icons/fi';
+import {
+  FaUserAlt,
+  FaSistrix,
+  FaGenderless,
+  FaRegFileAlt
+} from 'react-icons/fa';
 
-import { CSSTransition } from 'react-transition-group';
+// Components
+import { Menu } from '../Menu';
 
 interface SidebarProps extends BoxProps {
   onClose: () => void;
@@ -34,60 +40,78 @@ interface SidebarMobileProps extends FlexProps {
   onOpen: () => void;
 }
 
-const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
-  const [isOpenMenu, setIsOpen] = useState(false);
-  return (
-    <Box
-      transition="3s ease"
-      bgColor="secondary.200"
-      borderRight="1px"
-      w={{ base: 'full', md: 60 }}
-      pos="fixed"
-      h="full"
-      {...rest}
-    >
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontWeight="bold">
-          Logo
-        </Text>
-        <CloseButton
-          color="default.light"
-          display={{ base: 'flex', md: 'none' }}
-          onClick={onClose}
-        />
-      </Flex>
-      <Menu
-        closeOnSelect={false}
-        variant="sidebar"
-      >
-        <MenuButton
-          color="default.light"
-          w="100%"
-          textAlign="left"
-          onClick={() => {
-            setIsOpen(!isOpenMenu) }
-          }
-        >
-          <Flex alignItems="center" justifyContent="space-between">
-            <Flex alignItems="center">
-              <FaUserAlt />
-              <Text ml={5}>User</Text>
-            </Flex>
-            {isOpenMenu ? <FaAngleDown /> : <FaAngleRight />}
-          </Flex>
-        </MenuButton>
-        <MenuList pl={2} py={0}>
-          <CSSTransition in="main" timeout={500} unmountOnExit>
-            <Box ml={{ base: '-10px', md: '-22px' }}>
-              <MenuItem><FaGenderless size="20" /> <Text ml={5}>List</Text></MenuItem>
-              <MenuItem><FaGenderless size="20" /> <Text ml={5}>View</Text></MenuItem>
-            </Box>
-          </CSSTransition>
-        </MenuList>
-      </Menu>
-    </Box>
-  )
+const itemsUserMenu = {
+  label: 'User',
+  items: [
+    {
+      links: [
+        { name: 'List', icon: FaGenderless },
+        { name: 'View', icon: FaGenderless }
+      ]
+    }
+  ]
 };
+
+const itemsInvoiceMenu = {
+  label: 'Invoice',
+  items: [
+    {
+      links: [
+        { name: 'List', icon: FaGenderless },
+        { name: 'Preview', icon: FaGenderless },
+        { name: 'Edit', icon: FaGenderless }
+      ]
+    }
+  ]
+};
+
+const itemsMenuHeader = {
+  label: '',
+  items: [
+    {
+      links: [
+        { name: 'Profile', icon: FiUser },
+        { name: 'Inbox', icon: FiMail },
+        { name: 'Chat', icon: FiMessageCircle }
+      ]
+    },
+    {
+      links: [
+        { name: 'Setting', icon: FiSettings },
+        { name: 'Pricing', icon: FiDollarSign }
+      ]
+    }
+  ]
+};
+
+const SidebarContent = ({ onClose, ...rest }: SidebarProps) => (
+  <Box
+    transition="3s ease"
+    bgColor="secondary.200"
+    borderRight="1px"
+    w={{ base: 'full', md: 60 }}
+    pos="fixed"
+    h="full"
+    {...rest}
+  >
+    <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
+      <Text fontSize="2xl" fontWeight="bold">
+        Logo
+      </Text>
+      <CloseButton
+        color="default.light"
+        display={{ base: 'flex', md: 'none' }}
+        onClick={onClose}
+      />
+    </Flex>
+    <Menu type="sidebar" variant="sidebar" itemsMenu={itemsUserMenu}>
+      <FaUserAlt />
+    </Menu>
+    <Menu type="sidebar" variant="sidebar" itemsMenu={itemsInvoiceMenu}>
+      <FaRegFileAlt />
+    </Menu>
+  </Box>
+);
 
 const MobileNav = ({ onOpen, ...rest }: SidebarMobileProps) => (
   <Flex
@@ -139,35 +163,16 @@ const MobileNav = ({ onOpen, ...rest }: SidebarMobileProps) => (
           icon={<FiBell />}
         />
         <Flex alignItems="center">
-          <Menu size="sm">
-            <MenuButton
-              py={2}
-              transition="all 0.3s"
-              _focus={{ boxShadow: 'none' }}
-            >
-              <HStack>
-                <Avatar w={8} h={8}>
-                  <AvatarBadge boxSize="16px" bg="green.500" />
-                </Avatar>
-                <VStack
-                  display={{ base: 'none', md: 'flex' }}
-                  alignItems="flex-start"
-                  spacing="1px"
-                  ml="2"
-                >
-                  <Text fontSize="sm">Jone</Text>
-                </VStack>
-                <Box display={{ base: 'none', md: 'flex' }}>
-                  <FiChevronDown />
-                </Box>
-              </HStack>
-            </MenuButton>
-            <MenuList>
-              <MenuItem>Profile</MenuItem>
-              <MenuItem>Settings</MenuItem>
-              <MenuDivider />
-              <MenuItem>Sign out</MenuItem>
-            </MenuList>
+          <Menu
+            size="sm"
+            type="base"
+            userActive={{
+              name: 'John Doe',
+              role: 'Admin'
+            }}
+            itemsMenu={itemsMenuHeader}
+          >
+            <></>
           </Menu>
         </Flex>
       </HStack>

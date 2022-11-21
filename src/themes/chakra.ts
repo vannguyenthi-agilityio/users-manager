@@ -7,6 +7,7 @@ import { colors } from './commons/colors';
 import { lineHeights } from './commons/lineHeights';
 import { space } from './commons/spacing';
 import { radii } from './commons/borderRadius';
+import { shadows } from './commons/shadows';
 
 // Components
 import { Text } from './components/text';
@@ -36,6 +37,7 @@ const overrides = {
   colors,
   space,
   radii,
+  shadows,
   lineHeights
 };
 

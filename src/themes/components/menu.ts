@@ -48,21 +48,25 @@ export const Menu = {
       item: {
         color: 'default.light',
         bg: 'transparent',
+        pl: 5,
         borderRadius: 'sidebar',
         _hover: {
           bg: 'default.grey.800'
         },
         _expanded: {
-          boxShadow: 'rgb(19 17 32 / 42%) 0px 4px 8px -4px',
-          backgroundImage: 'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
+          boxShadow: 'sidebar',
+          backgroundImage:
+            'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
         },
         _focus: {
-          boxShadow: 'rgb(19 17 32 / 42%) 0px 4px 8px -4px',
-          backgroundImage: 'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
+          boxShadow: 'sidebar',
+          backgroundImage:
+            'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
         },
         _active: {
-          boxShadow: 'rgb(19 17 32 / 42%) 0px 4px 8px -4px',
-          backgroundImage: 'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
+          boxShadow: 'sidebar',
+          backgroundImage:
+            'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
         }
       },
       menu: {
