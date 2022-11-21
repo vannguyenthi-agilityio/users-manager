@@ -1,1 +1,0 @@
-{"pageProps":{"dehydratedState":{"mutations":[],"queries":[{"state":{"data":{},"dataUpdateCount":1,"dataUpdatedAt":1669048017998,"error":null,"errorUpdateCount":0,"errorUpdatedAt":0,"fetchFailureCount":0,"fetchFailureReason":null,"fetchMeta":null,"isInvalidated":false,"status":"success","fetchStatus":"idle"},"queryKey":["user"],"queryHash":"[\"user\"]"}]}},"__N_SSG":true}
