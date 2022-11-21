@@ -6,11 +6,9 @@ import { Indicator } from 'src/components/Indicator';
 import { User } from 'src/models/user';
 
 const Overview = () => {
-  const {
-    data = [],
-    isFetching
-  } = useQuery<Array<User>>(['users'], () => getUser(1));
-  console.log('data', data);
+  const { data = [], isFetching } = useQuery<Array<User>>(['users'], () =>
+    getUser(1)
+  );
 
   return isFetching ? (
     <Indicator />
@@ -26,13 +24,13 @@ const Overview = () => {
 export default Overview;
 
 export async function getStaticProps() {
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery(['user'], () => getUser())
+  await queryClient.prefetchQuery(['user'], () => getUser());
 
   return {
     props: {
       dehydratedState: dehydrate(queryClient)
     }
-  }
+  };
 }

@@ -315,7 +315,11 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
                             fontSize="16px"
                           >
                             <MenuItem value="view" py={3}>
-                              <Link href={ROUTES.USER_DETAIL.URL} display="flex" w="100%">
+                              <Link
+                                href={ROUTES.USER_DETAIL.URL}
+                                display="flex"
+                                w="100%"
+                              >
                                 <ViewIcon w={4} h={4} mr={3} />
                                 <Text color="default.grey.600">View</Text>
                               </Link>
