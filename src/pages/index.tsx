@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Users from 'src/pages/users/index';
+import Users from '../pages/users/index';
 
 const Home: NextPage = () => <Users />;
 
