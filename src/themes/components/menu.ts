@@ -94,7 +94,6 @@ export const Menu = {
       button: {
         px: 4,
         py: 3,
-        bgColor: 'default.grey.800',
         transition: 'all 0.2s',
         borderRadius: 'sidebar',
         borderWidth: 'none',
