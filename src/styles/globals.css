@@ -18,9 +18,12 @@ a.chakra-link:active {
   text-decoration: none;
 }
 
+.sidebar {
+  margin-top: 5px;
+}
+
 .sidebar .css-r6z5ec {
   width: 100%;
-  margin-top: 5px;
 }
 
 .sidebar-users .chakra-menu__menu-button {
