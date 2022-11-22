@@ -107,10 +107,20 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => (
         onClick={onClose}
       />
     </Flex>
-    <Menu type="sidebar" variant="sidebar" itemsMenu={itemsUserMenu}>
+    <Menu
+      type="sidebar"
+      variant="sidebar"
+      itemsMenu={itemsUserMenu}
+      className="sidebar"
+    >
       <FaUserAlt />
     </Menu>
-    <Menu type="sidebar" variant="sidebar" itemsMenu={itemsInvoiceMenu}>
+    <Menu
+      type="sidebar"
+      variant="sidebar"
+      itemsMenu={itemsInvoiceMenu}
+      className="sidebar"
+    >
       <FaRegFileAlt />
     </Menu>
   </Box>
@@ -143,7 +153,7 @@ const MobileNav = ({ onOpen, ...rest }: SidebarMobileProps) => (
       Logo
     </Text>
     <Flex justifyContent="space-between" w="100%">
-      <Flex alignItems="center">
+      <Flex alignItems="center" cursor="pointer">
         <IconButton
           aria-label="SearchIcon"
           icon={<FaSistrix />}

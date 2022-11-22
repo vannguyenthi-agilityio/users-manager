@@ -60,6 +60,7 @@ export const Menu = ({
     avatar: '',
     role: ''
   },
+  className ='',
   children,
   isIconAngle = true,
   type = 'base',
@@ -91,7 +92,7 @@ export const Menu = ({
     <Box>
       <MenuChakra closeOnSelect={false} variant={variant} {...props}>
         {({ isOpen }) => (
-          <Box minHeight={isOpen && type !== 'base' ? menuHeight : 'auto'}>
+          <Box minHeight={isOpen && type !== 'base' ? menuHeight : 'auto'} className={className}>
             <MenuButton
               color="default.light"
               w="100%"
