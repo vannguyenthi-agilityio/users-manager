@@ -23,5 +23,5 @@ a.chakra-link:active {
 }
 
 .sidebar-users .chakra-menu__menu-button {
-  background-color: 'rgba(231, 227, 252, 0.08)';
+  background-color: rgba(231, 227, 252, 0.08);
 }
