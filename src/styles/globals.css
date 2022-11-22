@@ -29,3 +29,9 @@ a.chakra-link:active {
 .sidebar-users .chakra-menu__menu-button {
   background-color: rgba(231, 227, 252, 0.08);
 }
+
+.sidebar .menu-active,
+.sidebar .menu-active:focus {
+  background-image: linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%);
+}
+

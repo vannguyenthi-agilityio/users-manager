@@ -327,7 +327,7 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant }) => {
                             <MenuItem value="edit" py={3}>
                               <Flex>
                                 <EditIcon w={4} h={4} mr={3} />
-                                <Text color="default.grey.600">Edit</Text>
+                                <Text color="default.grey.600">View</Text>
                               </Flex>
                             </MenuItem>
                             <MenuItem value="delete" py={3}>

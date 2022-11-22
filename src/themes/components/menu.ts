@@ -47,11 +47,11 @@ export const Menu = {
     sidebar: {
       item: {
         color: 'default.light',
-        bg: 'transparent',
+        mb: 2,
         pl: 5,
         borderRadius: 'sidebar',
         _hover: {
-          bg: 'default.grey.800'
+          backgroundColor: 'default.grey.800'
         },
         _expanded: {
           boxShadow: 'sidebar',
@@ -59,9 +59,7 @@ export const Menu = {
             'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
         },
         _focus: {
-          boxShadow: 'sidebar',
-          backgroundImage:
-            'linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%)'
+          backgroundColor: 'transparent'
         },
         _active: {
           boxShadow: 'sidebar',
@@ -73,7 +71,6 @@ export const Menu = {
         bg: 'transparent',
         borderStyle: 'none',
         borderRadius: 'sidebar',
-        mt: 1,
         _hover: {
           bg: 'default.grey.800'
         },
@@ -99,7 +96,7 @@ export const Menu = {
         borderRadius: 'sidebar',
         borderWidth: 'none',
         _hover: {
-          bg: 'gray.400'
+          bg: 'default.grey.800'
         },
         _expanded: {
           bg: 'default.grey.800'

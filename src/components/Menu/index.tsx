@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import {useRouter} from 'next/router';
+
 import {
   Menu as MenuChakra,
   MenuProps as MenuPropsChakra,
@@ -81,6 +83,8 @@ export const Menu = ({
 }: MenuProps) => {
   const [isOpenMenu, setIsOpen] = useState(false);
   const [menuHeight, setMenuHeight] = useState(0);
+  const { asPath, pathname } = useRouter();
+  console.log('asPath', asPath, 'pathname', pathname);
 
   const calcHeight = (length: number) => {
     setIsOpen(!isOpenMenu);
@@ -92,7 +96,10 @@ export const Menu = ({
     <Box>
       <MenuChakra closeOnSelect={false} variant={variant} {...props}>
         {({ isOpen }) => (
-          <Box minHeight={isOpen && type !== 'base' ? menuHeight : 'auto'} className={className}>
+          <Box
+            minHeight={isOpen && type !== 'base' ? menuHeight : 'auto'}
+            className={className}
+          >
             <MenuButton
               color="default.light"
               w="100%"
@@ -169,7 +176,7 @@ export const Menu = ({
                   <Box>
                     {itemsMenu?.items?.map((item) =>
                       item?.links?.map((link) => (
-                        <MenuItem>
+                        <MenuItem className={pathname === link.href ? 'menu-active' : ''}>
                           <Link
                             href={link.href}
                             display="flex"

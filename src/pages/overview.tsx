@@ -1,8 +1,10 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query';
 import { getUser } from 'src/service/user-service';
 // Components
 import { Indicator } from 'src/components/Indicator';
+import { Elevation } from 'src/components/Elevation';
+
 import { User } from 'src/models/user';
 
 const Overview = () => {
@@ -12,9 +14,7 @@ const Overview = () => {
     <Indicator />
   ) : (
     <Box>
-      <Heading mb={4} color="gray.600" fontSize="20px">
-        View user id = {data.id}
-      </Heading>
+      <Elevation data={data} />
     </Box>
   );
 };
