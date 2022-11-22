@@ -60,7 +60,7 @@ export const Menu = ({
     avatar: '',
     role: ''
   },
-  className ='',
+  className = '',
   children,
   isIconAngle = true,
   type = 'base',
