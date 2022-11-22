@@ -73,6 +73,7 @@ export const Menu = {
         bg: 'transparent',
         borderStyle: 'none',
         borderRadius: 'sidebar',
+        mt: 1,
         _hover: {
           bg: 'default.grey.800'
         },
