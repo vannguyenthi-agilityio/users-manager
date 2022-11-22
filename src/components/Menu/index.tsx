@@ -124,7 +124,7 @@ export const Menu = ({
               )}
             </MenuButton>
             <MenuList py={0}>
-              <CSSTransition in={true} timeout={500} unmountOnExit>
+              <CSSTransition in timeout={500} unmountOnExit>
                 {type === 'base' ? (
                   <Box>
                     <MenuItem>
