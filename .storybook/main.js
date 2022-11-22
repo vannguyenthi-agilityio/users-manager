@@ -3,13 +3,14 @@ const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
   "stories": [
-    "../src/components/**/*.stories.mdx",
-    "../src/components/**/*.stories.@(js|jsx|ts|tsx)"
+    "../src/**/*.stories.mdx",
+    "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-storysource"
+    "@storybook/addon-storysource",
+    "storybook-addon-next-router"
   ],
   webpackFinal: async (config) => {
     return {

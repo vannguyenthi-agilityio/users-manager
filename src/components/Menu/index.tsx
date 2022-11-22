@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
 import {
   Menu as MenuChakra,
@@ -83,8 +83,7 @@ export const Menu = ({
 }: MenuProps) => {
   const [isOpenMenu, setIsOpen] = useState(false);
   const [menuHeight, setMenuHeight] = useState(0);
-  const { asPath, pathname } = useRouter();
-  console.log('asPath', asPath, 'pathname', pathname);
+  const { pathname } = useRouter();
 
   const calcHeight = (length: number) => {
     setIsOpen(!isOpenMenu);
@@ -176,7 +175,11 @@ export const Menu = ({
                   <Box>
                     {itemsMenu?.items?.map((item) =>
                       item?.links?.map((link) => (
-                        <MenuItem className={pathname === link.href ? 'menu-active' : ''}>
+                        <MenuItem
+                          className={
+                            pathname === link.href ? 'menu-active' : ''
+                          }
+                        >
                           <Link
                             href={link.href}
                             display="flex"
