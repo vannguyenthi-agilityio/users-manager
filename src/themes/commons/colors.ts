@@ -43,7 +43,8 @@ export const colors = {
 
   secondary: {
     100: 'rgb(145, 85, 253)',
-    200: 'rgb(49, 45, 75)'
+    200: 'rgb(49, 45, 75)',
+    300: 'rgba(58, 53, 65, 0.12)'
   },
 
   error: {
