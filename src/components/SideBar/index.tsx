@@ -111,7 +111,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => (
       type="sidebar"
       variant="sidebar"
       itemsMenu={itemsUserMenu}
-      className="sidebar"
+      className="sidebar sidebar-users"
     >
       <FaUserAlt />
     </Menu>
