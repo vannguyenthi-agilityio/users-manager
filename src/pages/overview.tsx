@@ -24,7 +24,7 @@ const Overview = () => {
               h={8}
             />
             <Box>
-              <Link href="#">{project.techStack}</Link>
+              <Link href="#">{project.projectName}</Link>
               <Text
                 pt={2}
                 fontSize="xs"
