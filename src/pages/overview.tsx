@@ -1,4 +1,4 @@
-import { Box, HStack, Avatar, Link, Flex } from '@chakra-ui/react';
+import { Box, HStack, Avatar, Link, Flex, Progress } from '@chakra-ui/react';
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query';
 import { getUser } from 'src/service/user-service';
 // Components
@@ -39,7 +39,12 @@ const Overview = () => {
             {project.taskDone}/{project.totalTask}
           </Box>
         ),
-        progress: <Box>{(project.taskDone * 100) / project.totalTask}</Box>,
+        progress: (
+          <Box textAlign="center">
+            {Math.round((project.taskDone * 100) / project.totalTask)}%
+            <Progress colorScheme={(project.taskDone * 100) / project.totalTask > 75 ? 'green' : (project.taskDone * 100) / project.totalTask > 50 ? 'purple' : 'red'} size='xs' value={(project.taskDone * 100) / project.totalTask} borderRadius="lg" />
+          </Box>
+        ),
         hours: (
           <Box>
             {project.timeDone}:{project.totalTime}
