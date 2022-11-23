@@ -30,13 +30,12 @@ interface LinkItemProps {
   icon?: IconType;
 }
 
-interface LinksItemProps {
-  links: Array<LinkItemProps>;
-}
-
 interface ItemsMenuProps {
   label?: string;
-  items?: Array<LinksItemProps>;
+  items?: {
+    key: string;
+    links: Array<LinkItemProps>;
+  }[];
 }
 
 interface UserActiveProps {
@@ -71,6 +70,7 @@ export const Menu = ({
     label: 'User',
     items: [
       {
+        key: 'user',
         links: [
           { name: 'Preview', href: '#', icon: null },
           { name: 'Edit', href: '#', icon: null }
@@ -124,7 +124,7 @@ export const Menu = ({
               )}
             </MenuButton>
             <MenuList py={0}>
-              <CSSTransition in timeout={500} unmountOnExit>
+              <CSSTransition in={isOpen} timeout={500} unmountOnExit>
                 {type === 'base' ? (
                   <Box>
                     <MenuItem>
@@ -150,9 +150,9 @@ export const Menu = ({
                     </MenuItem>
                     <MenuDivider mt={0} />
                     {itemsMenu?.items?.map((item) => (
-                      <>
+                      <Box key={item.key}>
                         {item?.links?.map((link) => (
-                          <MenuItem>
+                          <MenuItem key={link.name}>
                             <Link href={link.href} display="flex" width="100%">
                               {link.icon && <link.icon size="20" />}
                               <Text ml={5} color="default.grey.600">
@@ -162,7 +162,7 @@ export const Menu = ({
                           </MenuItem>
                         ))}
                         <MenuDivider />
-                      </>
+                      </Box>
                     ))}
                     <MenuItem py={2}>
                       <FiLogOut size="20" />

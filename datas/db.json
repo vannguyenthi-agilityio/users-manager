@@ -7,12 +7,31 @@
       "email": "jone.nguyen@asnet.com.vn",
       "avatar": "./images/user.png",
       "role": "Editor",
+      "taxId": "8894",
       "status": "Active",
       "plan": "Enterprise",
       "totalTask": 10,
       "totalProject": 3,
       "language": "English",
-      "country": "USA"
+      "country": "USA",
+      "projects": [
+        {
+          "projectName": "Hoffman Website",
+          "techStack": "HTML project",
+          "totalTask": "110",
+          "taskDone": "98",
+          "totalTime": "45",
+          "timeDone": "12"
+        },
+        {
+          "projectName": "Foodista Mobile App",
+          "techStack": "Xamarin project",
+          "totalTask": "63",
+          "taskDone": "7",
+          "totalTime": "89",
+          "timeDone": "19"
+        }
+      ]
     },
     {
       "id": 2,

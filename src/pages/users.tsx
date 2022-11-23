@@ -51,7 +51,7 @@ const Users = () => {
         Search Filter
       </Heading>
       <Box boxShadow="xs" rounded="md" bg="white">
-        <BasicTable data={dataTable} columns={columnsUsers} />
+        <BasicTable data={dataTable} columns={columnsUsers} type="users" />
       </Box>
     </Box>
   );

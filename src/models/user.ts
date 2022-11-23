@@ -1,5 +1,14 @@
 import { USER } from 'src/constants/user';
 
+export interface Project {
+  projectName: string;
+  techStack?: string;
+  totalTask?: number;
+  taskDone?: number;
+  totalTime?: number;
+  timeDone?: number;
+}
+
 export interface User {
   id: number;
   fullName: string;
@@ -14,4 +23,5 @@ export interface User {
   country?: string;
   totalProject?: number;
   totalTask?: number;
+  projects?: Project[];
 }

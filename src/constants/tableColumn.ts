@@ -37,3 +37,27 @@ export const columnsUsers = [
     ]
   }
 ];
+
+export const columnsProjects = [
+  {
+    Header: 'Info',
+    columns: [
+      {
+        header: 'Project',
+        accessor: 'projectName'
+      },
+      {
+        header: 'Total Tasks',
+        accessor: 'totalTask'
+      },
+      {
+        header: 'Progress',
+        accessor: 'progress'
+      },
+      {
+        header: 'Hours',
+        accessor: 'hours'
+      }
+    ]
+  }
+];

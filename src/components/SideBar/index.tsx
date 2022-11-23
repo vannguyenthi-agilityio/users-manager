@@ -47,6 +47,7 @@ const itemsUserMenu = {
   label: 'User',
   items: [
     {
+      key: 'user',
       links: [
         { name: 'List', icon: FaGenderless, href: ROUTES.USERS },
         { name: 'View', icon: FaGenderless, href: ROUTES.USER_DETAIL.URL }
@@ -59,6 +60,7 @@ const itemsInvoiceMenu = {
   label: 'Invoice',
   items: [
     {
+      key: 'invoice',
       links: [
         { name: 'List', icon: FaGenderless, href: '#' },
         { name: 'Preview', icon: FaGenderless, href: '#' },
@@ -72,6 +74,7 @@ const itemsMenuHeader = {
   label: '',
   items: [
     {
+      key: 'menu1',
       links: [
         { name: 'Profile', icon: FiUser, href: '#' },
         { name: 'Inbox', icon: FiMail, href: '#' },
@@ -79,6 +82,7 @@ const itemsMenuHeader = {
       ]
     },
     {
+      key: 'menu2',
       links: [
         { name: 'Setting', icon: FiSettings, href: '#' },
         { name: 'Pricing', icon: FiDollarSign, href: '#' }

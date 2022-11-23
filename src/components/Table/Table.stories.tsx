@@ -89,7 +89,7 @@ const data = {
 };
 
 const Template: Storybook.ComponentStory<typeof Table> = (args) => (
-  <Table data={data.users} columns={columnsUsers} {...args} />
+  <Table data={data.users} columns={columnsUsers} type="users" {...args} />
 );
 
 export const Default = Template.bind({});
