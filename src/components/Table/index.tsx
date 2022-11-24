@@ -179,28 +179,32 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant, type }) => {
       <Table {...getTableProps()} variant={variant || 'simple'} size="sm">
         <Thead bg="default.bgHeadTable">
           <Tr h="62px">
-            <Th px={['4', '4', '6']} color="gray.300" w="8">
-              <Checkbox
-                colorScheme="orange"
-                isChecked={allChecked}
-                isIndeterminate={isIndeterminate}
-                onChange={(e) =>
-                  setCheckedItems([e.target.checked, e.target.checked])
-                }
-              />
-            </Th>
+            {type === 'users' && (
+              <Th px={['4', '4', '6']} color="gray.300" w="8">
+                <Checkbox
+                  colorScheme="orange"
+                  isChecked={allChecked}
+                  isIndeterminate={isIndeterminate}
+                  onChange={(e) =>
+                    setCheckedItems([e.target.checked, e.target.checked])
+                  }
+                />
+              </Th>
+            )}
             {headerGroups[1].headers.map((column) => (
               <Th
                 userSelect="none"
                 {...column.getHeaderProps(column.getSortByToggleProps())}
               >
                 <Flex align="center" className="table-users" minW="120px">
-                  <Divider
-                    orientation="vertical"
-                    borderWidth={1}
-                    h={6}
-                    mr={4}
-                  />
+                  {column.render('header') !== 'Project' &&
+                    <Divider
+                      orientation="vertical"
+                      borderWidth={1}
+                      h={6}
+                      mr={4}
+                    />
+                  }
                   {column.render('header')}
                   {!column.isSorted && (
                     <Button
@@ -256,16 +260,18 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant, type }) => {
             prepareRow(row);
             return (
               <Tr {...row.getRowProps()}>
-                <Td px={['4', '4', '6']} color="gray.300" w="8">
-                  <Checkbox
-                    colorScheme="gray"
-                    isChecked={allChecked}
-                    isIndeterminate={isIndeterminate}
-                    onChange={(e) =>
-                      setCheckedItems([e.target.checked, e.target.checked])
-                    }
-                  />
-                </Td>
+                {type === 'users' && (
+                  <Td px={['4', '4', '6']} color="gray.300" w="8">
+                    <Checkbox
+                      colorScheme="gray"
+                      isChecked={allChecked}
+                      isIndeterminate={isIndeterminate}
+                      onChange={(e) =>
+                        setCheckedItems([e.target.checked, e.target.checked])
+                      }
+                    />
+                  </Td>
+                )}
                 {row.cells.map((cell) => {
                   const status = cell.row.values.status?.toLowerCase();
                   const role = cell.row.values.role?.toLowerCase();
@@ -273,7 +279,7 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant, type }) => {
                     <Td
                       {...cell.getCellProps()}
                       maxW="250px"
-                      pl={9}
+                      pl={cell.column.id === 'projectName' ? 4 : 9}
                       color={`${
                         cell.column.id === 'email'
                           ? 'default.red.500'

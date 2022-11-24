@@ -1,6 +1,7 @@
 import { USER } from 'src/constants/user';
 
 export interface Project {
+  id: number;
   projectName: string;
   techStack?: string;
   totalTask?: number;

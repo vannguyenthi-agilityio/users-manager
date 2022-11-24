@@ -45,7 +45,7 @@ export const Pagination = ({
   });
   const pageCount = Math.ceil(totalCount / pagination.pageSizeState);
   const checkTotalCount =
-    pagination.pageSizeState * pagination.currentPage > totalCount;
+    pagination.pageSizeState * pagination.currentPage > totalCount && pagination.pageSizeState < totalCount;
   const valueStartPage = checkTotalCount
     ? totalCount
     : pagination.pageSizeState * pagination.currentPage -

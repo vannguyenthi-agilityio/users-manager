@@ -56,9 +56,9 @@ const Overview = () => {
   return isFetching ? (
     <Indicator />
   ) : (
-    <Flex>
+    <Flex flexDirection={{sm: 'column', md: 'row'}}>
       <Elevation userInfo={data} />
-      <Box w="inherit" boxShadow="xs" rounded="md" bg="white">
+      <Box w={{ sm: '100%', md: 'calc(100 - (340px * 100)/1028)' }} boxShadow="xs" rounded="md" bg="white">
         <BasicTable data={dataTable} columns={columnsProjects} />
       </Box>
     </Flex>

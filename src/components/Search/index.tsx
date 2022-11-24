@@ -63,7 +63,10 @@ export const DefaultSearchForColumn = ({
 }: FilterProps) =>
   id !== 'email' &&
   id !== 'userName' &&
-  id !== 'actions' && (
+  id !== 'actions' &&
+  id !== 'totalTask' &&
+  id !== 'progress' && 
+  id !== 'projectName' && (
     <Input
       value={searchValue || ''}
       onChange={(e) => {
