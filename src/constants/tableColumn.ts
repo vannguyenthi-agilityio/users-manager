@@ -40,7 +40,7 @@ export const columnsUsers = [
 
 export const columnsProjects = [
   {
-    Header: 'Info',
+    Header: 'InfoProject',
     columns: [
       {
         header: 'Project',

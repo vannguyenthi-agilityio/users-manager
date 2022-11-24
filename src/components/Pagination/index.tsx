@@ -46,14 +46,16 @@ export const Pagination = ({
   const pageCount = Math.ceil(totalCount / pagination.pageSizeState);
   const checkTotalCount =
     pagination.pageSizeState * pagination.currentPage > totalCount;
-  const valueStartPage = checkTotalCount && pagination.pageSizeState < totalCount
-    ? totalCount
-    : pagination.pageSizeState * pagination.currentPage -
-      pagination.pageSizeState +
-      1;
-  const valueEndPage = checkTotalCount && pagination.pageSizeState > totalCount
-    ? totalCount
-    : pagination.pageSizeState * pagination.currentPage;
+  const valueStartPage =
+    checkTotalCount && pagination.pageSizeState < totalCount
+      ? totalCount
+      : pagination.pageSizeState * pagination.currentPage -
+        pagination.pageSizeState +
+        1;
+  const valueEndPage =
+    checkTotalCount && pagination.pageSizeState > totalCount
+      ? totalCount
+      : pagination.pageSizeState * pagination.currentPage;
 
   const nextPageChange = () => {
     const newOffset: number = offset + pagination.pageSizeState;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 
 import {
@@ -84,6 +84,7 @@ export const Menu = ({
   const [isOpenMenu, setIsOpen] = useState(false);
   const [menuHeight, setMenuHeight] = useState(0);
   const { pathname } = useRouter();
+  const nodeRef = useRef(null);
 
   const calcHeight = (length: number) => {
     setIsOpen(!isOpenMenu);
@@ -124,9 +125,14 @@ export const Menu = ({
               )}
             </MenuButton>
             <MenuList py={0}>
-              <CSSTransition in={isOpen} timeout={500} unmountOnExit>
+              <CSSTransition
+                in={isOpen}
+                timeout={500}
+                unmountOnExit
+                nodeRef={nodeRef}
+              >
                 {type === 'base' ? (
-                  <Box>
+                  <Box ref={nodeRef}>
                     <MenuItem>
                       <Flex py={3}>
                         <Avatar w={8} h={8} src={userActive.avatar}>
@@ -173,25 +179,28 @@ export const Menu = ({
                   </Box>
                 ) : (
                   <Box>
-                    {itemsMenu?.items?.map((item) =>
-                      item?.links?.map((link) => (
-                        <MenuItem
-                          className={
-                            pathname === link.href ? 'menu-active' : ''
-                          }
-                        >
-                          <Link
-                            href={link.href}
-                            display="flex"
-                            width="100%"
-                            alignItems="center"
+                    {itemsMenu?.items?.map((item) => (
+                      <Box key={item.key}>
+                        {item?.links?.map((link) => (
+                          <MenuItem
+                            key={link.name}
+                            className={
+                              pathname === link.href ? 'menu-active' : ''
+                            }
                           >
-                            {link.icon && <link.icon size="20" />}
-                            <Text ml={5}>{link.name}</Text>
-                          </Link>
-                        </MenuItem>
-                      ))
-                    )}
+                            <Link
+                              href={link.href}
+                              display="flex"
+                              width="100%"
+                              alignItems="center"
+                            >
+                              {link.icon && <link.icon size="20" />}
+                              <Text ml={5}>{link.name}</Text>
+                            </Link>
+                          </MenuItem>
+                        ))}
+                      </Box>
+                    ))}
                   </Box>
                 )}
               </CSSTransition>

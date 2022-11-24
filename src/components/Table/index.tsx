@@ -167,13 +167,15 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant, type }) => {
               <ExternalLinkIcon w={4} h={4} ml={3} />
             </Button>
           )}
-          <Flex>
-            <Search
-              globalSearch={state.globalFilter}
-              setGlobalSearch={setGlobalFilter}
-            />
-            {type === 'users' && <AddUserModal />}
-          </Flex>
+          {type === 'users' && (
+            <Flex>
+              <Search
+                globalSearch={state.globalFilter}
+                setGlobalSearch={setGlobalFilter}
+              />
+              <AddUserModal />
+            </Flex>
+          )}
         </Flex>
       </Box>
       <Table {...getTableProps()} variant={variant || 'simple'} size="sm">
@@ -196,7 +198,7 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant, type }) => {
                 userSelect="none"
                 {...column.getHeaderProps(column.getSortByToggleProps())}
               >
-                <Flex align="center" className="table-users" minW="120px">
+                <Flex align="center" className="" minW="150px">
                   {column.render('header') !== 'Project' && (
                     <Divider
                       orientation="vertical"

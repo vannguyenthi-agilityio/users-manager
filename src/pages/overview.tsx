@@ -16,7 +16,7 @@ const Overview = () => {
   const dataTable = data?.projects.length
     ? data.projects.map((project) => ({
         projectName: (
-          <HStack spacing={2} key={project.projectName}>
+          <HStack spacing={2} key={project.id}>
             <Avatar
               name={project.projectName}
               src="https://bit.ly/broken-link"
@@ -44,8 +44,10 @@ const Overview = () => {
             {Math.round((project.taskDone * 100) / project.totalTask)}%
             <Progress
               colorScheme={
-                ((project.taskDone * 100) / project.totalTask >= 75 && 'green') ||
-                ((project.taskDone * 100) / project.totalTask >= 50 && 'purple') ||
+                ((project.taskDone * 100) / project.totalTask >= 75 &&
+                  'green') ||
+                ((project.taskDone * 100) / project.totalTask >= 50 &&
+                  'purple') ||
                 ((project.taskDone * 100) / project.totalTask < 50 && 'red')
               }
               size="xs"
@@ -65,9 +67,15 @@ const Overview = () => {
   return isFetching ? (
     <Indicator />
   ) : (
-    <Flex flexDirection={{sm: 'column', md: 'row'}}>
+    <Flex flexDirection={{ sm: 'column', md: 'row' }}>
       <Elevation userInfo={data} />
-      <Box w={{ sm: '100%', md: 'calc(100 - (340px * 100)/1028)' }} boxShadow="xs" rounded="md" bg="white">
+      <Box
+        w={{ sm: '100%', md: 'calc(800 * 100%/1028)' }}
+        boxShadow="xs"
+        rounded="md"
+        bg="white"
+        ml={8}
+      >
         <BasicTable data={dataTable} columns={columnsProjects} />
       </Box>
     </Flex>

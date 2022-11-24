@@ -8,6 +8,6 @@ type LayoutProp = {
 
 export const Layout = ({ children }: LayoutProp) => (
   <Sidebar>
-    <Box px="5">{children}</Box>
+    <Box>{children}</Box>
   </Sidebar>
 );
