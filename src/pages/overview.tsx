@@ -42,7 +42,16 @@ const Overview = () => {
         progress: (
           <Box textAlign="center">
             {Math.round((project.taskDone * 100) / project.totalTask)}%
-            <Progress colorScheme={(project.taskDone * 100) / project.totalTask > 75 ? 'green' : (project.taskDone * 100) / project.totalTask > 50 ? 'purple' : 'red'} size='xs' value={(project.taskDone * 100) / project.totalTask} borderRadius="lg" />
+            <Progress
+              colorScheme={
+                ((project.taskDone * 100) / project.totalTask >= 75 && 'green') ||
+                ((project.taskDone * 100) / project.totalTask >= 50 && 'purple') ||
+                ((project.taskDone * 100) / project.totalTask < 50 && 'red')
+              }
+              size="xs"
+              value={(project.taskDone * 100) / project.totalTask}
+              borderRadius="lg"
+            />
           </Box>
         ),
         hours: (

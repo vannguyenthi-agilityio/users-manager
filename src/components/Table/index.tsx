@@ -197,14 +197,14 @@ const BasicTable: React.FC<TableType> = ({ data, columns, variant, type }) => {
                 {...column.getHeaderProps(column.getSortByToggleProps())}
               >
                 <Flex align="center" className="table-users" minW="120px">
-                  {column.render('header') !== 'Project' &&
+                  {column.render('header') !== 'Project' && (
                     <Divider
                       orientation="vertical"
                       borderWidth={1}
                       h={6}
                       mr={4}
                     />
-                  }
+                  )}
                   {column.render('header')}
                   {!column.isSorted && (
                     <Button

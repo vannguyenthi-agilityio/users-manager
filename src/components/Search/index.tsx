@@ -65,7 +65,7 @@ export const DefaultSearchForColumn = ({
   id !== 'userName' &&
   id !== 'actions' &&
   id !== 'totalTask' &&
-  id !== 'progress' && 
+  id !== 'progress' &&
   id !== 'projectName' && (
     <Input
       value={searchValue || ''}
