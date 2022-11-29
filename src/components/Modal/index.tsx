@@ -72,6 +72,8 @@ export const Modal = ({
         variant="transparent"
         onClick={handleOnOpen}
         p={0}
+        minW="30px"
+        cursor="pointer"
         textTransform="inherit"
       >
         {label}

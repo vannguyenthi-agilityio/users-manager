@@ -14,7 +14,10 @@ import { User } from '../../../models/user';
 interface EditUserModalProps {
   isOpen?: boolean;
   userInfo?: User;
-  onSubmitModal?: (event: React.MouseEvent<HTMLButtonElement>, id?: number) => void;
+  onSubmitModal?: (
+    event: React.MouseEvent<HTMLButtonElement>,
+    id?: number
+  ) => void;
 }
 
 interface StateUser {
@@ -30,9 +33,11 @@ interface StateUser {
   status: string;
 }
 
-const EditUserModal = (
-  { isOpen = false, onSubmitModal, userInfo }: EditUserModalProps,
-  ) => {
+const EditUserModal = ({
+  isOpen = false,
+  onSubmitModal,
+  userInfo
+}: EditUserModalProps) => {
   const [isOpenModal, setOpenModal] = useState<boolean>(isOpen);
 
   const [valueFilterRole, setValueRole] = useState<string>('Editor');

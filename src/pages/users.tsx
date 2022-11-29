@@ -57,213 +57,226 @@ const Users = () => {
   const allChecked = checkedItems.every(Boolean);
   const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
 
-  const handleDelete = useCallback((e, id) => {
-    e.preventDefault();
-    settableDataUser(tableDataUser.filter((v, i) => i !== id));
-    setCloseModal(false);
-  }, [tableDataUser]);
+  const handleDelete = useCallback(
+    (e, id) => {
+      e.preventDefault();
+      const tableDataUserFilter = tableDataUser.filter(
+        (user) => user.id !== Number(id)
+      );
+      settableDataUser(tableDataUserFilter);
+      setCloseModal(false);
+    },
+    [tableDataUser]
+  );
 
-  const handleEdit = useCallback((e, id) => {
-    e.preventDefault();
-    setCloseModal(false);
-  }, [tableDataUser]);
+  const handleEdit = useCallback(
+    (e, id) => {
+      e.preventDefault();
+      setCloseModal(false);
+    },
+    [tableDataUser]
+  );
 
   const columnsTableUsers = useMemo(
-    () => [{
-      Header: 'Info',
-      columns: [
-        {
-          header: (
-            <Checkbox
-              colorScheme="orange"
-              isChecked={allChecked}
-              isIndeterminate={isIndeterminate}
-              onChange={(e) =>
-                setCheckedItems([e.target.checked, e.target.checked])
-              }
-            />
-          ),
-          accessor: 'checkBox'
-        },
-        {
-          header: 'User',
-          accessor: 'userName',
-          hasSort: true,
-          Cell: (cell) => {
-            const { row } = cell;
-            return (
-              <Text
-                className="text-overflow"
-                color="default.grey.600"
-                value={row.values.userName}
+    () => [
+      {
+        Header: 'Info',
+        columns: [
+          {
+            header: (
+              <Checkbox
+                colorScheme="orange"
+                isChecked={allChecked}
+                isIndeterminate={isIndeterminate}
+                onChange={(e) =>
+                  setCheckedItems([e.target.checked, e.target.checked])
+                }
               />
-            );
-          }
-        },
-        {
-          header: 'Email',
-          accessor: 'email',
-          Cell: (cell) => {
-            const { row } = cell;
-            return (
-              <Text
-                className="text-overflow"
-                color="default.grey.500"
-                value={row.values.email}
-                pl={4}
-              />
-            );
-          }
-        },
-        {
-          header: 'Role',
-          accessor: 'role',
-          Filter: Filter,
-          filter: 'includes',
-          hasFilter: true,
-          Cell: (cell) => {
-            const { row } = cell;
-            return (
-              <Text
-                className="text-overflow"
-                color="default.grey.600"
-                value={row.values.role}
-                pl={4}
-              />
-            );
-          }
-        },
-        {
-          header: 'Plan',
-          accessor: 'plan',
-          Filter: Filter,
-          filter: 'includes',
-          hasFilter: true,
-          Cell: (cell) => {
-            const { row } = cell;
-            return (
-              <Text
-                className="text-overflow"
-                color="default.grey.600"
-                value={row.values.plan}
-                pl={4}
-              />
-            );
-          }
-        },
-        {
-          header: 'Status',
-          accessor: 'status',
-          Filter: Filter,
-          filter: 'includes',
-          hasFilter: true,
-          Cell: (cell) => {
-            const { row } = cell;
-            return (
-              <StatusLabel
-                variant={getBadgeVariant(row.values.status?.toLowerCase())}
-                value={row.values.status}
-                ml={4}
-              />
-            );
-          }
-        },
-        {
-          header: 'Actions',
-          accessor: 'actions',
-          Cell: (tableProps) => {
-            const { row } = tableProps;
-            const userFilter = data?.filter((user) => user.id === Number(row.id));
-            const userEdit = Object(userFilter[0]);
-            return (
-              <Menu closeOnSelect>
-                <MenuButton
-                  w={6}
-                  h={10}
-                  transform="rotate(90deg)"
-                  fontSize="20px"
-                  ml="30px"
-                >
-                  ...
-                </MenuButton>
-                <MenuList minWidth="128px" color="gray.600" fontSize="16px">
-                  <MenuItem value="view" py={3}>
-                    <Link href={ROUTES.USER_DETAIL.URL} display="flex">
-                      <ViewIcon w={4} h={4} mr={3} />
-                      <Text color="default.grey.600" value="View" />
-                    </Link>
-                  </MenuItem>
-                  <MenuItem value="edit" py={3}>
-                    <Flex>
-                      <EditIcon w={4} h={4} mr={3} />
-                      <EditUserModal
-                        userInfo={userEdit}
-                        isOpen={isOpenModal}
-                        onSubmitModal={(event) => handleEdit(event, row.index)}
-                      />
-                    </Flex>
-                  </MenuItem>
-                  <MenuItem
-                    value="delete"
-                    py={3}
+            ),
+            accessor: 'checkBox'
+          },
+          {
+            header: 'User',
+            accessor: 'userName',
+            hasSort: true,
+            Cell: (cell) => {
+              const { row } = cell;
+              return (
+                <Text
+                  className="text-overflow"
+                  color="default.grey.600"
+                  value={row.values.userName}
+                />
+              );
+            }
+          },
+          {
+            header: 'Email',
+            accessor: 'email',
+            Cell: (cell) => {
+              const { row } = cell;
+              return (
+                <Text
+                  className="text-overflow"
+                  color="default.grey.500"
+                  value={row.values.email}
+                  pl={4}
+                />
+              );
+            }
+          },
+          {
+            header: 'Role',
+            accessor: 'role',
+            Filter: Filter,
+            filter: 'includes',
+            hasFilter: true,
+            Cell: (cell) => {
+              const { row } = cell;
+              return (
+                <Text
+                  className="text-overflow"
+                  color="default.grey.600"
+                  value={row.values.role}
+                  pl={4}
+                />
+              );
+            }
+          },
+          {
+            header: 'Plan',
+            accessor: 'plan',
+            Filter: Filter,
+            filter: 'includes',
+            hasFilter: true,
+            Cell: (cell) => {
+              const { row } = cell;
+              return (
+                <Text
+                  className="text-overflow"
+                  color="default.grey.600"
+                  value={row.values.plan}
+                  pl={4}
+                />
+              );
+            }
+          },
+          {
+            header: 'Status',
+            accessor: 'status',
+            Filter: Filter,
+            filter: 'includes',
+            hasFilter: true,
+            Cell: (cell) => {
+              const { row } = cell;
+              return (
+                <StatusLabel
+                  variant={getBadgeVariant(row.values.status?.toLowerCase())}
+                  value={row.values.status}
+                  ml={4}
+                />
+              );
+            }
+          },
+          {
+            header: 'Actions',
+            accessor: 'actions',
+            Cell: (tableProps) => {
+              const { row } = tableProps;
+              const userFilter = data?.filter(
+                (user) => user.id === Number(row.id)
+              );
+              const userEdit = Object(userFilter[0]);
+              return (
+                <Menu closeOnSelect>
+                  <MenuButton
+                    w={6}
+                    h={10}
+                    transform="rotate(90deg)"
+                    fontSize="20px"
+                    ml="30px"
                   >
-                    <Flex>
-                      <DeleteIcon w={4} h={4} mr={3} />
-                      <DeleteUserModal
-                        isOpen={isOpenModal}
-                        onSubmitModal={(event) => handleDelete(event, row.index)}
-                      />
-                    </Flex>
-                  </MenuItem>
-                </MenuList>
-              </Menu>
-            )
+                    ...
+                  </MenuButton>
+                  <MenuList minWidth="128px" color="gray.600" fontSize="16px">
+                    <MenuItem value="view" py={3}>
+                      <Link href={ROUTES.USER_DETAIL.URL} display="flex">
+                        <ViewIcon w={4} h={4} mr={3} />
+                        <Text color="default.grey.600" value="View" />
+                      </Link>
+                    </MenuItem>
+                    <MenuItem value="edit" py={3}>
+                      <Flex>
+                        <EditIcon w={4} h={4} mr={3} />
+                        <EditUserModal
+                          userInfo={userEdit}
+                          isOpen={isOpenModal}
+                          onSubmitModal={(event) =>
+                            handleEdit(event, row.index)
+                          }
+                        />
+                      </Flex>
+                    </MenuItem>
+                    <MenuItem value="delete" py={3}>
+                      <Flex>
+                        <DeleteIcon w={4} h={4} mr={3} />
+                        <DeleteUserModal
+                          isOpen={isOpenModal}
+                          onSubmitModal={(event) =>
+                            handleDelete(event, row.index)
+                          }
+                        />
+                      </Flex>
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+              );
+            }
           }
-        }
-      ],
-      ...columnsUsers
-    }
-  ],
-  [tableDataUser, isOpenModal, isFetching]
-);
+        ],
+        ...columnsUsers
+      }
+    ],
+    [tableDataUser, isOpenModal, isFetching]
+  );
 
-const dataTable = tableDataUser.length
-  ? tableDataUser.map((user) => ({
-      checkBox: (
-        <Checkbox
-          colorScheme="orange"
-          isChecked={allChecked}
-          isIndeterminate={isIndeterminate}
-          onChange={(e) =>
-            setCheckedItems([e.target.checked, e.target.checked])
-          }
-        />
-      ),
-      userName: (
-        <HStack spacing={2} key={user.id}>
-          <Avatar
-            name={user.fullName}
-            src="https://bit.ly/broken-link"
-            w={8}
-            h={8}
+  const dataTable = tableDataUser.length
+    ? tableDataUser.map((user) => ({
+        checkBox: (
+          <Checkbox
+            colorScheme="orange"
+            isChecked={allChecked}
+            isIndeterminate={isIndeterminate}
+            onChange={(e) =>
+              setCheckedItems([e.target.checked, e.target.checked])
+            }
           />
-          <Box>
-            <Link href={`${ROUTES.USER_DETAIL.URL}`}>{user.fullName}</Link>
-            <Text
-              pt={2}
-              fontSize="xs"
-              value={user.userName}
-              variant="caption"
+        ),
+        userName: (
+          <HStack spacing={2} key={user.id}>
+            <Avatar
+              name={user.fullName}
+              src="https://bit.ly/broken-link"
+              w={8}
+              h={8}
             />
-          </Box>
-        </HStack>
-      ),
-      email: user.email,
-      role: user.role,
-      plan: user.plan,
-      status: user.status
-    }))
-  : [];
+            <Box>
+              <Link href={`${ROUTES.USER_DETAIL.URL}`}>{user.fullName}</Link>
+              <Text
+                pt={2}
+                fontSize="xs"
+                value={user.userName}
+                variant="caption"
+              />
+            </Box>
+          </HStack>
+        ),
+        email: user.email,
+        role: user.role,
+        plan: user.plan,
+        status: user.status
+      }))
+    : [];
 
   return isFetching ? (
     <Indicator />
