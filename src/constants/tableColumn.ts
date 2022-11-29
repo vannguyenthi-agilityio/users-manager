@@ -1,3 +1,4 @@
+// Components
 import { Filter } from 'src/components/Filter';
 
 export const columnsUsers = [

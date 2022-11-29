@@ -13,6 +13,64 @@ import { User } from 'src/models/user';
 const Overview = () => {
   const { data, isFetching } = useQuery<User>(['users'], () => getUser(1));
 
+  const columnsTableProjects = [
+    {
+      Header: 'InfoProject',
+      columns: [
+        {
+          header: 'Project',
+          accessor: 'projectName'
+        },
+        {
+          header: 'Total Tasks',
+          accessor: 'totalTask',
+          Cell: (cell) => {
+            const { row } = cell;
+            return (
+              <Text
+                className="text-overflow"
+                color="default.grey.600"
+                pl={4}
+                value={row.values.totalTask}
+              />
+            );
+          }
+        },
+        {
+          header: 'Progress',
+          accessor: 'progress',
+          Cell: (cell) => {
+            const { row } = cell;
+            return (
+              <Text
+                className="text-overflow"
+                color="default.grey.600"
+                pl={4}
+                value={row.values.progress}
+              />
+            );
+          }
+        },
+        {
+          header: 'Hours',
+          accessor: 'hours',
+          Cell: (cell) => {
+            const { row } = cell;
+            return (
+              <Text
+                className="text-overflow"
+                color="default.grey.600"
+                pl={4}
+                value={row.values.hours}
+              />
+            );
+          }
+        }
+      ],
+      ...columnsProjects
+    }
+  ];
+
   const dataTable = data?.projects.length
     ? data.projects.map((project) => ({
         projectName: (
@@ -75,8 +133,9 @@ const Overview = () => {
         rounded="md"
         bg="white"
         ml={8}
+        className="table"
       >
-        <BasicTable data={dataTable} columns={columnsProjects} />
+        <BasicTable dataTable={dataTable} columnsTable={columnsTableProjects} />
       </Box>
     </Flex>
   );

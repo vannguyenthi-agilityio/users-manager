@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Modal as ModalChakra,
   ModalProps as ModalPropsChakra,
@@ -17,6 +17,7 @@ import { Text } from '../Text';
 
 export interface ModalProps extends ModalPropsChakra {
   title?: string;
+  label?: string;
   description?: string;
   children: React.ReactNode;
   size?: string;
@@ -27,13 +28,14 @@ export interface ModalProps extends ModalPropsChakra {
   isDisabledSubmit?: boolean;
   isDisabledOutsideClick?: boolean;
   isLoading?: boolean;
-  onSubmit?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onSubmit?: (event: React.MouseEvent<HTMLButtonElement>, id?: number) => void;
 }
 
 export const Modal = ({
   isOpen = false,
   onClose,
   title,
+  label,
   description,
   returnFocusOnClose = false,
   isCentered = false,
@@ -50,9 +52,15 @@ export const Modal = ({
   ...props
 }: ModalProps) => {
   const btnRef = React.useRef();
+  const [isOpenModal, setOpenModal] = useState(isOpen);
+  const handleOnOpen = () => {
+    setOpenModal(true);
+    return;
+  };
 
   const handleOnClose = () => {
     if (!isDisabledOutsideClick) {
+      setOpenModal(false);
       onClose();
     }
     return;
@@ -60,10 +68,18 @@ export const Modal = ({
 
   return (
     <>
+      <Button
+        variant="transparent"
+        onClick={handleOnOpen}
+        p={0}
+        textTransform="inherit"
+      >
+        {label}
+      </Button>
       <ModalChakra
         size={size}
         variant={variant}
-        isOpen={isOpen}
+        isOpen={isOpenModal}
         onClose={handleOnClose}
         finalFocusRef={btnRef}
         isCentered={isCentered}
@@ -83,13 +99,14 @@ export const Modal = ({
               letterSpacing="wide"
               w="100%"
               marginRight="30px"
+              color="default.grey.600"
               value={title}
             />
             <CloseButton
               outline="0"
               borderColor="transparent"
               color="default.grey.500"
-              onClick={onClose}
+              onClick={handleOnClose}
             />
           </ModalHeader>
           <ModalBody>
@@ -112,7 +129,7 @@ export const Modal = ({
                   label={cancelButtonText}
                   variant="transparent"
                   mr={3}
-                  onClick={onClose}
+                  onClick={handleOnClose}
                 />
               )}
             </Box>

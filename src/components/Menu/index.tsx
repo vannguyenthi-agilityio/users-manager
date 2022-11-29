@@ -20,13 +20,13 @@ import {
 import { IconType } from 'react-icons';
 
 import { FaAngleRight, FaAngleDown } from 'react-icons/fa';
-import { FiLogOut } from 'react-icons/fi';
 
 import { CSSTransition } from 'react-transition-group';
 
 interface LinkItemProps {
   name: string;
   href: string;
+  color?: string;
   icon?: IconType;
 }
 
@@ -106,15 +106,21 @@ export const Menu = ({
               textAlign="left"
               onClick={() => calcHeight(itemsMenu?.items[0]?.links?.length)}
             >
-              {type === 'base' ? (
-                <HStack>
-                  <Avatar w={8} h={8} src={userActive.avatar}>
-                    {!userActive.avatar && (
-                      <AvatarBadge boxSize="16px" bg="green.500" />
-                    )}
-                  </Avatar>
-                </HStack>
-              ) : (
+              {type === 'base' &&
+                (userActive.name ? (
+                  <HStack>
+                    <Avatar w={8} h={8} src={userActive.avatar}>
+                      {userActive.avatar && (
+                        <AvatarBadge boxSize="16px" bg="green.500" />
+                      )}
+                    </Avatar>
+                  </HStack>
+                ) : (
+                  <Text ml={5} color="default.grey.600">
+                    {itemsMenu.label}
+                  </Text>
+                ))}
+              {type === 'sidebar' && (
                 <Flex alignItems="center" justifyContent="space-between">
                   <Flex alignItems="center">
                     {children}
@@ -131,7 +137,7 @@ export const Menu = ({
                 unmountOnExit
                 nodeRef={nodeRef}
               >
-                {type === 'base' ? (
+                {type === 'base' && userActive.name ? (
                   <Box ref={nodeRef}>
                     <MenuItem>
                       <Flex py={3}>
@@ -170,12 +176,6 @@ export const Menu = ({
                         <MenuDivider />
                       </Box>
                     ))}
-                    <MenuItem py={2}>
-                      <FiLogOut size="20" />
-                      <Text ml={5} color="default.grey.600">
-                        Sign out
-                      </Text>
-                    </MenuItem>
                   </Box>
                 ) : (
                   <Box>
@@ -195,7 +195,9 @@ export const Menu = ({
                               alignItems="center"
                             >
                               {link.icon && <link.icon size="20" />}
-                              <Text ml={5}>{link.name}</Text>
+                              <Text ml={5} color={link.color}>
+                                {link.name}
+                              </Text>
                             </Link>
                           </MenuItem>
                         ))}

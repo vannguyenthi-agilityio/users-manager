@@ -50,7 +50,7 @@ export const Filter = ({
         >
           <option value="">All</option>
           {options.map((option: readonly string[]) => (
-            <option key={option.toString()} value={option}>
+            <option key={option?.toString()} value={option}>
               {option}
             </option>
           ))}

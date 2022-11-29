@@ -27,12 +27,16 @@ interface StateUser {
     contact: string;
   };
   info: {
+    id: number;
     fullName: string;
     userName: string;
     email: string;
     company: string;
     country: string;
     contact: number;
+    role: string;
+    plan: string;
+    status: string;
   };
   errorValidation: boolean;
 }
@@ -79,12 +83,16 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
       contact: ''
     },
     info: {
+      id: Math.random(),
       fullName: '',
       userName: '',
       email: '',
       company: '',
       country: '',
-      contact: 0
+      contact: 0,
+      role: '',
+      plan: '',
+      status: 'Active'
     },
     errorValidation: true
   });
@@ -94,11 +102,25 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
 
   const handleSetFilterRole = (val) => {
     setValueRole(val);
+    setUserInfo({
+      ...userInfo,
+      info: {
+        ...userInfo.info,
+        role: val
+      }
+    });
     return;
   };
 
   const handleSetFilterPlan = (val) => {
     setValuePlan(val);
+    setUserInfo({
+      ...userInfo,
+      info: {
+        ...userInfo.info,
+        plan: val
+      }
+    });
     return;
   };
 
@@ -117,6 +139,7 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    console.log('userInfo', userInfo);
     setUserInfo({
       ...userInfo,
       error: {
@@ -131,6 +154,7 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
       },
       errorValidation: disabledSubmit
     });
+    localStorage.setItem('newUser', JSON.stringify(userInfo.info));
   };
 
   const handleBlurInput = (event, key) => {

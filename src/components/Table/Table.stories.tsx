@@ -14,6 +14,10 @@ const columnsUsers = [
     Header: 'Info',
     columns: [
       {
+        header: 'CheckBox',
+        accessor: 'checkBox'
+      },
+      {
         header: 'User',
         accessor: 'userName'
       },
@@ -89,7 +93,7 @@ const data = {
 };
 
 const Template: Storybook.ComponentStory<typeof Table> = (args) => (
-  <Table data={data.users} columns={columnsUsers} type="users" {...args} />
+  <Table dataTable={data.users} columnsTable={columnsUsers} {...args} />
 );
 
 export const Default = Template.bind({});

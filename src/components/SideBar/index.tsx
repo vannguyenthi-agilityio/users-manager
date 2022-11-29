@@ -18,6 +18,7 @@ import {
   FiBell,
   FiUser,
   FiMail,
+  FiLogOut,
   FiSettings,
   FiDollarSign,
   FiMessageCircle
@@ -87,6 +88,10 @@ const itemsMenuHeader = {
         { name: 'Setting', icon: FiSettings, href: '#' },
         { name: 'Pricing', icon: FiDollarSign, href: '#' }
       ]
+    },
+    {
+      key: 'menu3',
+      links: [{ name: 'Sign out', icon: FiLogOut, href: '#' }]
     }
   ]
 };

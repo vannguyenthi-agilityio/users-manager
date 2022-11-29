@@ -21,7 +21,9 @@ export interface User {
   status: USER.STATUS;
   taxId: number;
   language?: string;
+  company?: string;
   country?: string;
+  contact?: number;
   totalProject?: number;
   totalTask?: number;
   projects?: Project[];
