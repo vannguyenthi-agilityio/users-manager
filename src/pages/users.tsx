@@ -173,7 +173,7 @@ const Users = () => {
           accessor: 'actions',
           Cell: (tableProps) => {
             const { row } = tableProps;
-            const userFilter = data?.filter((v, i) => i === row.id - 1);
+            const userFilter = data?.filter((user) => user.id === Number(row.id));
             const userEdit = Object(userFilter[0]);
             return (
               <Menu closeOnSelect>
