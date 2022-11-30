@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // Chakra ui lib
 import { Box } from '@chakra-ui/react';
@@ -26,17 +26,16 @@ const DeleteUserModal = ({
     return;
   };
 
-  useEffect(() => {
-    setOpenModal(isOpen);
-  }, [isOpen]);
-
   return (
     <Modal
       title="Delele User"
       label="Delete"
       isOpen={isOpenModal}
       onClose={handleClose}
-      onSubmit={onSubmitModal}
+      onSubmit={(e) => {
+        onSubmitModal(e);
+        handleClose();
+      }}
       size="default"
       submitButtonText="Delete"
       cancelButtonText="Cancel"

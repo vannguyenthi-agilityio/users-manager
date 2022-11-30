@@ -35,8 +35,6 @@ export const DrawerModal = ({
   onSubmit,
   ...props
 }: DrawerProps) => {
-  const btnRef = React.useRef();
-
   const [isOpenAddUserModal, setOpenAddUserModal] = useState<boolean>(isOpen);
 
   const onOpenModal = () => {
@@ -59,14 +57,13 @@ export const DrawerModal = ({
 
   return (
     <>
-      <Button ref={btnRef} onClick={onOpenModal} ml={3}>
+      <Button onClick={onOpenModal} ml={3}>
         {title}
       </Button>
       <Drawer
         isOpen={isOpenAddUserModal}
         placement="right"
         onClose={onCloseModal}
-        finalFocusRef={btnRef}
         {...props}
       >
         <DrawerOverlay />

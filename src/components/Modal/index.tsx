@@ -68,16 +68,9 @@ export const Modal = ({
 
   return (
     <>
-      <Button
-        variant="transparent"
-        onClick={handleOnOpen}
-        p={0}
-        minW="30px"
-        cursor="pointer"
-        textTransform="inherit"
-      >
+      <Box onClick={handleOnOpen} p={0} minW="30px" cursor="pointer">
         {label}
-      </Button>
+      </Box>
       <ModalChakra
         size={size}
         variant={variant}

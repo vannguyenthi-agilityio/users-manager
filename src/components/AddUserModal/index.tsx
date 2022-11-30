@@ -15,6 +15,7 @@ import { Filter } from '../Filter';
 interface AddUserModalProps {
   value?: string;
   isOpen?: boolean;
+  onSubmitModal?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 interface StateUser {
@@ -68,7 +69,11 @@ const filterRows = [
   }
 ];
 
-const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
+const AddUserModal = ({
+  value,
+  isOpen = false,
+  onSubmitModal
+}: AddUserModalProps) => {
   const [valueFilterRole, setValueRole] = useState<string>('Editor');
   const [valueFilterPlan, setValuePlan] = useState<string>('Basic');
   const [isOpenModal, setOpenModal] = useState<boolean>(isOpen);
@@ -139,7 +144,6 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log('userInfo', userInfo);
     setUserInfo({
       ...userInfo,
       error: {
@@ -221,7 +225,10 @@ const AddUserModal = ({ value, isOpen = false }: AddUserModalProps) => {
       onClose={handleClose}
       isError={userInfo.errorValidation}
       isDisabledSubmit={disabledSubmit}
-      onSubmit={handleSubmit}
+      onSubmit={(e) => {
+        handleSubmit(e);
+        onSubmitModal(e);
+      }}
     >
       <Box my="40px">
         <Text

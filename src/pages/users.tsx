@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import {
   Box,
   Avatar,
@@ -23,6 +23,16 @@ import { Filter } from 'src/components/Filter';
 import EditUserModal from 'src/components/Modal/EditUserModal';
 import DeleteUserModal from 'src/components/Modal/DeleteUserModal';
 
+import {
+  ExternalLinkIcon,
+  ViewIcon,
+  EditIcon,
+  DeleteIcon
+} from '@chakra-ui/icons';
+
+import { Button } from 'src/components/Button';
+import AddUserModal from 'src/components/AddUserModal';
+
 import { ROUTES } from 'src/constants/routes';
 
 // Utils
@@ -34,48 +44,45 @@ import { columnsUsers } from 'src/constants/tableColumn';
 // Models
 import { User } from 'src/models/user';
 
-import { ViewIcon, EditIcon, DeleteIcon } from '@chakra-ui/icons';
-
 const Users = () => {
   const { data = [], isFetching } = useQuery<Array<User>>(['users'], () =>
     getUsers()
   );
   const [checkedItems, setCheckedItems] = useState([false, false]);
-  const [tableDataUser, settableDataUser] = useState(data);
+  const [dataTableUser, setDataTableUser] = useState(data);
   const [isOpenModal, setCloseModal] = useState(false);
 
   useEffect(() => {
-    const dataNewUser = JSON.parse(localStorage.getItem('newUser') || null);
-    if (tableDataUser.length > 0) {
-      const newDataUser = [...tableDataUser, dataNewUser];
-      settableDataUser(newDataUser);
+    if (dataTableUser.length > 0) {
+      setDataTableUser(dataTableUser);
     } else {
-      settableDataUser(data);
+      setDataTableUser(data);
     }
-  }, [isFetching, isOpenModal]);
+  }, [isFetching]);
 
   const allChecked = checkedItems.every(Boolean);
   const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
 
-  const handleDelete = useCallback(
-    (e, id) => {
-      e.preventDefault();
-      const tableDataUserFilter = tableDataUser.filter(
-        (user) => user.id !== Number(id)
-      );
-      settableDataUser(tableDataUserFilter);
-      setCloseModal(false);
-    },
-    [tableDataUser]
-  );
+  const handleDelete = (e, id) => {
+    e.preventDefault();
+    const tableDataUserFilter = dataTableUser.filter(
+      (user) => user.id !== Number(id)
+    );
+    setDataTableUser(tableDataUserFilter);
+  };
 
-  const handleEdit = useCallback(
-    (e, id) => {
-      e.preventDefault();
-      setCloseModal(false);
-    },
-    [tableDataUser]
-  );
+  const handleEdit = (e, id) => {
+    e.preventDefault();
+    setCloseModal(false);
+  };
+
+  const handleAddUser = (e) => {
+    e.preventDefault();
+    const newUser = JSON.parse(localStorage.getItem('newUser'));
+    const newDataUser = [...dataTableUser, newUser];
+    setDataTableUser(newDataUser);
+    setCloseModal(false);
+  };
 
   const columnsTableUsers = useMemo(
     () => [
@@ -98,17 +105,7 @@ const Users = () => {
           {
             header: 'User',
             accessor: 'userName',
-            hasSort: true,
-            Cell: (cell) => {
-              const { row } = cell;
-              return (
-                <Text
-                  className="text-overflow"
-                  color="default.grey.600"
-                  value={row.values.userName}
-                />
-              );
-            }
+            hasSort: true
           },
           {
             header: 'Email',
@@ -210,7 +207,6 @@ const Users = () => {
                         <EditIcon w={4} h={4} mr={3} />
                         <EditUserModal
                           userInfo={userEdit}
-                          isOpen={isOpenModal}
                           onSubmitModal={(event) =>
                             handleEdit(event, row.index)
                           }
@@ -221,7 +217,6 @@ const Users = () => {
                       <Flex>
                         <DeleteIcon w={4} h={4} mr={3} />
                         <DeleteUserModal
-                          isOpen={isOpenModal}
                           onSubmitModal={(event) =>
                             handleDelete(event, row.index)
                           }
@@ -237,11 +232,11 @@ const Users = () => {
         ...columnsUsers
       }
     ],
-    [tableDataUser, isOpenModal, isFetching]
+    [dataTableUser, isOpenModal, isFetching]
   );
 
-  const dataTable = tableDataUser.length
-    ? tableDataUser.map((user) => ({
+  const dataTable = dataTableUser.length
+    ? dataTableUser.map((user) => ({
         checkBox: (
           <Checkbox
             colorScheme="orange"
@@ -285,7 +280,39 @@ const Users = () => {
       <Heading mb={4} color="gray.600" fontSize="20px">
         Search Filter
       </Heading>
-      <Box boxShadow="xs" rounded="md" bg="white" className="table">
+      <Box boxShadow="xs" rounded="md" bg="white" className="table" pt="20px">
+        <Flex
+          w="100%"
+          px={6}
+          alignItems="center"
+          justifyContent="space-between"
+          my={4}
+        >
+          <Button
+            h="48px"
+            bg="transparent"
+            w="130px"
+            minW="30px"
+            display="flex"
+            border="1px solid"
+            borderColor="buttons.export"
+            color="rgb(138, 141, 147)"
+            fontSize="14px"
+            mr={3}
+            textTransform="uppercase"
+            label="Export"
+            cursor="pointer"
+          >
+            <ExternalLinkIcon w={4} h={4} ml={3} />
+          </Button>
+          <Flex>
+            {/* <Search
+              globalSearch={globalFilter}
+              setGlobalSearch={setGlobalFilter}
+            /> */}
+            <AddUserModal onSubmitModal={(event) => handleAddUser(event)} />
+          </Flex>
+        </Flex>
         <BasicTable dataTable={dataTable} columnsTable={columnsTableUsers} />
       </Box>
     </Box>
