@@ -32,7 +32,7 @@ export const Elevation = ({
     borderRadius="sm"
     {...props}
   >
-    <Image src={userInfo.avatar} borderRadius="md" w="120px" />
+    <Image src={userInfo?.avatar} borderRadius="md" w="120px" />
     <Text
       fontWeight="500"
       fontSize="2xl"

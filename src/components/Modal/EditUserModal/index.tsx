@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ChangeEvent } from 'react';
 
 // Chakra ui lib
 import { Box } from '@chakra-ui/react';
@@ -14,23 +14,7 @@ import { User } from '../../../models/user';
 interface EditUserModalProps {
   isOpen?: boolean;
   userInfo?: User;
-  onSubmitModal?: (
-    event: React.MouseEvent<HTMLButtonElement>,
-    id?: number
-  ) => void;
-}
-
-interface StateUser {
-  id: number;
-  fullName: string;
-  userName: string;
-  email: string;
-  company: string;
-  country: string;
-  contact: number;
-  role: string;
-  plan: string;
-  status: string;
+  onSubmitModal: (user?: User, id?: string) => void;
 }
 
 const EditUserModal = ({
@@ -43,45 +27,41 @@ const EditUserModal = ({
   const [valueFilterRole, setValueRole] = useState<string>('Editor');
   const [valueFilterPlan, setValuePlan] = useState<string>('Basic');
 
-  const { email, role, plan, status, fullName, userName } = userInfo;
+  const { email, fullName, userName } = userInfo;
 
-  const [userInfoEdit, setUserInfo] = useState<StateUser>({
-    id: Math.random(),
+  const [userInfoEdit, setUserInfo] = useState<User>({
+    ...userInfo,
     fullName: fullName,
     userName: userName,
     email: email,
     company: '',
     country: '',
     contact: 0,
-    role: role,
-    plan: plan,
-    status: status
+    role: '',
+    plan: ''
   });
 
-  const handleSetFilterRole = (val) => {
+  const handleSetFilterRole = (val: string) => {
     setValueRole(val);
     setUserInfo({
       ...userInfoEdit,
       role: val
     });
-    return;
   };
 
-  const handleSetFilterPlan = (val) => {
+  const handleSetFilterPlan = (val: string) => {
     setValuePlan(val);
     setUserInfo({
       ...userInfoEdit,
       plan: val
     });
-    return;
   };
 
-  const handleChangeInput = (e, key) => {
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>, key: string) => {
     setUserInfo({
       ...userInfoEdit,
       [key]: e.target.value
     });
-    return;
   };
 
   const filterRows = [
@@ -134,13 +114,9 @@ const EditUserModal = ({
   };
 
   const handleClose = () => {
-    setOpenModal(isOpen);
-    return;
+    onSubmitModal(userInfoEdit);
+    setOpenModal(false);
   };
-
-  useEffect(() => {
-    setOpenModal(isOpen);
-  }, [!isOpen]);
 
   return (
     <Modal
@@ -148,7 +124,7 @@ const EditUserModal = ({
       label="Edit"
       isOpen={isOpenModal}
       onClose={handleClose}
-      onSubmit={onSubmitModal}
+      onSubmit={handleClose}
       size="default"
       submitButtonText="Edit"
       cancelButtonText="Cancel"

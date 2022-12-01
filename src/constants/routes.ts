@@ -5,7 +5,7 @@ export const ROUTES = {
   NOT_FOUND: '/404',
   USERS: '/users',
   USER_DETAIL: {
-    URL: '/overview',
+    URL: '/overview/',
     TITLE: 'User detail'
   }
 };

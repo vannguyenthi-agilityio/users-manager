@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import UserContext from 'src/contexts/UserContext';
+import { useRouter } from 'next/router';
 
 import { Box, HStack, Avatar, Link, Flex, Progress } from '@chakra-ui/react';
 
@@ -12,7 +13,9 @@ import { columnsProjects } from 'src/constants/tableColumn';
 
 const Overview = () => {
   const { users, isLoading } = useContext(UserContext);
-  const data = users[0];
+  const router = useRouter();
+  const { id } = router.query;
+  const dataUser = users[id?.toString()];
 
   const columnsTableProjects = [
     {
@@ -72,8 +75,8 @@ const Overview = () => {
     }
   ];
 
-  const dataTable = data?.projects?.length
-    ? data.projects.map((project) => ({
+  const dataTable = dataUser?.projects.length
+    ? dataUser.projects.map((project) => ({
         projectName: (
           <HStack spacing={2} key={project.id}>
             <Avatar
@@ -127,7 +130,7 @@ const Overview = () => {
     <Indicator />
   ) : (
     <Flex flexDirection={{ sm: 'column', md: 'row' }}>
-      <Elevation userInfo={data} />
+      <Elevation userInfo={dataUser} />
       <Box
         w={{ sm: '100%', md: 'calc(800 * 100%/1028)' }}
         boxShadow="xs"

@@ -11,7 +11,6 @@ const GroupFilter = (headerFilter) => {
         alignItems="center"
         justifyContent="space-between"
         flexDirection={{ sm: 'column', md: 'row' }}
-        my={4}
       >
         {headerGroups[1]?.headers.map(
           (column) =>

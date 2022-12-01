@@ -1,4 +1,5 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useContext } from 'react';
+import UserContext from 'src/contexts/UserContext';
 import {
   Box,
   Avatar,
@@ -12,8 +13,6 @@ import {
   Menu,
   Link
 } from '@chakra-ui/react';
-import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query';
-import { getUsers } from 'src/service/user-service';
 // Components
 import { Text } from 'src/components/Text';
 import BasicTable from 'src/components/Table';
@@ -45,43 +44,33 @@ import { columnsUsers } from 'src/constants/tableColumn';
 import { User } from 'src/models/user';
 
 const Users = () => {
-  const { data = [], isFetching } = useQuery<Array<User>>(['users'], () =>
-    getUsers()
-  );
+  const { users, isLoading, addUser, deleteUser, editUser, updateUser } =
+    useContext(UserContext);
   const [checkedItems, setCheckedItems] = useState([false, false]);
-  const [dataTableUser, setDataTableUser] = useState(data);
-  const [isOpenModal, setCloseModal] = useState(false);
+  const [dataTableUser, setDataTableUser] = useState(users);
 
   useEffect(() => {
     if (dataTableUser.length > 0) {
       setDataTableUser(dataTableUser);
     } else {
-      setDataTableUser(data);
+      setDataTableUser(users);
     }
-  }, [isFetching]);
+  }, [isLoading, dataTableUser]);
 
   const allChecked = checkedItems.every(Boolean);
   const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
 
-  const handleDelete = (e, id) => {
-    e.preventDefault();
-    const tableDataUserFilter = dataTableUser.filter(
-      (user) => user.id !== Number(id)
-    );
-    setDataTableUser(tableDataUserFilter);
+  const handleDelete = (id: string) => {
+    deleteUser(id);
   };
 
-  const handleEdit = (e, id) => {
-    e.preventDefault();
-    setCloseModal(false);
+  const handleEdit = (user: User) => {
+    editUser(user);
+    updateUser(user.id, user);
   };
 
-  const handleAddUser = (e) => {
-    e.preventDefault();
-    const newUser = JSON.parse(localStorage.getItem('newUser'));
-    const newDataUser = [...dataTableUser, newUser];
-    setDataTableUser(newDataUser);
-    setCloseModal(false);
+  const handleAddUser = (user: User) => {
+    addUser(user);
   };
 
   const columnsTableUsers = useMemo(
@@ -180,9 +169,8 @@ const Users = () => {
             accessor: 'actions',
             Cell: (tableProps) => {
               const { row } = tableProps;
-              const userFilter = data?.filter(
-                (user) => user.id === Number(row.id)
-              );
+              const { key } = row.values.userName;
+              const userFilter = users?.filter((user) => user.id === key);
               const userEdit = Object(userFilter[0]);
               return (
                 <Menu closeOnSelect>
@@ -197,7 +185,10 @@ const Users = () => {
                   </MenuButton>
                   <MenuList minWidth="128px" color="gray.600" fontSize="16px">
                     <MenuItem value="view" py={3}>
-                      <Link href={ROUTES.USER_DETAIL.URL} display="flex">
+                      <Link
+                        href={`${ROUTES.USER_DETAIL.URL}/${key}`}
+                        display="flex"
+                      >
                         <ViewIcon w={4} h={4} mr={3} />
                         <Text color="default.grey.600" value="View" />
                       </Link>
@@ -207,9 +198,7 @@ const Users = () => {
                         <EditIcon w={4} h={4} mr={3} />
                         <EditUserModal
                           userInfo={userEdit}
-                          onSubmitModal={(event) =>
-                            handleEdit(event, row.index)
-                          }
+                          onSubmitModal={(user) => handleEdit(user)}
                         />
                       </Flex>
                     </MenuItem>
@@ -217,9 +206,10 @@ const Users = () => {
                       <Flex>
                         <DeleteIcon w={4} h={4} mr={3} />
                         <DeleteUserModal
-                          onSubmitModal={(event) =>
-                            handleDelete(event, row.index)
-                          }
+                          onSubmitModal={() => {
+                            const { key } = row.values.userName;
+                            handleDelete(key);
+                          }}
                         />
                       </Flex>
                     </MenuItem>
@@ -232,7 +222,7 @@ const Users = () => {
         ...columnsUsers
       }
     ],
-    [dataTableUser, isOpenModal, isFetching]
+    [dataTableUser, isLoading]
   );
 
   const dataTable = dataTableUser.length
@@ -256,7 +246,9 @@ const Users = () => {
               h={8}
             />
             <Box>
-              <Link href={`${ROUTES.USER_DETAIL.URL}`}>{user.fullName}</Link>
+              <Link href={`${ROUTES.USER_DETAIL.URL}/${user.id}`}>
+                {user.fullName}
+              </Link>
               <Text
                 pt={2}
                 fontSize="xs"
@@ -273,7 +265,7 @@ const Users = () => {
       }))
     : [];
 
-  return isFetching ? (
+  return isLoading ? (
     <Indicator />
   ) : (
     <Box>
@@ -306,11 +298,7 @@ const Users = () => {
             <ExternalLinkIcon w={4} h={4} ml={3} />
           </Button>
           <Flex>
-            {/* <Search
-              globalSearch={globalFilter}
-              setGlobalSearch={setGlobalFilter}
-            /> */}
-            <AddUserModal onSubmitModal={(event) => handleAddUser(event)} />
+            <AddUserModal onSubmitModal={(user) => handleAddUser(user)} />
           </Flex>
         </Flex>
         <BasicTable dataTable={dataTable} columnsTable={columnsTableUsers} />
@@ -320,15 +308,3 @@ const Users = () => {
 };
 
 export default Users;
-
-export async function getStaticProps() {
-  const queryClient = new QueryClient();
-
-  await queryClient.prefetchQuery(['user'], () => getUsers());
-
-  return {
-    props: {
-      dehydratedState: dehydrate(queryClient)
-    }
-  };
-}

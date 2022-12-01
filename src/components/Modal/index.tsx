@@ -15,6 +15,9 @@ import {
 import { Button } from '../Button';
 import { Text } from '../Text';
 
+// Models
+import { User } from '../../models/user';
+
 export interface ModalProps extends ModalPropsChakra {
   title?: string;
   label?: string;
@@ -28,7 +31,11 @@ export interface ModalProps extends ModalPropsChakra {
   isDisabledSubmit?: boolean;
   isDisabledOutsideClick?: boolean;
   isLoading?: boolean;
-  onSubmit?: (event: React.MouseEvent<HTMLButtonElement>, id?: number) => void;
+  onSubmit?: (
+    event: React.MouseEvent<HTMLButtonElement>,
+    user?: User,
+    id?: string
+  ) => void;
 }
 
 export const Modal = ({
@@ -52,18 +59,22 @@ export const Modal = ({
   ...props
 }: ModalProps) => {
   const btnRef = React.useRef();
-  const [isOpenModal, setOpenModal] = useState(isOpen);
-  const handleOnOpen = () => {
-    setOpenModal(true);
-    return;
-  };
+  const [isOpenModal, setOpenModal] = useState<boolean>(isOpen);
 
   const handleOnClose = () => {
     if (!isDisabledOutsideClick) {
       setOpenModal(false);
       onClose();
     }
-    return;
+  };
+
+  const onSubmitModal = () => {
+    onSubmit;
+    handleOnClose();
+  };
+
+  const handleOnOpen = () => {
+    setOpenModal(true);
   };
 
   return (
@@ -115,7 +126,7 @@ export const Modal = ({
                   isLoading={isLoading}
                   isDisabled={isDisabledSubmit}
                   label={submitButtonText}
-                  onClick={onSubmit}
+                  onClick={onSubmitModal}
                   size="default"
                 />
               )}

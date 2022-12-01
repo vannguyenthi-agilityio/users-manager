@@ -85,14 +85,79 @@
       "fullName": "David Smart",
       "userName": "Smart",
       "email": "david.smart@asnet.com.vn",
-      "avatar": "https://bit.ly/broken-link",
+      "avatar": "/images/user.png",
       "role": "Author",
       "status": "Pending",
       "plan": "Team",
       "totalTask": 12,
       "totalProject": 2,
       "language": "English",
-      "country": "USA"
+      "country": "USA",
+      "projects": [
+        {
+          "id": 1,
+          "projectName": "Hoffman Website",
+          "techStack": "HTML project",
+          "totalTask": "110",
+          "taskDone": "98",
+          "totalTime": "45",
+          "timeDone": "12"
+        },
+        {
+          "id": 2,
+          "projectName": "Foodista Mobile App",
+          "techStack": "Xamarin project",
+          "totalTask": "63",
+          "taskDone": "7",
+          "totalTime": "89",
+          "timeDone": "19"
+        },
+        {
+          "id": 3,
+          "projectName": "Falcon Logo Design",
+          "techStack": "Figma project",
+          "totalTask": "56",
+          "taskDone": "9",
+          "totalTime": "42",
+          "timeDone": "20"
+        },
+        {
+          "id": 4,
+          "projectName": "Dojo React Project",
+          "techStack": "Python project",
+          "totalTask": "186",
+          "taskDone": "120",
+          "totalTime": "230",
+          "timeDone": "10"
+        },
+        {
+          "id": 5,
+          "projectName": "Dashboard Design",
+          "techStack": "VueJs project",
+          "totalTask": "320",
+          "taskDone": "290",
+          "totalTime": "120",
+          "timeDone": "87"
+        },
+        {
+          "id": 6,
+          "projectName": "Blockchain Website",
+          "techStack": "Sketch Project",
+          "totalTask": "109",
+          "taskDone": "99",
+          "totalTime": "342",
+          "timeDone": "41"
+        },
+        {
+          "id": 7,
+          "projectName": "BGC eCommerce App",
+          "techStack": "React project",
+          "totalTask": "240",
+          "taskDone": "122",
+          "totalTime": "42",
+          "timeDone": "18"
+        }
+      ]
     },
     {
       "id": 3,
@@ -105,7 +170,72 @@
       "language": "English",
       "country": "USA",
       "totalTask": 24,
-      "totalProject": 4
+      "totalProject": 4,
+      "projects": [
+        {
+          "id": 1,
+          "projectName": "Hoffman Website",
+          "techStack": "HTML project",
+          "totalTask": "110",
+          "taskDone": "98",
+          "totalTime": "45",
+          "timeDone": "12"
+        },
+        {
+          "id": 2,
+          "projectName": "Foodista Mobile App",
+          "techStack": "Xamarin project",
+          "totalTask": "63",
+          "taskDone": "7",
+          "totalTime": "89",
+          "timeDone": "19"
+        },
+        {
+          "id": 3,
+          "projectName": "Falcon Logo Design",
+          "techStack": "Figma project",
+          "totalTask": "56",
+          "taskDone": "9",
+          "totalTime": "42",
+          "timeDone": "20"
+        },
+        {
+          "id": 4,
+          "projectName": "Dojo React Project",
+          "techStack": "Python project",
+          "totalTask": "186",
+          "taskDone": "120",
+          "totalTime": "230",
+          "timeDone": "10"
+        },
+        {
+          "id": 5,
+          "projectName": "Dashboard Design",
+          "techStack": "VueJs project",
+          "totalTask": "320",
+          "taskDone": "290",
+          "totalTime": "120",
+          "timeDone": "87"
+        },
+        {
+          "id": 6,
+          "projectName": "Blockchain Website",
+          "techStack": "Sketch Project",
+          "totalTask": "109",
+          "taskDone": "99",
+          "totalTime": "342",
+          "timeDone": "41"
+        },
+        {
+          "id": 7,
+          "projectName": "BGC eCommerce App",
+          "techStack": "React project",
+          "totalTask": "240",
+          "taskDone": "122",
+          "totalTime": "42",
+          "timeDone": "18"
+        }
+      ]
     },
     {
       "id": 4,

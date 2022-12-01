@@ -1,5 +1,3 @@
-import { USER } from 'src/constants/user';
-
 export interface Project {
   id: number;
   projectName: string;
@@ -11,15 +9,15 @@ export interface Project {
 }
 
 export interface User {
-  id: number;
+  id: string;
   fullName: string;
   userName: string;
-  plan: USER.PLANS;
+  plan: string;
   email: string;
   avatar?: string;
-  role: USER.ROLES;
-  status: USER.STATUS;
-  taxId: number;
+  role: string;
+  status: string;
+  taxId?: number;
   language?: string;
   company?: string;
   country?: string;

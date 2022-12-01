@@ -9,10 +9,7 @@ import { Modal } from '..';
 
 interface DeleteUserModalProps {
   isOpen?: boolean;
-  onSubmitModal?: (
-    event: React.MouseEvent<HTMLButtonElement>,
-    id?: number
-  ) => void;
+  onSubmitModal: (id?: string) => void;
 }
 
 const DeleteUserModal = ({
@@ -26,16 +23,18 @@ const DeleteUserModal = ({
     return;
   };
 
+  const handleSubmit = () => {
+    onSubmitModal();
+    handleClose();
+  };
+
   return (
     <Modal
       title="Delele User"
       label="Delete"
       isOpen={isOpenModal}
       onClose={handleClose}
-      onSubmit={(e) => {
-        onSubmitModal(e);
-        handleClose();
-      }}
+      onSubmit={handleSubmit}
       size="default"
       submitButtonText="Delete"
       cancelButtonText="Cancel"

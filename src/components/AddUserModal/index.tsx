@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, FocusEvent, ChangeEvent } from 'react';
 
 // Chakra ui lib
 import { Box } from '@chakra-ui/react';
+
+// Models
+import { User } from 'src/models/user';
 
 // Utils
 import { validation } from '../../utils/helper';
@@ -15,7 +18,7 @@ import { Filter } from '../Filter';
 interface AddUserModalProps {
   value?: string;
   isOpen?: boolean;
-  onSubmitModal?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onSubmitModal: (userInfo: User) => void;
 }
 
 interface StateUser {
@@ -28,7 +31,7 @@ interface StateUser {
     contact: string;
   };
   info: {
-    id: number;
+    id: string;
     fullName: string;
     userName: string;
     email: string;
@@ -88,7 +91,7 @@ const AddUserModal = ({
       contact: ''
     },
     info: {
-      id: Math.random(),
+      id: Math.random().toString(),
       fullName: '',
       userName: '',
       email: '',
@@ -105,7 +108,7 @@ const AddUserModal = ({
   const disabledSubmit =
     Object.values(userInfo.error).findIndex((e) => !!e) > -1;
 
-  const handleSetFilterRole = (val) => {
+  const handleSetFilterRole = (val: string) => {
     setValueRole(val);
     setUserInfo({
       ...userInfo,
@@ -114,10 +117,9 @@ const AddUserModal = ({
         role: val
       }
     });
-    return;
   };
 
-  const handleSetFilterPlan = (val) => {
+  const handleSetFilterPlan = (val: string) => {
     setValuePlan(val);
     setUserInfo({
       ...userInfo,
@@ -126,12 +128,10 @@ const AddUserModal = ({
         plan: val
       }
     });
-    return;
   };
 
   const handleClose = () => {
     setOpenModal(false);
-    return;
   };
 
   const validateInput = (value: string, key: string) => {
@@ -158,10 +158,13 @@ const AddUserModal = ({
       },
       errorValidation: disabledSubmit
     });
-    localStorage.setItem('newUser', JSON.stringify(userInfo.info));
+    onSubmitModal(userInfo.info);
   };
 
-  const handleBlurInput = (event, key) => {
+  const handleBlurInput = (
+    event: FocusEvent<HTMLInputElement>,
+    key: string
+  ) => {
     const { value } = event.target;
     setUserInfo({
       ...userInfo,
@@ -175,10 +178,9 @@ const AddUserModal = ({
       },
       errorValidation: disabledSubmit
     });
-    return;
   };
 
-  const handleChangeInput = (e, key) => {
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>, key: string) => {
     setUserInfo({
       ...userInfo,
       [key]: e.target.value,
@@ -216,7 +218,6 @@ const AddUserModal = ({
     placeholder: 'Filter by plan',
     size: 'md'
   };
-
   return (
     <DrawerModal
       title="Add User"
@@ -225,10 +226,7 @@ const AddUserModal = ({
       onClose={handleClose}
       isError={userInfo.errorValidation}
       isDisabledSubmit={disabledSubmit}
-      onSubmit={(e) => {
-        handleSubmit(e);
-        onSubmitModal(e);
-      }}
+      onSubmit={(e) => handleSubmit(e)}
     >
       <Box my="40px">
         <Text
